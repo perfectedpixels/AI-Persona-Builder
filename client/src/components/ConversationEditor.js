@@ -164,11 +164,22 @@ function ConversationEditor() {
   // Speaker Management
   // ============================================================================
 
-  const handleSpeakerAdd = useCallback((name) => {
-    const newSpeaker = createSpeaker({ 
-      name,
-      voiceId: availableVoices[conversation.speakers.length % availableVoices.length]?.id
-    });
+  const handleSpeakerAdd = useCallback((speakerDataOrName) => {
+    let newSpeaker;
+    
+    if (typeof speakerDataOrName === 'string') {
+      // Legacy: just a name string
+      newSpeaker = createSpeaker({ 
+        name: speakerDataOrName,
+        voiceId: availableVoices[conversation.speakers.length % availableVoices.length]?.id
+      });
+    } else {
+      // New: full speaker object with voice configuration
+      newSpeaker = {
+        ...createSpeaker({ name: speakerDataOrName.name }),
+        ...speakerDataOrName
+      };
+    }
     
     setConversation(prev => ({
       ...prev,
@@ -319,11 +330,32 @@ function ConversationEditor() {
 
       const { speakers: generatedSpeakers, lines: generatedLines } = await response.json();
 
-      // Assign voices to generated speakers
-      const speakersWithVoices = generatedSpeakers.map((speaker, index) => ({
-        ...speaker,
-        voiceId: availableVoices[index % availableVoices.length]?.id || speaker.voiceId
-      }));
+      // Merge generated speakers with existing speaker configurations
+      // Match by name to preserve voice settings
+      const speakersWithVoices = generatedSpeakers.map((genSpeaker) => {
+        // Find existing speaker with same name
+        const existingSpeaker = conversation.speakers.find(
+          s => s.name.toLowerCase() === genSpeaker.name.toLowerCase()
+        );
+        
+        if (existingSpeaker) {
+          // Preserve existing speaker's voice configuration
+          return {
+            ...genSpeaker,
+            voiceId: existingSpeaker.voiceId,
+            defaultProsody: existingSpeaker.defaultProsody,
+            defaultSpeed: existingSpeaker.defaultSpeed,
+            color: existingSpeaker.color
+          };
+        } else {
+          // New speaker - assign default voice
+          const speakerIndex = generatedSpeakers.indexOf(genSpeaker);
+          return {
+            ...genSpeaker,
+            voiceId: availableVoices[speakerIndex % availableVoices.length]?.id || genSpeaker.voiceId
+          };
+        }
+      });
 
       // Update conversation with generated content
       setConversation(prev => ({

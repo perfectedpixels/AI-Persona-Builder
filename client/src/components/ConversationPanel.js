@@ -77,7 +77,8 @@ function ConversationPanel({
   };
 
   const handleSaveNewSpeaker = (speakerData) => {
-    onSpeakerAdd(speakerData.name);
+    // Pass the full speaker data including voice configuration
+    onSpeakerAdd(speakerData);
     handleCloseVoiceModal();
   };
 
