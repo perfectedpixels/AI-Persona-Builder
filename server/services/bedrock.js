@@ -8,14 +8,20 @@ const client = new BedrockRuntimeClient({
  * Invoke AWS Bedrock to generate conversation script
  */
 async function generateConversationScript(scenario, options = {}, speakers = []) {
-  const { numSpeakers = 2, length = 'medium' } = options;
+  const { numSpeakers = 2, length = 'medium', turns } = options;
 
-  // Map length to line counts
-  const lengthMap = {
-    short: '5-8 lines',
-    medium: '10-15 lines',
-    long: '20-30 lines'
-  };
+  // Map length to line counts or use custom turns
+  let lengthDescription;
+  if (length === 'custom' && turns) {
+    lengthDescription = `exactly ${turns} turns (${turns} lines total)`;
+  } else {
+    const lengthMap = {
+      short: '5-8 lines (5-8 turns)',
+      medium: '10-15 lines (10-15 turns)',
+      long: '20-30 lines (20-30 turns)'
+    };
+    lengthDescription = lengthMap[length] || lengthMap.medium;
+  }
 
   // Build speaker context information
   let speakerContextInfo = '';
@@ -39,7 +45,8 @@ CRITICAL RULES:
 - DO NOT include any stage directions, actions, or emotional cues in asterisks (e.g., *curiously*, *thoughtfully*, *laughs*)
 - DO NOT include any parenthetical descriptions or actions
 - ONLY include the spoken dialogue text after the speaker name
-- If speaker character descriptions are provided, ensure each speaker's dialogue matches their personality and role through word choice and phrasing, not stage directions`;
+- If speaker character descriptions are provided, ensure each speaker's dialogue matches their personality and role through word choice and phrasing, not stage directions
+- A "turn" means one line of dialogue from one speaker`;
 
   const userMessage = `Generate a conversation script based on this scenario:
 
@@ -47,7 +54,7 @@ Scenario: ${scenario}
 
 Requirements:
 - Number of speakers: ${numSpeakers}
-- Conversation length: ${lengthMap[length] || lengthMap.medium}
+- Conversation length: ${lengthDescription}
 - Format: Each line as "Speaker Name: dialogue text"
 - Make it natural and engaging
 - NO stage directions or actions in asterisks

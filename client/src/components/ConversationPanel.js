@@ -36,6 +36,7 @@ function ConversationPanel({
   // Script generation options
   const [scenario, setScenario] = useState('');
   const [length, setLength] = useState('medium');
+  const [customTurns, setCustomTurns] = useState(10);
 
   const handleSpeakerClick = (speaker) => {
     onSpeakerSelect(speaker.id);
@@ -84,7 +85,11 @@ function ConversationPanel({
 
   const handleGenerateScript = () => {
     if (scenario.trim()) {
-      onGenerateScript(scenario.trim(), { length });
+      const options = { 
+        length,
+        turns: length === 'custom' ? customTurns : undefined
+      };
+      onGenerateScript(scenario.trim(), options);
     }
   };
 
@@ -137,21 +142,43 @@ function ConversationPanel({
           
           <div className="detail-item detail-item-inline">
             <label>Length</label>
-            <div className="length-buttons">
-              {[
-                { value: 'short', label: 'Short' },
-                { value: 'medium', label: 'Medium' },
-                { value: 'long', label: 'Long' }
-              ].map(option => (
-                <button
-                  key={option.value}
-                  className={`btn-option ${length === option.value ? 'active' : ''}`}
-                  onClick={() => setLength(option.value)}
-                  disabled={isGeneratingScript}
-                >
-                  {option.label}
-                </button>
-              ))}
+            <div className="length-controls">
+              <div className="length-buttons">
+                {[
+                  { value: 'short', label: 'Short' },
+                  { value: 'medium', label: 'Medium' },
+                  { value: 'long', label: 'Long' },
+                  { value: 'custom', label: 'Custom' }
+                ].map(option => (
+                  <button
+                    key={option.value}
+                    className={`btn-option ${length === option.value ? 'active' : ''}`}
+                    onClick={() => setLength(option.value)}
+                    disabled={isGeneratingScript}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+              <div className="turns-display">
+                {length === 'short' && <span className="turns-info">5-8 turns</span>}
+                {length === 'medium' && <span className="turns-info">10-15 turns</span>}
+                {length === 'long' && <span className="turns-info">20-30 turns</span>}
+                {length === 'custom' && (
+                  <div className="custom-turns-input">
+                    <input
+                      type="number"
+                      min="2"
+                      max="50"
+                      value={customTurns}
+                      onChange={(e) => setCustomTurns(parseInt(e.target.value) || 10)}
+                      disabled={isGeneratingScript}
+                      placeholder="Turns"
+                    />
+                    <span className="turns-label">turns</span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

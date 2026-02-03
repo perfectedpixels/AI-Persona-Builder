@@ -200,9 +200,15 @@
   cursor: not-allowed;
 }
 
+.length-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
 .length-buttons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--spacing-xs);
 }
 
@@ -232,4 +238,50 @@
 .btn-option:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.turns-display {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-xs);
+  background: var(--color-background);
+  border-radius: var(--radius-sm);
+}
+
+.turns-info {
+  font-size: 13px;
+  color: var(--color-medium-gray);
+  font-style: italic;
+}
+
+.custom-turns-input {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  width: 100%;
+}
+
+.custom-turns-input input {
+  width: 60px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  text-align: center;
+}
+
+.custom-turns-input input:focus {
+  outline: none;
+  border-color: var(--color-orange-primary);
+}
+
+.custom-turns-input input:disabled {
+  background: var(--color-light-gray);
+  cursor: not-allowed;
+}
+
+.turns-label {
+  font-size: 13px;
+  color: var(--color-medium-gray);
 }
