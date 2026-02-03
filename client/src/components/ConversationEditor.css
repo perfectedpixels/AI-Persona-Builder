@@ -1,0 +1,134 @@
+.conversation-editor {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  background: var(--color-white);
+  padding: var(--spacing-md) var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left h1 {
+  font-size: 24px;
+  margin: 0;
+  color: var(--color-black);
+}
+
+.btn-new-conversation {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: var(--color-orange-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-new-conversation:hover {
+  background: #E67A2E;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(255, 140, 66, 0.3);
+}
+
+.theme-toggle {
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--radius-lg);
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--color-dark-gray);
+}
+
+.theme-toggle:hover {
+  background: var(--color-background);
+}
+
+.editor-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100vh - 80px);
+  overflow: hidden;
+}
+
+.conversation-panel {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.script-panel {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.middle-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  overflow: hidden;
+}
+
+.middle-panel > :first-child {
+  flex-shrink: 0;
+}
+
+.middle-panel > :last-child {
+  flex: 1;
+  overflow: hidden;
+}
+
+.script-panel,
+.playback-panel,
+.config-panel {
+  overflow-y: auto;
+}
+
+.script-panel h2,
+.playback-panel h2,
+.config-panel h2 {
+  font-size: 18px;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-black);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .editor-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  
+  .config-panel {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .editor-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .editor-header h1 {
+    font-size: 18px;
+  }
+}

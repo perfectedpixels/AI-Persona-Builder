@@ -1,0 +1,22 @@
+version: 1
+backend:
+  phases:
+    build:
+      commands:
+        - npm ci --legacy-peer-deps
+        - echo "Backend build complete"
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install --legacy-peer-deps
+        - cd client && npm install
+    build:
+      commands:
+        - mkdir -p client
+        - echo "REACT_APP_API_URL=$REACT_APP_API_URL" > client/.env.production
+        - npm run build
+  artifacts:
+    baseDirectory: client/build
+    files:
+      - '**/*'

@@ -1,0 +1,55 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+# Build outputs
+client/build/
+public/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Amplify
+amplify/
+.amplifyrc
+
+# Elastic Beanstalk
+.elasticbeanstalk/
+*.zip
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Audio files (generated)
+*.mp3
+*.wav
+!client/public/*.mp3
+!client/public/*.wav

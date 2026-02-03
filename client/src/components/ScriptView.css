@@ -1,0 +1,126 @@
+.script-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.script-header {
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-light-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.script-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: var(--color-dark-gray);
+}
+
+.empty-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: var(--spacing-2xl);
+  text-align: center;
+}
+
+.empty-state p {
+  color: var(--color-medium-gray);
+  font-size: 16px;
+}
+
+.lines-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding-right: var(--spacing-sm);
+}
+
+.line-item {
+  background: white;
+  border: 2px solid var(--color-light-gray);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-md);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.line-item:hover {
+  border-color: var(--color-medium-gray);
+}
+
+.line-item.selected {
+  border-color: var(--color-orange-primary);
+  background: rgba(255, 140, 66, 0.05);
+}
+
+.line-item.stale {
+  border-left: 4px solid var(--color-warning);
+}
+
+.line-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.line-speaker-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.line-speaker-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-black);
+}
+
+.stale-indicator {
+  color: var(--color-warning);
+  display: flex;
+  align-items: center;
+}
+
+.line-order {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--color-medium-gray);
+}
+
+.line-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-dark-gray);
+  margin-bottom: var(--spacing-sm);
+  min-height: 24px;
+}
+
+.line-text em {
+  color: var(--color-medium-gray);
+}
+
+.line-text-edit {
+  width: 100%;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+  resize: vertical;
+}
+
+.line-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  padding-top: var(--spacing-sm);
+  border-top: 1px solid var(--color-light-gray);
+}
+
+.line-actions .btn-icon {
+  padding: 6px;
+}
