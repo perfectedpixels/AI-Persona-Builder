@@ -4,6 +4,7 @@ import { createConversation, createSpeaker, markLineStale } from '../types/model
 import { PlusIcon } from './Icons';
 import ConversationPanel from './ConversationPanel';
 import ScriptPanel from './ScriptPanel';
+import API_URL from '../config';
 
 function ConversationEditor() {
   // Conversation state
@@ -62,7 +63,7 @@ function ConversationEditor() {
   const loadVoices = async () => {
     try {
       console.log('Loading voices from /api/voices...');
-      const response = await fetch('/api/voices');
+      const response = await fetch(`${API_URL}/api/voices`);
       
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
@@ -310,7 +311,7 @@ function ConversationEditor() {
     setUiState(prev => ({ ...prev, isGeneratingScript: true }));
 
     try {
-      const response = await fetch('/api/conversation/generate', {
+      const response = await fetch(`${API_URL}/api/conversation/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 

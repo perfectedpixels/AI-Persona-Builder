@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import './ScriptPanel.css';
 import { getEffectiveProsody, getEffectiveSpeed } from '../types/models';
 import { PlayIcon, PauseIcon, StopIcon, SpinnerIcon, DeleteIcon, ArrowUpIcon, ArrowDownIcon, WarningIcon, FileIcon } from './Icons';
+import API_URL from '../config';
 
 function ScriptPanel({ 
   lines, 
@@ -37,7 +38,7 @@ function ScriptPanel({
       speed
     });
 
-    const response = await fetch('/api/conversation/synthesize', {
+    const response = await fetch(`${API_URL}/api/conversation/synthesize`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

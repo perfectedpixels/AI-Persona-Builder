@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './VoiceConfigurator.css';
 import { MicrophoneIcon } from './Icons';
+import API_URL from '../config';
 
 function VoiceConfigurator({
   selectedLine,
@@ -97,7 +98,7 @@ function VoiceConfigurator({
         previewAudio.currentTime = 0;
       }
 
-      const response = await fetch('/api/conversation/synthesize', {
+      const response = await fetch(`${API_URL}/api/conversation/synthesize`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

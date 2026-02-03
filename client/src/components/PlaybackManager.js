@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import './PlaybackManager.css';
 import { getEffectiveProsody, getEffectiveSpeed } from '../types/models';
 import { PlayIcon, PauseIcon, StopIcon, SpinnerIcon } from './Icons';
+import API_URL from '../config';
 
 function PlaybackManager({ lines, speakers, playbackState, setPlaybackState, audioCache }) {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -15,7 +16,7 @@ function PlaybackManager({ lines, speakers, playbackState, setPlaybackState, aud
     const prosody = getEffectiveProsody(line, speaker);
     const speed = getEffectiveSpeed(line, speaker);
 
-    const response = await fetch('/api/conversation/synthesize', {
+    const response = await fetch(`${API_URL}/api/conversation/synthesize`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
