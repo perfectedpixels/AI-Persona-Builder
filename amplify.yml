@@ -13,7 +13,7 @@ frontend:
         - cd client && npm install
     build:
       commands:
-        - echo "REACT_APP_API_URL=$REACT_APP_API_URL" > client/.env.production
+        - cd client && echo "REACT_APP_API_URL=$REACT_APP_API_URL" > .env.production
         - cd client && npm run build
   artifacts:
     baseDirectory: client/build
