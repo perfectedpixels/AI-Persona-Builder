@@ -1,0 +1,9 @@
+# Don't include client files in backend deployment
+client/
+.git/
+.gitignore
+*.md
+.DS_Store
+amplify-*.json
+BUGFIXES.md
+DEPLOYMENT_SUCCESS.md

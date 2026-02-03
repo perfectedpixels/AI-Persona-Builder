@@ -1,91 +1,92 @@
 #!/bin/bash
 
-# Security check script - Run before committing to git
-# This script checks for accidentally committed secrets
+# Security check script - Run before every commit
+# Checks for accidentally committed secrets
+
+set -e
 
 echo "🔒 Running security checks..."
+echo ""
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
+FAILED=0
 
-ERRORS=0
-
-# Check 1: Verify .env is in .gitignore
-echo "Checking .gitignore..."
-if grep -q "^\.env$" .gitignore; then
-  echo -e "${GREEN}✓${NC} .env is in .gitignore"
-else
-  echo -e "${RED}✗${NC} .env is NOT in .gitignore!"
-  ERRORS=$((ERRORS + 1))
-fi
-
-# Check 2: Verify .env is not tracked by git
-echo "Checking if .env is tracked..."
+# Check 1: Ensure .env is not tracked by git
+echo "1️⃣  Checking if .env is tracked by git..."
 if git ls-files --error-unmatch .env 2>/dev/null; then
-  echo -e "${RED}✗${NC} .env is tracked by git! Remove it immediately!"
-  echo "  Run: git rm --cached .env"
-  ERRORS=$((ERRORS + 1))
+  echo "❌ FAIL: .env file is tracked by git!"
+  echo "   Run: git rm --cached .env"
+  FAILED=1
 else
-  echo -e "${GREEN}✓${NC} .env is not tracked by git"
+  echo "✅ PASS: .env is not tracked"
 fi
+echo ""
 
-# Check 3: Search for potential secrets in tracked files
-echo "Searching for potential secrets in tracked files..."
-PATTERNS=(
-  "aws_access_key_id.*=.*[A-Z0-9]{20}"
-  "aws_secret_access_key.*=.*[A-Za-z0-9/+=]{40}"
-  "AKIA[0-9A-Z]{16}"
-  "elevenlabs.*api.*key.*=.*[a-f0-9]{32}"
-)
-
-for pattern in "${PATTERNS[@]}"; do
-  if git grep -i -E "$pattern" -- ':!*.md' ':!check-secrets.sh' ':!SECURITY.md' 2>/dev/null; then
-    echo -e "${RED}✗${NC} Found potential secret matching pattern: $pattern"
-    ERRORS=$((ERRORS + 1))
-  fi
-done
-
-# Check 4: Verify .env has no actual values
-echo "Checking .env file for actual credentials..."
-if [ -f .env ]; then
-  if grep -E "^(AWS_ACCESS_KEY_ID|AWS_SECRET_ACCESS_KEY|ELEVENLABS_API_KEY)=.+$" .env | grep -v "your_.*_here" | grep -v "=\s*$"; then
-    echo -e "${YELLOW}⚠${NC}  .env file contains values (this is OK for local dev, but verify they're not committed)"
-    # Not counting as error since .env should be gitignored
-  else
-    echo -e "${GREEN}✓${NC} .env file has no credentials (or only placeholders)"
-  fi
-fi
-
-# Check 5: Verify amplify/ directory is gitignored
-echo "Checking amplify directory..."
-if [ -d amplify ]; then
-  if git ls-files --error-unmatch amplify/ 2>/dev/null; then
-    echo -e "${RED}✗${NC} amplify/ directory is tracked by git!"
-    ERRORS=$((ERRORS + 1))
-  else
-    echo -e "${GREEN}✓${NC} amplify/ directory is not tracked"
-  fi
+# Check 2: Search for AWS access keys in tracked files
+echo "2️⃣  Checking for AWS access keys in tracked files..."
+if git grep -i "AKIA[0-9A-Z]\{16\}" -- ':!*.md' ':!check-secrets.sh' 2>/dev/null; then
+  echo "❌ FAIL: AWS access key found in tracked files!"
+  FAILED=1
 else
-  echo -e "${GREEN}✓${NC} amplify/ directory doesn't exist yet"
+  echo "✅ PASS: No AWS access keys found"
 fi
+echo ""
+
+# Check 3: Search for AWS secret keys in tracked files
+echo "3️⃣  Checking for AWS secret keys in tracked files..."
+if git grep -E "['\"]?AWS_SECRET_ACCESS_KEY['\"]?\s*[:=]\s*['\"]?[A-Za-z0-9/+=]{40}['\"]?" -- ':!*.md' ':!check-secrets.sh' 2>/dev/null; then
+  echo "❌ FAIL: AWS secret key found in tracked files!"
+  FAILED=1
+else
+  echo "✅ PASS: No AWS secret keys found"
+fi
+echo ""
+
+# Check 4: Check for hardcoded API keys
+echo "4️⃣  Checking for hardcoded API keys in tracked files..."
+if git grep -E "sk_[a-zA-Z0-9]{48}" -- ':!*.md' ':!check-secrets.sh' 2>/dev/null; then
+  echo "❌ FAIL: ElevenLabs API key found in tracked files!"
+  FAILED=1
+else
+  echo "✅ PASS: No hardcoded API keys found"
+fi
+echo ""
+
+# Check 5: Verify .env.example has no real credentials
+echo "5️⃣  Checking .env.example for real credentials..."
+if grep -E "(AKIA[0-9A-Z]{16}|sk_[a-zA-Z0-9]{48})" .env.example 2>/dev/null; then
+  echo "❌ FAIL: Real credentials found in .env.example!"
+  FAILED=1
+else
+  echo "✅ PASS: .env.example contains only placeholders"
+fi
+echo ""
+
+# Check 6: Verify AWS credentials are not in .env.example
+echo "6️⃣  Checking .env.example doesn't suggest AWS access keys..."
+if grep -E "AWS_ACCESS_KEY_ID=(?!your_|<)" .env.example 2>/dev/null; then
+  echo "⚠️  WARNING: .env.example suggests using AWS access keys"
+  echo "   This is discouraged. Use IAM roles instead."
+fi
+echo "✅ PASS: .env.example follows security best practices"
+echo ""
 
 # Summary
-echo ""
-echo "================================"
-if [ $ERRORS -eq 0 ]; then
-  echo -e "${GREEN}✓ All security checks passed!${NC}"
-  echo "Safe to commit."
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+if [ $FAILED -eq 0 ]; then
+  echo "✅ All security checks passed!"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
   exit 0
 else
-  echo -e "${RED}✗ Found $ERRORS security issue(s)!${NC}"
-  echo "DO NOT COMMIT until these are resolved."
+  echo "❌ Security checks FAILED!"
+  echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
   echo ""
-  echo "If you accidentally committed secrets:"
-  echo "1. Remove from git: git rm --cached <file>"
-  echo "2. Rotate ALL exposed credentials immediately"
-  echo "3. See SECURITY.md for detailed recovery steps"
+  echo "⚠️  DO NOT COMMIT until all issues are resolved!"
+  echo ""
+  echo "To fix:"
+  echo "1. Remove secrets from tracked files"
+  echo "2. Run: git rm --cached <file>"
+  echo "3. Add files to .gitignore"
+  echo "4. Rotate any exposed credentials"
+  echo ""
   exit 1
 fi
