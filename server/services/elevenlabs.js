@@ -27,12 +27,15 @@ async function synthesizeSpeech({ text, voiceId, prosody, speed = 1.0, modelId }
     throw new Error('Text and voiceId are required');
   }
 
+  // Clamp speed to valid range (0.7 - 1.2 for most models)
+  const clampedSpeed = Math.max(0.7, Math.min(1.2, speed ?? 1.0));
+
   const voiceSettings = {
     stability: prosody?.stability ?? 0.75,
     similarity_boost: prosody?.similarity_boost ?? 0.75,
     style: prosody?.style ?? 0.5,
     use_speaker_boost: prosody?.use_speaker_boost ?? true,
-    speed: speed ?? 1.0
+    speed: clampedSpeed
   };
 
   console.log('Synthesizing speech with settings:', {

@@ -276,14 +276,14 @@ function VoiceConfigurator({
           </label>
           <input
             type="range"
-            min="0.5"
-            max="2.0"
-            step="0.1"
+            min="0.7"
+            max="1.2"
+            step="0.05"
             value={currentSpeed}
             onChange={(e) => handleSpeedChange(parseFloat(e.target.value))}
             className="slider"
           />
-          <div className="slider-hint">0.5x (slow) to 2.0x (fast)</div>
+          <div className="slider-hint">0.7x (slow) to 1.2x (fast)</div>
         </div>
       </div>
 
