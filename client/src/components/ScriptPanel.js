@@ -231,6 +231,65 @@ function ScriptPanel({
     URL.revokeObjectURL(url);
   };
 
+  const handleExportAudio = async () => {
+    // Check if all audio is generated
+    const staleLines = lines.filter(line => line.audioState.isStale || !line.audioState.audioUrl);
+    if (staleLines.length > 0) {
+      alert('Please generate all audio first using "Generate All Audio" button');
+      return;
+    }
+
+    try {
+      // Fetch all audio blobs
+      const sortedLines = lines.sort((a, b) => a.order - b.order);
+      const audioBlobs = [];
+      
+      for (const line of sortedLines) {
+        const response = await fetch(line.audioState.audioUrl);
+        const blob = await response.blob();
+        audioBlobs.push(blob);
+      }
+
+      // Concatenate all audio blobs
+      const combinedBlob = new Blob(audioBlobs, { type: 'audio/mpeg' });
+      
+      // Try to use File System Access API (Chrome/Edge only)
+      if ('showSaveFilePicker' in window) {
+        try {
+          const handle = await window.showSaveFilePicker({
+            suggestedName: `${conversationName.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_audio.mp3`,
+            types: [{
+              description: 'Audio Files',
+              accept: { 'audio/mpeg': ['.mp3'] }
+            }]
+          });
+          
+          const writable = await handle.createWritable();
+          await writable.write(combinedBlob);
+          await writable.close();
+          return;
+        } catch (error) {
+          if (error.name !== 'AbortError') {
+            console.error('Save file error:', error);
+          }
+        }
+      }
+      
+      // Fallback: Create blob and download
+      const url = URL.createObjectURL(combinedBlob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `${conversationName.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_audio.mp3`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error exporting audio:', error);
+      alert('Failed to export audio. Please try again.');
+    }
+  };
+
   const staleCount = lines.filter(line => line.audioState.isStale).length;
 
   const currentLine = playbackState.currentLineIndex >= 0 
@@ -321,6 +380,16 @@ function ScriptPanel({
           >
             <FileIcon size={16} />
             <span>Export Transcript</span>
+          </button>
+          
+          <button
+            className="btn-export-audio"
+            onClick={handleExportAudio}
+            disabled={lines.length === 0 || staleCount > 0}
+            title={staleCount > 0 ? 'Generate all audio first' : 'Export combined audio file'}
+          >
+            <FileIcon size={16} />
+            <span>Export Audio</span>
           </button>
           
           {isGenerating && !isGeneratingAll && (

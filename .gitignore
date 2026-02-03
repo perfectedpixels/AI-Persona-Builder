@@ -11,7 +11,7 @@ server/node_modules/
 
 # Build outputs
 client/build/
-public/
+/public/
 dist/
 
 # Logs

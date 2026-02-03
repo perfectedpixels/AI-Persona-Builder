@@ -141,7 +141,8 @@
   animation: spin 1s linear infinite;
 }
 
-.btn-export-transcript {
+.btn-export-transcript,
+.btn-export-audio {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -157,13 +158,15 @@
   white-space: nowrap;
 }
 
-.btn-export-transcript:hover:not(:disabled) {
+.btn-export-transcript:hover:not(:disabled),
+.btn-export-audio:hover:not(:disabled) {
   background: var(--color-background);
   border-color: var(--color-medium-gray);
   transform: translateY(-1px);
 }
 
-.btn-export-transcript:disabled {
+.btn-export-transcript:disabled,
+.btn-export-audio:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   transform: none;
