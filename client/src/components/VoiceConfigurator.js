@@ -109,11 +109,17 @@ function VoiceConfigurator({
         })
       });
 
+      console.log('Preview response status:', response.status);
+      console.log('Preview response headers:', Object.fromEntries(response.headers.entries()));
+
       if (!response.ok) {
-        throw new Error('Failed to generate voice preview');
+        const errorText = await response.text();
+        console.error('Preview error response:', errorText);
+        throw new Error(`Failed to generate voice preview: ${response.status} ${errorText}`);
       }
 
       const blob = await response.blob();
+      console.log('Preview blob size:', blob.size, 'type:', blob.type);
       const audioUrl = URL.createObjectURL(blob);
       const audio = new Audio(audioUrl);
       
