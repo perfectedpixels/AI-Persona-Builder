@@ -332,7 +332,7 @@ function ConversationEditor() {
       const { speakers: generatedSpeakers, lines: generatedLines } = await response.json();
 
       // Merge generated speakers with existing speaker configurations
-      // Match by name to preserve voice settings
+      // Match by name to preserve voice settings and IDs
       const speakersWithVoices = generatedSpeakers.map((genSpeaker) => {
         // Find existing speaker with same name
         const existingSpeaker = conversation.speakers.find(
@@ -340,13 +340,11 @@ function ConversationEditor() {
         );
         
         if (existingSpeaker) {
-          // Preserve existing speaker's voice configuration
+          // Preserve existing speaker's ID and voice configuration
           return {
-            ...genSpeaker,
-            voiceId: existingSpeaker.voiceId,
-            defaultProsody: existingSpeaker.defaultProsody,
-            defaultSpeed: existingSpeaker.defaultSpeed,
-            color: existingSpeaker.color
+            ...existingSpeaker, // Keep all existing speaker data
+            name: genSpeaker.name, // Update name in case of capitalization changes
+            context: genSpeaker.context || existingSpeaker.context // Update context if provided
           };
         } else {
           // New speaker - assign default voice
