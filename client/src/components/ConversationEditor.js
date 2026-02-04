@@ -395,7 +395,30 @@ function ConversationEditor() {
           throw new Error('Invalid conversation file format');
         }
         
-        setConversation(data);
+        console.log('Loading conversation:', data);
+        console.log('Speakers:', data.speakers.length);
+        console.log('Lines:', data.lines.length);
+        console.log('Context:', data.context);
+        
+        // Ensure all required fields are present
+        const loadedConversation = {
+          id: data.id || Date.now().toString(),
+          name: data.name || 'Imported Conversation',
+          context: data.context || '',
+          speakers: data.speakers || [],
+          lines: data.lines || [],
+          metadata: data.metadata || { created: Date.now(), modified: Date.now() }
+        };
+        
+        setConversation(loadedConversation);
+        
+        // Clear any selected items
+        setUiState(prev => ({
+          ...prev,
+          selectedLineId: null,
+          selectedSpeakerId: null
+        }));
+        
         alert('Conversation loaded successfully!');
       } catch (error) {
         console.error('Failed to load conversation:', error);

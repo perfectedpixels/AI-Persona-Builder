@@ -119,30 +119,27 @@ function VoiceConfigurator({
       }
 
       // Check if response is base64 encoded (from Lambda/API Gateway)
-      const contentType = response.headers.get('content-type');
-      let audioBlob;
+      const arrayBuffer = await response.arrayBuffer();
+      const uint8Array = new Uint8Array(arrayBuffer);
       
-      if (contentType === 'audio/mpeg') {
-        // Try to get as blob first
-        const blob = await response.blob();
-        
-        // Check if it's actually base64 text
-        const text = await blob.text();
-        if (text.match(/^[A-Za-z0-9+/=]+$/)) {
-          // It's base64, decode it
-          console.log('Decoding base64 audio response');
-          const binaryString = atob(text);
-          const bytes = new Uint8Array(binaryString.length);
-          for (let i = 0; i < binaryString.length; i++) {
-            bytes[i] = binaryString.charCodeAt(i);
-          }
-          audioBlob = new Blob([bytes], { type: 'audio/mpeg' });
-        } else {
-          // It's already binary
-          audioBlob = blob;
+      // Check if it's base64 by looking at the first few bytes
+      // Base64 text will be ASCII characters, binary MP3 will start with ID3 or 0xFF
+      const isBase64 = uint8Array[0] !== 0xFF && uint8Array[0] !== 0x49; // Not 0xFF (MP3) or 'I' (ID3)
+      
+      let audioBlob;
+      if (isBase64) {
+        // Decode base64
+        console.log('Decoding base64 audio response');
+        const text = new TextDecoder().decode(uint8Array);
+        const binaryString = atob(text);
+        const bytes = new Uint8Array(binaryString.length);
+        for (let i = 0; i < binaryString.length; i++) {
+          bytes[i] = binaryString.charCodeAt(i);
         }
+        audioBlob = new Blob([bytes], { type: 'audio/mpeg' });
       } else {
-        audioBlob = await response.blob();
+        // Already binary
+        audioBlob = new Blob([uint8Array], { type: 'audio/mpeg' });
       }
 
       console.log('Preview blob size:', audioBlob.size, 'type:', audioBlob.type);

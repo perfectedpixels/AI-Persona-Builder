@@ -32,27 +32,26 @@ function PlaybackManager({ lines, speakers, playbackState, setPlaybackState, aud
     }
 
     // Handle base64 encoded response from Lambda/API Gateway
-    const contentType = response.headers.get('content-type');
-    let audioBlob;
+    const arrayBuffer = await response.arrayBuffer();
+    const uint8Array = new Uint8Array(arrayBuffer);
     
-    if (contentType === 'audio/mpeg') {
-      const blob = await response.blob();
-      const text = await blob.text();
-      
-      // Check if it's base64 encoded
-      if (text.match(/^[A-Za-z0-9+/=]+$/)) {
-        // Decode base64
-        const binaryString = atob(text);
-        const bytes = new Uint8Array(binaryString.length);
-        for (let i = 0; i < binaryString.length; i++) {
-          bytes[i] = binaryString.charCodeAt(i);
-        }
-        audioBlob = new Blob([bytes], { type: 'audio/mpeg' });
-      } else {
-        audioBlob = blob;
+    // Check if it's base64 by looking at the first few bytes
+    // Base64 text will be ASCII characters, binary MP3 will start with ID3 or 0xFF
+    const isBase64 = uint8Array[0] !== 0xFF && uint8Array[0] !== 0x49; // Not 0xFF (MP3) or 'I' (ID3)
+    
+    let audioBlob;
+    if (isBase64) {
+      // Decode base64
+      const text = new TextDecoder().decode(uint8Array);
+      const binaryString = atob(text);
+      const bytes = new Uint8Array(binaryString.length);
+      for (let i = 0; i < binaryString.length; i++) {
+        bytes[i] = binaryString.charCodeAt(i);
       }
+      audioBlob = new Blob([bytes], { type: 'audio/mpeg' });
     } else {
-      audioBlob = await response.blob();
+      // Already binary
+      audioBlob = new Blob([uint8Array], { type: 'audio/mpeg' });
     }
 
     return URL.createObjectURL(audioBlob);
