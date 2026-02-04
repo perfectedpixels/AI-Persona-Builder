@@ -12,15 +12,22 @@ async function generateConversationScript(scenario, options = {}, speakers = [])
 
   // Map length to line counts or use custom turns
   let lengthDescription;
+  let minTurns, maxTurns;
+  
   if (length === 'custom' && turns) {
-    lengthDescription = `exactly ${turns} turns (${turns} lines total)`;
+    lengthDescription = `exactly ${turns} turns`;
+    minTurns = turns;
+    maxTurns = turns;
   } else {
     const lengthMap = {
-      short: '5-8 lines (5-8 turns)',
-      medium: '10-15 lines (10-15 turns)',
-      long: '20-30 lines (20-30 turns)'
+      short: { min: 5, max: 8, desc: '5-8 turns' },
+      medium: { min: 10, max: 15, desc: '10-15 turns' },
+      long: { min: 20, max: 30, desc: '20-30 turns' }
     };
-    lengthDescription = lengthMap[length] || lengthMap.medium;
+    const config = lengthMap[length] || lengthMap.medium;
+    lengthDescription = config.desc;
+    minTurns = config.min;
+    maxTurns = config.max;
   }
 
   // Build speaker context information
@@ -63,13 +70,15 @@ Scenario: ${scenario}
 
 Requirements:
 - Number of speakers: ${numSpeakers}
-- Conversation length: ${lengthDescription}
+- Conversation length: ${lengthDescription} (IMPORTANT: Generate at least ${minTurns} turns and no more than ${maxTurns} turns)
 - Format: Each line as "Speaker Name: dialogue text"
 - Make it natural and engaging
 - ABSOLUTELY NO stage directions, actions, or emotional cues in asterisks or parentheses
 - ONLY the exact words that would be spoken out loud${speakerContextInfo}
 
-Generate the conversation script now. Remember: NO *actions*, NO (descriptions), ONLY spoken words:`;
+Generate the conversation script now. Remember: 
+- Generate between ${minTurns} and ${maxTurns} turns total
+- NO *actions*, NO (descriptions), ONLY spoken words:`;
 
 
   const modelId = process.env.BEDROCK_MODEL_ID || 'us.anthropic.claude-3-haiku-20240307-v1:0';
