@@ -9,8 +9,8 @@ Successfully deployed Conversation Maker with **zero-credential architecture** u
 ## What Was Fixed
 
 ### Security Incident Response
-1. ✅ **Deleted exposed AWS access key**: `AKIA2YLBW7AEHBITDC7Y`
-2. ✅ **Generated new AWS credentials**: `AKIA2YLBW7AEF7DA7CWQ` (for CLI only)
+1. ✅ **Deleted exposed AWS access key**: `AKIA2YLBW7AE********` (redacted)
+2. ✅ **Generated new AWS credentials** (for CLI only, not stored in code)
 3. ✅ **Removed AWS credentials from all code and configs**
 4. ✅ **Implemented IAM role-based deployment**
 

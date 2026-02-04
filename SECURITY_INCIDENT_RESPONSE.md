@@ -2,7 +2,7 @@
 
 ## Incident Summary
 **Date**: 2026-02-03  
-**Issue**: AWS Access Key `AKIA2YLBW7AEHBITDC7Y` exposed in Amplify environment variables  
+**Issue**: AWS Access Key exposed in Amplify environment variables  
 **Detection**: AWS ACAT automated security scanning  
 **Status**: Key disabled by AWS Epoxy Mitigations  
 
@@ -15,7 +15,7 @@ aws iam list-access-keys --user-name <your-iam-username>
 
 # Delete the exposed key (even though it's disabled)
 aws iam delete-access-key \
-  --access-key-id AKIA2YLBW7AEHBITDC7Y \
+  --access-key-id <EXPOSED_KEY_ID> \
   --user-name <your-iam-username>
 ```
 

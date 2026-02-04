@@ -62,7 +62,7 @@ aws iam list-access-keys --user-name <your-iam-username>
 
 # Delete the exposed key
 aws iam delete-access-key \
-  --access-key-id AKIA2YLBW7AEHBITDC7Y \
+  --access-key-id <EXPOSED_KEY_ID> \
   --user-name <your-iam-username>
 ```
 
