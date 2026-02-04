@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './ConversationEditor.css';
-import { createConversation, createSpeaker, markLineStale } from '../types/models';
+import { createConversation, createSpeaker, markLineStale, generateSpeakerColor } from '../types/models';
 import { PlusIcon } from './Icons';
 import ConversationPanel from './ConversationPanel';
 import ScriptPanel from './ScriptPanel';
@@ -14,6 +14,22 @@ function ConversationEditor() {
     if (saved) {
       try {
         const parsed = JSON.parse(saved);
+        
+        // Migrate old speaker data to new format
+        if (parsed.speakers) {
+          parsed.speakers = parsed.speakers.map(speaker => ({
+            ...speaker,
+            voiceId: speaker.voiceId || null,
+            defaultProsody: speaker.defaultProsody || {
+              stability: 0.75,
+              similarity_boost: 0.75,
+              style: 0.5,
+              use_speaker_boost: true
+            },
+            defaultSpeed: speaker.defaultSpeed ?? 1.0,
+            color: speaker.color || generateSpeakerColor()
+          }));
+        }
         
         // Validate that all line speakerIds reference existing speakers
         const speakerIds = new Set(parsed.speakers?.map(s => s.id) || []);
