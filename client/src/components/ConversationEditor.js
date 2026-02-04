@@ -333,6 +333,8 @@ function ConversationEditor() {
 
       // Merge generated speakers with existing speaker configurations
       // Match by name to preserve voice settings and IDs
+      const speakerIdMap = new Map(); // Maps generated ID to existing ID
+      
       const speakersWithVoices = generatedSpeakers.map((genSpeaker) => {
         // Find existing speaker with same name
         const existingSpeaker = conversation.speakers.find(
@@ -340,6 +342,9 @@ function ConversationEditor() {
         );
         
         if (existingSpeaker) {
+          // Map generated speaker ID to existing speaker ID
+          speakerIdMap.set(genSpeaker.id, existingSpeaker.id);
+          
           // Preserve existing speaker's ID and voice configuration
           return {
             ...existingSpeaker, // Keep all existing speaker data
@@ -347,7 +352,7 @@ function ConversationEditor() {
             context: genSpeaker.context || existingSpeaker.context // Update context if provided
           };
         } else {
-          // New speaker - assign default voice
+          // New speaker - keep generated ID and assign default voice
           const speakerIndex = generatedSpeakers.indexOf(genSpeaker);
           return {
             ...genSpeaker,
@@ -356,11 +361,17 @@ function ConversationEditor() {
         }
       });
 
+      // Update line speakerIds to match existing speaker IDs
+      const linesWithCorrectSpeakerIds = generatedLines.map(line => ({
+        ...line,
+        speakerId: speakerIdMap.get(line.speakerId) || line.speakerId
+      }));
+
       // Update conversation with generated content
       setConversation(prev => ({
         ...prev,
         speakers: speakersWithVoices,
-        lines: generatedLines,
+        lines: linesWithCorrectSpeakerIds,
         metadata: { ...prev.metadata, modified: Date.now() }
       }));
 
