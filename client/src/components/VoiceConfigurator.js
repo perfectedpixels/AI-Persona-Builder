@@ -118,9 +118,35 @@ function VoiceConfigurator({
         throw new Error(`Failed to generate voice preview: ${response.status} ${errorText}`);
       }
 
-      const blob = await response.blob();
-      console.log('Preview blob size:', blob.size, 'type:', blob.type);
-      const audioUrl = URL.createObjectURL(blob);
+      // Check if response is base64 encoded (from Lambda/API Gateway)
+      const contentType = response.headers.get('content-type');
+      let audioBlob;
+      
+      if (contentType === 'audio/mpeg') {
+        // Try to get as blob first
+        const blob = await response.blob();
+        
+        // Check if it's actually base64 text
+        const text = await blob.text();
+        if (text.match(/^[A-Za-z0-9+/=]+$/)) {
+          // It's base64, decode it
+          console.log('Decoding base64 audio response');
+          const binaryString = atob(text);
+          const bytes = new Uint8Array(binaryString.length);
+          for (let i = 0; i < binaryString.length; i++) {
+            bytes[i] = binaryString.charCodeAt(i);
+          }
+          audioBlob = new Blob([bytes], { type: 'audio/mpeg' });
+        } else {
+          // It's already binary
+          audioBlob = blob;
+        }
+      } else {
+        audioBlob = await response.blob();
+      }
+
+      console.log('Preview blob size:', audioBlob.size, 'type:', audioBlob.type);
+      const audioUrl = URL.createObjectURL(audioBlob);
       const audio = new Audio(audioUrl);
       
       setPreviewAudio(audio);

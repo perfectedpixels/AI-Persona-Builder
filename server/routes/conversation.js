@@ -32,7 +32,7 @@ router.post('/synthesize', async (req, res, next) => {
       modelId
     });
 
-    // Return audio
+    // Return audio with proper headers for binary response
     res.set({
       'Content-Type': 'audio/mpeg',
       'Content-Length': audioBuffer.length,
