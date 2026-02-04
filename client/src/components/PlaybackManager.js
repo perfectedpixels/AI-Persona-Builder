@@ -31,7 +31,30 @@ function PlaybackManager({ lines, speakers, playbackState, setPlaybackState, aud
       throw new Error('Failed to generate audio');
     }
 
-    const audioBlob = await response.blob();
+    // Handle base64 encoded response from Lambda/API Gateway
+    const contentType = response.headers.get('content-type');
+    let audioBlob;
+    
+    if (contentType === 'audio/mpeg') {
+      const blob = await response.blob();
+      const text = await blob.text();
+      
+      // Check if it's base64 encoded
+      if (text.match(/^[A-Za-z0-9+/=]+$/)) {
+        // Decode base64
+        const binaryString = atob(text);
+        const bytes = new Uint8Array(binaryString.length);
+        for (let i = 0; i < binaryString.length; i++) {
+          bytes[i] = binaryString.charCodeAt(i);
+        }
+        audioBlob = new Blob([bytes], { type: 'audio/mpeg' });
+      } else {
+        audioBlob = blob;
+      }
+    } else {
+      audioBlob = await response.blob();
+    }
+
     return URL.createObjectURL(audioBlob);
   };
 
