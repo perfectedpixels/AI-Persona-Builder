@@ -150,6 +150,7 @@ export function createConversation(overrides = {}) {
   return {
     id: uuidv4(),
     name: 'New Conversation',
+    context: '', // Conversation scenario/context
     speakers: [],
     lines: [],
     metadata: {

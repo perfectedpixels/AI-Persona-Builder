@@ -481,6 +481,14 @@ function ConversationEditor() {
     }));
   }, []);
 
+  const handleConversationContextChange = useCallback((newContext) => {
+    setConversation(prev => ({
+      ...prev,
+      context: newContext,
+      metadata: { ...prev.metadata, modified: Date.now() }
+    }));
+  }, []);
+
   const handleExportScript = useCallback(async () => {
     // Export full conversation as JSON
     const conversationData = {
@@ -546,9 +554,11 @@ function ConversationEditor() {
       <div className="editor-layout">
         <ConversationPanel
           conversationName={conversation.name}
+          conversationContext={conversation.context}
           speakers={conversation.speakers}
           lines={conversation.lines}
           onConversationNameChange={handleConversationNameChange}
+          onConversationContextChange={handleConversationContextChange}
           onSpeakerAdd={handleSpeakerAdd}
           onSpeakerDelete={handleSpeakerDelete}
           onSpeakerSelect={handleSpeakerSelect}

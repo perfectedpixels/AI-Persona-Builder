@@ -5,9 +5,11 @@ import VoiceConfigModal from './VoiceConfigModal';
 
 function ConversationPanel({
   conversationName,
+  conversationContext,
   speakers,
   lines,
   onConversationNameChange,
+  onConversationContextChange,
   onSpeakerAdd,
   onSpeakerDelete,
   onSpeakerSelect,
@@ -34,7 +36,6 @@ function ConversationPanel({
   const [isCreatingNewSpeaker, setIsCreatingNewSpeaker] = useState(false);
   
   // Script generation options
-  const [scenario, setScenario] = useState('');
   const [length, setLength] = useState('medium');
   const [customTurns, setCustomTurns] = useState(10);
 
@@ -84,12 +85,12 @@ function ConversationPanel({
   };
 
   const handleGenerateScript = () => {
-    if (scenario.trim()) {
+    if (conversationContext.trim()) {
       const options = { 
         length,
         turns: length === 'custom' ? customTurns : undefined
       };
-      onGenerateScript(scenario.trim(), options);
+      onGenerateScript(conversationContext.trim(), options);
     }
   };
 
@@ -127,8 +128,8 @@ function ConversationPanel({
           <textarea
             className="scenario-input"
             placeholder="Describe your conversation scenario..."
-            value={scenario}
-            onChange={(e) => setScenario(e.target.value)}
+            value={conversationContext}
+            onChange={(e) => onConversationContextChange(e.target.value)}
             rows={3}
             disabled={isGeneratingScript}
           />
@@ -216,7 +217,7 @@ function ConversationPanel({
         <button 
           className="btn-primary btn-full" 
           onClick={handleGenerateScript}
-          disabled={!scenario.trim() || isGeneratingScript}
+          disabled={!conversationContext.trim() || isGeneratingScript}
         >
           <PlusIcon size={16} />
           {isGeneratingScript ? 'Generating...' : 'Generate Script'}
