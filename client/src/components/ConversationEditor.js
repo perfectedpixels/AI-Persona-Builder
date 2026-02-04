@@ -13,9 +13,22 @@ function ConversationEditor() {
     const saved = localStorage.getItem('conversation-tool-state');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        
+        // Validate that all line speakerIds reference existing speakers
+        const speakerIds = new Set(parsed.speakers?.map(s => s.id) || []);
+        const hasOrphanedLines = parsed.lines?.some(line => !speakerIds.has(line.speakerId));
+        
+        if (hasOrphanedLines) {
+          console.warn('Detected orphaned lines with invalid speaker references. Clearing corrupted data.');
+          localStorage.removeItem('conversation-tool-state');
+          // Fall through to create new conversation
+        } else {
+          return parsed;
+        }
       } catch (error) {
         console.error('Failed to parse saved conversation:', error);
+        localStorage.removeItem('conversation-tool-state');
       }
     }
     
