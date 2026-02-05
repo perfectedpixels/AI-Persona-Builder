@@ -363,8 +363,10 @@ function ConversationEditor() {
       // Merge generated speakers with existing speaker configurations
       // Match by name to preserve voice settings and IDs
       const speakerIdMap = new Map(); // Maps generated ID to existing ID
+      const processedSpeakerNames = new Set(); // Track which existing speakers were updated
       
-      const speakersWithVoices = generatedSpeakers.map((genSpeaker) => {
+      // First, update existing speakers that appear in the generated script
+      const updatedSpeakers = generatedSpeakers.map((genSpeaker) => {
         // Find existing speaker with same name
         const existingSpeaker = conversation.speakers.find(
           s => s.name.toLowerCase() === genSpeaker.name.toLowerCase()
@@ -373,6 +375,7 @@ function ConversationEditor() {
         if (existingSpeaker) {
           // Map generated speaker ID to existing speaker ID
           speakerIdMap.set(genSpeaker.id, existingSpeaker.id);
+          processedSpeakerNames.add(existingSpeaker.name.toLowerCase());
           
           // Preserve existing speaker's ID and voice configuration
           return {
@@ -383,12 +386,21 @@ function ConversationEditor() {
         } else {
           // New speaker - keep generated ID and assign default voice
           const speakerIndex = generatedSpeakers.indexOf(genSpeaker);
+          processedSpeakerNames.add(genSpeaker.name.toLowerCase());
           return {
             ...genSpeaker,
             voiceId: availableVoices[speakerIndex % availableVoices.length]?.id || genSpeaker.voiceId
           };
         }
       });
+      
+      // Preserve existing speakers that weren't in the generated script
+      const preservedSpeakers = conversation.speakers.filter(
+        s => !processedSpeakerNames.has(s.name.toLowerCase())
+      );
+      
+      // Combine: updated/new speakers first, then preserved speakers
+      const speakersWithVoices = [...updatedSpeakers, ...preservedSpeakers];
 
       // Update line speakerIds to match existing speaker IDs
       const linesWithCorrectSpeakerIds = generatedLines.map(line => ({
