@@ -7,12 +7,37 @@ const { v4: uuidv4 } = require('uuid');
  * Parse generated script into speakers and lines
  */
 function parseGeneratedScript(scriptText) {
-  const lines = scriptText.split('\n').filter(line => line.trim());
   const speakers = new Map();
   const parsedLines = [];
   
   // Speaker colors for UI
   const colors = ['#FF8C42', '#4CC9F0', '#C77DFF', '#2D5016', '#F44336', '#4CAF50'];
+  
+  // First, try to split by newlines
+  let lines = scriptText.split('\n').filter(line => line.trim());
+  
+  // If we only got one line, the AI might have put everything in a paragraph
+  // Try to split by speaker labels (e.g., "Patient: " or "Scheduler: ")
+  if (lines.length === 1) {
+    const singleLine = lines[0];
+    // Split on pattern: "SpeakerName: " (with space after colon)
+    // Use a regex that captures the speaker name and keeps it with the dialogue
+    const segments = singleLine.split(/(?=\b[A-Z][a-zA-Z\s]*:\s)/);
+    lines = segments.filter(seg => seg.trim());
+  }
+  
+  // Track the last speaker for lines without labels
+  let lastSpeaker = null;
+  let firstSpeakerName = null;
+  
+  // First pass: identify the first speaker name that appears
+  for (const line of lines) {
+    const match = line.match(/^([^:]+):\s*(.+)$/);
+    if (match) {
+      firstSpeakerName = match[1].trim();
+      break;
+    }
+  }
   
   lines.forEach((line, index) => {
     // Match format: "Speaker Name: dialogue text"
@@ -40,10 +65,63 @@ function parseGeneratedScript(scriptText) {
       }
       
       const speaker = speakers.get(cleanSpeakerName);
+      lastSpeaker = speaker;
+      
       parsedLines.push({
         id: uuidv4(),
         speakerId: speaker.id,
         text: text.trim(),
+        order: parsedLines.length,
+        prosodyOverride: null,
+        speedOverride: null,
+        audioState: {
+          isStale: true,
+          audioUrl: null,
+          duration: null
+        }
+      });
+    } else if (line.trim() && index === 0 && firstSpeakerName) {
+      // First line without speaker label - attribute to the first speaker we found
+      // This handles cases where AI starts with dialogue before adding speaker labels
+      if (!speakers.has(firstSpeakerName)) {
+        const speakerId = uuidv4();
+        speakers.set(firstSpeakerName, {
+          id: speakerId,
+          name: firstSpeakerName,
+          voiceId: '',
+          defaultProsody: {
+            stability: 0.75,
+            similarity_boost: 0.80,
+            style: 0.50,
+            use_speaker_boost: true
+          },
+          defaultSpeed: 1.0,
+          color: colors[0]
+        });
+      }
+      
+      const speaker = speakers.get(firstSpeakerName);
+      lastSpeaker = speaker;
+      
+      parsedLines.push({
+        id: uuidv4(),
+        speakerId: speaker.id,
+        text: line.trim(),
+        order: parsedLines.length,
+        prosodyOverride: null,
+        speedOverride: null,
+        audioState: {
+          isStale: true,
+          audioUrl: null,
+          duration: null
+        }
+      });
+    } else if (line.trim() && lastSpeaker) {
+      // Line without speaker label - attribute to last speaker
+      parsedLines.push({
+        id: uuidv4(),
+        speakerId: lastSpeaker.id,
+        text: line.trim(),
         order: parsedLines.length,
         prosodyOverride: null,
         speedOverride: null,

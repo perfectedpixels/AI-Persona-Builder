@@ -12,15 +12,22 @@ async function generateConversationScript(scenario, options = {}, speakers = [])
 
   // Map length to line counts or use custom turns
   let lengthDescription;
+  let minTurns, maxTurns;
+  
   if (length === 'custom' && turns) {
-    lengthDescription = `exactly ${turns} turns (${turns} lines total)`;
+    lengthDescription = `exactly ${turns} turns`;
+    minTurns = turns;
+    maxTurns = turns;
   } else {
     const lengthMap = {
-      short: '5-8 lines (5-8 turns)',
-      medium: '10-15 lines (10-15 turns)',
-      long: '20-30 lines (20-30 turns)'
+      short: { min: 5, max: 8, desc: '5-8 turns' },
+      medium: { min: 10, max: 15, desc: '10-15 turns' },
+      long: { min: 20, max: 30, desc: '20-30 turns' }
     };
-    lengthDescription = lengthMap[length] || lengthMap.medium;
+    const config = lengthMap[length] || lengthMap.medium;
+    lengthDescription = config.desc;
+    minTurns = config.min;
+    maxTurns = config.max;
   }
 
   // Build speaker context information
@@ -42,11 +49,20 @@ CRITICAL RULES:
 - Format each line as: "Speaker Name: dialogue text"
 - Use clear, descriptive speaker names (e.g., "Host", "Guest", "Interviewer", "Expert", "Customer", "Agent")
 - Make the dialogue natural and conversational with appropriate context and transitions
-- DO NOT include any stage directions, actions, or emotional cues in asterisks (e.g., *curiously*, *thoughtfully*, *laughs*)
-- DO NOT include any parenthetical descriptions or actions
-- ONLY include the spoken dialogue text after the speaker name
-- If speaker character descriptions are provided, ensure each speaker's dialogue matches their personality and role through word choice and phrasing, not stage directions
-- A "turn" means one line of dialogue from one speaker`;
+- A "turn" means one line of dialogue from one speaker
+
+ABSOLUTELY FORBIDDEN - DO NOT INCLUDE:
+- Stage directions in asterisks: *chuckles*, *nods*, *thoughtfully*, *laughs*, *smiles*, etc.
+- Parenthetical actions: (laughs), (pauses), (sighs), etc.
+- Emotional cues or descriptions of how something is said
+- Any non-spoken text whatsoever
+
+ONLY OUTPUT:
+- The speaker's name followed by a colon
+- The exact words they would speak out loud
+- Nothing else
+
+If you want to convey emotion or tone, do it through word choice, sentence structure, and the actual dialogue itself, NOT through stage directions.`;
 
   const userMessage = `Generate a conversation script based on this scenario:
 
@@ -54,13 +70,15 @@ Scenario: ${scenario}
 
 Requirements:
 - Number of speakers: ${numSpeakers}
-- Conversation length: ${lengthDescription}
+- Conversation length: ${lengthDescription} (IMPORTANT: Generate at least ${minTurns} turns and no more than ${maxTurns} turns)
 - Format: Each line as "Speaker Name: dialogue text"
 - Make it natural and engaging
-- NO stage directions or actions in asterisks
-- ONLY spoken dialogue${speakerContextInfo}
+- ABSOLUTELY NO stage directions, actions, or emotional cues in asterisks or parentheses
+- ONLY the exact words that would be spoken out loud${speakerContextInfo}
 
-Generate the conversation script now:`;
+Generate the conversation script now. Remember: 
+- Generate between ${minTurns} and ${maxTurns} turns total
+- NO *actions*, NO (descriptions), ONLY spoken words:`;
 
 
   const modelId = process.env.BEDROCK_MODEL_ID || 'us.anthropic.claude-3-haiku-20240307-v1:0';
@@ -87,7 +105,25 @@ Generate the conversation script now:`;
   try {
     const response = await client.send(command);
     const responseBody = JSON.parse(new TextDecoder().decode(response.body));
-    return responseBody.content[0].text;
+    let scriptText = responseBody.content[0].text;
+    
+    // Post-process to remove any stage directions that slipped through
+    // Remove content in asterisks: *chuckles*, *nods thoughtfully*, etc.
+    scriptText = scriptText.replace(/\*[^*]+\*/g, '');
+    
+    // Remove content in parentheses at the start or middle of lines: (laughs), (pauses), etc.
+    scriptText = scriptText.replace(/\([^)]+\)/g, '');
+    
+    // Clean up any double spaces or trailing spaces
+    scriptText = scriptText.replace(/\s+/g, ' ').replace(/\s+$/gm, '');
+    
+    // Clean up any lines that became empty or just whitespace
+    scriptText = scriptText.split('\n')
+      .map(line => line.trim())
+      .filter(line => line.length > 0)
+      .join('\n');
+    
+    return scriptText;
   } catch (error) {
     console.error('Bedrock invocation error:', error);
     throw new Error(`Failed to generate script: ${error.message}`);
