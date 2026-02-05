@@ -1,7 +1,7 @@
 # Conversation Maker - Current Status
 
-**Last Updated**: February 3, 2026  
-**Version**: 1.1.0  
+**Last Updated**: February 4, 2026  
+**Version**: 1.1.1  
 **Status**: ✅ Production Ready
 
 ## Live Application
@@ -14,33 +14,41 @@
 
 ### Issues Resolved
 
-1. **Voice Preview Failure** ✅
+1. **Speakers Deleted After Script Generation** ✅ (Feb 4, 2026)
+   - **Problem**: Second speaker deleted when generating script, conversation became monologue
+   - **Root Cause**: Only speakers in generated script were preserved, unused speakers were lost
+   - **Solution**: Modified speaker merge logic to preserve all existing speakers
+   - **Files**: `ConversationEditor.js`
+   - **Deployment**: Job #28 (Amplify auto-deploy)
+
+2. **Voice Preview Failure** ✅
    - **Problem**: Lambda returns base64-encoded audio, browser couldn't play it
    - **Solution**: Added base64 detection and decoding in frontend
    - **Files**: `VoiceConfigurator.js`, `PlaybackManager.js`
 
-2. **Audio Playback Not Working** ✅
+3. **Audio Playback Not Working** ✅
    - **Problem**: Same base64 encoding issue affecting conversation playback
    - **Solution**: Applied same decoding logic to PlaybackManager
    - **Files**: `PlaybackManager.js`
 
-3. **Conversation Context Not Saved** ✅
+4. **Conversation Context Not Saved** ✅
    - **Problem**: Scenario field stored in local state, not conversation object
    - **Solution**: Added `context` field to conversation model, connected to state
    - **Files**: `ConversationEditor.js`, `ConversationPanel.js`, `models.js`
 
-4. **Speaker Configuration Lost After Generation** ✅
+5. **Speaker Configuration Lost After Generation** ✅
    - **Problem**: Backend generated new speaker IDs, frontend lost voice settings
    - **Solution**: Map generated IDs to existing IDs, preserve all configurations
    - **Files**: `ConversationEditor.js`
 
-5. **Orphaned Speaker References** ✅
+6. **Orphaned Speaker References** ✅
    - **Problem**: Lines referencing non-existent speakers after generation
    - **Solution**: Added validation on load, clear corrupted data automatically
    - **Files**: `ConversationEditor.js`
 
 ### Deployments Completed
 
+- **Job 28**: Fixed speaker preservation during script generation (Feb 4, 2026)
 - **Job 19**: Fixed speaker ID mapping
 - **Job 20**: Added orphaned line validation
 - **Job 21**: Fixed conversation context persistence
