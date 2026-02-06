@@ -45,21 +45,30 @@ async function generateConversationScript(scenario, options = {}, speakers = [])
 
   const systemPrompt = `You are a conversation script writer. Generate natural, engaging dialogue based on user scenarios.
 
-CRITICAL RULES:
-- Format each line as: "Speaker Name: dialogue text"
+CRITICAL FORMATTING RULES:
+- Each line of dialogue MUST be on its own line
+- Format: "Speaker Name: dialogue text"
+- Put a line break after each speaker's dialogue
 - Use clear, descriptive speaker names (e.g., "Host", "Guest", "Interviewer", "Expert", "Customer", "Agent")
 - Make the dialogue natural and conversational with appropriate context and transitions
 - A "turn" means one line of dialogue from one speaker
+
+EXAMPLE FORMAT:
+Host: Welcome to the show!
+Guest: Thanks for having me.
+Host: Let's dive right in.
 
 ABSOLUTELY FORBIDDEN - DO NOT INCLUDE:
 - Stage directions in asterisks: *chuckles*, *nods*, *thoughtfully*, *laughs*, *smiles*, etc.
 - Parenthetical actions: (laughs), (pauses), (sighs), etc.
 - Emotional cues or descriptions of how something is said
 - Any non-spoken text whatsoever
+- Multiple speakers in one line
 
 ONLY OUTPUT:
 - The speaker's name followed by a colon
 - The exact words they would speak out loud
+- Each line on a separate line
 - Nothing else
 
 If you want to convey emotion or tone, do it through word choice, sentence structure, and the actual dialogue itself, NOT through stage directions.`;
@@ -71,14 +80,20 @@ Scenario: ${scenario}
 Requirements:
 - Number of speakers: ${numSpeakers}
 - Conversation length: ${lengthDescription} (IMPORTANT: Generate at least ${minTurns} turns and no more than ${maxTurns} turns)
-- Format: Each line as "Speaker Name: dialogue text"
+- Format: Each line as "Speaker Name: dialogue text" ON A SEPARATE LINE
 - Make it natural and engaging
 - ABSOLUTELY NO stage directions, actions, or emotional cues in asterisks or parentheses
-- ONLY the exact words that would be spoken out loud${speakerContextInfo}
+- ONLY the exact words that would be spoken out loud
+- PUT EACH SPEAKER'S LINE ON ITS OWN LINE${speakerContextInfo}
 
 Generate the conversation script now. Remember: 
 - Generate between ${minTurns} and ${maxTurns} turns total
-- NO *actions*, NO (descriptions), ONLY spoken words:`;
+- Each speaker's dialogue on a NEW LINE
+- NO *actions*, NO (descriptions), ONLY spoken words
+- Format example:
+Speaker1: Hello there.
+Speaker2: Hi, how are you?
+Speaker1: I'm doing well, thanks.`;
 
 
   const modelId = process.env.BEDROCK_MODEL_ID || 'us.anthropic.claude-3-haiku-20240307-v1:0';

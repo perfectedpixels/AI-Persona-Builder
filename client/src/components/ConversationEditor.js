@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import './ConversationEditor.css';
-import { createConversation, createSpeaker, markLineStale, generateSpeakerColor } from '../types/models';
+import { createConversation, createSpeaker, createLine, markLineStale, generateSpeakerColor } from '../types/models';
 import { PlusIcon } from './Icons';
 import ConversationPanel from './ConversationPanel';
 import ScriptPanel from './ScriptPanel';
@@ -189,6 +189,27 @@ function ConversationEditor() {
   const handleLineSelect = useCallback((lineId) => {
     setUiState(prev => ({ ...prev, selectedLineId: lineId }));
   }, []);
+
+  const handleLineAdd = useCallback((speakerId, text = '') => {
+    const maxOrder = conversation.lines.length > 0
+      ? Math.max(...conversation.lines.map(l => l.order))
+      : -1;
+    
+    const newLine = createLine({
+      speakerId,
+      text,
+      order: maxOrder + 1
+    });
+    
+    setConversation(prev => ({
+      ...prev,
+      lines: [...prev.lines, newLine],
+      metadata: { ...prev.metadata, modified: Date.now() }
+    }));
+    
+    // Select the new line
+    setUiState(prev => ({ ...prev, selectedLineId: newLine.id }));
+  }, [conversation.lines]);
 
   // ============================================================================
   // Speaker Management
@@ -612,6 +633,7 @@ function ConversationEditor() {
           lines={conversation.lines}
           speakers={conversation.speakers}
           selectedLineId={uiState.selectedLineId}
+          onLineAdd={handleLineAdd}
           onLineEdit={handleLineEdit}
           onLineDelete={handleLineDelete}
           onLineReorder={handleLineReorder}

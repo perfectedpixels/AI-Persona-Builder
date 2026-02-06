@@ -8,6 +8,7 @@ function ScriptPanel({
   lines, 
   speakers, 
   selectedLineId,
+  onLineAdd,
   onLineEdit,
   onLineDelete,
   onLineReorder,
@@ -531,6 +532,29 @@ function ScriptPanel({
                   </div>
                 );
               })}
+          </div>
+        )}
+        
+        {/* Add Line Section */}
+        {speakers.length > 0 && (
+          <div className="add-line-section">
+            <div className="add-line-label">Add line for:</div>
+            <div className="add-line-buttons">
+              {speakers.map(speaker => (
+                <button
+                  key={speaker.id}
+                  className="btn-add-line"
+                  onClick={() => onLineAdd(speaker.id, '')}
+                  title={`Add line for ${speaker.name}`}
+                >
+                  <div 
+                    className="speaker-color-dot"
+                    style={{ backgroundColor: speaker.color }}
+                  />
+                  <span>{speaker.name}</span>
+                </button>
+              ))}
+            </div>
           </div>
         )}
       </div>
