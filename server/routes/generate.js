@@ -160,8 +160,8 @@ router.post('/', async (req, res) => {
       return res.status(400).json({ error: 'Number of speakers must be between 2 and 10' });
     }
 
-    if (!['short', 'medium', 'long'].includes(length)) {
-      return res.status(400).json({ error: 'Length must be short, medium, or long' });
+    if (!['short', 'medium', 'long', 'custom'].includes(length)) {
+      return res.status(400).json({ error: 'Length must be short, medium, long, or custom' });
     }
 
     // Generate script using Bedrock with speaker contexts
