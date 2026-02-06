@@ -265,32 +265,69 @@ function ScriptPanel({
     }
 
     try {
-      // Fetch all audio blobs
       const sortedLines = lines.sort((a, b) => a.order - b.order);
-      const audioBlobs = [];
       
+      // Create audio context
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const sampleRate = audioContext.sampleRate;
+      
+      // Fetch and decode all audio
+      const audioBuffers = [];
       for (const line of sortedLines) {
         const response = await fetch(line.audioState.audioUrl);
-        const blob = await response.blob();
-        audioBlobs.push(blob);
+        const arrayBuffer = await response.arrayBuffer();
+        const audioBuffer = await audioContext.decodeAudioData(arrayBuffer);
+        audioBuffers.push(audioBuffer);
       }
-
-      // Concatenate all audio blobs
-      const combinedBlob = new Blob(audioBlobs, { type: 'audio/mpeg' });
+      
+      // Calculate total length (audio + 1 second padding between clips)
+      const paddingDuration = 1.0; // 1 second
+      const totalDuration = audioBuffers.reduce((sum, buffer) => sum + buffer.duration, 0) 
+                          + (paddingDuration * (audioBuffers.length - 1));
+      
+      // Create combined buffer
+      const numberOfChannels = audioBuffers[0].numberOfChannels;
+      const combinedBuffer = audioContext.createBuffer(
+        numberOfChannels,
+        Math.ceil(totalDuration * sampleRate),
+        sampleRate
+      );
+      
+      // Copy audio data with padding
+      let offset = 0;
+      for (let i = 0; i < audioBuffers.length; i++) {
+        const buffer = audioBuffers[i];
+        
+        for (let channel = 0; channel < numberOfChannels; channel++) {
+          const sourceData = buffer.getChannelData(channel);
+          const destData = combinedBuffer.getChannelData(channel);
+          destData.set(sourceData, offset);
+        }
+        
+        offset += buffer.length;
+        
+        // Add padding (silence) between clips, but not after the last one
+        if (i < audioBuffers.length - 1) {
+          offset += Math.ceil(paddingDuration * sampleRate);
+        }
+      }
+      
+      // Convert to WAV (since we can't easily encode to MP3 in browser)
+      const wavBlob = await audioBufferToWav(combinedBuffer);
       
       // Try to use File System Access API (Chrome/Edge only)
       if ('showSaveFilePicker' in window) {
         try {
           const handle = await window.showSaveFilePicker({
-            suggestedName: `${conversationName.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_audio.mp3`,
+            suggestedName: `${conversationName.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_audio.wav`,
             types: [{
               description: 'Audio Files',
-              accept: { 'audio/mpeg': ['.mp3'] }
+              accept: { 'audio/wav': ['.wav'] }
             }]
           });
           
           const writable = await handle.createWritable();
-          await writable.write(combinedBlob);
+          await writable.write(wavBlob);
           await writable.close();
           return;
         } catch (error) {
@@ -301,18 +338,76 @@ function ScriptPanel({
       }
       
       // Fallback: Create blob and download
-      const url = URL.createObjectURL(combinedBlob);
+      const url = URL.createObjectURL(wavBlob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = `${conversationName.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_audio.mp3`;
+      link.download = `${conversationName.replace(/[^a-z0-9]/gi, '_').toLowerCase()}_audio.wav`;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(url);
+      
+      // Close audio context
+      audioContext.close();
     } catch (error) {
       console.error('Error exporting audio:', error);
       alert('Failed to export audio. Please try again.');
     }
+  };
+
+  // Helper function to convert AudioBuffer to WAV
+  const audioBufferToWav = (buffer) => {
+    const numberOfChannels = buffer.numberOfChannels;
+    const sampleRate = buffer.sampleRate;
+    const format = 1; // PCM
+    const bitDepth = 16;
+    
+    const bytesPerSample = bitDepth / 8;
+    const blockAlign = numberOfChannels * bytesPerSample;
+    
+    const data = [];
+    for (let i = 0; i < buffer.length; i++) {
+      for (let channel = 0; channel < numberOfChannels; channel++) {
+        const sample = buffer.getChannelData(channel)[i];
+        const int16 = Math.max(-1, Math.min(1, sample)) * 0x7FFF;
+        data.push(int16);
+      }
+    }
+    
+    const dataLength = data.length * bytesPerSample;
+    const bufferLength = 44 + dataLength;
+    const arrayBuffer = new ArrayBuffer(bufferLength);
+    const view = new DataView(arrayBuffer);
+    
+    // WAV header
+    const writeString = (offset, string) => {
+      for (let i = 0; i < string.length; i++) {
+        view.setUint8(offset + i, string.charCodeAt(i));
+      }
+    };
+    
+    writeString(0, 'RIFF');
+    view.setUint32(4, bufferLength - 8, true);
+    writeString(8, 'WAVE');
+    writeString(12, 'fmt ');
+    view.setUint32(16, 16, true); // fmt chunk size
+    view.setUint16(20, format, true);
+    view.setUint16(22, numberOfChannels, true);
+    view.setUint32(24, sampleRate, true);
+    view.setUint32(28, sampleRate * blockAlign, true);
+    view.setUint16(32, blockAlign, true);
+    view.setUint16(34, bitDepth, true);
+    writeString(36, 'data');
+    view.setUint32(40, dataLength, true);
+    
+    // Write audio data
+    let offset = 44;
+    for (let i = 0; i < data.length; i++) {
+      view.setInt16(offset, data[i], true);
+      offset += 2;
+    }
+    
+    return new Blob([arrayBuffer], { type: 'audio/wav' });
   };
 
   const staleCount = lines.filter(line => line.audioState.isStale).length;
