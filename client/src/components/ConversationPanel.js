@@ -243,7 +243,7 @@ function ConversationPanel({
         <VoiceConfigModal
           key={currentModalSpeaker.id}
           speaker={currentModalSpeaker}
-          selectedLine={selectedLine}
+          selectedLine={null}
           availableVoices={availableVoices}
           voicesLoading={voicesLoading}
           onClose={handleCloseVoiceModal}

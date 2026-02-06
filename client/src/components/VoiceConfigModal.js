@@ -22,11 +22,12 @@ function VoiceConfigModal({
 }) {
   const [editedName, setEditedName] = useState(speaker.name);
   const [editedContext, setEditedContext] = useState(speaker.context || '');
+  const [editedSpeaker, setEditedSpeaker] = useState(speaker);
 
   const handleSave = () => {
     if (editedName.trim()) {
       if (isCreatingNew) {
-        onSaveNew({ ...speaker, name: editedName.trim(), context: editedContext.trim() });
+        onSaveNew({ ...editedSpeaker, name: editedName.trim(), context: editedContext.trim() });
       } else {
         onSpeakerEdit(speaker.id, editedName.trim());
         if (editedContext !== speaker.context) {
@@ -44,6 +45,36 @@ function VoiceConfigModal({
     }
   };
 
+  // Wrapper functions for new speaker creation
+  const handleVoiceChange = (speakerId, voiceId) => {
+    if (isCreatingNew) {
+      setEditedSpeaker(prev => ({ ...prev, voiceId }));
+    } else {
+      onSpeakerVoiceChange(speakerId, voiceId);
+    }
+  };
+
+  const handleProsodyChange = (speakerId, prosodyChanges) => {
+    if (isCreatingNew) {
+      setEditedSpeaker(prev => ({
+        ...prev,
+        defaultProsody: { ...prev.defaultProsody, ...prosodyChanges }
+      }));
+    } else {
+      onSpeakerProsodyChange(speakerId, prosodyChanges);
+    }
+  };
+
+  const handleSpeedChange = (speakerId, speed) => {
+    if (isCreatingNew) {
+      setEditedSpeaker(prev => ({ ...prev, defaultSpeed: speed }));
+    } else {
+      onSpeakerSpeedChange(speakerId, speed);
+    }
+  };
+
+  const currentSpeaker = isCreatingNew ? editedSpeaker : speaker;
+
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -59,7 +90,7 @@ function VoiceConfigModal({
           <div className="speaker-name-section">
             <div 
               className="speaker-color-dot" 
-              style={{ backgroundColor: speaker.color }}
+              style={{ backgroundColor: currentSpeaker.color }}
             />
             <input
               type="text"
@@ -88,13 +119,13 @@ function VoiceConfigModal({
           
           {/* Voice Configuration */}
           <VoiceConfigurator
-            selectedLine={selectedLine}
-            selectedSpeaker={speaker}
+            selectedLine={null}
+            selectedSpeaker={currentSpeaker}
             availableVoices={availableVoices}
             voicesLoading={voicesLoading}
-            onSpeakerVoiceChange={onSpeakerVoiceChange}
-            onSpeakerProsodyChange={onSpeakerProsodyChange}
-            onSpeakerSpeedChange={onSpeakerSpeedChange}
+            onSpeakerVoiceChange={handleVoiceChange}
+            onSpeakerProsodyChange={handleProsodyChange}
+            onSpeakerSpeedChange={handleSpeedChange}
             onLineProsodyOverride={onLineProsodyOverride}
             onLineSpeedOverride={onLineSpeedOverride}
           />
