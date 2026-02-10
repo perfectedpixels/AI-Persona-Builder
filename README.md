@@ -1,6 +1,6 @@
-# ElevenLabs Conversation Maker
+# Conversation Maker
 
-A web application for creating, editing, and playing multi-speaker conversations using ElevenLabs text-to-speech voices with AI-powered script generation.
+AI-powered conversation script generator with voice synthesis. Create multi-speaker dialogues with custom voices, generate scripts using AI, and produce professional audio conversations.
 
 ## Live Application
 
@@ -8,79 +8,83 @@ A web application for creating, editing, and playing multi-speaker conversations
 
 ## Features
 
-- **Multi-Speaker Conversations**: Create dialogues with 2+ speakers, each with unique voice configurations
-- **AI Script Generation**: Generate natural conversation scripts using AWS Bedrock (Claude 3 Haiku)
-- **Voice Customization**: Fine-tune prosody (stability, similarity, style) and speed per speaker or per line
-- **Sequential Playback**: Play conversations with natural timing and speaker transitions
-- **Conversation Management**: Save/load conversations with full state preservation (scenario, speakers, lines, voice settings)
-- **Voice Preview**: Test voice configurations before applying to conversations
-- **Persistent State**: Automatic localStorage backup prevents data loss on refresh
+### Script Creation & Editing
+- **AI Script Generation**: Generate natural conversations using AWS Bedrock (Claude 3 Haiku)
+- **Custom Length Control**: Short (5-8 turns), Medium (10-15), Long (20-30), or Custom turn count
+- **Manual Editing**: Add, edit, delete, and reorder individual lines
+- **Import Transcripts**: Import existing scripts from text files (flexible format support)
+- **Multi-Speaker Support**: 2-10 speakers with unique personalities and contexts
+
+### Voice Synthesis & Customization
+- **26 Professional Voices**: ElevenLabs voice library with diverse options
+- **Per-Speaker Configuration**: Assign unique voices to each speaker
+- **Prosody Controls**: Fine-tune stability, similarity boost, style, and speaker boost
+- **Speed Adjustment**: 0.7x - 1.2x speed control per speaker or per line
+- **Per-Line Overrides**: Override voice settings for individual lines
+- **Voice Preview**: Test voice configurations before applying
+
+### Audio Production
+- **Sequential Playback**: Play conversations with natural timing and visual timeline
+- **Batch Generation**: Generate audio for all lines at once
+- **Export Audio**: Combined audio file with 1-second padding between clips (WAV format)
+- **Export Transcript**: Plain text transcript export
+
+### Data Management
+- **Save/Load Conversations**: Full conversation export/import (JSON format)
+- **Persistent State**: Automatic localStorage backup prevents data loss
+- **Speaker Preservation**: Voice configurations maintained across script regeneration
 
 ## Tech Stack
 
-- **Frontend**: React 18 with functional components and hooks
-- **Backend**: Node.js with Express (deployed as AWS Lambda via serverless-http)
-- **AI**: AWS Bedrock (Claude 3 Haiku) for script generation
-- **Voice Synthesis**: ElevenLabs API (26 voices with prosody controls)
-- **Deployment**: 
-  - Frontend: AWS Amplify (auto-deploy from CodeCommit)
-  - Backend: AWS Lambda + API Gateway
-  - IAM: Zero-credential architecture (Lambda execution role)
+### Frontend
+- React 18 with functional components and hooks
+- Deployed via AWS Amplify (auto-deploy from CodeCommit)
+- Web Audio API for audio processing
 
-## Architecture
+### Backend
+- Node.js + Express
+- Deployed as AWS Lambda (serverless)
+- API Gateway for HTTP endpoints
 
-### Zero-Credential Security Model
-- Lambda function uses IAM execution role for AWS service access
-- No AWS credentials stored in code or environment variables
-- ElevenLabs API key stored in Lambda environment variables only
-- Frontend communicates with Lambda via API Gateway
+### AI & Voice Services
+- **AWS Bedrock** (Claude 3 Haiku) - Script generation
+- **ElevenLabs API** - Text-to-speech synthesis and voice library
 
-### Data Flow
-1. User creates/edits conversation in React frontend
-2. Frontend stores state in localStorage for persistence
-3. Script generation requests sent to Lambda via API Gateway
-4. Lambda uses Bedrock for AI generation, ElevenLabs for voice synthesis
-5. Audio returned as base64-encoded MP3 (decoded in frontend)
+### Security
+- Zero-credential architecture (Lambda IAM execution role)
+- No AWS credentials in code or environment variables
+- ElevenLabs API key stored in Lambda environment only
 
-## Setup
+## Quick Start
 
 ### Prerequisites
 
 - Node.js 18+
-- AWS Account with:
-  - Bedrock access (Claude 3 Haiku model)
-  - Lambda execution permissions
-  - API Gateway access
+- AWS Account with Bedrock access
 - ElevenLabs API key
 
 ### Local Development
 
-1. Clone the repository:
+1. **Clone the repository**:
 ```bash
-git clone <your-codecommit-repo-url>
-cd conversation-tool
+git clone https://git-codecommit.us-east-1.amazonaws.com/v1/repos/conversation-maker
+cd conversation-maker
 ```
 
-2. Install dependencies:
+2. **Install dependencies**:
 ```bash
 npm install
-cd client && npm install
-cd ../server && npm install
+cd client && npm install && cd ..
+cd server && npm install && cd ..
 ```
 
-3. Configure environment variables:
+3. **Configure environment**:
 ```bash
-# Server .env (for local development only)
 cp .env.example .env
-# Add your ElevenLabs API key and AWS credentials
+# Add your ElevenLabs API key to .env
 ```
 
-4. **SECURITY CHECK** - Before committing:
-```bash
-./check-secrets.sh
-```
-
-5. Start development servers:
+4. **Start development servers**:
 ```bash
 # Terminal 1 - Backend
 cd server && npm start
@@ -89,90 +93,58 @@ cd server && npm start
 cd client && npm start
 ```
 
-The app will be available at:
-- Frontend: http://localhost:3000
-- Backend: http://localhost:3001
-
-## Security
-
-⚠️ **NEVER commit your `.env` file or any files containing API keys!**
-
-Before committing to git:
-```bash
-npm run check-secrets
-```
-
-See [SECURITY.md](SECURITY.md) for detailed security guidelines.
+Frontend: http://localhost:3000  
+Backend: http://localhost:3001
 
 ## Deployment
 
-### Current Production Setup
-
-**Frontend (AWS Amplify)**
-- App ID: `d2b3efwoc19bjt`
-- URL: https://d2b3efwoc19bjt.amplifyapp.com
-- Auto-deploys from CodeCommit `main` branch
-- Environment variables configured in Amplify Console
-
-**Backend (AWS Lambda)**
-- Function: `conversation-maker-api`
-- Runtime: Node.js 18.x
-- Memory: 512MB, Timeout: 30s
-- API Gateway: https://ic8yikinc1.execute-api.us-east-1.amazonaws.com/prod
-- IAM Role: `ConversationMakerLambdaRole` (Bedrock + CloudWatch permissions)
-
-### Deployment Process
-
-#### Frontend Deployment
+### Frontend (AWS Amplify)
+Automatically deploys when you push to the `main` branch:
 ```bash
-# Commit and push to CodeCommit
 git add -A
 git commit -m "Your changes"
 git push origin main
-
-# Amplify auto-deploys (check status in AWS Console)
 ```
 
-#### Backend Deployment
+### Backend (AWS Lambda)
+Deploy code updates without changing environment variables:
 ```bash
-# Package and deploy Lambda
-./deploy-lambda.sh
-
-# Or manually:
-cd lambda-package
-zip -r ../conversation-maker-lambda.zip .
-aws lambda update-function-code \
-  --function-name conversation-maker-api \
-  --zip-file fileb://../conversation-maker-lambda.zip
+./deploy-lambda-code-only.sh
 ```
 
-### Environment Variables
-
-**Lambda Environment Variables:**
-- `ELEVENLABS_API_KEY` - ElevenLabs API key (only place credentials are stored)
-
-**Amplify Environment Variables:**
-- `REACT_APP_API_URL` - Lambda API Gateway URL
-
-**Note**: AWS credentials are NOT stored anywhere - Lambda uses IAM execution role.
+For full deployment including environment variables:
+```bash
+export ELEVENLABS_API_KEY=your_key_here
+./deploy-lambda.sh
+```
 
 ## Project Structure
 
 ```
-conversation-tool/
-├── client/              # React frontend
+conversation-maker/
+├── client/                    # React frontend
 │   ├── public/
 │   └── src/
-│       ├── components/  # React components
-│       ├── types/       # TypeScript types
-│       └── utils/       # Utility functions
-├── server/              # Express backend
-│   ├── index.js         # Server entry point
-│   ├── routes/          # API routes
-│   ├── services/        # Business logic
-│   └── templates/       # Conversation templates
-├── amplify.yml          # Amplify build configuration
-└── package.json         # Root package configuration
+│       ├── components/        # React components
+│       │   ├── ConversationEditor.js    # Main app container
+│       │   ├── ConversationPanel.js     # Speaker & generation controls
+│       │   ├── ScriptPanel.js           # Script editing & playback
+│       │   ├── VoiceConfigModal.js      # Voice configuration UI
+│       │   └── ...
+│       ├── types/             # Data models
+│       └── config.js          # API configuration
+├── server/                    # Express backend
+│   ├── index.js              # Server entry point
+│   ├── routes/               # API routes
+│   │   └── generate.js       # Script generation endpoint
+│   └── services/             # Business logic
+│       ├── bedrock.js        # AWS Bedrock integration
+│       └── elevenlabs.js     # ElevenLabs API integration
+├── lambda-package/           # Lambda deployment package
+├── lambda.js                 # Lambda handler wrapper
+├── deploy-lambda-code-only.sh  # Quick Lambda deployment
+├── deploy-lambda.sh          # Full Lambda deployment
+└── amplify.yml               # Amplify build configuration
 ```
 
 ## API Endpoints
@@ -180,50 +152,124 @@ conversation-tool/
 ### Voice Management
 - `GET /api/voices` - List available ElevenLabs voices
 
-### Conversation Generation
+### Script Generation
 - `POST /api/conversation/generate` - Generate AI conversation script
-  - Body: `{ prompt, options: { length, turns }, speakers }`
-  - Returns: `{ speakers, lines }`
+  ```json
+  {
+    "prompt": "A podcast interview about AI",
+    "options": {
+      "length": "medium",  // or "short", "long", "custom"
+      "turns": 10          // required if length is "custom"
+    },
+    "speakers": [
+      { "name": "Host", "context": "Enthusiastic interviewer" },
+      { "name": "Guest", "context": "AI researcher" }
+    ]
+  }
+  ```
 
 ### Audio Synthesis
-- `POST /api/audio/synthesize` - Synthesize single line of dialogue
-  - Body: `{ text, voiceId, prosody, speed }`
-  - Returns: MP3 audio (base64-encoded in Lambda response)
+- `POST /api/conversation/synthesize` - Synthesize dialogue audio
+  ```json
+  {
+    "text": "Hello, welcome to the show!",
+    "voiceId": "21m00Tcm4TlvDq8ikWAM",
+    "prosody": {
+      "stability": 0.75,
+      "similarity_boost": 0.75,
+      "style": 0.5,
+      "use_speaker_boost": true
+    },
+    "speed": 1.0
+  }
+  ```
 
-- `POST /api/audio/preview` - Preview voice with sample text
-  - Body: `{ voiceId, prosody, speed }`
-  - Returns: MP3 audio (base64-encoded)
+## Import/Export Formats
 
-## Recent Fixes & Improvements
+### JSON Conversation Format
+Full conversation with all settings (speakers, voices, prosody, lines).  
+See [CONVERSATION_JSON_FORMAT.md](CONVERSATION_JSON_FORMAT.md) for detailed specification.
+
+### Text Transcript Format
+Simple text format for importing scripts. Supports multiple formats:
+
+**Format 1** (same line):
+```
+Speaker 1: Hello, how are you?
+Speaker 2: I'm doing great, thanks!
+```
+
+**Format 2** (next line with colon):
+```
+Speaker 1:
+Hello, how are you?
+Speaker 2:
+I'm doing great, thanks!
+```
+
+**Format 3** (next line without colon):
+```
+Speaker 1
+Hello, how are you?
+Speaker 2
+I'm doing great, thanks!
+```
+
+## Security
+
+⚠️ **NEVER commit `.env` files or API keys to git!**
+
+Before committing:
+```bash
+./check-secrets.sh
+```
+
+See [SECURITY.md](SECURITY.md) for detailed security guidelines.
+
+## Recent Updates
+
+### v1.2.0 (February 2026)
+- ✅ Added Import Transcript feature with flexible format support
+- ✅ Added manual line addition for any speaker
+- ✅ Added audio export with 1-second padding between clips
+- ✅ Fixed custom conversation length validation
+- ✅ Fixed voice selection for new speakers
+- ✅ Created code-only Lambda deployment script
 
 ### v1.1.0 (February 2026)
-- ✅ Fixed conversation context not persisting across sessions
-- ✅ Fixed speaker configuration lost after script generation
-- ✅ Fixed orphaned speaker references causing playback errors
+- ✅ Fixed speaker preservation during script generation
+- ✅ Fixed conversation context persistence
 - ✅ Fixed base64 audio decoding for Lambda responses
 - ✅ Added validation for corrupted conversation data
 - ✅ Implemented zero-credential security architecture
-- ✅ Migrated from Elastic Beanstalk to Lambda + API Gateway
-
-### Known Issues
-- None currently reported
 
 ## Troubleshooting
 
 ### Voice Preview Not Working
-- Check browser console for base64 decoding errors
+- Check browser console for errors
 - Verify API Gateway has `audio/mpeg` in binary media types
-- Ensure Lambda has sufficient timeout (30s recommended)
+- Ensure Lambda timeout is sufficient (30s recommended)
 
-### Speaker Configuration Lost
-- Clear localStorage and refresh if data corruption detected
-- Export conversations regularly as backup
-- Check that speaker IDs match between lines and speakers array
+### Custom Length Not Working
+- Ensure Lambda backend is deployed with latest code
+- Run `./deploy-lambda-code-only.sh` to update
 
 ### Audio Playback Issues
 - Verify ElevenLabs API key is valid in Lambda environment
-- Check CloudWatch logs for Lambda errors
-- Ensure voice IDs are valid (use `/api/voices` to verify)
+- Check CloudWatch logs: `/aws/lambda/conversation-maker-api`
+- Ensure voice IDs are valid (use `/api/voices` endpoint)
+
+## Documentation
+
+- [CONVERSATION_JSON_FORMAT.md](CONVERSATION_JSON_FORMAT.md) - JSON file format specification
+- [TEAM_ACCESS_MESSAGE.md](TEAM_ACCESS_MESSAGE.md) - Team access credentials
+- [SECURITY.md](SECURITY.md) - Security guidelines
+- [CHANGELOG.md](CHANGELOG.md) - Version history
+
+## Team Access
+
+Read-only repository access is available for team members.  
+See [TEAM_ACCESS_MESSAGE.md](TEAM_ACCESS_MESSAGE.md) for credentials and setup instructions.
 
 ## License
 
