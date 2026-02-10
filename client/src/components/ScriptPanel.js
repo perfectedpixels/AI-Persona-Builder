@@ -268,32 +268,65 @@ function ScriptPanel({
       
       try {
         const text = await file.text();
-        const textLines = text.split('\n').filter(line => line.trim());
+        const textLines = text.split('\n').map(line => line.trim());
         
         if (textLines.length === 0) {
           throw new Error('Empty transcript file');
         }
         
-        // Parse speaker lines (format: "Speaker Name: dialogue")
+        // Parse speaker lines - support multiple formats:
+        // 1. "Speaker: dialogue" (same line)
+        // 2. "Speaker:\n dialogue" (next line)
+        // 3. "Speaker\n dialogue" (next line, no colon)
         const parsedLines = [];
+        let currentSpeaker = null;
         
         for (let i = 0; i < textLines.length; i++) {
-          const line = textLines[i].trim();
+          const line = textLines[i];
           if (!line) continue;
           
+          // Check if this line has a colon (potential speaker label)
           const colonIndex = line.indexOf(':');
-          if (colonIndex === -1) continue;
           
-          const speakerName = line.substring(0, colonIndex).trim();
-          const dialogue = line.substring(colonIndex + 1).trim();
-          
-          if (!speakerName || !dialogue) continue;
-          
-          parsedLines.push({ speakerName, dialogue });
+          if (colonIndex !== -1) {
+            const beforeColon = line.substring(0, colonIndex).trim();
+            const afterColon = line.substring(colonIndex + 1).trim();
+            
+            // If there's text after the colon, it's format 1: "Speaker: dialogue"
+            if (afterColon) {
+              parsedLines.push({ 
+                speakerName: beforeColon, 
+                dialogue: afterColon 
+              });
+              currentSpeaker = beforeColon;
+            } 
+            // If nothing after colon, next line is the dialogue (format 2)
+            else {
+              currentSpeaker = beforeColon;
+            }
+          }
+          // No colon - could be dialogue for previous speaker or a speaker name
+          else {
+            // If we have a current speaker, this is their dialogue
+            if (currentSpeaker) {
+              parsedLines.push({ 
+                speakerName: currentSpeaker, 
+                dialogue: line 
+              });
+              currentSpeaker = null; // Reset after using
+            }
+            // Otherwise, treat as speaker name (format 3)
+            else {
+              currentSpeaker = line;
+            }
+          }
         }
         
         if (parsedLines.length === 0) {
-          throw new Error('No valid dialogue lines found. Format should be "Speaker: dialogue"');
+          throw new Error('No valid dialogue lines found. Supported formats:\n' +
+                         '1. "Speaker: dialogue"\n' +
+                         '2. "Speaker:\\n dialogue"\n' +
+                         '3. "Speaker\\n dialogue"');
         }
         
         // Pass to parent to handle the actual import
