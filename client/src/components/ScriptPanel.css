@@ -142,6 +142,7 @@
 }
 
 .btn-export-transcript,
+.btn-import-transcript,
 .btn-export-audio {
   display: flex;
   align-items: center;
@@ -159,6 +160,7 @@
 }
 
 .btn-export-transcript:hover:not(:disabled),
+.btn-import-transcript:hover:not(:disabled),
 .btn-export-audio:hover:not(:disabled) {
   background: var(--color-background);
   border-color: var(--color-medium-gray);
@@ -166,6 +168,7 @@
 }
 
 .btn-export-transcript:disabled,
+.btn-import-transcript:disabled,
 .btn-export-audio:disabled {
   opacity: 0.5;
   cursor: not-allowed;

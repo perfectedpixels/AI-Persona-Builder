@@ -211,6 +211,54 @@ function ConversationEditor() {
     setUiState(prev => ({ ...prev, selectedLineId: newLine.id }));
   }, [conversation.lines]);
 
+  const handleImportTranscript = useCallback((parsedLines) => {
+    // parsedLines is array of { speakerName, dialogue }
+    const speakerMap = new Map();
+    const newLines = [];
+    
+    // Map existing speakers by name
+    conversation.speakers.forEach(speaker => {
+      speakerMap.set(speaker.name, speaker);
+    });
+    
+    // Create new speakers as needed
+    const newSpeakers = [];
+    parsedLines.forEach(({ speakerName }) => {
+      if (!speakerMap.has(speakerName)) {
+        const speaker = createSpeaker({
+          name: speakerName,
+          voiceId: availableVoices[speakerMap.size % availableVoices.length]?.id || null
+        });
+        speakerMap.set(speakerName, speaker);
+        newSpeakers.push(speaker);
+      }
+    });
+    
+    // Get max order from existing lines
+    const maxOrder = conversation.lines.length > 0
+      ? Math.max(...conversation.lines.map(l => l.order))
+      : -1;
+    
+    // Create new lines
+    parsedLines.forEach(({ speakerName, dialogue }, index) => {
+      const speaker = speakerMap.get(speakerName);
+      const newLine = createLine({
+        speakerId: speaker.id,
+        text: dialogue,
+        order: maxOrder + 1 + index
+      });
+      newLines.push(newLine);
+    });
+    
+    // Update conversation
+    setConversation(prev => ({
+      ...prev,
+      speakers: [...prev.speakers, ...newSpeakers],
+      lines: [...prev.lines, ...newLines],
+      metadata: { ...prev.metadata, modified: Date.now() }
+    }));
+  }, [conversation.lines, conversation.speakers, availableVoices]);
+
   // ============================================================================
   // Speaker Management
   // ============================================================================
@@ -451,7 +499,7 @@ function ConversationEditor() {
   const handleImportScript = useCallback(() => {
     const input = document.createElement('input');
     input.type = 'file';
-    input.accept = '.json,.txt';
+    input.accept = '.json';
     
     input.onchange = async (e) => {
       const file = e.target.files[0];
@@ -459,121 +507,46 @@ function ConversationEditor() {
       
       try {
         const text = await file.text();
+        const data = JSON.parse(text);
         
-        // Check if it's JSON or text format
-        if (file.name.endsWith('.json')) {
-          // JSON format - full conversation import
-          const data = JSON.parse(text);
-          
-          // Validate the loaded data has required structure
-          if (!data.speakers || !data.lines) {
-            throw new Error('Invalid conversation file format');
-          }
-          
-          console.log('Loading conversation:', data);
-          console.log('Speakers:', data.speakers.length);
-          console.log('Lines:', data.lines.length);
-          console.log('Context:', data.context);
-          
-          // Ensure all required fields are present
-          const loadedConversation = {
-            id: data.id || Date.now().toString(),
-            name: data.name || 'Imported Conversation',
-            context: data.context || '',
-            speakers: data.speakers || [],
-            lines: data.lines || [],
-            metadata: data.metadata || { created: Date.now(), modified: Date.now() }
-          };
-          
-          setConversation(loadedConversation);
-          
-          // Clear any selected items
-          setUiState(prev => ({
-            ...prev,
-            selectedLineId: null,
-            selectedSpeakerId: null
-          }));
-          
-          alert('Conversation loaded successfully!');
-        } else {
-          // Text format - parse transcript
-          const lines = text.split('\n').filter(line => line.trim());
-          
-          if (lines.length === 0) {
-            throw new Error('Empty transcript file');
-          }
-          
-          // First line is the conversation name
-          const conversationName = lines[0].trim();
-          
-          // Parse speaker lines (format: "Speaker Name: dialogue")
-          const speakerMap = new Map();
-          const parsedLines = [];
-          
-          for (let i = 1; i < lines.length; i++) {
-            const line = lines[i].trim();
-            if (!line) continue;
-            
-            const colonIndex = line.indexOf(':');
-            if (colonIndex === -1) continue;
-            
-            const speakerName = line.substring(0, colonIndex).trim();
-            const dialogue = line.substring(colonIndex + 1).trim();
-            
-            if (!speakerName || !dialogue) continue;
-            
-            // Get or create speaker
-            if (!speakerMap.has(speakerName)) {
-              const speaker = createSpeaker({
-                name: speakerName,
-                voiceId: availableVoices[speakerMap.size % availableVoices.length]?.id || null
-              });
-              speakerMap.set(speakerName, speaker);
-            }
-            
-            const speaker = speakerMap.get(speakerName);
-            
-            // Create line
-            const newLine = createLine({
-              speakerId: speaker.id,
-              text: dialogue,
-              order: parsedLines.length
-            });
-            
-            parsedLines.push(newLine);
-          }
-          
-          if (parsedLines.length === 0) {
-            throw new Error('No valid dialogue lines found in transcript');
-          }
-          
-          // Create new conversation
-          const importedConversation = {
-            ...createConversation(),
-            name: conversationName || 'Imported Transcript',
-            speakers: Array.from(speakerMap.values()),
-            lines: parsedLines
-          };
-          
-          setConversation(importedConversation);
-          
-          // Clear any selected items
-          setUiState(prev => ({
-            ...prev,
-            selectedLineId: null,
-            selectedSpeakerId: null
-          }));
-          
-          alert(`Transcript imported successfully!\n${speakerMap.size} speakers, ${parsedLines.length} lines`);
+        // Validate the loaded data has required structure
+        if (!data.speakers || !data.lines) {
+          throw new Error('Invalid conversation file format');
         }
+        
+        console.log('Loading conversation:', data);
+        console.log('Speakers:', data.speakers.length);
+        console.log('Lines:', data.lines.length);
+        console.log('Context:', data.context);
+        
+        // Ensure all required fields are present
+        const loadedConversation = {
+          id: data.id || Date.now().toString(),
+          name: data.name || 'Imported Conversation',
+          context: data.context || '',
+          speakers: data.speakers || [],
+          lines: data.lines || [],
+          metadata: data.metadata || { created: Date.now(), modified: Date.now() }
+        };
+        
+        setConversation(loadedConversation);
+        
+        // Clear any selected items
+        setUiState(prev => ({
+          ...prev,
+          selectedLineId: null,
+          selectedSpeakerId: null
+        }));
+        
+        alert('Conversation loaded successfully!');
       } catch (error) {
-        console.error('Failed to load file:', error);
-        alert(`Failed to load file: ${error.message}`);
+        console.error('Failed to load conversation:', error);
+        alert(`Failed to load conversation: ${error.message}`);
       }
     };
     
     input.click();
-  }, [availableVoices]);
+  }, []);
 
   const handleNewConversation = useCallback(() => {
     if (window.confirm('Create a new conversation? This will clear all current data.')) {
@@ -714,6 +687,7 @@ function ConversationEditor() {
           onLineReorder={handleLineReorder}
           onLineSelect={handleLineSelect}
           onLineAudioUpdate={handleLineAudioUpdate}
+          onImportTranscript={handleImportTranscript}
           playbackState={playbackState}
           setPlaybackState={setPlaybackState}
           conversationName={conversation.name}

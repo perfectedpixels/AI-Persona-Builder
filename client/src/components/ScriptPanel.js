@@ -14,6 +14,7 @@ function ScriptPanel({
   onLineReorder,
   onLineSelect,
   onLineAudioUpdate,
+  onImportTranscript,
   playbackState, 
   setPlaybackState,
   conversationName
@@ -256,6 +257,58 @@ function ScriptPanel({
     URL.revokeObjectURL(url);
   };
 
+  const handleImportTranscript = () => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = '.txt';
+    
+    input.onchange = async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      
+      try {
+        const text = await file.text();
+        const textLines = text.split('\n').filter(line => line.trim());
+        
+        if (textLines.length === 0) {
+          throw new Error('Empty transcript file');
+        }
+        
+        // Parse speaker lines (format: "Speaker Name: dialogue")
+        const parsedLines = [];
+        
+        for (let i = 0; i < textLines.length; i++) {
+          const line = textLines[i].trim();
+          if (!line) continue;
+          
+          const colonIndex = line.indexOf(':');
+          if (colonIndex === -1) continue;
+          
+          const speakerName = line.substring(0, colonIndex).trim();
+          const dialogue = line.substring(colonIndex + 1).trim();
+          
+          if (!speakerName || !dialogue) continue;
+          
+          parsedLines.push({ speakerName, dialogue });
+        }
+        
+        if (parsedLines.length === 0) {
+          throw new Error('No valid dialogue lines found. Format should be "Speaker: dialogue"');
+        }
+        
+        // Pass to parent to handle the actual import
+        onImportTranscript(parsedLines);
+        
+        alert(`Transcript imported successfully! ${parsedLines.length} lines added.`);
+      } catch (error) {
+        console.error('Failed to import transcript:', error);
+        alert(`Failed to import transcript: ${error.message}`);
+      }
+    };
+    
+    input.click();
+  };
+
   const handleExportAudio = async () => {
     // Check if all audio is generated
     const staleLines = lines.filter(line => line.audioState.isStale || !line.audioState.audioUrl);
@@ -491,6 +544,14 @@ function ScriptPanel({
             ) : (
               <span>Generate All Audio ({staleCount} stale)</span>
             )}
+          </button>
+          
+          <button
+            className="btn-import-transcript"
+            onClick={handleImportTranscript}
+          >
+            <FileIcon size={16} />
+            <span>Import Transcript</span>
           </button>
           
           <button
