@@ -1,0 +1,104 @@
+.phase-c {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+  position: sticky;
+  top: 20px;
+}
+
+.phase-header {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.phase-header h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.phase-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.controls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.control-group.compact {
+  margin-bottom: 8px;
+}
+
+.control-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.control-value {
+  font-size: 12px;
+  color: #FF8C42;
+  font-weight: 600;
+}
+
+.control-select {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.control-select:focus {
+  outline: none;
+  border-color: #FF8C42;
+}
+
+.export-button.compact {
+  width: 100%;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #FF8C42;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+}
+
+.export-button.compact:hover:not(:disabled) {
+  background: #ff7a28;
+  transform: translateY(-1px);
+}
+
+.export-button.compact:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

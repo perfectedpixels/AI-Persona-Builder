@@ -1,0 +1,4478 @@
+WEBVTT
+
+1
+00:00:08.280 --> 00:00:23.640
+Zoe N Magno: Lot of users. I think it's nice to have a playlist be created for you if you're someone who's busy or someone who just doesn't want to go through and click through different songs Spotify algorithm. I think is pretty good for what it is.
+
+2
+00:00:25.620 --> 00:00:33.840
+Zoe N Magno: And I like that it has sort of these non invasive little blurbs about what you could possibly get from that playlist. You know, so like this playlist has
+
+3
+00:00:34.260 --> 00:00:44.970
+Zoe N Magno: paramour and like other bands that are similar to that genre or this one is a little bit slower. It's got pavement and beach house so accessing it and understanding what you're accessing. It's pretty easy based off of that design.
+
+4
+00:00:45.330 --> 00:00:58.230
+Jason Levine: And if you notice the album art is turned into a grayscale for the album art to feel like it's in brand part of the styling of the system itself.
+
+5
+00:00:58.470 --> 00:00:59.610
+Zoe N Magno: Yeah, and even
+
+6
+00:00:59.700 --> 00:01:02.220
+Jason Levine: A way to get around the problem of it not feeling like it's this
+
+7
+00:01:02.220 --> 00:01:06.450
+Jason Levine: Random craziness that could happen otherwise.
+
+8
+00:01:06.720 --> 00:01:14.670
+Zoe N Magno: Right. And it even does the same visit really old picture of me like during undergrad, but it does the same thing with your profile picture for its you discover weekly so it feels like
+
+9
+00:01:15.180 --> 00:01:24.570
+Zoe N Magno: Like it's yours but it was something that was made for you, like, here's this picture of you and it's it's music about you. And I think that that's pretty cool. And I like that one of my favorite things about Spotify.
+
+10
+00:01:25.650 --> 00:01:26.520
+Zoe N Magno: But yeah
+
+11
+00:01:27.060 --> 00:01:37.080
+Jason Levine: Great findings. Thank you. Spotify is an interesting case because they their differentiator was their algorithm that they had built to differentiate themselves from
+
+12
+00:01:37.920 --> 00:01:57.570
+Jason Levine: Places like Pandora and so they spent a lot of focus on that being their feature that they put focus into building the personalization around and it was only out of the frustration of the owners, the, the, the two founders.
+
+13
+00:01:58.920 --> 00:02:05.310
+Jason Levine: Wanting certain features to be to be used by users when they put in front of users that they weren't being used.
+
+14
+00:02:05.700 --> 00:02:25.290
+Jason Levine: And so they started focusing on their usability, not on the algorithm as much as on the interface itself. And so for those like Zoe that have been long time Spotify users will have seen a dramatic improvement on the interface over. I guess it's been about five years now.
+
+15
+00:02:26.340 --> 00:02:34.440
+Jason Levine: And it's a it's all because they have focused very much on building prototypes, putting in front of users learning what they can
+
+16
+00:02:34.860 --> 00:02:42.540
+Jason Levine: Putting it live putting in front of users, seeing where what new innovations, they might want to think about because of that input and then starting that cycle again.
+
+17
+00:02:44.220 --> 00:02:45.270
+Jason Levine: Great products. Thank you. Sorry.
+
+18
+00:02:45.480 --> 00:02:45.870
+Thank you.
+
+19
+00:02:47.040 --> 00:02:47.880
+Jason Levine: Anyone else
+
+20
+00:02:49.260 --> 00:02:49.830
+Jason Levine: I can do.
+
+21
+00:02:52.110 --> 00:02:53.880
+Jason Levine: That but that sounds good. Oh, here. Yeah.
+
+22
+00:02:54.420 --> 00:02:57.630
+Aaron Good: Um, so one of my favorite. Let me share here.
+
+23
+00:03:05.760 --> 00:03:06.540
+Aaron Good: You guys see that
+
+24
+00:03:07.650 --> 00:03:08.460
+Aaron Good: Charity Water
+
+25
+00:03:11.970 --> 00:03:18.960
+Aaron Good: So this is one of my favorite nonprofit websites. I've done a lot of class projects around this, but their
+
+26
+00:03:20.070 --> 00:03:26.250
+Aaron Good: brand identity really surfaces obviously around water but then the yellow Jerry can, which is a symbol of water.
+
+27
+00:03:27.840 --> 00:03:43.170
+Aaron Good: storage and transportation across the globe. So one of the things with them, especially that I love is their use of white space, especially when using like full color photos. So they take a lot of photos like this one here that have white space built into the photo.
+
+28
+00:03:44.340 --> 00:03:56.190
+Aaron Good: This one up here, they do with like depth of field so images going to builder were only part of the images on focus so that they can overlay text and then they do stuff like
+
+29
+00:03:58.050 --> 00:04:12.210
+Aaron Good: This where they'll take stuff like photos with a part of the image. That's a clear background so they can blend it into like a gradient and then they can blend stuff just together to basically give that white space, even though it all feels like it's kind of one image.
+
+30
+00:04:14.790 --> 00:04:16.680
+Aaron Good: I really love that and then their
+
+31
+00:04:17.880 --> 00:04:23.070
+Aaron Good: Consistency clear and consistent brand around the military cancel yellow is their primary color.
+
+32
+00:04:23.700 --> 00:04:36.360
+Aaron Good: You can see through a lot of their branding. It's a bright very happy, energetic color they filled out pair that with a lot of, you know, smiling, happy faces success stories and then they do this kind of yellow highlight
+
+33
+00:04:37.320 --> 00:04:43.590
+Aaron Good: Another fun piece of their brand is that a lot of its kind of that hand drawn so it feels very like personal it feels
+
+34
+00:04:45.210 --> 00:04:54.360
+Aaron Good: Know, unique, it's not corporate so you see that up in these sort of like hand drawn style logos as well or icons.
+
+35
+00:04:57.630 --> 00:04:59.880
+Jason Levine: You can tell that the
+
+36
+00:05:02.940 --> 00:05:11.970
+Jason Levine: Action is new to the design system because if you look, the water looks like it is dripping into that poor woman's head.
+
+37
+00:05:12.900 --> 00:05:15.960
+Aaron Good: Yes, right there. Yeah, this one up top is a new
+
+38
+00:05:16.200 --> 00:05:16.620
+Jason Levine: Yeah.
+
+39
+00:05:17.460 --> 00:05:27.210
+Aaron Good: For sure. And it's actually funny because we did a in my last class, we did a class project using a site and that definitely wasn't there. So you know that for a fact.
+
+40
+00:05:27.270 --> 00:05:31.740
+Jason Levine: Yeah. And you can tell it the design is very seamless as you go. Scroll further down
+
+41
+00:05:32.040 --> 00:05:39.090
+Jason Levine: It was signed holistically and that they added that later to the design and hadn't really thought through what it would impact.
+
+42
+00:05:40.110 --> 00:05:41.520
+Jason Levine: water leaking into the important ones.
+
+43
+00:05:43.980 --> 00:05:48.270
+Aaron Good: Um, yeah. So those are some big ones. And then I think they're they're
+
+44
+00:05:49.860 --> 00:05:56.340
+Aaron Good: Like the hierarchy. They use of spacing and size and color to get their message across. And
+
+45
+00:05:57.360 --> 00:06:01.470
+Aaron Good: Draw attention to call to actions the button colors the highlights.
+
+46
+00:06:02.580 --> 00:06:03.570
+Aaron Good: All that is very
+
+47
+00:06:04.740 --> 00:06:05.340
+Aaron Good: Clear
+
+48
+00:06:05.640 --> 00:06:06.180
+Nice.
+
+49
+00:06:08.070 --> 00:06:11.460
+Aaron Good: Oh, I had some other ones, but I don't remember what they are exactly
+
+50
+00:06:12.270 --> 00:06:16.770
+Jason Levine: Thank you. This is. Yeah. It's beautiful. And it also has a serene Enos to it.
+
+51
+00:06:17.910 --> 00:06:23.040
+Jason Levine: And I think that's because of the use of negative space and then the photography. They chose
+
+52
+00:06:24.120 --> 00:06:26.220
+Jason Levine: Really has that effect. Yep.
+
+53
+00:06:35.460 --> 00:06:36.180
+Jason Levine: Anyone else
+
+54
+00:06:43.800 --> 00:06:45.210
+Jason Levine: And we haven't heard from you in a while.
+
+55
+00:06:46.710 --> 00:06:47.490
+Jason Levine: Do you like to share
+
+56
+00:06:50.850 --> 00:06:51.300
+Ruby Sharma: The show
+
+57
+00:06:51.960 --> 00:06:52.560
+Edward McFields: Yeah. Oh.
+
+58
+00:06:55.560 --> 00:06:58.830
+Jason Levine: Oh, sorry. Name check that word. You can go next, after that Ruby.
+
+59
+00:07:01.290 --> 00:07:12.150
+Edward McFields: Hours. Yeah, you know what, let me share actually connect. Can I share what I what I found some of the sites that do not meet the main principles of user experience.
+
+60
+00:07:12.570 --> 00:07:19.380
+Jason Levine: Oh, we'll go to that next. So offer that. And then we'll move to switch to that topic. Well, I'll let you go first.
+
+61
+00:07:20.190 --> 00:07:22.530
+Edward McFields: Okay, hang on. Let me see one.
+
+62
+00:07:23.850 --> 00:07:24.930
+Edward McFields: Me share my screen real quick.
+
+63
+00:07:41.790 --> 00:07:45.750
+Edward McFields: Okay, yeah. So one side that I really enjoy
+
+64
+00:07:47.460 --> 00:07:55.680
+Edward McFields: Going over all time, especially now that nowadays is the political the political side. Can you see my screen. Yep.
+
+65
+00:08:01.740 --> 00:08:17.310
+Edward McFields: Okay, cool. Yeah, so I mean the size very appealing has has always no matter what has always compelling content, whether it's going to serve others. You know, liberal. What I like about the side there. There's no, there are no ads.
+
+66
+00:08:18.810 --> 00:08:32.040
+Edward McFields: So it doesn't feel overwhelmed. So you can happily click on hyperlinks. You know, without getting bombarded with ads, there's very organized. I like the white by the white background gives you clarity when he's calling
+
+67
+00:08:34.080 --> 00:08:42.060
+Edward McFields: It has pretty big headers. The images. Sometimes the photos are kind of big, but nevertheless, it gives is still a clean content.
+
+68
+00:08:43.410 --> 00:08:49.080
+Edward McFields: The speed is also in spite of the big images. It has to be
+
+69
+00:08:50.910 --> 00:08:58.890
+Edward McFields: Consistent and what I like about the size that it's always up to date is never there's always something new, something fresh popping on the side.
+
+70
+00:09:00.840 --> 00:09:06.630
+Edward McFields: You want me to talk about what I found some other sites that do not meet the criteria.
+
+71
+00:09:07.080 --> 00:09:08.460
+Jason Levine: I will switch to that in a little bit.
+
+72
+00:09:09.720 --> 00:09:15.960
+Jason Levine: Yeah, political is a really interesting one. Does anybody know the history behind the genesis of Politico.
+
+73
+00:09:19.350 --> 00:09:25.740
+Jason Levine: So they are, I believe, now five years old.
+
+74
+00:09:26.910 --> 00:09:39.690
+Jason Levine: I believe they're five years old, somewhere around there and they were started by was prior to the purchase of washington post by Jeff Bezos
+
+75
+00:09:40.350 --> 00:09:51.690
+Jason Levine: And so the washington post was a mostly print based subscription and the political journalist, the investigative journalist for The Washington Post.
+
+76
+00:09:52.080 --> 00:10:07.260
+Jason Levine: got frustrated as they watched their this crown jewel of journalism slowly deteriorating. So they decided to start their own company and have a political focused
+
+77
+00:10:07.740 --> 00:10:31.260
+Jason Levine: Online only website and at the time that was considered heresy to have a newspaper without having an actual paper to print it on and because they already had all these inside connections in Washington throughout the capital, they were able to have immediately start with really in depth.
+
+78
+00:10:32.280 --> 00:10:42.810
+Jason Levine: Journalism without the overhead of the print part of the business. And so their Genesis was online for online and
+
+79
+00:10:43.950 --> 00:10:54.750
+Jason Levine: To their chagrin, Washington Post then was forever funded by Jeff Bezos with no intent of concern for whether or not they would be
+
+80
+00:10:56.250 --> 00:10:56.880
+Jason Levine: Profitable
+
+81
+00:10:57.900 --> 00:10:58.680
+Jason Levine: And so
+
+82
+00:10:59.970 --> 00:11:08.550
+Jason Levine: They ended up having to compete with the online focus that the post then started to do, which is kind of interesting, but because that was their, their
+
+83
+00:11:08.910 --> 00:11:20.760
+Jason Levine: Genesis. The design is reflective of that that it's not trying to represent a print version. So if you look at Seattle Times New York Times, the, the New Yorker.
+
+84
+00:11:21.900 --> 00:11:36.810
+Jason Levine: Or Washington Post, they all feel like an online version of their physical paper and the blood Politico does not. And it's doing that on purpose as part of its design system to say that this is an online experience.
+
+85
+00:11:39.870 --> 00:11:42.090
+Jason Levine: Thank you. It's a great, a great find Ruby.
+
+86
+00:11:44.400 --> 00:11:47.460
+Ruby Sharma: I was still looking at the website with positive experience.
+
+87
+00:11:47.520 --> 00:11:48.000
+Yes.
+
+88
+00:11:50.010 --> 00:11:51.060
+Ruby Sharma: I share my screen.
+
+89
+00:11:57.720 --> 00:11:58.470
+Ruby Sharma: So, uh,
+
+90
+00:12:00.330 --> 00:12:10.380
+Ruby Sharma: I analyzed lemon as one of the website, but the good user experience their lifestyle brand with a lot of emphasis on
+
+91
+00:12:11.610 --> 00:12:21.060
+Ruby Sharma: active lifestyle and and staying connected with the with the lemon community. So their website successfully reflects all that
+
+92
+00:12:22.080 --> 00:12:38.340
+Ruby Sharma: They have, they have appealing images on related to work out and meditation and yoga last a call to action buttons also are inconsistent and represent for the back of a brand values such as
+
+93
+00:12:39.570 --> 00:12:45.480
+Ruby Sharma: Strengthening the sense of community and staying connected with the community. So they have
+
+94
+00:12:46.650 --> 00:12:51.420
+Ruby Sharma: Was a building content and and call to action buttons as well.
+
+95
+00:12:52.590 --> 00:12:55.350
+Ruby Sharma: They have good use of guest star principles they have
+
+96
+00:12:56.580 --> 00:13:14.820
+Ruby Sharma: Used all the similar images together and principal focal point where the focus directly goes on what they want the users to focus and free shipping and free returns as one of the benefits and this is the principle of closure helps to keep the site.
+
+97
+00:13:15.930 --> 00:13:18.270
+Ruby Sharma: Tidy neat and
+
+98
+00:13:19.470 --> 00:13:39.690
+Ruby Sharma: The website is not cluttered. They have made good use of white space that used to deter carousel and they have divided sections. They use images to divide the sections of the website. So it looks really neat. And again, good use of white space with the help of fair so
+
+99
+00:13:40.740 --> 00:13:45.420
+Ruby Sharma: We are a users are able to drag me for focus on the products and they're
+
+100
+00:13:47.940 --> 00:13:51.510
+Ruby Sharma: The information such as the price or the colors.
+
+101
+00:13:53.610 --> 00:14:03.990
+Ruby Sharma: The consistent with the brand as in their messaging and their images they have used all the images that represent their community.
+
+102
+00:14:05.040 --> 00:14:15.900
+Ruby Sharma: Of people who are involved in an active lifestyle. They also use this personalization in the website shows the sense of community.
+
+103
+00:14:17.280 --> 00:14:22.350
+Ruby Sharma: And then they do it actively in their messaging in one direction, Buttons.
+
+104
+00:14:23.940 --> 00:14:25.470
+Ruby Sharma: Yeah, so that was
+
+105
+00:14:26.790 --> 00:14:27.750
+Jason Levine: Yeah, it's beautiful.
+
+106
+00:14:32.100 --> 00:14:46.440
+Jason Levine: It does the same kind of impact with headline image white space. Yeah, you see that that theme over and over again is there their design model really well executed.
+
+107
+00:14:48.720 --> 00:14:54.930
+Jason Levine: Anyone else have a best in class to share before we move on to the Uglies.
+
+108
+00:15:04.140 --> 00:15:07.110
+Jason Levine: No one's proud of what they did for their homework. Come on.
+
+109
+00:15:11.100 --> 00:15:12.840
+Cole Whitworth: I can share another example.
+
+110
+00:15:13.410 --> 00:15:14.610
+Jason Levine: Okay, cool. Thank you.
+
+111
+00:15:16.590 --> 00:15:17.280
+Cole Whitworth: If you lie.
+
+112
+00:15:18.030 --> 00:15:19.320
+Jason Levine: Great strain.
+
+113
+00:15:23.190 --> 00:15:24.960
+Cole Whitworth: Can you guys see the screen.
+
+114
+00:15:25.470 --> 00:15:26.250
+Jason Levine: Not yet.
+
+115
+00:15:31.410 --> 00:15:43.680
+Cole Whitworth: Doesn't look like it's allowing me to do I have to change my system preferences, but I'm, um, I can talk about it. There's a I found a company called the light phone and it's just a light.
+
+116
+00:15:43.740 --> 00:15:49.050
+Jason Levine: Me share my screen and you tell me the URL to go to
+
+117
+00:15:49.320 --> 00:15:51.480
+Cole Whitworth: Okay, yeah, just the light phone com
+
+118
+00:15:53.820 --> 00:15:54.900
+Cole Whitworth: Li GH t
+
+119
+00:15:57.420 --> 00:15:57.780
+Yeah.
+
+120
+00:15:59.520 --> 00:16:12.060
+Jason Levine: Let me share my screen.com
+
+121
+00:16:12.750 --> 00:16:13.050
+Yeah.
+
+122
+00:16:21.000 --> 00:16:22.830
+Jason Levine: I think I can give you control.
+
+123
+00:16:25.590 --> 00:16:25.920
+Jason Levine: They're
+
+124
+00:16:29.160 --> 00:16:30.060
+Cole Whitworth: Scrolling
+
+125
+00:16:32.610 --> 00:16:36.660
+Jason Levine: Oh, it's wanting me to change my system settings. So maybe I can let you do
+
+126
+00:16:36.690 --> 00:16:37.890
+Cole Whitworth: Yeah, that's okay. You can
+
+127
+00:16:38.340 --> 00:16:39.600
+Cole Whitworth: So it's basically one
+
+128
+00:16:39.750 --> 00:16:51.840
+Cole Whitworth: Long continuous website, but it's basically a phone that's been developed by these two guys a couple years ago actually just two years ago, and they're wanting to basically cut back the
+
+129
+00:16:52.950 --> 00:17:04.350
+Cole Whitworth: Consumption that we find on our devices by minimizing what's actually on our mobile devices. And I feel like their website really reflects their business bottle of kind of being minimal and very clean.
+
+130
+00:17:04.860 --> 00:17:17.160
+Cole Whitworth: They also had a really nice aesthetic with this sort of moving imagery, you know, really organic with their photography usage, which I think helps with it being a technology based company kind of bringing in that
+
+131
+00:17:18.300 --> 00:17:28.230
+Cole Whitworth: Sense of natural organic Ness can kind of appeal to sort of their top target audience of the younger generation model and I, they're, they're really focusing on sort of getting back
+
+132
+00:17:29.220 --> 00:17:39.150
+Cole Whitworth: Our control with technology, rather than having a control us their FAQ is really good. It kind of even as you continue to go down. There's just a really easy.
+
+133
+00:17:39.270 --> 00:17:40.560
+Cole Whitworth: Explanation behind it.
+
+134
+00:17:42.660 --> 00:17:57.570
+Cole Whitworth: Yeah, good video content. Everything's very clean, very good use of of white space. And if you choose to buy it. The only navigation, they really have open the top left corner is the buy button or you can access the menu in the top right.
+
+135
+00:18:00.210 --> 00:18:08.820
+Cole Whitworth: The I really liked their use of photography and their product and kind of the, the clean minimal approach that they had to showcasing this
+
+136
+00:18:10.920 --> 00:18:11.670
+Jason Levine: Interesting.
+
+137
+00:18:13.740 --> 00:18:16.500
+Jason Levine: Yeah, it looks like a minimalist iPhone five.
+
+138
+00:18:16.560 --> 00:18:29.940
+Cole Whitworth: Yeah, it's still kind of expensive. It's about $350 and they they asked the they answer the questions like there, they just started implementing navigation into it and they're working on adding
+
+139
+00:18:30.450 --> 00:18:39.810
+Cole Whitworth: The feature of listening to music because that was one of my concerns, will you know most people have their music playing devices on their phones. Now, what do they do about not having that there
+
+140
+00:18:41.550 --> 00:18:47.580
+Cole Whitworth: But I thought their approach and their I guess overall goal is a business was pretty interesting and
+
+141
+00:18:49.260 --> 00:18:53.880
+Cole Whitworth: I found it kind of appealing in a different form of a website kind of showcasing a new product.
+
+142
+00:18:56.340 --> 00:19:00.450
+Jason Levine: Yeah, it's interesting how they through its
+
+143
+00:19:01.740 --> 00:19:14.430
+Jason Levine: Emphasis on on minimalism that it implies kind of a way, the same way that square does what the experience is using the phone. Despite that, it is a different form factor.
+
+144
+00:19:19.530 --> 00:19:20.130
+Jason Levine: Very cool.
+
+145
+00:19:21.270 --> 00:19:27.480
+Cole Whitworth: Yeah, that transition. I really enjoy that as you kind of go up and a new image kind of starts. It's pretty cool.
+
+146
+00:19:27.870 --> 00:19:34.830
+Jason Levine: Yeah, this progressive disclosure with the concept as well for the a plus site that I shared with you.
+
+147
+00:19:36.510 --> 00:19:37.440
+Jason Levine: It's, it's
+
+148
+00:19:39.240 --> 00:19:56.100
+Jason Levine: It was a 2008 I think was when that became a real popular trend to take over your screen like that. And it's not used as often. Now, and I think the reason why is because it's hard as a designer to make it work. Yeah, these guys do a really good job of that.
+
+149
+00:19:59.940 --> 00:20:00.870
+Jason Levine: Nice. Thank you.
+
+150
+00:20:01.020 --> 00:20:01.710
+Cole Whitworth: Yeah, you're welcome.
+
+151
+00:20:06.570 --> 00:20:17.970
+Jason Levine: Okay, so, um, let's move on to the, the ugly ones who would like to share one of their gross monstrosities that they identified and where do you want to kick it off.
+
+152
+00:20:22.920 --> 00:20:25.860
+Edward McFields: Yeah, no problem. I'm actually use my my company's website.
+
+153
+00:20:27.870 --> 00:20:28.710
+Right, there's a
+
+154
+00:20:32.100 --> 00:20:32.610
+Edward McFields: nice evening.
+
+155
+00:20:54.600 --> 00:21:13.740
+Edward McFields: So our for our four pack car and we're pretty much the, the makers of these big great trucks and I'm in the other parts division. So I take care of the French dealerships and what I noticed on our site, which is tarp parts com i noticed that
+
+156
+00:21:15.540 --> 00:21:19.800
+Edward McFields: Well, I'm going to skip this off the bat. If you look at this
+
+157
+00:21:23.100 --> 00:21:31.740
+Edward McFields: You can see that is not very consistent when the, when the ads. So yes, you see a space here some space. So here are the $10
+
+158
+00:21:33.210 --> 00:21:35.040
+Edward McFields: So is that is not very
+
+159
+00:21:36.420 --> 00:21:40.770
+Edward McFields: Yes, that consistent. Also, there's a lot of misspellings in there and French
+
+160
+00:21:41.580 --> 00:21:42.810
+Edward McFields: Missing accents as
+
+161
+00:21:42.870 --> 00:21:44.610
+Edward McFields: The as missing the XML.
+
+162
+00:21:46.650 --> 00:21:49.230
+Edward McFields: Images are those are missing images.
+
+163
+00:21:50.340 --> 00:22:10.650
+Edward McFields: And especially for the French side lot a lot of the parts have English headers. There's no no French translations. So yeah, so I found that pretty interesting and saying what the Peterbilt this which is one of our brains, you can click on the French side and you're directed to an English
+
+164
+00:22:11.820 --> 00:22:13.650
+Edward McFields: English site and other page.
+
+165
+00:22:16.800 --> 00:22:23.220
+Edward McFields: Just kind of nail me click the French to translate it doesn't translate anything. So those are my findings on this one.
+
+166
+00:22:27.330 --> 00:22:28.680
+Jason Levine: Do you mind going back to the
+
+167
+00:22:30.660 --> 00:22:33.150
+Jason Levine: The, the page where it shows the offers
+
+168
+00:22:34.740 --> 00:22:34.980
+Edward McFields: Yeah.
+
+169
+00:22:39.390 --> 00:22:41.160
+Jason Levine: Yeah, that one or the other one. Yeah, that one.
+
+170
+00:22:43.860 --> 00:22:45.030
+Jason Levine: That one's interesting
+
+171
+00:22:49.260 --> 00:22:51.060
+Jason Levine: It. They look like coupons.
+
+172
+00:22:51.960 --> 00:22:52.230
+Yeah.
+
+173
+00:22:53.280 --> 00:22:56.790
+Jason Levine: They don't feel like there are here. Are they coupons.
+
+174
+00:22:58.020 --> 00:22:58.500
+Edward McFields: Coupons
+
+175
+00:22:59.820 --> 00:23:00.870
+Edward McFields: Loyalty offers
+
+176
+00:23:02.190 --> 00:23:02.550
+Jason Levine: Okay.
+
+177
+00:23:03.750 --> 00:23:05.730
+Edward McFields: And you notice how it still has to
+
+178
+00:23:05.760 --> 00:23:10.950
+Edward McFields: English when the regulator's on makes grills and this is the French side.
+
+179
+00:23:12.750 --> 00:23:13.800
+Jason Levine: That's gotta be frustrating.
+
+180
+00:23:14.310 --> 00:23:17.460
+Edward McFields: Yeah, especially from the French Canadian system once that was the ones I deal with
+
+181
+00:23:20.160 --> 00:23:21.660
+Jason Levine: They are proud of their French speaking
+
+182
+00:23:23.820 --> 00:23:28.320
+Jason Levine: Okay, so they are at least somehow they're able to reference themselves as a
+
+183
+00:23:30.720 --> 00:23:33.930
+Jason Levine: As a coupon. It feels like a coupon code because they're all
+
+184
+00:23:34.980 --> 00:23:37.530
+Jason Levine: Spaced the way they are. So it's funny that
+
+185
+00:23:37.620 --> 00:23:37.920
+Yeah.
+
+186
+00:23:39.630 --> 00:23:41.010
+It, it's
+
+187
+00:23:42.360 --> 00:23:44.700
+Jason Levine: It's referencing the right form factor.
+
+188
+00:23:46.530 --> 00:23:51.090
+Jason Levine: But you're right. The, the fact that there's the line breaks
+
+189
+00:23:52.530 --> 00:23:59.670
+Jason Levine: Like all it would obviously would take us for that $5 rebate at the top to all of a sudden say $15 rebate and then it would have the same
+
+190
+00:24:00.300 --> 00:24:12.210
+Jason Levine: Line wrapping problem that's, that's one of the, it's a problem is very, very common on a lot of sites is that they are designed with their dummy copy in mind and not reality.
+
+191
+00:24:12.990 --> 00:24:21.270
+Jason Levine: So one of the things that we try to do when we build things is to build our designs with the worst case scenario.
+
+192
+00:24:22.110 --> 00:24:32.850
+Jason Levine: So it may not look as pretty. When we are shopping it around, but at least we've pressure tested that it's not going to look hideous in the real world. And this is an example that
+
+193
+00:24:33.450 --> 00:24:41.790
+Jason Levine: Obviously the designer had put in a single digit rebate without thinking about a coupon that what could be more than a single digit
+
+194
+00:24:44.610 --> 00:24:46.080
+Jason Levine: Thank you. Great. Fine.
+
+195
+00:24:52.170 --> 00:24:56.700
+Jason Levine: Anybody else like to share the problems that they had identified
+
+196
+00:25:02.970 --> 00:25:04.560
+Sophia Charchuk: I can share mine.
+
+197
+00:25:05.520 --> 00:25:06.150
+Jason Levine: Thank you. Sophia
+
+198
+00:25:26.460 --> 00:25:30.390
+Sophia Charchuk: Okay, so I decided to look at ultra calm.
+
+199
+00:25:31.410 --> 00:25:41.760
+Sophia Charchuk: And I was really surprised that what I found, actually, it's really like boring and it just feels like the products are just thrown on the page. Um, so this
+
+200
+00:25:43.260 --> 00:25:48.450
+Sophia Charchuk: I pointed out the Gestalt principles. I don't think that it appropriately uses them.
+
+201
+00:25:49.500 --> 00:26:02.700
+Sophia Charchuk: It just has. So here it's it's supposed to have different sections. But when I looked at it, it just kind of seemed like one section, you really have to, like, pay attention, you're not like drawn to anything in particular. And then when I went to
+
+202
+00:26:03.810 --> 00:26:23.790
+Sophia Charchuk: This section over here, it just brought up. It's called new arrivals section. It didn't have anything in particular pointed out, it's just the 1300 51 results that come up, which is really confusing and I didn't know it's, it was just annoying. I thought to look at. I'm stressful.
+
+203
+00:26:25.410 --> 00:26:33.900
+Sophia Charchuk: And then here's another section. It's kind of the same thing. Everything's just like thrown on the page. No, I didn't think it used
+
+204
+00:26:35.940 --> 00:26:38.670
+Sophia Charchuk: A deaf use of size contrast and position.
+
+205
+00:26:39.690 --> 00:26:46.500
+Sophia Charchuk: There's so much competing for attention. As I said, it's this, it's pretty much the same as the section right here.
+
+206
+00:26:47.580 --> 00:27:01.770
+Sophia Charchuk: Um, so we'll see him as well. I don't think it follows the rules behind neuro aesthetics. It's not very pleasing. There's nothing pretty about it. There's no nice pictures. It's just the products on the page.
+
+207
+00:27:05.880 --> 00:27:10.650
+Sophia Charchuk: Everything here. Um, there's nothing compelling about the content that I found
+
+208
+00:27:12.240 --> 00:27:13.530
+Sophia Charchuk: It's just the products.
+
+209
+00:27:14.790 --> 00:27:23.520
+Jason Levine: So here's an interesting thing about also it was it's designed as a purpose to supplement your in store experience.
+
+210
+00:27:24.630 --> 00:27:32.790
+Jason Levine: So the idea is that it's for easy pickup at the store. It's to give you more details of something while in the store.
+
+211
+00:27:33.960 --> 00:27:44.130
+Jason Levine: And it's the idea of a whole entire idea of the site is to be efficient for in store experience now due to the code virus.
+
+212
+00:27:44.790 --> 00:27:54.900
+Jason Levine: They now all of a sudden have to rely 100% on a site that was not optimized for its actual intent shopping online,
+
+213
+00:27:55.800 --> 00:28:05.400
+Jason Levine: And so the things you're picking up on have to do with the fact that they had not really put much emphasis on their business from being a retail
+
+214
+00:28:06.150 --> 00:28:23.940
+Jason Levine: Brick and mortar business. And now that they have to rely 100% of their business on online. They're really behind the eight ball because of it. And it's a and this is you're bringing up the exact types of issues like I don't know if you did any using the search and filtering tools, but
+
+215
+00:28:25.710 --> 00:28:34.200
+Jason Levine: They're very confusing because they're using, like when somebody at a store would tell you suggest for things like for your
+
+216
+00:28:34.830 --> 00:28:49.320
+Jason Levine: skincare regiment. It's using terminology that is going to be a beautician would know but not your average person. And so it makes it very difficult to use. If you're not able to go in the store and talk to one of the associates.
+
+217
+00:28:50.490 --> 00:29:05.760
+Jason Levine: So it's a, it's a, an interesting problem that that I'm sure a lot of retail outlets are now facing is that you now have to rely entirely on on an online model that their business was not supporting or putting at least enough emphasis in investment in
+
+218
+00:29:09.120 --> 00:29:09.600
+Jason Levine: Thank you.
+
+219
+00:29:10.080 --> 00:29:10.680
+No problem.
+
+220
+00:29:13.650 --> 00:29:14.610
+Jason Levine: Anybody else
+
+221
+00:29:16.380 --> 00:29:17.010
+Aaron Good: I know
+
+222
+00:29:18.030 --> 00:29:18.810
+Aaron Good: It's Aaron again.
+
+223
+00:29:20.460 --> 00:29:20.790
+Aaron Good: Hey,
+
+224
+00:29:22.080 --> 00:29:26.610
+Aaron Good: So I hate like walking through the actual website here so
+
+225
+00:29:27.930 --> 00:29:29.940
+Aaron Good: I did IMDb was one of them.
+
+226
+00:29:32.190 --> 00:29:32.940
+Aaron Good: So,
+
+227
+00:29:34.140 --> 00:29:41.610
+Aaron Good: If you start here. It's their homepage. It looks okay not great but it looks like it has a design and then you go to
+
+228
+00:29:41.760 --> 00:29:42.720
+Jason Levine: Does it though.
+
+229
+00:29:42.960 --> 00:29:44.670
+Aaron Good: Yeah, I mean, it's pretty basic.
+
+230
+00:29:44.760 --> 00:29:45.900
+Aaron Good: It's pretty basic.
+
+231
+00:29:47.100 --> 00:29:59.820
+Aaron Good: And it's basically leveraging you know all the imagery from the movies. But then it gets worse. You click so like their first link is this release calendar and this is what it looks like so.
+
+232
+00:30:01.170 --> 00:30:14.340
+Aaron Good: You know, for me, the, the sizing spacing is a huge problem. This is a calendar, but it's really just a list. So like there's no headers in terms of what like what are the month start and begin or starting in
+
+233
+00:30:16.260 --> 00:30:25.530
+Aaron Good: You know, there's really no division of this. There's no search features or filters for any of this. So if you're looking for something, you basically just have to scroll and read. It's
+
+234
+00:30:25.830 --> 00:30:38.880
+Aaron Good: Not really designed for skimming either without any of that spacing. So that's really hard to do. And then you also have this competing list of the upcoming releases for a country which could just as easily be like one
+
+235
+00:30:40.080 --> 00:30:42.090
+Aaron Good: You know pulldown menu or
+
+236
+00:30:44.160 --> 00:30:50.430
+Aaron Good: You know, to filter this out, but instead you have a whole list of links that look exactly the same as all these links over here.
+
+237
+00:30:52.110 --> 00:30:52.470
+Jason Levine: We
+
+238
+00:30:52.650 --> 00:30:55.500
+Jason Levine: There's going to be a rerelease of valley girl.
+
+239
+00:30:57.630 --> 00:30:59.130
+Jason Levine: How does that work.
+
+240
+00:30:59.490 --> 00:31:01.110
+Jason Levine: Okay. Sorry, I'm getting thrown off.
+
+241
+00:31:01.290 --> 00:31:01.860
+You good
+
+242
+00:31:03.510 --> 00:31:14.580
+Aaron Good: And then one of the other things I thought of was in terms of the not using Gestalt principles at the top of the page is not bad but once you get deep
+
+243
+00:31:15.240 --> 00:31:30.030
+Aaron Good: It's like it's another one of those examples of a website that's basically all links. So your attention is drawn in a million different directions, you have this pop of color down here you have all these links that are bigger than these, like the main links that you're looking at.
+
+244
+00:31:31.200 --> 00:31:45.570
+Aaron Good: And then the other problem that is just kind of an era with the site is that it leverages, a lot of the movie imagery, which then you have like competing textiles and colors art styles. So once you really get into a page with content on it. You're it's
+
+245
+00:31:46.620 --> 00:31:48.030
+Aaron Good: Really disorienting.
+
+246
+00:31:50.460 --> 00:32:01.590
+Aaron Good: And then one of my other favorite pages. If you go to the Oscars. So you got like this whole 50 shades of grey thing going up here, or it's like gray on grey grey so
+
+247
+00:32:01.980 --> 00:32:16.770
+Aaron Good: There's a lot of white space, technically, but it's used very poorly. There's contrast issues you have stuff like this event history that, you know, it's just the list of years and it takes up this massive amount of space that's really ugly on the eye.
+
+248
+00:32:17.970 --> 00:32:33.780
+Aaron Good: And also, you know, this left side is really the feature content, but there's no space in between that and sort of the sidebar. So at all like what's up together and your attention is actually drawn more kind of over in this direction than it is on on this stuff. So just really
+
+249
+00:32:34.800 --> 00:32:37.950
+Jason Levine: Do you mind swapping to the movie detail pages.
+
+250
+00:32:38.250 --> 00:32:38.640
+Yeah.
+
+251
+00:32:48.000 --> 00:32:49.920
+Benjamin Porter: Did you look at IMD
+
+252
+00:32:50.490 --> 00:32:52.530
+Benjamin Porter: IMDb TV at all for this.
+
+253
+00:32:52.860 --> 00:32:57.540
+Aaron Good: Just know, I mean, I'm sure that I tried to click on Pro, but you get a login
+
+254
+00:32:58.890 --> 00:33:01.620
+Aaron Good: So I'm sure that those are more design on the original
+
+255
+00:33:03.030 --> 00:33:05.100
+Aaron Good: Since those are the premium features.
+
+256
+00:33:05.220 --> 00:33:07.740
+Jason Levine: So IMDb is a very interesting case they are
+
+257
+00:33:07.890 --> 00:33:24.330
+Jason Levine: At least 22 years old, maybe even longer than that. And it has everything to do with the fact that it's 22 years old and its business model has morphed over and over again. At first it was a passion project.
+
+258
+00:33:25.890 --> 00:33:34.110
+Jason Levine: To just simply catalog. Then it became a pro service was what they decided to do or you could use it to
+
+259
+00:33:36.180 --> 00:33:36.840
+Jason Levine: For
+
+260
+00:33:37.890 --> 00:33:41.730
+Jason Levine: Business Insider's to be able to have additional detail for sales.
+
+261
+00:33:43.440 --> 00:33:50.820
+Jason Levine: And then Amazon bought them for their database, not for their business. And so they leverage the the
+
+262
+00:33:51.300 --> 00:34:03.960
+Jason Levine: Rich Content and the data for their own purposes, and then all of a sudden decided turn into a consumer model based on that. And so, all while the database is essentially a 22 year old.
+
+263
+00:34:04.560 --> 00:34:15.120
+Jason Levine: artifact that they've had to glom on and add to and modify and so you've got competing business models compete competing design systems and
+
+264
+00:34:15.810 --> 00:34:29.430
+Jason Levine: And competing users that it is it is designed for. And so the conflicts, you're seeing is essentially that it doesn't know what it who it is. And so it has all these self referential problems.
+
+265
+00:34:30.450 --> 00:34:39.390
+Jason Levine: Though it had its rich and information and it's rich in value. The design is holding it back because of those business factors.
+
+266
+00:34:43.080 --> 00:34:49.560
+Aaron Good: Yeah, for sure. And you can definitely tell like the button style and stuff, a whole look like they were like mid to late 2000s.
+
+267
+00:34:49.650 --> 00:34:50.940
+Jason Levine: Yep. Yeah.
+
+268
+00:34:51.000 --> 00:34:55.350
+Aaron Good: And then you get stuff like this that's more modern driving you to, you know, prime
+
+269
+00:34:57.000 --> 00:34:57.750
+Aaron Good: Options.
+
+270
+00:35:00.780 --> 00:35:02.250
+Jason Levine: Yeah, it's, it's definitely
+
+271
+00:35:03.600 --> 00:35:05.910
+Jason Levine: Has the split personality disorder.
+
+272
+00:35:08.100 --> 00:35:09.720
+Jason Levine: And the design is representative of that.
+
+273
+00:35:12.180 --> 00:35:14.340
+Jason Levine: Any others, well actually know what we've got.
+
+274
+00:35:16.260 --> 00:35:20.010
+Jason Levine: Yeah, go ahead. Just one last one. If anybody doesn't, then I'll show you my favorite one.
+
+275
+00:35:20.340 --> 00:35:27.030
+Benjamin Porter: I have a quick quick one. I can show and I feel like in comparison to some of these. It's not all that bad.
+
+276
+00:35:27.420 --> 00:35:29.700
+Benjamin Porter: Okay, but it does
+
+277
+00:35:30.750 --> 00:35:33.720
+Benjamin Porter: Highlight a bit of the coven dilemma.
+
+278
+00:35:37.890 --> 00:35:39.330
+Benjamin Porter: sharing my screen.
+
+279
+00:35:40.920 --> 00:35:46.140
+Benjamin Porter: So going through the Rei experience. There was definitely a bit of
+
+280
+00:35:47.250 --> 00:36:00.990
+Benjamin Porter: Kind of a weird discount push that I was seeing. So you have like Rei outlet used gear another link to Rei outlet sweet savings great deals safe big shop the sale and
+
+281
+00:36:01.530 --> 00:36:13.050
+Benjamin Porter: Another shop Rei outlet all kind of above the fold and going through the experience like I'm currently looking to buy a bike just given the fact that the weather's turning
+
+282
+00:36:13.920 --> 00:36:23.130
+Benjamin Porter: I could not decide, even though all of this content was deal related if I should click on any of these links and very quickly decided just to
+
+283
+00:36:23.550 --> 00:36:34.800
+Benjamin Porter: Kind of run through my project and not focus on actually shopping, the site. I think this is probably like appropriate imagery and content given coven
+
+284
+00:36:35.580 --> 00:36:44.490
+Benjamin Porter: But feels much more like a business decision and as you go down the page, it ends up then bleeding into their regular content.
+
+285
+00:36:44.910 --> 00:37:01.380
+Benjamin Porter: And kind of feels like a hit or miss solution here where we're now back to talking about hiking trips and hiking boots and you know your checklist for those types of activities which doesn't really fit with the design or intention of the above the fold experience.
+
+286
+00:37:04.710 --> 00:37:21.420
+Jason Levine: Yeah, it's that's probably the frustrating thing is when site had more than likely, this is a situation where the design as it was intended was beautiful. I like if you see the color system matches themselves that type biography matches the
+
+287
+00:37:21.750 --> 00:37:24.900
+Jason Levine: Right to the photography has a similar styling to it.
+
+288
+00:37:28.080 --> 00:37:28.950
+Jason Levine: Sorry, just one sec.
+
+289
+00:37:37.260 --> 00:37:48.060
+Jason Levine: But the issue that you face is that the site is kind of like the same problem that you saw with the the water conservation nonprofit.
+
+290
+00:37:49.170 --> 00:38:00.960
+Jason Levine: Which is that it was designed with a purpose, but not necessarily the chaos that comes as it's then inherited and owned by marketers and developers and product managers.
+
+291
+00:38:01.560 --> 00:38:13.140
+Jason Levine: That it doesn't have enough legs to stand on where all of a sudden, it starts to fold in on itself, because it hadn't considered enough of how that content would be then
+
+292
+00:38:14.100 --> 00:38:25.140
+Jason Levine: Needing to be built upon the that scaffolding. And so you can see that there are elements of beautiful design that are just falling under the weight of what's being asked of it.
+
+293
+00:38:30.000 --> 00:38:37.500
+Jason Levine: So in the last few minutes I will share it with you. The world's ugliest website. If you go to and actually type it in.
+
+294
+00:38:39.210 --> 00:38:40.950
+Jason Levine: I'm sharing my screen, I think. Yeah.
+
+295
+00:38:43.320 --> 00:38:44.880
+Jason Levine: Things cars com
+
+296
+00:38:46.080 --> 00:38:58.230
+Jason Levine: I don't know if any of you have seen this before, but it is so ugly that it is endearing. It's kind of like the room, the movie The room is it's so bad. It's great.
+
+297
+00:38:59.340 --> 00:39:17.760
+Jason Levine: That it has an endearing quality to it because it's so it's like breaking literally every single rule possible, but because it's doing it so brazenly on purpose that it actually makes it endearing and fun. Despite that,
+
+298
+00:39:20.160 --> 00:39:22.530
+Jason Levine: Oh, I didn't even notice the hop. That's adorable.
+
+299
+00:39:28.890 --> 00:39:34.080
+Jason Levine: And those are no this is Boris Johnson showing off his Brexit risk free
+
+300
+00:39:37.260 --> 00:39:48.840
+Jason Levine: It's just nuts. I mean, the colors, the noise of lack of any space, but God damn, I want to buy a car from this guy.
+
+301
+00:39:51.540 --> 00:39:52.200
+Jason Levine: So,
+
+302
+00:39:53.670 --> 00:39:57.870
+Jason Levine: Anyway, I thought that was a fun one that I
+
+303
+00:39:58.890 --> 00:39:59.850
+Jason Levine: Will forever love
+
+304
+00:40:00.480 --> 00:40:03.960
+Aaron Good: The Taglines. The best I am laying. You can trust me.
+
+305
+00:40:08.820 --> 00:40:10.380
+Jason Levine: I should try that sometime. That's good.
+
+306
+00:40:11.670 --> 00:40:15.720
+Jason Levine: So we will go for a 20 minute break.
+
+307
+00:40:18.180 --> 00:40:25.050
+Jason Levine: And so we'll meet back up at 721 give you some time for bio break and get some dinner.
+
+308
+00:40:26.070 --> 00:40:35.700
+Jason Levine: Thank you all for your contributions and by the way so tonight was my wife and I's anniversary. So I usually have an hour and a half before
+
+309
+00:40:36.870 --> 00:40:44.760
+Jason Levine: Class that I grade, but I hope you understand was for a better purpose. Oh, I see a little baby.
+
+310
+00:40:46.170 --> 00:40:46.980
+Jason Levine: Hello.
+
+311
+00:40:51.450 --> 00:41:03.240
+Jason Levine: I finally found in a pro have a good reason that we don't normally get in an in person class. So we get we get bystanders. So I don't know if you could hear my children as bystanders and
+
+312
+00:41:05.070 --> 00:41:13.110
+Jason Levine: It's gonna be fun anyway. Um, so yeah. So usually I use that hour and a half to grade. And so I apologize, I am behind
+
+313
+00:41:13.560 --> 00:41:28.380
+Jason Levine: For good good cause. I will not be sleeping on the couch, because I did be focused on our anniversary versus your homework. So I will catch up over the weekend, I promise. Anyway, so I will see you and I guess 722 now. And thank you, and I'll see in a little bit.
+
+314
+00:41:40.920 --> 00:41:45.210
+Jason Levine: Okay, got everybody back, um,
+
+315
+00:41:52.950 --> 00:41:55.020
+Jason Levine: So okay, so let's
+
+316
+00:41:56.460 --> 00:41:58.620
+Jason Levine: shift over to the next topic.
+
+317
+00:42:00.360 --> 00:42:03.210
+Jason Levine: And I will share my screen.
+
+318
+00:42:12.390 --> 00:42:12.960
+Jason Levine: Recording
+
+319
+00:42:24.960 --> 00:42:28.740
+Jason Levine: Okay, so we're going to talk about personas.
+
+320
+00:42:29.940 --> 00:42:49.800
+Jason Levine: And specifically, what we can learn from from categorize cataloging our users. So just so you're aware, I will not be able to see your messages. If you have any questions, so I will need somebody to monitor that for me, please.
+
+321
+00:42:53.550 --> 00:42:58.620
+Jason Levine: So if you have any questions, feel free to either chat or interrupt with your audio.
+
+322
+00:43:01.050 --> 00:43:09.690
+Jason Levine: So first question is, does anybody have any experience working with personas, either in a classroom setting or in a work setting.
+
+323
+00:43:23.520 --> 00:43:23.820
+Jason Levine: Yeah.
+
+324
+00:43:24.960 --> 00:43:42.300
+Benjamin Porter: Yeah, so for actually David Evans user psychology course I broke out number of personas based on Maslow's hierarchy of needs and breaking it out that way. And then I built the
+
+325
+00:43:43.980 --> 00:44:00.090
+Benjamin Porter: pitch deck for Amazon fresh that we use with our vendors when we're talking through investment on the channel and built out some persona research there to talk through like what the typical shopper would look like on that channel.
+
+326
+00:44:01.200 --> 00:44:04.050
+Jason Levine: Great. I'm going to switch over to the
+
+327
+00:44:05.820 --> 00:44:10.890
+Jason Levine: Screen, see if anybody else raises their hand on
+
+328
+00:44:12.030 --> 00:44:13.350
+Jason Levine: I'm also
+
+329
+00:44:14.700 --> 00:44:17.250
+Jason Levine: I'm using personas.
+
+330
+00:44:19.350 --> 00:44:20.100
+Jason Levine: Anyone else
+
+331
+00:44:20.670 --> 00:44:21.480
+Jason Levine: Using personas.
+
+332
+00:44:22.560 --> 00:44:32.640
+Jessie Sinclair Knudsen: Um, I worked at a boutique advertising agency in Los Angeles, like, years and years ago and we used a program called prison, I believe.
+
+333
+00:44:33.720 --> 00:44:38.400
+Jessie Sinclair Knudsen: That put together based on area codes personas for different groups.
+
+334
+00:44:39.600 --> 00:44:41.070
+Jessie Sinclair Knudsen: I think it was called prism.
+
+335
+00:44:42.810 --> 00:44:44.490
+Jessie Sinclair Knudsen: But yeah, that was my experience.
+
+336
+00:44:44.790 --> 00:44:57.150
+Jason Levine: Okay, so we have two professional experience uses of it, one in class as well. Same person anyone else that had to use it for class or for personal, professional use
+
+337
+00:45:01.290 --> 00:45:12.000
+Jason Levine: Oh, good. Okay, so this content will be someone fresh glad to hear that. All right, so let's move back to here. Interesting thing about this screen.
+
+338
+00:45:12.480 --> 00:45:26.280
+Jason Levine: I was presenting this at an event with about 400 people and I put this background in and you know you see how they have little faces made up demonstrating by their hair to identify people
+
+339
+00:45:26.790 --> 00:45:36.480
+Jason Levine: I thought that was pretty clever. So I did it. And I didn't realize the one in the bottom left corner was a Hitler, you had the Hitler mustache and the Hitler hair.
+
+340
+00:45:38.400 --> 00:45:43.080
+Jason Levine: Yeah, that was pretty embarrassing. So luckily I learned from that.
+
+341
+00:45:46.440 --> 00:45:56.400
+Jason Levine: Okay, so first thing we got to do when we were talking about personas is understanding the user journey of our experience that we're trying to analyze
+
+342
+00:45:58.740 --> 00:45:59.310
+Jason Levine: So,
+
+343
+00:46:01.110 --> 00:46:17.220
+Jason Levine: Inexperienced map is designed as a visual representation of one's customer experience with that product or service in order to identify what those touch points are to be able to coalesce how these things are used by different user user types.
+
+344
+00:46:18.690 --> 00:46:21.030
+Jason Levine: And we'll get into what that means in a second.
+
+345
+00:46:22.560 --> 00:46:29.490
+Jason Levine: So here's one for Comcast when they were introducing an online gaming feature.
+
+346
+00:46:30.930 --> 00:46:42.870
+Jason Levine: And so it was important to understand when they were thinking about the product was, how do people currently learn about games because they're introducing a new platform new
+
+347
+00:46:43.470 --> 00:46:53.100
+Jason Levine: Game content through a consumption of a different device to get to it. So they needed to understand how do people consume games now. So they went through the the journey of
+
+348
+00:46:53.520 --> 00:47:03.930
+Jason Levine: How People Learn about games and then how they become aware of new games. And then what what leads them to to focus and interest in invest in a certain game.
+
+349
+00:47:04.470 --> 00:47:21.270
+Jason Levine: And so they go went through that whole process just identified. Well, how does this all work and how do we insert ourselves into that process. So, where you see the arrows in indicates what the different types of messages that were relevant to those different stages of people's journey.
+
+350
+00:47:22.440 --> 00:47:28.260
+Jason Levine: Is another example of using a user journey for a storyboard in order to demonstrate
+
+351
+00:47:28.740 --> 00:47:35.070
+Jason Levine: The different applications for how things are used in the real world. And from that you can get an indication of
+
+352
+00:47:35.520 --> 00:47:44.640
+Jason Levine: What are those touch points and who is using those things at different points and that also gives you an opportunity to identify how it could be consumed in a different way.
+
+353
+00:47:45.000 --> 00:47:58.800
+Jason Levine: Based on its need and the need introduces how we understand personas. So the way we can get into understanding that from a user journey perspective is the announcement to the iPod. The original iPod.
+
+354
+00:48:00.270 --> 00:48:13.350
+Jason Levine: So Steve Jobs at Moscone Center always would present his new products and so when he introduced the iPod. It was a paradigm entered
+
+355
+00:48:14.520 --> 00:48:21.870
+Jason Levine: Halting event because it was a very different experience. And the way that they came up with what the product would do.
+
+356
+00:48:22.260 --> 00:48:30.120
+Jason Levine: And what the product should be sorry what the product should do and how it should be trying to consider. What would be different about it.
+
+357
+00:48:30.750 --> 00:48:39.120
+Jason Levine: was defined by the user journey. And once they understood the user journey. It actually refined their concept of who they should be focusing on.
+
+358
+00:48:39.480 --> 00:48:52.470
+Jason Levine: For their target audience, which then developed into a persona. So we're gonna take a look at that. Hopefully it won't be allowed commercial. Ah, no, I tested this two weeks ago.
+
+359
+00:48:53.610 --> 00:49:00.090
+Jason Levine: All right. As you can see, these are my daughter's search searches, other than this one using my phone.
+
+360
+00:49:01.380 --> 00:49:02.880
+Jason Levine: Okay, so
+
+361
+00:49:03.900 --> 00:49:04.290
+Jason Levine: See
+
+362
+00:49:07.440 --> 00:49:08.010
+Jason Levine: Hey,
+
+363
+00:49:09.930 --> 00:49:10.470
+There we go.
+
+364
+00:49:27.960 --> 00:49:33.930
+Jason Levine: Okay, so the first thing to know is how they came across the idea of
+
+365
+00:49:36.660 --> 00:49:48.000
+Jason Levine: Sorry, this one that's got a different timestamps so we'll market and because it's a part of everyone's life. Yeah. Okay, so this is the important part, how they came up with first defining what product they were going to go after
+
+366
+00:49:49.320 --> 00:49:54.450
+Jason Levine: And then we'll go into the user journey and it will always be around. This is not a speculative mark.
+
+367
+00:49:55.740 --> 00:50:08.250
+Jason Levine: Was music. Sorry. Okay, the field that we decided to do it in a choice we made with music and why music. Well, we love music and it's always good to do something you love
+
+368
+00:50:10.200 --> 00:50:27.000
+Jason Levine: More importantly, using some part of everyone's life everyone uses around forever. It will always be around. This is not a speculative market and because it's a part of everyone's life. It's a very large target market all around the world. It knows no boundaries.
+
+369
+00:50:28.530 --> 00:50:34.440
+Jason Levine: But interestingly enough in this whole new digital music revolution. There is no market leader.
+
+370
+00:50:35.790 --> 00:50:46.260
+Jason Levine: There are small companies like creative and sonic blue and then there's the large companies like somebody that haven't had a hit yet. They haven't found a recipe. No one has really found a recipe yet.
+
+371
+00:50:46.830 --> 00:50:59.310
+Jason Levine: For digital music and we think not only can we find the recipe, but we think the apple brand is going to be fantastic because people trust the apple brand to get their great digital electronics from
+
+372
+00:51:01.080 --> 00:51:18.990
+Jason Levine: So let's look at portable music. Let's look at the landscape, the first thing, if you want to listen, music, probably, you've got my CD. CD player. Right. That's one way to go 1510 to 15 songs or you can buy a Flash Player one by one of those. You can buy a MP3 CD player.
+
+373
+00:51:20.220 --> 00:51:27.750
+Jason Levine: Or you can buy a hard disk space. You watch these are the four choices for portable music right now. So let's take a look at each one of those
+
+374
+00:51:28.830 --> 00:51:35.070
+Jason Levine: A CD player plus about $75 old 10 to 15 songs on a CD. It's about $5 a song.
+
+375
+00:51:38.820 --> 00:51:45.900
+Jason Levine: Go buy a Flash Player about double that about $150 holds the same 10 to 15 songs or about $10 a song.
+
+376
+00:51:47.430 --> 00:51:57.450
+Jason Levine: You can go buy an MP3 CD player and MP3 CD, which you can burn on your computer cost about $150 but holds 150 songs you get down to $1 a song.
+
+377
+00:51:59.010 --> 00:52:11.190
+Jason Levine: Or you can go buy a hard drive. Jukebox player for about $300 it holds about 1000 songs and cost 30 cents a song. Okay, so what we've heard so far in this
+
+378
+00:52:12.060 --> 00:52:23.280
+Jason Levine: Analysis of a user journey was to first look at what are the different intakes for this opportunity. And so those intakes are different medium.
+
+379
+00:52:23.880 --> 00:52:40.920
+Jason Levine: CDs stars flash drives MP3 CDs, etc. For them to identify where their product would sit in the competitive space. So then what he does is he goes into trying to define what is the experience of using these things.
+
+380
+00:52:44.700 --> 00:52:49.410
+Jason Levine: At times, and you go on the road with a CD player and said, oh God, the car. I didn't bring a. See, I want to listen to
+
+381
+00:52:50.790 --> 00:52:58.080
+Jason Levine: Have your whole music library with you at all times is a quantum leap in listening to music.
+
+382
+00:53:00.660 --> 00:53:07.020
+Jason Levine: The coolest thing about iPod is that whole your entire music library fits in your pockets.
+
+383
+00:53:08.190 --> 00:53:21.150
+Jason Levine: Okay, you can take your whole music library with you right in your content. Now what he means by fits in your pocket is they literally measured of the gene pocket size.
+
+384
+00:53:21.660 --> 00:53:41.970
+Jason Levine: And to find the width to make sure that it could fit, specifically in a weird pocket of jeans. So if you look at an iPod. I'm sorry, a iPad Mini. It is exactly the same width to fit in that exact measurement of a back pocket gene, same idea.
+
+385
+00:53:44.370 --> 00:53:47.220
+Jason Levine: never before possible. So that's my point.
+
+386
+00:53:48.480 --> 00:53:54.540
+Jason Levine: There are three major breakthroughs and iPhone. Let's take a look at each one of them. The first one is, it's all for portable
+
+387
+00:53:55.200 --> 00:54:10.590
+Jason Levine: So if we're going to keep 1000 songs on iPod and it fits in your pocket, how to do this. How do we possibly do this. We start off with an ultra thin harddrive we've got a 1.8 inch diameter hard drive.
+
+388
+00:54:11.970 --> 00:54:23.280
+Jason Levine: And we built in 20 minutes skin protection, it's not it's not 20 seconds 20 minutes skin protection. So you can take iPod bicycling mountain climbing jogging, you name it.
+
+389
+00:54:23.820 --> 00:54:33.180
+Jason Levine: So what he's describing here is that they build as a requirement for the product which is very expensive at the time, which is to cash the
+
+390
+00:54:34.110 --> 00:54:45.990
+Jason Levine: The playing power of 20 minutes worth of audio data specifically because of what they were going to see as the user journey of when you would be using this product.
+
+391
+00:54:46.350 --> 00:54:54.870
+Jason Levine: Which would be when you're being active with earbuds in your ears. So the idea of it being active but it wouldn't work when you're active
+
+392
+00:54:55.260 --> 00:55:09.960
+Jason Levine: Was a non starter. And so the modeling that they had was based on that user journey of what people would be consuming it with and that's biking exercising, etc. It had to have that as a requirement of how that product worked
+
+393
+00:55:11.760 --> 00:55:12.870
+Jason Levine: And you're not going to skip a beat.
+
+394
+00:55:14.820 --> 00:55:20.790
+Jason Levine: So we got this five gigabyte drive it was 1000 songs. How do we get the thousand songs on the iPod.
+
+395
+00:55:21.810 --> 00:55:29.310
+Jason Levine: We don't want to wait so we built in FireWire now apples, you know, invented FireWire we should FireWire on every computer we make
+
+396
+00:55:29.970 --> 00:55:42.810
+Jason Levine: It's built into iPod. It's the first and only music player with FireWire why because it's fast. You can download an entire CD in the iPod in five to 10 seconds and entire CD.
+
+397
+00:55:44.460 --> 00:55:46.350
+Jason Levine: So let's take a look at how it compares with USB
+
+398
+00:55:47.550 --> 00:55:57.300
+Jason Levine: Five to 10 seconds. The FireWire to load a CD on a USB player, you're talking five minutes. Okay, so it's worth noticing that FireWire is a
+
+399
+00:55:58.050 --> 00:56:07.290
+Jason Levine: Dedicated technology of its time. It's now surpassed by USB three, which is what we all use. Now the important thing here was that he was understanding
+
+400
+00:56:07.860 --> 00:56:16.680
+Jason Levine: The hardest part of a portable device that's using your data that's on your computer is the transfer of that data to your device.
+
+401
+00:56:17.220 --> 00:56:31.650
+Jason Levine: So part of the logic for what he did. That was different than how it was done before it was always considered well you're transferring files. So we will make it as software work the way it does when you transfer between folders on
+
+402
+00:56:32.610 --> 00:56:42.480
+Jason Levine: So you have folder. A any a folder be and you drag. What you want into folder be and so that was the model that all these other software products have provided, which was very manual
+
+403
+00:56:43.020 --> 00:56:57.420
+Jason Levine: Instead, the way that it worked on the iPod. Was it would automatically just synchronize whatever was the difference between what was on your machine and what was on your iPod and it would simply update those automatically. So they were one to one.
+
+404
+00:56:59.310 --> 00:57:01.110
+Jason Levine: Let's talk about 1000 songs now.
+
+405
+00:57:02.370 --> 00:57:04.860
+Jason Levine: On iPod with FireWire okay you win.
+
+406
+00:57:05.940 --> 00:57:16.860
+Jason Levine: Now, it doesn't matter how many songs you have with you if your battery's dead right so we have built in an extraordinary battery in the iPod.
+
+407
+00:57:18.090 --> 00:57:22.440
+Jason Levine: 10 hours of battery life and that is 10 hours of continuous music
+
+408
+00:57:23.910 --> 00:57:38.010
+Jason Levine: We're using a rechargeable lithium polymer battery. This is a more advanced battery to me when using our portable computers. It's the most advanced battery we've ever shipped and you can recharge this 10 hour battery in one hour to 80% of its capacity on a fast George
+
+409
+00:57:39.030 --> 00:57:39.690
+Jason Levine: One hour.
+
+410
+00:57:41.220 --> 00:57:50.340
+Jason Levine: Maybe the coolest thing is that you know FireWire the firewire cable carries all the data from a Mac to iPod FireWire also has power on it.
+
+411
+00:57:50.820 --> 00:57:59.040
+Jason Levine: And so when you plug in to your Mac. It actually charges the iPod over that single firewire cable.
+
+412
+00:57:59.880 --> 00:58:06.720
+Jason Levine: So you don't have another charging cable to worry about it charges over FireWire every time you plug in your mouth. And you might say, well,
+
+413
+00:58:07.200 --> 00:58:13.260
+Jason Levine: What happens if I'm on the road with my iPod and I didn't bring my Mac with me and my battery's running low. What do I do
+
+414
+00:58:14.010 --> 00:58:19.020
+Jason Levine: Well, we got a really cool charger. This is part of iPod to and this charger.
+
+415
+00:58:19.500 --> 00:58:28.830
+Jason Levine: Has a firewire port on it. So you take your firewire cable and just plug it right into the charger and plug it in the outlet and charge iPod, wherever you happen to be where there's an element. Okay.
+
+416
+00:58:29.460 --> 00:58:42.210
+Jason Levine: So one of the requirements that Steve Jobs had required when it came to the battery why they had chosen a 10 hour highly expensive for its time battery.
+
+417
+00:58:43.320 --> 00:58:53.070
+Jason Levine: Was for a use case that he had defined as part of that user journey. I'm on a cross country plane trip.
+
+418
+00:58:54.570 --> 00:59:00.000
+Jason Levine: And I want to make sure that the battery will last for both legs of the flight back and forth.
+
+419
+00:59:01.320 --> 00:59:20.370
+Jason Levine: So that was his requirement not 10 hours, but I wanted to last for the length of a cross country flight back and forth because he was understanding that, you know, we need to look at these things from a user journey perspective and then how we solve for things from that perspective.
+
+420
+00:59:23.370 --> 00:59:25.560
+Jason Levine: Anybody have any questions or comments.
+
+421
+00:59:31.830 --> 00:59:32.310
+Okay.
+
+422
+00:59:34.380 --> 00:59:35.580
+Jason Levine: Where'd my, there we go.
+
+423
+00:59:39.960 --> 00:59:40.260
+Jason Levine: Okay.
+
+424
+00:59:41.520 --> 00:59:54.210
+Jason Levine: So now that we've got all this understanding of the of the user journey. Now we need to find out if there's slices of that audience that uses in consumes these things in a different way.
+
+425
+00:59:54.540 --> 01:00:08.610
+Jason Levine: So we take that user journey from a holistic point of view. And now we're going to try to cut it up into pieces. Is there a different person at the beginning of a journey. Then there is at the end of the journey that's making some of the product selections, or is that the
+
+426
+01:00:10.230 --> 01:00:16.830
+Jason Levine: The main investor in the house, whatever, or is it a matter of that it's consumed in a different way based on those audiences.
+
+427
+01:00:17.910 --> 01:00:27.450
+Jason Levine: And so the way we look at a persona is by targeting specific audiences that are to those needs and we can then frame it within a persona.
+
+428
+01:00:28.740 --> 01:00:36.600
+Jason Levine: So here what your way. We talked about a persona is a is comes from the Greek term for Persona
+
+429
+01:00:36.990 --> 01:00:44.310
+Jason Levine: So the way it works is that there were these in classical times there are these theaters that opening theaters that they would have
+
+430
+01:00:44.670 --> 01:00:51.300
+Jason Levine: Three or four actors and they would play literally every character, no matter how many characters or were
+
+431
+01:00:51.660 --> 01:01:06.750
+Jason Levine: In the play and the way they would represent those different characters is by using the Greek word persona, which means mask or second self to represent that particular character so that way they would actually use
+
+432
+01:01:08.100 --> 01:01:20.670
+Jason Levine: The idea behind a second self as to represent that caricature that they were trying to define within the play was how we come about in our definition of what a persona is for our uses
+
+433
+01:01:23.430 --> 01:01:31.140
+Jason Levine: So the way we that we use it is to demonstrate major user groups of have a website or application.
+
+434
+01:01:32.670 --> 01:01:41.460
+Jason Levine: Now the thing about a persona. That's, that's kind of confusing, is that we don't design for that specific specificity of that.
+
+435
+01:01:42.150 --> 01:01:59.460
+Jason Levine: User Group what we assume is is that those user groups, help us make some of those decisions that apply to all user groups, but we want to make sure that the core uses that may be consumed in different ways are being addressed by grouping them into these different
+
+436
+01:02:01.140 --> 01:02:03.150
+Jason Levine: Buckets so
+
+437
+01:02:04.320 --> 01:02:14.730
+Jason Levine: We use this then as a as a modeling to then express and those needs and those expectations for that group and what their, their demands are, because if you remember from our
+
+438
+01:02:15.420 --> 01:02:24.960
+Jason Levine: Second week of presentation. We talked about how you must serve the users goals. And so this is how we group those goal.
+
+439
+01:02:26.340 --> 01:02:28.260
+Jason Levine: Does that make sense, does anybody have any questions so far.
+
+440
+01:02:32.100 --> 01:02:44.430
+Jason Levine: Okay, so those goals are then refined into what are the tasks involved based on those goals and so that way we can refine and make sure that
+
+441
+01:02:44.880 --> 01:02:57.000
+Jason Levine: Any particular action is resolved when you're trying to to solve for those bigger problems like let's use the example. And I'd like I'm going to stop sharing for now. So we can discuss this.
+
+442
+01:03:00.660 --> 01:03:02.460
+Jason Levine: So, for example,
+
+443
+01:03:03.660 --> 01:03:09.630
+Jason Levine: When we are trying to decide for something that none of us can do right now, which is plan for our next vacation.
+
+444
+01:03:11.700 --> 01:03:29.250
+Jason Levine: Think about in describe to me what are some of the things that you do to plan for that vacation. What are some of the things that you have as a starting point to make those first decisions and then we'll move on to what are the how we then figure those we were find those decisions.
+
+445
+01:03:31.290 --> 01:03:32.850
+Cole Whitworth: Research where you want to go.
+
+446
+01:03:33.780 --> 01:03:36.300
+Jason Levine: So what's that based on what do you like how do you do that.
+
+447
+01:03:36.840 --> 01:03:37.350
+Rather
+
+448
+01:03:39.840 --> 01:03:40.230
+Jason Levine: Okay.
+
+449
+01:03:41.340 --> 01:03:53.880
+Jason Levine: So you start like you may say, Okay, I want a winter destination to go skiing or I want to be where it's sunny to get away from the the six months of darkness and misery that that exists in in Washington.
+
+450
+01:03:55.620 --> 01:04:01.620
+Jason Levine: So yeah, you're right. So you're going to be thinking about it from a regional perspective. I'll be one way and then how do you refine it from there.
+
+451
+01:04:05.880 --> 01:04:13.440
+Nora Ortiz Romero: Um, I would I would need to consider my son's school schedule and my own school schedule and work.
+
+452
+01:04:14.460 --> 01:04:16.080
+Jason Levine: So, so timing. Yeah.
+
+453
+01:04:16.140 --> 01:04:16.530
+Nora Ortiz Romero: Timing
+
+454
+01:04:16.590 --> 01:04:21.030
+Jason Levine: And so that will mean that will define when you're available and your duration.
+
+455
+01:04:24.000 --> 01:04:24.480
+Jason Levine: What else
+
+456
+01:04:26.520 --> 01:04:27.060
+Jessie Sinclair Knudsen: Budget.
+
+457
+01:04:29.010 --> 01:04:34.440
+Jason Levine: For the costs are based on several different things. Oh, I've got craziness going on in this House.
+
+458
+01:04:37.320 --> 01:04:48.780
+Jason Levine: So the. You're right. So then I may be considering what are my cost parameters and that could be by thinking through not, it's not just a matter of saying I have
+
+459
+01:04:49.770 --> 01:05:00.990
+Jason Levine: $600 it will be. I have I'm willing to start with this amount of cost to get me there. And then I may think about what I'm willing to pay.
+
+460
+01:05:01.680 --> 01:05:15.990
+Jason Levine: Well, I'm staying there and then I'll have a different budget for what I do. While there. And so that's usually the next stage. I do with that kind of budgeting is say how much, how much am I willing to to put forward for those different stages.
+
+461
+01:05:18.330 --> 01:05:27.510
+Jason Levine: And OK, so now that we've got that defined. We've got when we're going to go where would the area. We're going to go in the pricing, then what do I use this some of my other decision factors.
+
+462
+01:05:29.520 --> 01:05:30.270
+Sophia Charchuk: Lights.
+
+463
+01:05:32.340 --> 01:05:33.120
+Sophia Charchuk: Lights gets me
+
+464
+01:05:35.100 --> 01:05:36.720
+Jason Levine: I'm sorry, I missed the first word you said.
+
+465
+01:05:36.870 --> 01:05:38.340
+Sophia Charchuk: Oh flights flight scope.
+
+466
+01:05:39.600 --> 01:05:45.390
+Jason Levine: Okay. So then you'll look into seeing the convenience of a flight that will work within those parameters.
+
+467
+01:05:46.620 --> 01:05:49.800
+Jason Levine: And so that can be a very circular process.
+
+468
+01:05:51.120 --> 01:06:05.640
+Jason Levine: And that may change your destination in some cases. So you may be thinking, I would like to go to Switzerland and then you find out, well, I can only afford to train to Vancouver.
+
+469
+01:06:06.870 --> 01:06:15.360
+Jason Levine: Based on my costs that I've got, you know, it's all dependent on my that it might make restart that entire process.
+
+470
+01:06:15.900 --> 01:06:27.180
+Jason Levine: Based on some of those parameters that come into the convenience factor. It may be that the prices for me to fly outside of five, but after 5am
+
+471
+01:06:27.840 --> 01:06:38.910
+Jason Levine: Are too expensive. And so I'll again maybe start on a different day or a different or a different location if that's if I don't have my heart set on a specific destination.
+
+472
+01:06:39.390 --> 01:06:44.670
+Jason Levine: And so all those parameters are a matter of. It's not like it's a linear path.
+
+473
+01:06:45.360 --> 01:06:53.910
+Jason Levine: It is a circular weaving because any one of those things that is impacted me change my other decisions and start over again.
+
+474
+01:06:54.450 --> 01:07:03.270
+Jason Levine: And that's the whole idea of a user journey is I need to be considering how those things are not only part of my decision factor, but how they interrelate to each other.
+
+475
+01:07:04.890 --> 01:07:05.490
+Does that make sense.
+
+476
+01:07:07.470 --> 01:07:11.910
+Jason Levine: Um. Any other, any questions before we move back to the slide deck.
+
+477
+01:07:13.980 --> 01:07:14.520
+Okay.
+
+478
+01:07:17.730 --> 01:07:20.130
+Jason Levine: There's a lot of craziness going on in my house today.
+
+479
+01:07:23.940 --> 01:07:25.260
+Jason Levine: Sharing it is
+
+480
+01:07:29.970 --> 01:07:33.240
+Jason Levine: So there's a really great book by Alan Cooper.
+
+481
+01:07:34.380 --> 01:07:39.000
+Jason Levine: Called about face. He's the one that we did a quote from in our first week.
+
+482
+01:07:40.380 --> 01:07:45.840
+Jason Levine: About making interfaces more human, and he's the the
+
+483
+01:07:46.860 --> 01:07:51.750
+Jason Levine: First, he's the one that that builds the first visual interface for coding
+
+484
+01:07:52.980 --> 01:08:04.500
+Jason Levine: And so he has this quote personas are not real people. They are hypothetical of actual users to find with significant rigor and precision. So the other way you can look talk about a
+
+485
+01:08:06.120 --> 01:08:09.870
+Jason Levine: Persona the other terminology we now use this archetype.
+
+486
+01:08:11.160 --> 01:08:13.200
+Jason Levine: Because we are not trying to
+
+487
+01:08:14.850 --> 01:08:15.270
+Jason Levine: To
+
+488
+01:08:16.590 --> 01:08:32.820
+Jason Levine: Focus as a series of walls, who and only who we see as being the appropriate model for our user. It's more that we use them as our reference point based on research and then how that research impacts our decisions.
+
+489
+01:08:33.960 --> 01:08:34.560
+Jason Levine: Make sense
+
+490
+01:08:37.680 --> 01:08:47.640
+Jason Levine: Okay so Airbnb is an interesting example so understand the world from the point of view, to inform your point of view. So Joe gap. I did us
+
+491
+01:08:48.900 --> 01:09:08.040
+Jason Levine: A talk where he described how he came about with Airbnb in its final form. And as they're kind of interesting in that he started with being for finding an extra room in apartments for certain events in New York City.
+
+492
+01:09:09.060 --> 01:09:17.430
+Jason Levine: And his it was wildly successful, but he noticed. Once he tried to expand that to the events outside
+
+493
+01:09:17.880 --> 01:09:38.100
+Jason Levine: To not being event driven, but all year round for the New York City area that it became a lot more difficult to get people interested in renting an apartment space in somebody's house so he realized he saw a fast that
+
+494
+01:09:39.540 --> 01:09:43.560
+Jason Levine: He didn't have much insight. He started to rent out places.
+
+495
+01:09:44.610 --> 01:09:49.590
+Jason Levine: To stay in of hosts. And then, so he could talk to them at their kitchen table.
+
+496
+01:09:50.400 --> 01:10:01.140
+Jason Levine: And when he was talking to them. They were really excited about the service and they were very frustrated at the same time, because they would put all this effort into trying to make their place rentable
+
+497
+01:10:01.980 --> 01:10:14.400
+Jason Levine: But nobody was interested in. So he started noticing after you would meet with certain people and that were more successful that it came down to their staging in their photos.
+
+498
+01:10:15.150 --> 01:10:29.190
+Jason Levine: And so he came to realize that it was less about them getting the space ready. It had everything to do with getting the space presentable. And so he started to introduce
+
+499
+01:10:30.540 --> 01:10:47.100
+Jason Levine: Where he would go and take pictures for them and stage. Their, their apartments it to post on the site. And sure enough, anyone that he had done the foot, because he was a a design major from rusty Rhode Island School of Design.
+
+500
+01:10:48.390 --> 01:11:02.850
+Jason Levine: And what they came to realize is that the more that he had put investment into photography and for staging it paid off for those. And so he ended up creating an entire program where he would have professional photographers
+
+501
+01:11:04.020 --> 01:11:15.960
+Jason Levine: Go and take pictures for each of their sites. And then he built that into an entire program so that he could cover more and more of the country, specifically for that reason.
+
+502
+01:11:17.460 --> 01:11:18.330
+Jason Levine: And this all came from.
+
+503
+01:11:19.740 --> 01:11:21.780
+Jason Levine: From understanding it from their point of view.
+
+504
+01:11:24.420 --> 01:11:27.450
+Jason Levine: Okay, so what is defined within the persona.
+
+505
+01:11:28.470 --> 01:11:36.240
+Jason Levine: And that is a lot of different things, but you want to keep in mind that the whole idea behind this is to have it focus on
+
+506
+01:11:36.600 --> 01:11:49.890
+Jason Levine: This fictitious characterization. That's all driven by what is that user goal. And so we let map it back to that user goal by having certain things that give us context for how to think about that person.
+
+507
+01:11:52.650 --> 01:11:54.330
+Jason Levine: So that can be lots of different things.
+
+508
+01:11:55.830 --> 01:12:02.820
+Jason Levine: And so we collected from lots of different areas. So, along with the user goals we have their skill level and experience.
+
+509
+01:12:03.390 --> 01:12:16.920
+Jason Levine: Another demographic their opinions and then contextual background for why and how, plus some of the drivers and influencers that brought them there and then try to create privatizations from their tasks.
+
+510
+01:12:19.470 --> 01:12:26.400
+Jason Levine: So it could be I'm this is just a sampling of what those things could be and it can be lots and lots of different ways of representing a persona.
+
+511
+01:12:29.580 --> 01:12:35.580
+Jason Levine: And they work because people respond to people, it's a lot easier to do it that way. And it's easy to remember.
+
+512
+01:12:36.840 --> 01:12:50.790
+Jason Levine: Then referencing a compilation of data. And so we use these as a reference point, not to be able to identify and discuss things together as a team where we're talking from the same vantage point
+
+513
+01:12:52.260 --> 01:13:09.180
+Jason Levine: And this allows us to have a better idea when we are trying to shoot ideas of having some form of a measurement stick in on how closely they align. So, years and years ago, I used to work at a
+
+514
+01:13:09.930 --> 01:13:22.560
+Jason Levine: design agency called sequence, Gail. And we were based in New York. When I was in Los Angeles office and one of our clients was Mattel and we had the Barbie.
+
+515
+01:13:23.580 --> 01:13:35.070
+Jason Levine: Account for some of their interactive products. And so we had the the Barbie room, and it was pink and it had dolls and it had
+
+516
+01:13:35.790 --> 01:13:47.340
+Jason Levine: Glitter. And it had big mirrors and it was not necessarily an a nine year old girls room, but it certainly puts you in that frame of mind.
+
+517
+01:13:47.940 --> 01:13:56.460
+Jason Levine: Because I don't know if you quite notice, but I don't quite look like a nine year old girl. At least I hope I don't, and nor did
+
+518
+01:13:57.180 --> 01:14:09.930
+Jason Levine: Anyone I worked with, but this allowed us when we were in that room to brainstorm forced us into the the context of that type of vantage point
+
+519
+01:14:10.530 --> 01:14:16.500
+Jason Levine: And so we had personas that were for those types of users, including the mother so because they're the ones that were doing.
+
+520
+01:14:17.280 --> 01:14:29.010
+Jason Levine: The shopping for the their daughter, as well as having a better identity around. What were some of the driving factors for the for the consumer as well. The, the dominant
+
+521
+01:14:33.240 --> 01:14:33.810
+Jason Levine: So,
+
+522
+01:14:35.370 --> 01:14:43.710
+Jason Levine: The hardest part about these things is trying to make sure that we're focusing on the right goals and so
+
+523
+01:14:44.910 --> 01:14:56.640
+Jason Levine: You want to focus when you're building these personas on what are the proper goals that are associated with those groupings that you're creating. So that way, it's realistic for that point of reference.
+
+524
+01:14:58.500 --> 01:15:04.110
+Jason Levine: And it's so that way you're fulfilling the proper goals in their prioritization based on their context.
+
+525
+01:15:04.620 --> 01:15:20.160
+Jason Levine: And then when we think about those things we map it back to the traits that are associated with that persona. And so the persona is helping to inform our tasks and the tasks are helping us to better refine the persona.
+
+526
+01:15:25.050 --> 01:15:30.990
+Jason Levine: So there are a lot of different steps that we do for this process. The first thing is collecting and analyzing data.
+
+527
+01:15:31.620 --> 01:15:45.570
+Jason Levine: The second is aligning our assumptions with data and use and user types with our goals and then we determine our market segments and demographics. So this part is a can be a marketing effort.
+
+528
+01:15:47.310 --> 01:15:49.470
+Jason Levine: That is informing our decisions.
+
+529
+01:15:50.520 --> 01:16:02.850
+Jason Levine: And then we will do interviewing to make sure that we've got a rounded perspective and hopefully what we're not doing is doing confirmation bias where we're only hearing what we need, what we think we need to hear, but we're hearing instead
+
+530
+01:16:03.510 --> 01:16:12.570
+Jason Levine: A larger perspective. So that way, it's able to put a better perspective on how we should be looking at the problem space.
+
+531
+01:16:14.040 --> 01:16:19.500
+Jason Levine: And that also allows us to then have the right skeleton in place for our rationales
+
+532
+01:16:20.910 --> 01:16:22.590
+Jason Levine: From there are
+
+533
+01:16:25.050 --> 01:16:25.320
+Jason Levine: Part of
+
+534
+01:16:26.490 --> 01:16:36.630
+Jason Levine: Our segments in remember seeing how things align that then determines the primary personas it saying my internet is unstable. It was everyone able to hear me okay
+
+535
+01:16:42.180 --> 01:16:46.110
+Jason Levine: Oh, you know what, I don't have my inner maybe that's why
+
+536
+01:16:46.920 --> 01:16:51.990
+Frost Keaton: You're getting a little bit shaky, but we still understand you, but it was a little starting a little shaky.
+
+537
+01:16:52.770 --> 01:16:56.340
+Jason Levine: Okay, I just realized I unplugged my
+
+538
+01:16:57.480 --> 01:17:02.730
+Jason Levine: My wire wired in patch. So hopefully the bandwidth will kick in and the second
+
+539
+01:17:04.290 --> 01:17:05.910
+Jason Levine: Okay, um,
+
+540
+01:17:07.020 --> 01:17:24.420
+Jason Levine: And then lastly, we will then want to pressure test it by throwing tasks at the persona, to see if the goals and the prioritization hold up to the story we're trying to say for that archetype.
+
+541
+01:17:29.400 --> 01:17:39.180
+Jason Levine: So, um, the thing is, is we're not looking to solve everything we're trying to solve for the core
+
+542
+01:17:40.980 --> 01:17:55.560
+Jason Levine: Goal, and the core happy path tasks that are related to that goal. And so that way we make sure that we're tackling the right issues, but not all issues. That's a big difference.
+
+543
+01:17:56.820 --> 01:18:10.050
+Jason Levine: And what makes that hard, is to not be self referential. In other words, I'm always using my perspective to inform the larger perspective as in I come with my own
+
+544
+01:18:11.850 --> 01:18:21.870
+Jason Levine: Biases. And the last thing I want is to have those biases defining assumptions versus allowing the data to inform the assumptions.
+
+545
+01:18:22.290 --> 01:18:40.800
+Jason Levine: And the other is to not make the the the elastic user in our persona. In other words, don't make too wide of a bucket for your goals and for your, your prioritization were too many of the refined persona archetypes are left into a larger bucket where it's not providing enough guidance.
+
+546
+01:18:44.580 --> 01:18:50.940
+Jason Levine: So, um, there is a difference between market segmenting and personas. They are interrelated.
+
+547
+01:18:52.020 --> 01:18:55.020
+Jason Levine: And together they should be able to generate
+
+548
+01:18:56.310 --> 01:19:09.720
+Jason Levine: To be able to help you know how to generate the demand and then the persona is how you satisfy that demand. That's the idea of how those two things work to get there. And I can use one I can use either one to inform the other
+
+549
+01:19:13.830 --> 01:19:15.570
+Jason Levine: Is. Does anybody have any questions so far.
+
+550
+01:19:23.310 --> 01:19:23.580
+Okay.
+
+551
+01:19:25.530 --> 01:19:29.790
+Jason Levine: So we're going to go into back into care Oregon for looking at their
+
+552
+01:19:30.930 --> 01:19:46.020
+Jason Levine: Personas as a representation. So we can get an idea how this all works. So here the personas were pretty clear cut because the business was defined by their personas. And so we there wasn't much
+
+553
+01:19:46.950 --> 01:19:59.250
+Jason Levine: Need to identify who were the right target audiences based on their user journeys. It was the business is defined by those that consume.
+
+554
+01:20:00.060 --> 01:20:17.730
+Jason Levine: In had medical care and those that provide medical care and those that are making decisions for who to use as for their medical care. So those are that's essentially how all the the main markets are for in this space. So it was a lot easier as a starting point.
+
+555
+01:20:18.960 --> 01:20:25.200
+Jason Levine: So what we do is the first thing we did was we added a banner on to this very ugly site.
+
+556
+01:20:26.340 --> 01:20:35.220
+Jason Levine: To get some survey data and that allowed us to be able to have some of the core data points that we needed to make some of our initial decisions.
+
+557
+01:20:37.650 --> 01:20:53.400
+Jason Levine: So even though we had these general personas of the type of user. What we didn't have is what the context was within that environment. And so that's what the the demographic data allowed us to be able to determine
+
+558
+01:20:54.060 --> 01:21:07.980
+Jason Levine: As well as some of the questions that we then pulled from those personas in our surveys. So in this case, one of them is the medical providers here. There were 76 that had responded and it was a pretty
+
+559
+01:21:09.030 --> 01:21:10.500
+Jason Levine: Interesting breakdown of
+
+560
+01:21:11.820 --> 01:21:34.590
+Jason Levine: Of health care providers and staff and then pharmacy. So of those, they found that a one out of five actually used the site on a daily basis, while making up half were using it several times a week. If you counted both market segments something as a consumption was very, very high.
+
+561
+01:21:36.180 --> 01:21:36.900
+Jason Levine: And then
+
+562
+01:21:38.280 --> 01:21:49.860
+Jason Levine: The other thing that came into into play when we understood this information was by looking at how often they were using it was. Oops, I just jumped ahead.
+
+563
+01:21:51.060 --> 01:22:01.320
+Jason Levine: Yeah okay was where they were using it so surprisingly a third we're as medical care providers were using
+
+564
+01:22:02.400 --> 01:22:10.680
+Jason Levine: This information from home when we came to find out later. The reason why was because they had no time to do their finish their work at work.
+
+565
+01:22:11.190 --> 01:22:18.720
+Jason Levine: And so they needed to have access to their account from home. So, a lot of them were snagging their
+
+566
+01:22:19.200 --> 01:22:28.470
+Jason Levine: work laptop, because we had it tethered to a single account from that machine and we didn't make it so it was flexible enough due to HIPAA rules.
+
+567
+01:22:29.130 --> 01:22:46.710
+Jason Levine: To make it so that you could log in from a home machine. And so we realized, Okay, what we really need to do to make this more consumable for our users just from this data point alone was that we needed to increase our security measures so that way people could log on remotely from home.
+
+568
+01:22:51.450 --> 01:23:00.480
+Jason Levine: Um, so we also looked at the health related information and the funding sources they were likely to use
+
+569
+01:23:03.750 --> 01:23:06.540
+Jason Levine: And then we asked what they were using care, Oregon.
+
+570
+01:23:07.350 --> 01:23:20.010
+Jason Levine: For or what they would plan on using care Oregon for. And so this allowed us to have a better idea of what we needed to prioritize is the high access type of content so
+
+571
+01:23:20.460 --> 01:23:30.660
+Jason Levine: Health News was a key consumer that they were using the care Oregon website for the reason for that was because they were, they are the primary health insurance provider.
+
+572
+01:23:31.440 --> 01:23:40.110
+Jason Levine: For Medicare and Medicaid. And so they had a very, very large audience. And so they were able to sway
+
+573
+01:23:40.920 --> 01:23:50.880
+Jason Levine: Health practice in the state of Oregon because of it. So a lot of that consumption was out of coming to the site for that purpose, which we weren't expecting at all.
+
+574
+01:23:51.780 --> 01:24:06.150
+Jason Levine: And so we were expecting to be more transactional so us being able to look at the information from just this perspective alone of this survey completely swayed our point of view on what our site needed to be supporting and focusing on for our users.
+
+575
+01:24:13.050 --> 01:24:16.140
+Jason Levine: Here's some of the quotes. We heard
+
+576
+01:24:17.910 --> 01:24:29.280
+Jason Levine: And the anecdotes are important because they give us insight and so we try to instill we do is we look for how anecdotes. Our support are
+
+577
+01:24:30.330 --> 01:24:38.040
+Jason Levine: Are providing insight into our data so that we have a better perspective in context with what what our data is saying.
+
+578
+01:24:42.030 --> 01:24:49.530
+Jason Levine: And so in that you'll see that they would want to talk to people.
+
+579
+01:24:51.870 --> 01:25:01.140
+Jason Levine: Only if they had to. And so them because it's time consuming and so the more that they were able to execute online. It actually worked out to be a better
+
+580
+01:25:01.890 --> 01:25:22.470
+Jason Levine: Solution for the providers than we actually had intended, we were seeing the site is kind of like what we were describing for Alta where the site for providers was simply as a bolster for the customer support calls because so much of their business was driven by a phone call.
+
+581
+01:25:23.520 --> 01:25:32.250
+Jason Levine: That we came to find out. Well, it's actually the other way around. They would much prefer to be a transacting online. Yeah, as opposed to phone calls.
+
+582
+01:25:34.920 --> 01:25:38.670
+Jason Levine: Okay, so now we'll move to demographics of our members.
+
+583
+01:25:40.260 --> 01:25:43.710
+Jason Levine: And so this was a breakdown of them. People that responded to that.
+
+584
+01:25:44.820 --> 01:25:45.210
+Jason Levine: That
+
+585
+01:25:46.590 --> 01:25:48.300
+Jason Levine: Banner that was on that page.
+
+586
+01:25:53.520 --> 01:26:04.320
+Jason Levine: So the interesting thing that we found was, how often do they access the internet and versus how often do they access for health related information.
+
+587
+01:26:05.520 --> 01:26:10.260
+Jason Levine: So there was not a direct correlation between the two, which was kind of surprising for us.
+
+588
+01:26:10.770 --> 01:26:22.230
+Jason Levine: And the reason why it was surprising is because like I said, the majority of their users are medicated or sorry, their customers or Medicaid and Medicare, which means that there is in a lot of cases and underlining medical condition.
+
+589
+01:26:23.550 --> 01:26:32.820
+Jason Levine: But it looked like that. They're referencing for medical information was literally the opposite of what we were seeing for from the care providers and using
+
+590
+01:26:34.500 --> 01:26:35.310
+Jason Levine: The website.
+
+591
+01:26:37.230 --> 01:26:48.930
+Jason Levine: So this was an interesting one about where they access the internet so 60% of our home. But what we were surprised to find out is that
+
+592
+01:26:50.040 --> 01:27:01.200
+Jason Levine: If you combine other which generally meant from somebody else's home, namely their parents or their or their siblings home combined with no access combined with library.
+
+593
+01:27:01.980 --> 01:27:15.840
+Jason Levine: Because we were talking about a Medicaid and Medicare scenario for our users. But we hadn't realized is that a lot of people making up 22% of our or 23% of our survey.
+
+594
+01:27:16.290 --> 01:27:28.170
+Jason Levine: Don't have internet did not have Internet at home because they were low income. And so they were using it so that a lot of that has been eaten up since then, with cell phone.
+
+595
+01:27:28.680 --> 01:27:36.720
+Jason Levine: So they're using their mobile phone to consume, but that but this gives you an idea of how much this colored our perspective on the consumption of information.
+
+596
+01:27:40.380 --> 01:27:49.410
+Jason Levine: Um, so where they seek their information for healthcare. So you'll see that it's much, much more reliant on the experts source of a doctor and a
+
+597
+01:27:50.790 --> 01:27:59.850
+Jason Levine: Half of its reliance on information that got from the Internet, which is literally the opposite of what we saw from healthcare providers.
+
+598
+01:28:03.270 --> 01:28:06.330
+Jason Levine: And so then this code comes back to the types of information that we're
+
+599
+01:28:06.960 --> 01:28:16.350
+Jason Levine: Looking for. And then all of a sudden we're seeing aligning an alignment of transactions so that the key transactions were the most important thing and that had to do with
+
+600
+01:28:16.920 --> 01:28:25.080
+Jason Levine: Drugs that were covered and benefits which included a health care providers that were covered
+
+601
+01:28:25.470 --> 01:28:35.250
+Jason Levine: And so, those being the key aspects became the most important thing, as well as submitting forms. So when you combine that it became a lot more important for transactions than it was for
+
+602
+01:28:35.730 --> 01:28:45.750
+Jason Levine: providing additional information outside that world. So you'll see that health news was roughly half versus what we saw with providers.
+
+603
+01:28:52.590 --> 01:28:56.130
+Jason Levine: So this was just simply asking and this data is not as important anymore.
+
+604
+01:28:59.010 --> 01:29:06.180
+Jason Levine: And then we were asked to how they preferred, and this was surprising as well that nearly half
+
+605
+01:29:07.980 --> 01:29:19.620
+Jason Levine: Preferred physical, material. And then if you conclude over the phone. It made two thirds of your customer did not want to use the internet at all. And that was pretty surprising.
+
+606
+01:29:27.900 --> 01:29:32.610
+Jason Levine: And then we came to find out when we listen to people. The reason why was because I don't like using a website.
+
+607
+01:29:35.490 --> 01:29:37.200
+Jason Levine: And that came through in our anecdotes.
+
+608
+01:29:41.250 --> 01:29:53.520
+Jason Levine: So, um, so, the thing that we came to learn that were insights that we had not expected vulnerable populations are likely to be offline. That seems obvious in hindsight.
+
+609
+01:29:55.170 --> 01:30:00.810
+Jason Levine: And those that are using social networks were likely to be online and vice versa.
+
+610
+01:30:01.800 --> 01:30:10.410
+Jason Levine: One third of American adults care for their parents. And so one of the things that we had to consider was that much of the consumption was not by the
+
+611
+01:30:11.220 --> 01:30:17.790
+Jason Levine: Person needing the care, but by a loved one that was supporting them with that care.
+
+612
+01:30:18.240 --> 01:30:32.040
+Jason Levine: And that was another thing we hadn't really considered is that we were considering everything behind a an account for that person when it's actually, they may have an account, but they're actually needing it for a different person that's not in their account.
+
+613
+01:30:33.060 --> 01:30:35.970
+Jason Levine: And so that made us have to look at the problem in a completely different way.
+
+614
+01:30:37.770 --> 01:30:39.840
+Jason Levine: Does anybody have any questions about this information.
+
+615
+01:30:46.290 --> 01:30:46.590
+Okay.
+
+616
+01:30:50.670 --> 01:30:58.890
+Jason Levine: So before I move on to the personas themselves. I hope you're seeing how the research via the
+
+617
+01:30:59.580 --> 01:31:10.470
+Jason Levine: survey that we did as well as some of the initial interviews highly informed, how we need to be thinking about our personas how different our perspectives were
+
+618
+01:31:10.950 --> 01:31:26.820
+Jason Levine: Because of the consumption of having data to inform our decisions. And so the way that we were looking at personas is not to say this is the only way that the that our user is using and consuming our product or service.
+
+619
+01:31:27.240 --> 01:31:43.590
+Jason Levine: It's instead allowing us to be enlightened based on the rigor of our data. The things we need to make sure are afforded and accommodated specifically for this type of user and the context of their consumption for their user goals.
+
+620
+01:31:44.190 --> 01:31:54.090
+Jason Levine: And that's, that's the reason why we make these things. It's so we don't lose sight of our preferences that are outside of our control.
+
+621
+01:31:56.100 --> 01:32:00.090
+Jason Levine: So here's an example of the persona for a member
+
+622
+01:32:02.760 --> 01:32:10.110
+Jason Levine: So this is for an existing Member in here. We created a persona that had a narrative to it.
+
+623
+01:32:11.220 --> 01:32:17.460
+Jason Levine: And so we, in this case we had to have two personas that were built in the same thing because they have the same user goals.
+
+624
+01:32:17.730 --> 01:32:27.120
+Jason Levine: But we need to make sure that we had context for the fact that one is a representative for the member and the other is the member themselves and how those overlap. So they're combined into the same
+
+625
+01:32:27.540 --> 01:32:37.530
+Jason Levine: Persona as a pieces of that archetype. And so here you're seeing the narrative that applied to how their user goals were being
+
+626
+01:32:38.730 --> 01:32:39.240
+Jason Levine: Needed
+
+627
+01:32:40.800 --> 01:32:46.290
+Jason Levine: And then here, you're seeing specific specificity around the
+
+628
+01:32:47.520 --> 01:33:01.440
+Jason Levine: Persona itself to give us a better understanding of how we should be servicing that. So here we have a little bit of a of a window into the type of role that this person.
+
+629
+01:33:02.460 --> 01:33:07.860
+Jason Levine: Will be coming to the site with not that these are specifics. Not everyone will be
+
+630
+01:33:08.910 --> 01:33:17.250
+Jason Levine: This age group, and only have a high school diploma with part time as a part time waitress, but this just simply gives us a a
+
+631
+01:33:17.760 --> 01:33:32.040
+Jason Levine: marker of how we should be looking at this problem space and that way when we're looking at the usage needs. In other words, the tasks that are necessary as high priority. We have context for what the rest of the world is like while they're doing these things.
+
+632
+01:33:35.130 --> 01:33:40.980
+Jason Levine: Um, so here's a prospective Member and so for this person.
+
+633
+01:33:42.660 --> 01:33:50.490
+Jason Levine: This is describing somebody who's a retiree that is now looking to be covered for their Medicare
+
+634
+01:33:51.660 --> 01:34:00.540
+Jason Levine: I'm sorry, Medicaid. Is that right, no, I forget which one is which. Medicare is for retirees Medicaid is for those that are in have chronic conditions.
+
+635
+01:34:02.070 --> 01:34:13.980
+Jason Levine: And so, uh, so we built the same kind of thing a narrative that help give context and with the same thing with giving some form of a top level.
+
+636
+01:34:14.460 --> 01:34:32.880
+Jason Levine: And then what their core actions worth. Now there's something really interesting that occurs when that is a difficulty in the designer, the design space. So we as designers are consuming design assets from fellow designers
+
+637
+01:34:33.960 --> 01:34:41.520
+Jason Levine: And so when we get our stock photography. When we get our audio clips. When we get our
+
+638
+01:34:42.540 --> 01:34:44.430
+Jason Levine: visual design system.
+
+639
+01:34:45.720 --> 01:35:00.180
+Jason Levine: Assets. Those are from other designers. Here's the thing, 76% of designers are white and of those designers about 70% of them are female.
+
+640
+01:35:01.020 --> 01:35:16.620
+Jason Levine: And so the actual content that we're consuming to create these things for other people are by people just like us. So, how this relates to this photo is that I tried to find a older
+
+641
+01:35:18.390 --> 01:35:22.650
+Jason Levine: person of color gentleman that did not look rich
+
+642
+01:35:23.760 --> 01:35:24.390
+Jason Levine: And
+
+643
+01:35:25.560 --> 01:35:32.820
+Jason Levine: The problem I found is the only way I could find somebody that didn't fit that criteria was finding somebody dirt poor
+
+644
+01:35:34.560 --> 01:35:42.900
+Jason Levine: And it was the same thing with Asians. So this. It was a very difficult picture to find because there are very few photos of
+
+645
+01:35:43.650 --> 01:35:52.560
+Jason Levine: Middle class Asians in here. It was literally impossible to find somebody that fit the criteria. I was looking for. In fact, this photo was actually have
+
+646
+01:35:53.550 --> 01:36:07.980
+Jason Levine: A rich older gentleman on a golf course. So what I had to do was make the grass behind them a little brown so it didn't look like he was on a green I photoshopped out the
+
+647
+01:36:09.210 --> 01:36:12.780
+Jason Levine: Little flag they stick in for the T and not the team for the whole
+
+648
+01:36:13.650 --> 01:36:20.520
+Jason Levine: That was behind him. I gave him a cheaper watch so he's got a digital cheap digital watch them that nice classy. Watch. He had
+
+649
+01:36:20.790 --> 01:36:37.350
+Jason Levine: And I had a grime up his shirt. It's a little off color. It's not pure white and he and I had a yellow his teeth a little and give them a bit more gray. And the reason why was because the stock photography was so biased. And so it was either very rich young
+
+650
+01:36:39.150 --> 01:36:44.970
+Jason Levine: African Americans or it was very, very poor urbanites nothing in between.
+
+651
+01:36:46.110 --> 01:36:53.520
+Jason Levine: Versus I don't have that problem. If I'm looking for fellow white people, it, it's, it's interesting how much our socio economic
+
+652
+01:36:54.210 --> 01:37:13.320
+Jason Levine: Position influences how we consume and to make decisions. And so, and then so I bring this up because that meant that if I started from the vantage point of photos I can be influenced the wrong direction, just by what it is. I was finding because I'm consuming from people just like me.
+
+653
+01:37:18.990 --> 01:37:25.710
+Jason Levine: Now, Julia is an actual care provider that's within the care Oregon program. So that was a lot easier to find somebody
+
+654
+01:37:26.790 --> 01:37:39.930
+Jason Levine: And so here I was to define the type of person who best met the criteria. So here I didn't need to have as much of a narrative, because it's a broader audience and there's less context.
+
+655
+01:37:40.530 --> 01:37:58.290
+Jason Levine: So I was able to build a narrower narrative in in inside this page of the of the persona. So they use the core high priority needs are met at the bottom of the page with the
+
+656
+01:38:00.510 --> 01:38:03.750
+Jason Levine: The demographic information and their consumption information at the top.
+
+657
+01:38:05.790 --> 01:38:07.800
+Jason Levine: So any questions.
+
+658
+01:38:10.710 --> 01:38:21.720
+Frost Keaton: Jason, good question. Um, yeah, this is a good example of, you know, how did you use a research for an existing site for people that are already you know
+
+659
+01:38:22.230 --> 01:38:26.940
+Frost Keaton: Members providers, you know, people that already interact with the site and everything like that, using a survey.
+
+660
+01:38:27.300 --> 01:38:36.240
+Frost Keaton: Based, which is obviously less expensive than, you know, getting people together in a room, what, what would you suggest to do, like, how would you conduct user research.
+
+661
+01:38:36.780 --> 01:38:41.970
+Frost Keaton: For let's say a company that was just starting up as you start a company where it's, you know, kind of
+
+662
+01:38:42.540 --> 01:38:47.250
+Frost Keaton: breaking new ground they don't have a website, they don't have customers even they're trying to you know figure that out.
+
+663
+01:38:47.730 --> 01:38:58.440
+Frost Keaton: Um, how do you, how do you, I mean, you can get to understand how you can define the market segment that you're going after for that, but then marrying with the persona not really quite knowing
+
+664
+01:38:58.920 --> 01:39:04.200
+Frost Keaton: Exactly what their goals are. Since the site has to come out of the services, who would you suggest for doing that.
+
+665
+01:39:04.710 --> 01:39:21.030
+Jason Levine: So that you would want to follow the same model. It's a very good question. And this is a common problem that we have whenever we're inventing so there's a famous quote that I will bastardized because I don't remember the word for word quote of from
+
+666
+01:39:22.440 --> 01:39:26.010
+Jason Levine: Henry Ford. That said, if I was asking what
+
+667
+01:39:27.630 --> 01:39:30.210
+Jason Levine: The common customer wanted
+
+668
+01:39:32.040 --> 01:39:41.910
+Jason Levine: That was then I would get an answer about a healthier horse or something like that. I'm probably screwing it up really bad. But the point is, is that
+
+669
+01:39:42.510 --> 01:39:51.000
+Jason Levine: The product. He was trying to define for them was a product that did not exist. And so I'm not going to hear the them.
+
+670
+01:39:51.600 --> 01:40:00.240
+Jason Levine: pontificate on the product I want, they're going to talk about the problem space of where they are now and how they would want to improve that existing
+
+671
+01:40:00.960 --> 01:40:08.700
+Jason Levine: Problem space and not necessarily contextually to what it is I want to build or design or serve service for them.
+
+672
+01:40:09.690 --> 01:40:21.960
+Jason Levine: So the, the best way you can do that is like you're just describing through surveys and then follow up with at with that demographic data of simply doing lots and lots and lots of interviews.
+
+673
+01:40:23.640 --> 01:40:31.950
+Jason Levine: So I can't remember it's all blending together. And I'll give you some context. Once I've asked this. Have any of you.
+
+674
+01:40:33.060 --> 01:40:37.020
+Jason Levine: Have already discussed with you about Amazon rentals.
+
+675
+01:40:42.030 --> 01:40:42.390
+Jason Levine: No.
+
+676
+01:40:42.900 --> 01:40:44.190
+Benjamin Porter: No. Okay.
+
+677
+01:40:45.210 --> 01:40:51.030
+Jason Levine: So this is a good breaking point for that question. The question you're asking. So
+
+678
+01:40:52.260 --> 01:40:53.430
+Jason Levine: Amazon rentals.
+
+679
+01:40:54.840 --> 01:40:58.410
+Jason Levine: Was a service that I was the primary
+
+680
+01:40:59.700 --> 01:41:16.110
+Jason Levine: Principal designer for and the idea at first was to build a product service for renting of cameras and so that way you could rent high end cameras at a discounted price.
+
+681
+01:41:17.730 --> 01:41:35.730
+Jason Levine: For a window of time. So, either in most cases we were seeing it as for a vacation for a wedding or if you're a professional camera. I'm sorry, a professional photographer. You wanted high end equipment that was outside of your reach that you needed for a specific purpose in all
+
+682
+01:41:36.990 --> 01:41:41.850
+Jason Levine: This is it was the idea was something that you'd have a short transaction for somebody who was
+
+683
+01:41:43.230 --> 01:41:51.870
+Jason Levine: In high demand of that product and wouldn't have a long term need for that product. And in those cases so
+
+684
+01:41:52.560 --> 01:42:04.890
+Jason Levine: We went about building the service and we did the entire experience and then it fell on top of itself because cannon realized they were going to be cannibalizing their own market. So they pulled out.
+
+685
+01:42:05.400 --> 01:42:19.980
+Jason Levine: Well, once they did then Nikon pulled out and then Sony pulled out because they no longer we're competing against each other. So why would they also want to be cannibalizing their own product.
+
+686
+01:42:20.610 --> 01:42:31.410
+Jason Levine: So all of a sudden we had a service with no products to rent and so it sat on the back shelf for about a year and then it kicked up again when we had a way of
+
+687
+01:42:32.190 --> 01:42:50.940
+Jason Levine: Finding a manufacturer that was dedicated to the product space that we had a dedicated market that we could see for a longer window than a usage of a week to two weeks to three weeks max. So the. They also had is they want to have something that was more durable than a
+
+688
+01:42:52.200 --> 01:42:53.550
+Jason Levine: camera equipment which is
+
+689
+01:42:55.050 --> 01:43:08.850
+Jason Levine: Requiring very expensive equipment to ship it into a sure that it would return in the same piece. It was sent in. So they wanted something that was a bit more durable. And so what they came up with as being the pilot program for this was
+
+690
+01:43:10.440 --> 01:43:11.010
+Jason Levine: A
+
+691
+01:43:12.120 --> 01:43:20.490
+Jason Levine: Musical Instruments specifically brass musical instruments and the reason why was because they're durable in and
+
+692
+01:43:21.210 --> 01:43:35.670
+Jason Levine: They also are used at schools for an entire semester to an entire year. So you had a longer model for when to expect the usage of them and the they have the durability to be reinvented multiple times.
+
+693
+01:43:36.870 --> 01:43:51.750
+Jason Levine: And so we pivoted to work from that workspace. And so we rebuilt the entire design specific to go after that category without thinking through how much else had to change any experience around that.
+
+694
+01:43:52.650 --> 01:44:00.810
+Jason Levine: So now back to your question. Here's a service that people may have a different perspective on what they want to use it for
+
+695
+01:44:01.980 --> 01:44:14.040
+Jason Levine: But I'm not going to be able to find out how they would do it online. If they've never done it online before, nor will I find out what they would do different if they bought it, since they can't compare it to an online rental
+
+696
+01:44:15.390 --> 01:44:24.690
+Jason Levine: So the information. I'm going to get is pretty flawed. But that doesn't mean that I can't get information from them anyway. So the more interviews I did.
+
+697
+01:44:25.980 --> 01:44:42.060
+Jason Levine: The more information. I was able to have context. But then something really interesting happened at the early part of that that process. I was talking to somebody who was telling me how pissed off, they were at their 11 year old son.
+
+698
+01:44:43.080 --> 01:44:50.400
+Jason Levine: Because his he bought his son, a trumpet and his son.
+
+699
+01:44:51.450 --> 01:44:56.310
+Jason Levine: Through the trumpet over a fence, because there's a shortcut to the House.
+
+700
+01:44:57.510 --> 01:45:08.070
+Jason Levine: And he figured it was fine to throw it over the fence, because it was in its case. So to the nine year old logic or 10 year old logic, what was
+
+701
+01:45:09.300 --> 01:45:28.800
+Jason Levine: That seemed like a perfectly fine thing to do is just haul it right over your head and climb the fence. And sure enough, it was pretty mangled inside the case. And that's when I had this epiphany and I realized we built this rental experience for not the customer.
+
+702
+01:45:29.820 --> 01:45:38.400
+Jason Levine: The customer we built was for a professional photographer who is going to lovingly care for an expensive item.
+
+703
+01:45:39.810 --> 01:45:57.180
+Jason Levine: And instead, the person that is going to be renting it is different than the person who is consuming it and the person that is going to be consuming it has no interest in prioritizing the care of that rental item.
+
+704
+01:45:58.590 --> 01:46:10.800
+Jason Levine: And once I realized that it occurred to me that all of our premises were false, we were focusing on the wrong person for our decisions.
+
+705
+01:46:11.610 --> 01:46:22.380
+Jason Levine: Because we were basing on who was renting it and thinking that was one in the same. So once we got into that market, it became a lot of researching not instead the parent
+
+706
+01:46:24.210 --> 01:46:28.200
+Jason Levine: But how the parent deals with their kid.
+
+707
+01:46:30.090 --> 01:46:38.040
+Jason Levine: With that item that completely changed our perspective on a lot of the different consumption, because then we had to consider how do you get a
+
+708
+01:46:39.540 --> 01:46:46.230
+Jason Levine: A. I don't know what those things are called on a trumpet or any type of brass of the little things that go up and down. When you those things.
+
+709
+01:46:47.970 --> 01:47:01.560
+Jason Levine: When those were broken and they need to be replaced and you have band practice on Thursday and the item doesn't work right on Tuesday. How do you fix that online as a rental.
+
+710
+01:47:02.220 --> 01:47:10.590
+Jason Levine: We hadn't considered that because we were in considering its consumption. So the long way of answering your question is that
+
+711
+01:47:11.610 --> 01:47:16.050
+Jason Levine: You learn through anecdotes and then it informs your data.
+
+712
+01:47:17.160 --> 01:47:24.870
+Jason Levine: And so it requires allowing for yourself to be wrong all the time or the scribble I showed you the very first class.
+
+713
+01:47:25.290 --> 01:47:33.450
+Jason Levine: That's when we all of a sudden realize the scribble is much bigger than we thought. And we got to start over again on our perspective to narrow that how much we've got wrong.
+
+714
+01:47:34.320 --> 01:47:41.820
+Jason Levine: And so that's how those personas help you. And that's how you use those things to then inform your than later business decisions.
+
+715
+01:47:42.990 --> 01:47:44.100
+Jason Levine: Does that help answer your question.
+
+716
+01:47:46.530 --> 01:47:48.750
+Frost Keaton: Yeah. Yeah, it does. Yeah, thanks.
+
+717
+01:47:52.140 --> 01:47:53.190
+Frost Keaton: I'll go back to sharing
+
+718
+01:47:56.670 --> 01:47:57.510
+Jason Levine: How we doing on time.
+
+719
+01:47:58.830 --> 01:48:04.200
+Jason Levine: 830 they're doing all right, you need a break. You don't. Okay.
+
+720
+01:48:07.350 --> 01:48:12.000
+Jason Levine: All right, I'll keep going for probably another 15 minutes and then we'll look, we'll take a break.
+
+721
+01:48:16.380 --> 01:48:17.310
+Jason Levine: I am sharing my screen.
+
+722
+01:48:24.750 --> 01:48:25.380
+Jason Levine: Alright.
+
+723
+01:48:27.930 --> 01:48:31.920
+Jason Levine: So there's another thing to consider four personas.
+
+724
+01:48:34.470 --> 01:48:38.370
+Jason Levine: And that's to do with complexity of information.
+
+725
+01:48:39.570 --> 01:48:46.410
+Jason Levine: So you can't just simply say that there are these five tasks. And so therefore, I'm done.
+
+726
+01:48:47.910 --> 01:49:06.900
+Jason Levine: Well, you have to consider is the complexity of how that information is is then consumed, because that is a bigger problem for those users. So for the implement security department. If you remember, that was the one you did the the heuristics report reference was from them.
+
+727
+01:49:08.460 --> 01:49:18.210
+Jason Levine: There was a big, big, big problem with the website itself and it had to do with the sheer volume of information that it could provide
+
+728
+01:49:19.560 --> 01:49:22.320
+Jason Levine: And how that could be
+
+729
+01:49:28.950 --> 01:49:36.720
+Jason Levine: So again, this is that English be floored by how wonderful the line is otherwise. So glad to be tripped.
+
+730
+01:49:38.220 --> 01:49:47.730
+Jason Levine: And what you're seeing from this design. If you can call it a design is your it doesn't know where to go. There's a lot of information.
+
+731
+01:49:48.810 --> 01:50:00.600
+Jason Levine: And none of that information is necessarily standing out is more important than the other, and the information I'm looking at kind of blends into the other information. So it's hard to determine tasks.
+
+732
+01:50:02.010 --> 01:50:15.540
+Jason Levine: So what we wanted to do was first analyze what content we had and how that content was being consumed. So we did was we made a website a sitemap
+
+733
+01:50:16.980 --> 01:50:20.190
+Jason Levine: So here is a representation of all the parent
+
+734
+01:50:22.740 --> 01:50:31.950
+Jason Levine: All of the things in red are the different forms of navigation. So on this page, we have the tools drop down, which was available on most pages.
+
+735
+01:50:33.060 --> 01:50:41.520
+Jason Levine: We have the left column which had which was available on most pages. And then we have the body of information in the middle. Plus, we had
+
+736
+01:50:41.850 --> 01:50:57.210
+Jason Levine: The parent navigation at the top where it says home my labor market info career center. So all these were. And then there's a footer. And so what you're seeing are those core elements in red as those sections, I believe. That's right.
+
+737
+01:50:59.160 --> 01:51:08.130
+Jason Levine: Let's take a look a little closer because I can't remember anymore. It's been a long time. Yeah. So there's different navigation available on the homepage. So this is the parent navigation here.
+
+738
+01:51:09.150 --> 01:51:21.030
+Jason Levine: Career Center labor market section data library and then the utilitarian ABA the side navigation down below. And then the footer navigation and then the toolbar navigation.
+
+739
+01:51:22.140 --> 01:51:25.680
+Jason Levine: So that gives you an idea of all the different parts of the navigation and where they went to
+
+740
+01:51:27.780 --> 01:51:41.250
+Jason Levine: So one of the things that stood out for us was the repetitive nature, first of all, that there were things available in this multiple times in this in different areas, but also how common certain vernacular was
+
+741
+01:51:42.540 --> 01:51:48.270
+Jason Levine: So here is replication of using this word is a mind.
+
+742
+01:51:52.560 --> 01:52:02.730
+Jason Levine: Of the term labor market and how often it was repeated throughout different parts of the site. So here in green is showing you how often that term was used
+
+743
+01:52:05.940 --> 01:52:10.350
+Jason Levine: This is labor market report to give you an idea how often that term was being used.
+
+744
+01:52:14.400 --> 01:52:21.000
+Jason Levine: Here's a highlighting anytime the word publication or the word report was being used. So,
+
+745
+01:52:22.080 --> 01:52:25.230
+Jason Levine: Quick question. Does anybody know the difference between a publication and a report.
+
+746
+01:52:29.520 --> 01:52:32.730
+Jason Levine: All right. It's a trick question. There is no differentiation
+
+747
+01:52:36.030 --> 01:52:48.960
+Jason Levine: This is a fun one different places where you could find wage information. So this is not using necessarily the same labeling, but where you would find wage information in the navigation in these different sections.
+
+748
+01:52:54.480 --> 01:52:58.890
+Jason Levine: So now let's look at the Career Center. So this is one of the sub sections in the site.
+
+749
+01:53:00.420 --> 01:53:06.330
+Jason Levine: And seeing. So the red navigation is this is that child navigation underneath the Career Center.
+
+750
+01:53:07.500 --> 01:53:07.920
+Jason Levine: NAF
+
+751
+01:53:09.360 --> 01:53:22.590
+Jason Levine: So this shows you what's an orange in both places are literally the identical page of content into different sections simply what you see in the cyan blue
+
+752
+01:53:23.490 --> 01:53:33.690
+Jason Levine: Those are the same report in different locations on the site. It's the same thing with the purple. And same thing with the yellow. So you go, navigate to different places to find the same thing.
+
+753
+01:53:35.280 --> 01:53:43.140
+Jason Levine: Here's another example of business and planet dynamics in two different locations. Why, you may ask why. Why would you
+
+754
+01:53:43.680 --> 01:53:53.400
+Jason Levine: Do this to your user. And the reason why was because when they did usability studies and they asked, go find where you would get business employment dynamic information.
+
+755
+01:53:53.760 --> 01:54:02.880
+Jason Levine: Some of their users went to publications by timeline and others went to publications and report in their section. So they decided. Alright, well, we'll have it in both places.
+
+756
+01:54:05.280 --> 01:54:07.680
+Jason Levine: So why the replication.
+
+757
+01:54:08.970 --> 01:54:20.280
+Jason Levine: And we, it's interesting because we are specifically constrained in the English language because of this man, William of Orange.
+
+758
+01:54:21.930 --> 01:54:24.390
+Jason Levine: That was based in Normandy.
+
+759
+01:54:26.940 --> 01:54:28.110
+Jason Levine: In 1066
+
+760
+01:54:29.430 --> 01:54:29.880
+Jason Levine: So,
+
+761
+01:54:31.440 --> 01:54:37.380
+Jason Levine: How could this be why would that be such a great such a massive event.
+
+762
+01:54:38.430 --> 01:54:44.850
+Jason Levine: And so what you have to think about is specifically what was going on in 1066
+
+763
+01:54:45.870 --> 01:54:56.160
+Jason Levine: Because what was going on in 1066 was that it was a Germanic set of tribes that had
+
+764
+01:54:57.480 --> 01:55:06.030
+Jason Levine: Migrated after the fall of the Roman Empire and had set up tribal
+
+765
+01:55:07.080 --> 01:55:13.470
+Jason Levine: fiefdoms throughout Britain and they all spoke a Germanic language.
+
+766
+01:55:16.170 --> 01:55:26.400
+Jason Levine: Then in 1066 the this man here invaded speaking a Romance language based on a version of French
+
+767
+01:55:27.900 --> 01:55:45.030
+Jason Levine: And when they they invaded they wiped out. Anyone who was of the ruling class and they installed there on people. So here you have a case where the people in
+
+768
+01:55:45.990 --> 01:55:56.940
+Jason Levine: Germany. I'm sorry. Those that were a Germanic language spoke a different language than those that rule them that speaking a Romance language something similar to French
+
+769
+01:55:58.230 --> 01:56:20.820
+Jason Levine: Why would this be a big deal. Well, if you think about it, culturally, we are intertwined with the words that are focused in our culture. So here is an example in Hawaii, the Hawaiians have 27 different words to describe ocean wave types. Why would you think that would be
+
+770
+01:56:26.580 --> 01:56:27.720
+Frost Keaton: They're surrounded by ocean.
+
+771
+01:56:29.220 --> 01:56:30.180
+Jason Levine: How would that impact.
+
+772
+01:56:30.990 --> 01:56:33.480
+Jason Levine: So why would that have an impact for them.
+
+773
+01:56:34.830 --> 01:56:42.240
+Frost Keaton: Because they would notice all different sorts of ways different shapes, different sizes, different velocities and everything like that and want to name them accordingly so they could
+
+774
+01:56:43.650 --> 01:56:52.260
+Frost Keaton: District describe them to each other in you know the right way so that people would know exactly what you know, one who is versus not.
+
+775
+01:56:53.880 --> 01:57:00.240
+Jason Levine: Exactly. So if your culture is contextual to that environment.
+
+776
+01:57:01.290 --> 01:57:16.260
+Jason Levine: The, the nuances of that environment are very, very important because you don't want to send your daughter to go spearfishing if there are undertow waves that will sucker under and she will die.
+
+777
+01:57:16.920 --> 01:57:35.460
+Jason Levine: So you need to be able to describe the right waves that she can go spear fishing in and so that way you're using words that are not necessarily necessary in a different environment that are very, very important to the context of the existing environment. Fast forward to 1066
+
+778
+01:57:37.290 --> 01:57:39.180
+Jason Levine: We're talking about
+
+779
+01:57:41.130 --> 01:57:46.350
+Jason Levine: A Bronze Age or maybe it was Iron Age at that. No, no, it was Bronze Age.
+
+780
+01:57:48.150 --> 01:58:00.180
+Jason Levine: Society that was rural and tribalistic. This is give you an idea how many words, there are for the word kill English all the different words we can use to describe killing
+
+781
+01:58:01.470 --> 01:58:02.070
+Jason Levine: There are a lot
+
+782
+01:58:03.210 --> 01:58:08.010
+Jason Levine: And we have to think about it. Well, this has a lot to do with what was going on in an agrarian
+
+783
+01:58:09.450 --> 01:58:11.520
+Jason Levine: Bronze Age society.
+
+784
+01:58:12.810 --> 01:58:18.900
+Jason Levine: Where there were warring factions at any one time words are around those things.
+
+785
+01:58:20.520 --> 01:58:26.190
+Jason Levine: So if you think about it, here we are in 1066 and
+
+786
+01:58:27.330 --> 01:58:30.120
+Jason Levine: I have a French ruling class.
+
+787
+01:58:31.380 --> 01:58:38.700
+Jason Levine: And I have the people who serve me are a Germanic ruling class or sorry pled pled class of
+
+788
+01:58:40.170 --> 01:58:40.920
+Jason Levine: Sorry, a
+
+789
+01:58:41.940 --> 01:58:44.910
+Jason Levine: serfdom class of clubs.
+
+790
+01:58:46.080 --> 01:58:59.430
+Jason Levine: And they will use their own words to describe things were all of a sudden in a snapshot time period, they have to communicate. So I know that I have somebody here that knows French tell me the word for
+
+791
+01:59:00.930 --> 01:59:01.380
+Jason Levine: Cow.
+
+792
+01:59:05.160 --> 01:59:05.940
+Jason Levine: Think that was Edward
+
+793
+01:59:14.070 --> 01:59:14.820
+Jason Levine: There were
+
+794
+01:59:20.790 --> 01:59:24.630
+Edward McFields: Some things here. Yeah, it's called a rush, rush. Yeah.
+
+795
+01:59:25.170 --> 01:59:27.060
+Jason Levine: How about for meat on your plate.
+
+796
+01:59:31.560 --> 01:59:35.490
+Edward McFields: You love your mom flat. Now, young dumb. I'm glad.
+
+797
+01:59:37.860 --> 01:59:40.320
+Jason Levine: So how about for
+
+798
+01:59:43.350 --> 01:59:44.940
+Jason Levine: What about Beth. What is Beth mean
+
+799
+01:59:52.200 --> 01:59:52.560
+Edward McFields: Was it
+
+800
+01:59:53.160 --> 01:59:53.640
+Beth.
+
+801
+01:59:57.480 --> 01:59:59.880
+Jason Levine: Beth, maybe I'm getting wrong. No.
+
+802
+02:00:02.010 --> 02:00:02.610
+Edward McFields: Whereas, Beth.
+
+803
+02:00:03.000 --> 02:00:04.860
+Edward McFields: Yeah, oh, we're Beth.
+
+804
+02:00:06.090 --> 02:00:07.200
+Jason Levine: Yeah, so what what does that word mean
+
+805
+02:00:08.220 --> 02:00:11.790
+Edward McFields: EU is where it is pretty much know
+
+806
+02:00:12.390 --> 02:00:14.490
+Jason Levine: FB F F F.
+
+807
+02:00:15.930 --> 02:00:16.500
+Edward McFields: G.
+
+808
+02:00:18.780 --> 02:00:20.700
+Jason Levine: Know maybe I'm throwing it off. I'm sorry.
+
+809
+02:00:22.440 --> 02:00:23.160
+Jason Levine: So,
+
+810
+02:00:24.270 --> 02:00:26.610
+Jason Levine: Beth, as it for cow.
+
+811
+02:00:28.980 --> 02:00:30.720
+Jason Levine: Am I right, no.
+
+812
+02:00:31.260 --> 02:00:32.370
+Edward McFields: I know, Beth is
+
+813
+02:00:33.000 --> 02:00:33.450
+Deaf
+
+814
+02:00:36.270 --> 02:00:37.200
+Jason Levine: People to another word.
+
+815
+02:00:39.540 --> 02:00:41.910
+Jason Levine: There about for our chicken.
+
+816
+02:00:48.390 --> 02:00:49.560
+Edward McFields: When I say cook.
+
+817
+02:00:51.510 --> 02:00:54.480
+Edward McFields: Chef regards to chicken okay Cydia
+
+818
+02:00:55.980 --> 02:00:56.460
+Edward McFields: Male chicken.
+
+819
+02:00:59.970 --> 02:01:11.160
+Jason Levine: So all right, I'm getting thrown off here because my butt. So I could be wrong. I guess I am, but I understood the word to be Beth for
+
+820
+02:01:13.170 --> 02:01:14.400
+Jason Levine: The word for
+
+821
+02:01:16.740 --> 02:01:17.190
+Jason Levine: For
+
+822
+02:01:18.420 --> 02:01:21.840
+Jason Levine: The word that's the meat on your plate from a cow and
+
+823
+02:01:23.400 --> 02:01:25.500
+Jessie Sinclair Knudsen: That's what I remember from high school French to
+
+824
+02:01:27.960 --> 02:01:29.940
+Jessie Sinclair Knudsen: Pull it all. That sounds familiar to me.
+
+825
+02:01:31.500 --> 02:01:32.880
+Jason Levine: So the word for cow.
+
+826
+02:01:33.690 --> 02:01:35.610
+Jason Levine: Is cool in German.
+
+827
+02:01:37.200 --> 02:01:38.790
+Jason Levine: In German is
+
+828
+02:01:39.330 --> 02:01:39.720
+Edward McFields: is cool.
+
+829
+02:01:39.960 --> 02:01:40.920
+Jason Levine: Sounds a lot like
+
+830
+02:01:41.040 --> 02:01:51.420
+Jason Levine: The German version of cow is the same as the English version because the dramatic people are the ones that took care of the cow, but the ones who got to eat the cow.
+
+831
+02:01:52.710 --> 02:01:54.030
+Jason Levine: Those are the French speaking ones.
+
+832
+02:01:55.410 --> 02:02:02.880
+Jason Levine: And so the word that we have for consuming it something like I understood for the high school version of French was Beth.
+
+833
+02:02:04.560 --> 02:02:07.230
+Jason Levine: Is a is the word for consuming it
+
+834
+02:02:08.880 --> 02:02:16.020
+Jason Levine: And if you look at every single nuanced word that you can't spell. Right. It's the French version.
+
+835
+02:02:17.190 --> 02:02:22.230
+Jason Levine: If it is utilitarian word nine times out of 10 it's the German word
+
+836
+02:02:23.250 --> 02:02:36.210
+Jason Levine: And the reason why I have to think of it that way is that, essentially, we have a window in time where you had problem of communication, having to be solved or you died.
+
+837
+02:02:36.990 --> 02:02:47.910
+Jason Levine: So everything that was a snapshot of that time period became very, very important. So that's why we have so many words for this. But then when we look at say
+
+838
+02:02:48.930 --> 02:02:56.220
+Jason Levine: Words that were not so common in the Bronze Age words like employment, there weren't that many
+
+839
+02:02:58.350 --> 02:03:01.830
+Jason Levine: And that's because this was
+
+840
+02:03:02.910 --> 02:03:19.170
+Jason Levine: A in in an agrarian society. These words were less important. People didn't get employed. You were a surf. That was an apprentice, and that apprenticeship let you have what you did for the rest of your life. You weren't employed.
+
+841
+02:03:20.670 --> 02:03:31.950
+Jason Levine: And so the difference in our point of view is demonstrated by the limitation of our words at this exact point with English very specifically
+
+842
+02:03:32.370 --> 02:03:40.320
+Jason Levine: So for example, I have a great advantage in Chinese, for example, Chinese is a culture that has existed for
+
+843
+02:03:40.860 --> 02:03:46.080
+Jason Levine: I'm going to get it wrong. I believe about three and a half thousand years, with its existing language at its core.
+
+844
+02:03:47.070 --> 02:04:02.940
+Jason Levine: And three and a half thousand years to develop a language gives you a lot of room for breath in that language versus ours, which essentially got a kickstart in 1066 and didn't really get refined until the 1600s, once we had the
+
+845
+02:04:04.410 --> 02:04:04.980
+Jason Levine: The
+
+846
+02:04:06.690 --> 02:04:08.010
+Jason Levine: The King James Bible.
+
+847
+02:04:10.020 --> 02:04:28.740
+Jason Levine: So one of the great things you can do with Chinese is that you have to character symbols that you have one idea per character and then you combine the two characters together, it creates a new idea. That's a, that's an assimilation of those two character ideas.
+
+848
+02:04:29.850 --> 02:04:44.310
+Jason Levine: It's invent new words by taking a simulation idea one combining it with us with idea number two. And now you have this conceptual word that you can understand what it might mean we don't have that advantage in English.
+
+849
+02:04:45.360 --> 02:04:48.600
+Jason Levine: And so this is why we have such a
+
+850
+02:04:49.770 --> 02:05:00.690
+Jason Levine: Replication that we're seeing on the website because we just don't have enough vocabulary in our nuance for describing those things because of what was going on in 1066
+
+851
+02:05:01.470 --> 02:05:11.310
+Jason Levine: So it's the same thing with reports. The reason why publications and reports mean the same thing is because there aren't such thing as data reports in 1066
+
+852
+02:05:12.030 --> 02:05:23.370
+Jason Levine: And so you don't have many words to describe these things into our problems faced with our persona. I can't use the definition of these things.
+
+853
+02:05:23.820 --> 02:05:33.900
+Jason Levine: When there's nuance involved if I only have a vocabulary that all say essentially the same thing with so few words that have any nuance to them.
+
+854
+02:05:37.410 --> 02:05:52.710
+Jason Levine: So back to our persona. We did our research and we define the tasks and we realized that there were these very specific tasks involved that were around certain types of users. Same kind of thing. We have a
+
+855
+02:05:54.870 --> 02:05:58.800
+Jason Levine: A summary with some context with specific
+
+856
+02:05:59.880 --> 02:06:05.760
+Jason Levine: Around specifics around their use cases and then a breakdown of that persona based on that.
+
+857
+02:06:06.330 --> 02:06:20.340
+Jason Levine: And here's. So this is a job seeker. Interestingly, I had a very difficult time trying to represent a job seeker because everyone does it online. So I took the next best thing of trying to find somebody reading the wanted ads.
+
+858
+02:06:20.910 --> 02:06:32.190
+Jason Levine: In the newspaper, simply because it was referential and what I hadn't realized was that the only photo I could find that was decent enough was actually in a French Cafe. So
+
+859
+02:06:32.820 --> 02:06:39.690
+Jason Levine: I kind of screwed that one up pretty bad. But anyway, the point here is that I'm providing the same kind of narrative.
+
+860
+02:06:40.230 --> 02:07:00.450
+Jason Levine: And I have the user goals and use cases that come from that. So taking all those personas I group them into the main categories of user journey starting a career seeking a job or on the other side of the persona researching data, an employer or getting stats for an article
+
+861
+02:07:01.950 --> 02:07:11.460
+Jason Levine: So what I do is I I group them into these user journey buckets and then through what type of persona may live inside of each one of those
+
+862
+02:07:13.980 --> 02:07:27.870
+Jason Levine: And from there, it broke into three main categories. There were journalists analysts economists corporate researchers curriculum researchers policymakers, they're all doing some level of deep data research.
+
+863
+02:07:29.040 --> 02:07:41.280
+Jason Levine: Then there was those that had occupational means those were jobseekers, those were educators and those were employers that we're looking for specifics around what how I can improve my chances of the best type of career path.
+
+864
+02:07:42.240 --> 02:07:54.180
+Jason Levine: So those were very different categories of needs that were within those personas and then in the middle is how they overlapped with tasks on a website personalization.
+
+865
+02:07:56.340 --> 02:08:02.010
+Jason Levine: So from there, I was able to then define the site essentially into to
+
+866
+02:08:03.120 --> 02:08:15.690
+Jason Levine: Essentially different worlds with different needs that each persona lived in. And so I was able to cleave the site in half, essentially based on those needs.
+
+867
+02:08:19.410 --> 02:08:25.050
+Jason Levine: And then what I did was I took every single type of content and attached it to a persona.
+
+868
+02:08:26.280 --> 02:08:37.350
+Jason Levine: And from that piece of content. I would then provide additional meta, meta tagging of its popularity how recent it was what type of file type, it might be because in this case there were a lot of reports.
+
+869
+02:08:38.280 --> 02:08:44.550
+Jason Levine: Whether or not it had visualization and whether or not there was other types of categories or subcategories, as well as descriptors and so
+
+870
+02:08:44.910 --> 02:08:49.500
+Jason Levine: All I don't know what it was something like four and a half thousand different documents three and a half thousand documents.
+
+871
+02:08:50.100 --> 02:08:58.800
+Jason Levine: Everything was intact and provided with this methodology and the reason why this is so important is then if you apply machine learning to it.
+
+872
+02:08:59.370 --> 02:09:11.910
+Jason Levine: Your then your AI is smart enough to serve up the most important thing, based on a very few number of keywords as well as suggest to you. What are other things that are are necessary or helpful for you.
+
+873
+02:09:12.210 --> 02:09:19.500
+Jason Levine: Just from the starting point of what that keyword brought you to as a starting point. And so the machine learning was able to do predictive logic.
+
+874
+02:09:20.430 --> 02:09:30.450
+Jason Levine: Of the things that you would want to do that are related to each other by using that taxonomy of removing yourself from having to categorize what things would be where
+
+875
+02:09:31.320 --> 02:09:40.050
+Jason Levine: And so it was all about actions instead. And so that allowed us to be able to break things up from the tasks instead per persona.
+
+876
+02:09:42.300 --> 02:09:49.170
+Jason Levine: I know I talked pretty fast. I know that was a lot all at once. How much of that talk through how do you feel about this. So it. Did that make sense.
+
+877
+02:09:57.060 --> 02:09:59.310
+Jason Levine: This is important stuff is why I got that AWS drive
+
+878
+02:10:06.000 --> 02:10:06.840
+Jason Levine: Any questions at all.
+
+879
+02:10:10.440 --> 02:10:18.330
+Jason Levine: So to summarize, the idea here was to combine the logic.
+
+880
+02:10:19.770 --> 02:10:36.990
+Jason Levine: Around my persona and the actual actions related to that persona and redefining the consumption of content and its data so that I could perform for me. What we're predictive of that personas needs.
+
+881
+02:10:38.460 --> 02:10:44.940
+Jason Levine: And so that way you can be consumed multiple in multiple ways. Based on those personas and it could save myself.
+
+882
+02:10:45.300 --> 02:10:59.700
+Jason Levine: From having users have to go through that insane website you saw before, of having to figure out the labeling and what lives inside each one of those sections and then go inside those sections to find other sections of yet more nonsensical content that all sounded the same
+
+883
+02:11:02.040 --> 02:11:03.120
+Jason Levine: That, that makes sense.
+
+884
+02:11:06.360 --> 02:11:09.210
+Jason Levine: Cool. Okay, this is a good spot to break
+
+885
+02:11:11.490 --> 02:11:14.970
+Jason Levine: We'll take a seven minute break.
+
+886
+02:11:16.020 --> 02:11:29.880
+Jason Levine: I had been fighting for the past month literally a month, trying to figure out what the assignment would be because the assignment I originally had we couldn't do because of the coronavirus and
+
+887
+02:11:31.050 --> 02:11:36.210
+Jason Levine: an epiphany occurred at 5:30pm
+
+888
+02:11:37.440 --> 02:11:51.390
+Jason Levine: So I'm going to quickly do a skeleton for that assignment and I'll fill in the details later tonight. So I'm going to do that right now. So let's give it you know 10 minutes I'll give me till 905
+
+889
+02:11:53.010 --> 02:11:55.200
+Jason Levine: Okay. Thanks for reading. I'll see you in a little bit.
+
+890
+02:11:56.280 --> 02:12:14.460
+Frost Keaton: As and then in that example. You were just talking about before our break you took the content and through machine learning. We try to predict. You know what pieces of content would be appropriate for people, you know, different personas based off of their, their goals.
+
+891
+02:12:15.750 --> 02:12:30.510
+Frost Keaton: What I'm missing though is how did they, how does that content presented to them. Was it like through search. Was it just, you know, based upon what they were, what actions they were performing on the sideline. Where was the content delivered. That's what I don't think I missed
+
+892
+02:12:30.600 --> 02:12:36.240
+Jason Levine: Oh, there was actually a design that focused on. I am a job seeker.
+
+893
+02:12:38.160 --> 02:12:40.230
+Jason Levine: And then that was the default
+
+894
+02:12:41.520 --> 02:12:48.960
+Jason Levine: Then he could be. I'm a researcher has been another one. And so the homepage focused on the key things that are
+
+895
+02:12:50.100 --> 02:12:55.320
+Jason Levine: Of value that we're ranked as being a starting point.
+
+896
+02:12:56.430 --> 02:13:08.550
+Jason Levine: And from there, it could then refine the experience. From there, the design itself is circa 2008 so it looks very, very dated and has since been upgraded to a different design with some let's live
+
+897
+02:13:09.090 --> 02:13:16.380
+Jason Levine: And though they're using the same logic and system. I'm not familiar with it well enough to know to talk you through the interface.
+
+898
+02:13:17.910 --> 02:13:21.270
+Jason Levine: But the short answer is that was the starting point was
+
+899
+02:13:23.550 --> 02:13:42.990
+Jason Levine: stating it as I'm a job seeker as being the default because that worked out to be about 85% of the of the visitors and then you could say, now we're looking for. I'm a researcher and then we give you different content that was common to them and then it would guide you. The same principle.
+
+900
+02:13:47.850 --> 02:13:48.690
+Jason Levine: Any other questions.
+
+901
+02:13:53.700 --> 02:13:59.700
+Jason Levine: How much for those that have used a persona before. How much did this overlap with your point of view and understanding
+
+902
+02:14:05.040 --> 02:14:18.450
+Jessie Sinclair Knudsen: It was pretty consistent with what I understood it to be and and the other. I can't remember the number, but the other user experience class with misty Weaver, it was pretty similar to what we learned in that class as well.
+
+903
+02:14:20.160 --> 02:14:33.000
+Jason Levine: Yeah, there's content strategy relies heavily on what is best to be consumed and how so the persona and the research of personas and that and
+
+904
+02:14:34.110 --> 02:14:41.640
+Jason Levine: usernames and in context is everything. So in those two classes. That's where our Venn diagrams are like that.
+
+905
+02:14:42.870 --> 02:15:07.410
+Jason Levine: We slowly start to move apart. I'm turning into the Millennium Falcon. There are slowly start to separate out and have a more of a differentiator. As we use that information in our next class, which is to learn tasks and how those tasks are represented are solved for by our research.
+
+906
+02:15:08.820 --> 02:15:09.540
+Jason Levine: That make sense.
+
+907
+02:15:11.550 --> 02:15:13.560
+Jason Levine: Anybody else have any other questions, comments.
+
+908
+02:15:14.400 --> 02:15:20.070
+Benjamin Porter: But say it's pretty consistent with the ways that I've used personas previously.
+
+909
+02:15:21.480 --> 02:15:28.620
+Benjamin Porter: The one interesting element of the way that we used it in our pitch deck. When we talk to vendors as we would
+
+910
+02:15:29.310 --> 02:15:35.580
+Benjamin Porter: Frame it a little differently to be sensitive to the data that we were giving out and also to, you know, obviously, entice
+
+911
+02:15:35.970 --> 02:15:47.760
+Benjamin Porter: Folks to look at our personas and an exciting way and we lead with basket builders, so talking through what the kind of actions and incentives of our personas were rather than just
+
+912
+02:15:48.540 --> 02:15:56.670
+Benjamin Porter: A description up front of this is the type of person. And so you can start envisioning their journey we would say this is what their journey results in
+
+913
+02:15:57.330 --> 02:16:12.780
+Benjamin Porter: And here's the ways that you can capitalize on that, for instance, like these users typically start with sparkling water. And so you can imagine that goes down this units per order journey and XYZ
+
+914
+02:16:15.030 --> 02:16:20.790
+Jason Levine: Gotcha. Okay, that makes sense. Great. Um, is there anyone who
+
+915
+02:16:23.280 --> 02:16:37.200
+Jason Levine: feels that this would apply in some way to their own job in a different way because the reason I'm asking is, I want to make sure that as we go into this this exercise and I'm touching on some of these points that might provide value for you.
+
+916
+02:16:42.300 --> 02:16:42.630
+Jason Levine: Know,
+
+917
+02:16:45.030 --> 02:16:45.270
+Jason Levine: Okay.
+
+918
+02:16:46.650 --> 02:16:49.710
+Jason Levine: Let's go back to the deck. I can find it.
+
+919
+02:16:52.020 --> 02:16:53.250
+Jason Levine: There we go. Okay.
+
+920
+02:16:54.510 --> 02:16:55.680
+Jason Levine: So I'll share my screen.
+
+921
+02:17:00.090 --> 02:17:00.420
+Okay.
+
+922
+02:17:05.280 --> 02:17:13.680
+Jason Levine: So let's go back to a plus and I'm using a plus, simply because it. Sure.
+
+923
+02:17:14.940 --> 02:17:18.300
+Jason Levine: It gives us a skipping stone to get straight back into it.
+
+924
+02:17:20.940 --> 02:17:24.030
+Jason Levine: And so I don't have to give you a whole bunch of context.
+
+925
+02:17:25.530 --> 02:17:26.160
+Jason Levine: So,
+
+926
+02:17:27.210 --> 02:17:37.260
+Jason Levine: The A Plus Program. Just as a quick recap, from where what we talked about last week, is that it is a youth program for athletically gifted
+
+927
+02:17:38.520 --> 02:17:42.210
+Jason Levine: Young adults, mostly in high school and junior high school
+
+928
+02:17:44.520 --> 02:18:02.280
+Jason Levine: And gives them a program to compete to refine their skills and as a requirement of being part of this elite program, you are required to keep a certain grade point average, which is, I believe, a, b minus and
+
+929
+02:18:03.330 --> 02:18:13.950
+Jason Levine: You receive proper tutoring and socio economic help if necessary. It counselor and
+
+930
+02:18:16.590 --> 02:18:19.710
+Jason Levine: A travel back and forth between your
+
+931
+02:18:21.060 --> 02:18:37.320
+Jason Levine: Your practices and your meats and back back home again. And the idea is to give you a, a more holistic understanding of how you can take your skills and allow yourself to excel.
+
+932
+02:18:38.430 --> 02:18:42.810
+Jason Levine: athletically but especially in developing your academics.
+
+933
+02:18:45.180 --> 02:18:46.950
+Jason Levine: So this program is
+
+934
+02:18:48.000 --> 02:18:49.290
+Jason Levine: Supported by
+
+935
+02:18:50.460 --> 02:18:59.160
+Jason Levine: The students and their gifts and how what they get from it. So here's the
+
+936
+02:19:00.210 --> 02:19:02.910
+Jason Levine: The top level of
+
+937
+02:19:04.620 --> 02:19:13.920
+Jason Levine: The common student, they'd be somewhere between 13 and 16 in most cases, they're in this was based in the
+
+938
+02:19:15.120 --> 02:19:15.990
+Jason Levine: It's not
+
+939
+02:19:17.550 --> 02:19:31.380
+Jason Levine: I think this was a facility near or at Rainier Beach or white. White center it's somewhere around there. I can't remember exactly where I think it's, it's a, it's just outside of Reno beach
+
+940
+02:19:32.820 --> 02:19:42.390
+Jason Levine: Was where this facility was that they provided from people. And so the kids were made up of about 60% from the, from the general area.
+
+941
+02:19:43.140 --> 02:20:00.090
+Jason Levine: And then the others were kids from outside that area. So for him, I Sean is seen as a leader in his high school and is involved in any clubs and his mom notices that his grades have improved and he's mature for his age as part of this program.
+
+942
+02:20:02.040 --> 02:20:11.550
+Jason Levine: And that's the important part is the the dynamic leadership qualities that start to emerge in the students that are part of this program.
+
+943
+02:20:13.620 --> 02:20:15.600
+Jason Levine: This was an example of her parent
+
+944
+02:20:16.710 --> 02:20:17.250
+Jason Levine: Program.
+
+945
+02:20:20.460 --> 02:20:25.470
+Jason Levine: And showing what her intention is
+
+946
+02:20:26.760 --> 02:20:28.050
+Jason Levine: In for her. It's
+
+947
+02:20:29.190 --> 02:20:33.300
+Jason Levine: That she is stretched thin and wants what's best for her kids.
+
+948
+02:20:35.760 --> 02:20:49.980
+Jason Levine: So here is a an A plus program life coach is what they call them, they are working really, really hard because they have a passion for
+
+949
+02:20:51.090 --> 02:20:56.790
+Jason Levine: Their students and the dynamism that they can bring to these kids.
+
+950
+02:20:57.960 --> 02:20:58.980
+Jason Levine: And so
+
+951
+02:21:00.060 --> 02:21:00.840
+Jason Levine: They
+
+952
+02:21:01.890 --> 02:21:03.750
+Jason Levine: Have a fatherly type of
+
+953
+02:21:05.430 --> 02:21:09.870
+Jason Levine: A relationship with their with their kids that they help
+
+954
+02:21:11.490 --> 02:21:19.350
+Jason Levine: Train. It was interesting. I went to a public pool in Renton with my kids. And there was a
+
+955
+02:21:21.270 --> 02:21:33.090
+Jason Levine: Close team that was there to celebrate the end of their, their year and all the parents knew each other all the kids were best friends with each other.
+
+956
+02:21:34.170 --> 02:21:47.130
+Jason Levine: And the life coach. There was just beaming in in the pride, the ad for his kids and they all and they they just took over a section in the into the pool.
+
+957
+02:21:48.210 --> 02:21:52.530
+Jason Levine: And you could just see there's a dynamic that is created from this program.
+
+958
+02:21:54.120 --> 02:22:01.110
+Jason Levine: And from talking to these these coaches, they are spread really really thin, they work really hard for not a lot of money.
+
+959
+02:22:02.340 --> 02:22:09.210
+Jason Levine: And they're doing this on the side along with another job in most cases that they're, it's almost like a paid volunteer.
+
+960
+02:22:10.620 --> 02:22:15.030
+Jason Levine: So they're working to the bone and they are putting a lot of effort into doing that.
+
+961
+02:22:16.050 --> 02:22:20.640
+Jason Levine: So I can go into the other personas. I don't think that they're as valuable.
+
+962
+02:22:23.280 --> 02:22:32.640
+Jason Levine: So what we're going to do is do a little bit of a brainstorm for what are some of the core needs.
+
+963
+02:22:33.900 --> 02:22:35.640
+Jason Levine: And problem spaces for each of these
+
+964
+02:22:37.440 --> 02:22:41.280
+Jason Levine: Personas so let's go
+
+965
+02:22:42.510 --> 02:22:44.220
+Jason Levine: This way. There we go.
+
+966
+02:22:45.750 --> 02:22:46.050
+Jason Levine: All right.
+
+967
+02:22:50.400 --> 02:23:00.660
+Jason Levine: So everybody take their themselves off of mute and we'll do our best to try this exercise. Usually this is on a whiteboard and is much, much easier with
+
+968
+02:23:01.980 --> 02:23:07.140
+Jason Levine: Being able to see people's faces and their energy level and what they want to talk about. So
+
+969
+02:23:08.340 --> 02:23:16.260
+Jason Levine: This should be interesting. We'll see how it goes. So the first one we want to talk about is the will go with the student
+
+970
+02:23:18.360 --> 02:23:34.050
+Jason Levine: Someone who is currently part of the program as a and one of the kids. And what we want to think about for the student is specifically a starting point of what are their personal goals.
+
+971
+02:23:38.640 --> 02:23:41.520
+Jason Levine: And why they would be involved in the program.
+
+972
+02:23:50.100 --> 02:23:50.430
+Jason Levine: Okay.
+
+973
+02:23:53.010 --> 02:23:53.520
+Jason Levine: So,
+
+974
+02:23:55.560 --> 02:24:07.890
+Jason Levine: It's okay to make assumptions. Obviously, you haven't done a lot of research here and you can ask me questions and we can answer those three bullet points. So what do you think their personal goals would be in being involved in an A plus youth program.
+
+975
+02:24:09.390 --> 02:24:14.520
+Cole Whitworth: I assume they want to become a professional at whatever sport. They are participating in
+
+976
+02:24:16.770 --> 02:24:17.670
+Cole Whitworth: And I go pro
+
+977
+02:24:30.150 --> 02:24:32.040
+Edward McFields: Division one scholarship
+
+978
+02:24:38.790 --> 02:24:39.870
+Jason Levine: I'm just going to
+
+979
+02:24:49.110 --> 02:24:50.070
+Jason Levine: Say preparation.
+
+980
+02:24:56.490 --> 02:25:02.490
+Frost Keaton: That they might want to connect with other friends see what their friends are doing. We're also part of the program.
+
+981
+02:25:13.980 --> 02:25:19.350
+Sophia Charchuk: Maybe compete with athletes who are at the same level as them skill sets.
+
+982
+02:25:25.290 --> 02:25:28.260
+Cole Whitworth: Yep, also thought maybe recognition.
+
+983
+02:25:29.310 --> 02:25:31.380
+Cole Whitworth: Either amongst peers or
+
+984
+02:25:32.430 --> 02:25:35.280
+Cole Whitworth: Parental figures are just yeah community.
+
+985
+02:25:38.850 --> 02:25:52.620
+Jason Levine: You're exactly right. Um, so there's another piece to this stay like you guys to think about. Who here has been involved in a school sport at a high competitive level.
+
+986
+02:25:54.780 --> 02:25:58.200
+Jason Levine: Let me see two hands. Three, maybe. Okay.
+
+987
+02:26:00.480 --> 02:26:05.250
+Jason Levine: So I would assume those the at that
+
+988
+02:26:05.460 --> 02:26:06.990
+Jason Levine: Your coaches.
+
+989
+02:26:07.410 --> 02:26:16.110
+Jason Levine: Did not have too much of a concern. How much homework or studying you were sacrificing in order to excel at that sport. Yeah.
+
+990
+02:26:17.280 --> 02:26:18.240
+Jason Levine: Is that a fair statement.
+
+991
+02:26:20.550 --> 02:26:25.860
+Jason Levine: It was Excel the sport at all costs in to a degree.
+
+992
+02:26:27.210 --> 02:26:44.130
+Jason Levine: So the difference in this program is we want you to be well we want you to be happy. We want you to be proud of yourself. We want you to be able to go on with your life with or without your support.
+
+993
+02:26:45.180 --> 02:26:49.860
+Jason Levine: So there's another aspect of this that I want you to be thinking about when we're talking about
+
+994
+02:26:51.000 --> 02:26:55.410
+Jason Levine: About the aspects of this of this program. So how do you think that would play out.
+
+995
+02:26:59.580 --> 02:27:02.280
+Jessie Sinclair Knudsen: Maybe becoming a more well rounded athlete.
+
+996
+02:27:08.550 --> 02:27:11.640
+Jason Levine: I will be. Let's put that in student terms, what would that be like
+
+997
+02:27:15.750 --> 02:27:20.370
+Jason Levine: That like what you're describing is what may be the parent of the student probably is thinking
+
+998
+02:27:20.910 --> 02:27:21.690
+Right.
+
+999
+02:27:23.430 --> 02:27:31.980
+Jessie Sinclair Knudsen: Um, maybe achieving that still sounds like a parent achieving a better balance between school athletics.
+
+1000
+02:27:32.790 --> 02:27:33.270
+Jason Levine: Close.
+
+1001
+02:27:33.750 --> 02:27:35.220
+Jessie Sinclair Knudsen: It's hard to think back to being a kid.
+
+1002
+02:27:46.290 --> 02:27:47.340
+Jason Levine: I'll fill that in for you.
+
+1003
+02:27:52.200 --> 02:27:55.290
+Jason Levine: Along with that is getting along better at home.
+
+1004
+02:28:00.120 --> 02:28:06.480
+Jason Levine: So this gives you an idea of the wellness factor of what they're trying to have goals.
+
+1005
+02:28:07.530 --> 02:28:16.620
+Jason Levine: So now let's think about, um, the same thing for our parent. So this is the parent who
+
+1006
+02:28:18.030 --> 02:28:21.000
+Jason Levine: That I saw at that public pool in Renton
+
+1007
+02:28:22.320 --> 02:28:28.650
+Jason Levine: They go to the events. They're there for their kids, they're not there all the time because they're working a lot of hours.
+
+1008
+02:28:29.760 --> 02:28:30.750
+Jason Levine: But they're dedicated
+
+1009
+02:28:31.830 --> 02:28:32.400
+Jason Levine: So,
+
+1010
+02:28:39.630 --> 02:28:41.400
+Jason Levine: What are they looking for out of this program.
+
+1011
+02:28:49.980 --> 02:28:51.900
+Isioma Okeleke: Time with your kids and
+
+1012
+02:28:55.740 --> 02:29:00.990
+Jason Levine: I will specifically they're taking their kids out of their home.
+
+1013
+02:29:02.580 --> 02:29:03.150
+Jason Levine: Instead,
+
+1014
+02:29:04.320 --> 02:29:05.640
+Jason Levine: Oh, there's my four year old.
+
+1015
+02:29:11.070 --> 02:29:12.660
+Jason Levine: Speaking of personal goals for parents.
+
+1016
+02:29:15.300 --> 02:29:19.500
+Jason Levine: So what would that be, we've got about 10 minutes. So I'm going to make sure we get through this.
+
+1017
+02:29:21.180 --> 02:29:22.860
+Frost Keaton: Pretty much they're safe and
+
+1018
+02:29:23.370 --> 02:29:24.810
+Frost Keaton: well structured environment.
+
+1019
+02:29:31.260 --> 02:29:31.590
+Jason Levine: Yeah.
+
+1020
+02:29:33.120 --> 02:29:33.480
+Jason Levine: What else
+
+1021
+02:29:34.770 --> 02:29:37.980
+Jessie Sinclair Knudsen: Can I use my more what a well rounded one here.
+
+1022
+02:29:38.490 --> 02:29:40.320
+Jessie Sinclair Knudsen: Surely so well rounded athlete.
+
+1023
+02:29:42.480 --> 02:29:43.290
+Or child.
+
+1024
+02:29:48.360 --> 02:29:49.350
+Ruby Sharma: Productive use
+
+1025
+02:29:49.440 --> 02:29:51.330
+Ruby Sharma: Of time for the children.
+
+1026
+02:29:54.630 --> 02:29:59.340
+napaaramthanapon: And maybe money. I'm not sure if this costs money. Sorry, I didn't catch it, but
+
+1027
+02:30:03.270 --> 02:30:03.570
+Okay.
+
+1028
+02:30:10.860 --> 02:30:15.120
+Edward McFields: Maybe this is better exposure for the kids to enough for scouts.
+
+1029
+02:30:18.150 --> 02:30:18.840
+Jason Levine: Sorry, there was
+
+1030
+02:30:21.180 --> 02:30:26.550
+Jason Levine: This building the scouts. There was one that I was typing. I think Jesse was at you. That was saying.
+
+1031
+02:30:27.300 --> 02:30:28.350
+Jessie Sinclair Knudsen: The well rounded one
+
+1032
+02:30:29.280 --> 02:30:32.730
+Jason Levine: Yeah, oh no that's well rounded kid from the program.
+
+1033
+02:30:33.060 --> 02:30:34.230
+Aaron Good: Production was awesome.
+
+1034
+02:30:34.590 --> 02:30:35.400
+Cole Whitworth: It was a Napa.
+
+1035
+02:30:36.000 --> 02:30:36.810
+napaaramthanapon: Yeah, um,
+
+1036
+02:30:38.040 --> 02:30:41.700
+napaaramthanapon: Time and like costs of game your cuts into the
+
+1037
+02:30:43.020 --> 02:30:45.540
+Jason Levine: Yes, so they do have
+
+1038
+02:30:48.480 --> 02:30:54.270
+Jason Levine: They have to be concerned about payments, they, what they do is they have a program where
+
+1039
+02:30:55.350 --> 02:31:06.870
+Jason Levine: 80% of the program is paid for with donations and other 20% is paid for by students because they want their parents. The parents invested
+
+1040
+02:31:08.850 --> 02:31:16.290
+Jason Levine: And so yeah, they do have to make payments and so payment and they're due dates are important to them.
+
+1041
+02:31:18.090 --> 02:31:34.110
+Jason Levine: So now we're getting into a bit more of the as we talked about these tasks and will is what their goals are and this will go into tasks which we're about to touch on to. And so along these lines. It has to do with awareness of
+
+1042
+02:31:37.050 --> 02:31:38.580
+Jason Levine: Of schedule.
+
+1043
+02:31:42.360 --> 02:31:43.620
+Jason Levine: And also,
+
+1044
+02:31:45.750 --> 02:31:47.640
+Jason Levine: Being able to follow.
+
+1045
+02:31:48.780 --> 02:31:49.740
+Jason Levine: their child's
+
+1046
+02:31:53.010 --> 02:31:53.550
+Jason Levine: Progress.
+
+1047
+02:31:56.910 --> 02:31:57.180
+Jason Levine: Okay.
+
+1048
+02:31:58.800 --> 02:32:06.030
+Jason Levine: You're short on time. So then let's go back now to think about what are some of the tasks that are involved for this.
+
+1049
+02:32:08.910 --> 02:32:15.720
+Jason Levine: So what are some of the things that this that the tasks the site can provide
+
+1050
+02:32:17.340 --> 02:32:17.940
+Jason Levine: Goals.
+
+1051
+02:32:21.780 --> 02:32:25.950
+Zoe N Magno: Probably like tutoring or other scholarly resources.
+
+1052
+02:32:30.270 --> 02:32:32.550
+Cole Whitworth: Attention alumni from the program.
+
+1053
+02:32:33.420 --> 02:32:36.210
+Jason Levine: Why exactly I'm night you're on the right track. But why
+
+1054
+02:32:37.080 --> 02:32:38.130
+Cole Whitworth: To show success.
+
+1055
+02:32:41.160 --> 02:32:42.180
+Cole Whitworth: Yeah, good progress.
+
+1056
+02:32:48.630 --> 02:32:49.350
+Jason Levine: Yep. What else
+
+1057
+02:32:52.740 --> 02:32:55.710
+Zoe N Magno: Maybe like mentorship with those alumni as well.
+
+1058
+02:32:59.700 --> 02:33:00.180
+Jason Levine: What else
+
+1059
+02:33:03.150 --> 02:33:03.780
+Jason Levine: About this one.
+
+1060
+02:33:08.400 --> 02:33:13.830
+Frost Keaton: To communicate their grades or what they've got going on in school to the coaches and the staff.
+
+1061
+02:33:21.390 --> 02:33:21.780
+Jason Levine: Yes.
+
+1062
+02:33:23.010 --> 02:33:29.310
+Jason Levine: Okay, run out of time, so I'm going to go short. Let's do the same thing for the parents.
+
+1063
+02:33:45.570 --> 02:33:46.230
+Edward McFields: Peace Corps.
+
+1064
+02:33:55.200 --> 02:33:57.270
+Cole Whitworth: Scholarship or scout information.
+
+1065
+02:34:12.030 --> 02:34:19.140
+Aaron Good: Like payment resources like reminders or scheduling tools that kind of stuff.
+
+1066
+02:34:20.460 --> 02:34:21.000
+Sounds good.
+
+1067
+02:34:23.220 --> 02:34:23.580
+Jason Levine: How about this.
+
+1068
+02:34:24.210 --> 02:34:27.540
+Edward McFields: Universities involved or universities.
+
+1069
+02:34:30.900 --> 02:34:34.350
+Jason Levine: So along with this what partnerships.
+
+1070
+02:34:36.060 --> 02:34:36.900
+Edward McFields: As a better word. Yeah.
+
+1071
+02:34:43.170 --> 02:34:49.020
+Zoe N Magno: In regards to scheduling maybe providing calendars or ways for parents to like write out individual schedules.
+
+1072
+02:34:49.530 --> 02:34:51.240
+Jason Levine: Like how you're on the right side.
+
+1073
+02:34:51.600 --> 02:34:58.920
+Zoe N Magno: Um, maybe either example schedules or based on whatever grade they're in grade level schedules.
+
+1074
+02:35:00.930 --> 02:35:04.230
+Zoe N Magno: If they're in a particular class, class specific schedules.
+
+1075
+02:35:07.170 --> 02:35:10.020
+Jason Levine: Wait, why am I spelling calendar wrong. It's getting late for me.
+
+1076
+02:35:13.740 --> 02:35:15.840
+Jason Levine: Okay. Um, so
+
+1077
+02:35:17.400 --> 02:35:20.490
+Jason Levine: What we provided was notifications via SMS
+
+1078
+02:35:23.490 --> 02:35:37.410
+Jason Levine: Okay, we're at a time or I would love to spend more time on this, but you're all on the right path. So the first thing is, is that we have our core understanding of the persona.
+
+1079
+02:35:38.100 --> 02:35:54.090
+Jason Levine: The goals that are related to that persona and the end how it's provided by the pro the program or site or content and then specifically how you can tailor that information specific to those needs.
+
+1080
+02:35:55.200 --> 02:36:02.580
+Jason Levine: And how, if you notice there is some overlap, but they are quite different in what therefore because
+
+1081
+02:36:03.870 --> 02:36:12.780
+Jason Levine: Though I may want to know about this as a student, it's not going to be one of my top five top 10
+
+1082
+02:36:13.860 --> 02:36:28.320
+Jason Levine: In, in most cases, so I want to make sure though it's number one for my parents or they wouldn't be investing their time. So are you seeing how this all interrelated and how there is differentiation. Our persona plays out.
+
+1083
+02:36:30.510 --> 02:36:30.870
+Jason Levine: Yeah.
+
+1084
+02:36:33.300 --> 02:36:35.040
+Jason Levine: Okay, so
+
+1085
+02:36:51.720 --> 02:36:56.580
+Jason Levine: And so some of this. It's all based on Trader Joes was the original one.
+
+1086
+02:36:57.900 --> 02:36:59.610
+Jason Levine: And originally
+
+1087
+02:37:00.900 --> 02:37:15.810
+Jason Levine: The intent was to have you go to Trader Joe's and learn about use cases, based on the types of personas that obviously does not apply anymore. Since we can't have you running around for an hour and a half.
+
+1088
+02:37:20.220 --> 02:37:25.080
+Jason Levine: At a store. I want to keep you all safe and healthy. So how it goes. That idea.
+
+1089
+02:37:26.220 --> 02:37:37.890
+Jason Levine: And so I came across these two really, really fast. Actually, let me rephrase that it is its my anniversary. I might as well give her credit, credit my wife told me about these two articles in the Wall Street Journal
+
+1090
+02:37:39.810 --> 02:37:41.730
+Jason Levine: About how
+
+1091
+02:37:42.840 --> 02:37:43.590
+Jason Levine: The coven
+
+1092
+02:37:44.910 --> 02:37:50.430
+Jason Levine: Thread is impacting people very differently based on their
+
+1093
+02:37:51.660 --> 02:38:06.330
+Jason Levine: Not just socio economic conditions, but specifically based on their they're generating and it's generationally related to the impact that it's having are very, very different from each other.
+
+1094
+02:38:08.100 --> 02:38:24.990
+Jason Levine: I need to add more around this. But it's essentially the same idea I what I want you to do is first read those two articles either PDF since Wall Street. Wall Street Journal is behind a paywall so that's not very helpful for you. So I've got these PDFs instead
+
+1095
+02:38:26.400 --> 02:38:39.690
+Jason Levine: And I want you to think about the problem space of how people in stay at home conditions are facing very different dilemmas and anxieties and problems.
+
+1096
+02:38:40.440 --> 02:39:01.200
+Jason Levine: To their generational point of view. So, those that are 30 or younger, as well as 40 or more in age and I want you to interview at least two people in each age group. And I want you to define for me. The correlating information that you're seeing
+
+1097
+02:39:02.250 --> 02:39:07.440
+Jason Levine: Their political affiliation. If you're seeing some kind of thread between them there.
+
+1098
+02:39:08.760 --> 02:39:20.490
+Jason Levine: What might be from their past that is influencing their concerns or their way to deal with the particular anxieties and how they solve for them.
+
+1099
+02:39:22.200 --> 02:39:32.310
+Jason Levine: Etc. So what I want you to do is learn from what you're hearing and define as a persona what the how they're tackling this problem space.
+
+1100
+02:39:33.690 --> 02:39:46.950
+Jason Levine: I'll add more to the assignment and we're going to tonight, but this is essentially the storyline that we're following for this assignment to give you some framework to work from.
+
+1101
+02:39:49.440 --> 02:39:50.550
+Jason Levine: Any questions.
+
+1102
+02:39:57.720 --> 02:39:59.490
+Jason Levine: So here's the article, just to give you an idea.
+
+1103
+02:40:07.230 --> 02:40:07.920
+Jason Levine: Any questions.
+
+1104
+02:40:20.040 --> 02:40:23.190
+Jason Levine: Are you quiet because you're reading or are you quiet because there's no questions.
+
+1105
+02:40:29.820 --> 02:40:31.050
+Edward McFields: That looks pretty straightforward.
+
+1106
+02:40:31.740 --> 02:40:38.100
+Jason Levine: Cool. Okay, so I'll try to make it more prescriptive for how you document.
+
+1107
+02:40:40.890 --> 02:40:46.650
+Jason Levine: And but the idea is for you to define what are the correlating
+
+1108
+02:40:48.210 --> 02:40:54.990
+Jason Levine: Factors of the persona of the older person dealing with coronavirus you can choose the age group.
+
+1109
+02:40:55.830 --> 02:41:06.600
+Jason Levine: And the younger person again, you can choose the age group. So if you decide teenagers 20 to 30 millennials. Whatever you decide, just try to have it wrap around that same problem space.
+
+1110
+02:41:07.440 --> 02:41:16.080
+Jason Levine: And see in your specifically as you describe those personas you're describing those personas within the context of how what those differentiators are
+
+1111
+02:41:16.980 --> 02:41:33.840
+Jason Levine: And then what I want you to do once you're seeing that anecdotal information and how it correlates to the the articles find additional data points in any research that you want to append to this to reference as part of your material for your assumptions.
+
+1112
+02:41:35.640 --> 02:41:36.120
+Jason Levine: Make sense
+
+1113
+02:41:39.480 --> 02:41:41.010
+Jason Levine: Okay, thank you.
+
+1114
+02:41:42.480 --> 02:41:46.950
+Jason Levine: Have a great night. I appreciate all of your great work and
+
+1115
+02:41:48.480 --> 02:41:55.440
+Jason Levine: Yeah, expect an update later with with the assignment finalized for you. Okay. Good night, everyone.
+
+1116
+02:41:55.980 --> 02:41:56.340
+Aaron Good: Thank
+
+1117
+02:41:56.400 --> 02:41:58.140
+Cole Whitworth: You. Thanks. Happy anniversary
+
+1118
+02:41:58.440 --> 02:41:59.070
+Jason Levine: Thank you.
+
+1119
+02:41:59.190 --> 02:41:59.610
+Cheers
+

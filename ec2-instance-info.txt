@@ -1,0 +1,8 @@
+Instance ID: i-06986a8cae45c7906
+Public IP: 54.204.140.214 (changes on restart)
+Key File: conversation-maker-key.pem
+SSH Command: ssh -i conversation-maker-key.pem ec2-user@54.204.140.214
+
+Note: The public IP changes each time the instance is stopped and started.
+To access the site, always check the current IP with:
+aws ec2 describe-instances --instance-ids i-06986a8cae45c7906 --query 'Reservations[0].Instances[0].PublicIpAddress' --output text

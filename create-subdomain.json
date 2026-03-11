@@ -1,0 +1,17 @@
+{
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "ai-personamaker.jllevine.people.aws.dev",
+        "Type": "A",
+        "TTL": 300,
+        "ResourceRecords": [
+          {
+            "Value": "54.204.140.214"
+          }
+        ]
+      }
+    }
+  ]
+}

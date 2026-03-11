@@ -1,0 +1,171 @@
+.processing-status {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 40px auto;
+}
+
+.status-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.status-header h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.status-message {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.status-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.status-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  position: relative;
+  padding: 15px 0;
+}
+
+.step-icon {
+  font-size: 32px;
+  min-width: 40px;
+  text-align: center;
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+.status-step.active .step-icon,
+.status-step.complete .step-icon {
+  opacity: 1;
+}
+
+.status-step.active .step-icon {
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #999;
+  transition: color 0.3s;
+}
+
+.status-step.active .step-label {
+  color: #FF8C42;
+}
+
+.status-step.complete .step-label {
+  color: #4CAF50;
+}
+
+.step-progress {
+  margin-top: 8px;
+}
+
+.progress-bar {
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FF8C42, #ff7a28);
+  animation: progress 2s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.step-check {
+  margin-top: 5px;
+  color: #4CAF50;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.step-connector {
+  position: absolute;
+  left: 19px;
+  top: 55px;
+  width: 2px;
+  height: calc(100% - 10px);
+  background: #e0e0e0;
+  transition: background 0.3s;
+}
+
+.step-connector.complete {
+  background: #4CAF50;
+}
+
+.status-error {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff3f3;
+  border: 2px solid #ff4444;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.error-icon {
+  font-size: 24px;
+}
+
+.error-message {
+  flex: 1;
+  font-size: 14px;
+  color: #d32f2f;
+}
+
+.error-message strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.status-details {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.status-details summary {
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  font-weight: 600;
+}
+
+.status-details pre {
+  margin-top: 10px;
+  font-size: 11px;
+  color: #333;
+  overflow-x: auto;
+}

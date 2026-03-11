@@ -38,6 +38,7 @@ AI-powered conversation script generator with voice synthesis. Create multi-spea
 
 ### Frontend
 - React 18 with functional components and hooks
+- Vite for fast builds and dev server
 - Deployed via AWS Amplify (auto-deploy from CodeCommit)
 - Web Audio API for audio processing
 
@@ -57,13 +58,21 @@ AI-powered conversation script generator with voice synthesis. Create multi-spea
 
 ## Quick Start
 
-### Prerequisites
+### 🚀 AWS Deployment (Recommended)
 
-- Node.js 18+
-- AWS Account with Bedrock access
-- ElevenLabs API key
+Deploy to AWS in minutes with automated setup:
 
-### Local Development
+```bash
+cd conversation-maker
+export ELEVENLABS_API_KEY=your_key_here
+./setup-aws-services.sh
+```
+
+See [QUICK_START.md](QUICK_START.md) for the fastest path to production.
+
+For detailed AWS setup instructions, see [AWS_SETUP_GUIDE.md](AWS_SETUP_GUIDE.md).
+
+### 💻 Local Development
 
 1. **Clone the repository**:
 ```bash
@@ -89,8 +98,8 @@ cp .env.example .env
 # Terminal 1 - Backend
 cd server && npm start
 
-# Terminal 2 - Frontend  
-cd client && npm start
+# Terminal 2 - Frontend (Vite)
+cd client && npm run dev
 ```
 
 Frontend: http://localhost:3000  
@@ -98,7 +107,23 @@ Backend: http://localhost:3001
 
 ## Deployment
 
-### Frontend (AWS Amplify)
+### Complete AWS Setup
+```bash
+./setup-aws-services.sh
+```
+Creates Lambda, API Gateway, IAM roles, and configures everything automatically.
+
+### Update Backend (Lambda)
+```bash
+# Code changes only
+./deploy-lambda-code-only.sh
+
+# Code + environment variables
+export ELEVENLABS_API_KEY=your_key_here
+./deploy-lambda.sh
+```
+
+### Update Frontend (Amplify)
 Automatically deploys when you push to the `main` branch:
 ```bash
 git add -A
@@ -106,16 +131,9 @@ git commit -m "Your changes"
 git push origin main
 ```
 
-### Backend (AWS Lambda)
-Deploy code updates without changing environment variables:
+### Verify Deployment
 ```bash
-./deploy-lambda-code-only.sh
-```
-
-For full deployment including environment variables:
-```bash
-export ELEVENLABS_API_KEY=your_key_here
-./deploy-lambda.sh
+./verify-aws-setup.sh
 ```
 
 ## Project Structure
@@ -261,10 +279,20 @@ See [SECURITY.md](SECURITY.md) for detailed security guidelines.
 
 ## Documentation
 
+### Setup & Deployment
+- [AWS_SETUP_COMPLETE.md](AWS_SETUP_COMPLETE.md) - 🎉 Complete AWS setup package overview
+- [QUICK_START.md](QUICK_START.md) - ⭐ Get started in minutes
+- [AWS_SETUP_GUIDE.md](AWS_SETUP_GUIDE.md) - 📖 Complete AWS setup guide
+- [AWS_CHECKLIST.md](AWS_CHECKLIST.md) - ✅ Deployment checklist
+- [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) - 📋 Detailed deployment instructions
+
+### Reference
+- [AWS_SERVICES_SUMMARY.md](AWS_SERVICES_SUMMARY.md) - 🏗️ Architecture and services overview
+- [AWS_COMMANDS_REFERENCE.md](AWS_COMMANDS_REFERENCE.md) - 💻 AWS CLI commands reference
 - [CONVERSATION_JSON_FORMAT.md](CONVERSATION_JSON_FORMAT.md) - JSON file format specification
-- [TEAM_ACCESS_MESSAGE.md](TEAM_ACCESS_MESSAGE.md) - Team access credentials
 - [SECURITY.md](SECURITY.md) - Security guidelines
 - [CHANGELOG.md](CHANGELOG.md) - Version history
+- [TEAM_ACCESS_MESSAGE.md](TEAM_ACCESS_MESSAGE.md) - Team access credentials
 
 ## Team Access
 

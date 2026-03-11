@@ -14,7 +14,7 @@ frontend:
     build:
       commands:
         - mkdir -p client
-        - echo "REACT_APP_API_URL=$REACT_APP_API_URL" > client/.env.production
+        - echo "VITE_API_URL=$VITE_API_URL" > client/.env
         - cd client && npm run build
   artifacts:
     baseDirectory: client/build

@@ -96,7 +96,7 @@ Speaker2: Hi, how are you?
 Speaker1: I'm doing well, thanks.`;
 
 
-  const modelId = process.env.BEDROCK_MODEL_ID || 'us.anthropic.claude-3-haiku-20240307-v1:0';
+  const modelId = process.env.BEDROCK_MODEL_ID || 'us.anthropic.claude-sonnet-4-20250514-v1:0';
 
   const payload = {
     anthropic_version: 'bedrock-2023-05-31',

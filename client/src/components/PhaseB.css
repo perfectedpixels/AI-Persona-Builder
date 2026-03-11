@@ -1,0 +1,362 @@
+.phase-b {
+  background: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.scenarios-section h3,
+.conversation-section h3,
+.user-input-section h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.scenario-card {
+  padding: 12px;
+  background: #f8f8f8;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.scenario-card:hover {
+  background: #fff8f4;
+  border-color: #FF8C42;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.scenario-card.selected {
+  background: #FF8C42;
+  color: white;
+  border-color: #FF8C42;
+}
+
+.scenario-number {
+  font-size: 11px;
+  font-weight: 600;
+  opacity: 0.7;
+  margin-bottom: 5px;
+}
+
+.scenario-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.scenario-description {
+  font-size: 11px;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+/* Conversation Section */
+.conversation-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation-section h3 {
+  padding: 15px 20px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.imessage-chat {
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chat-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.chat-messages {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #f8f9fa;
+}
+
+.chat-bubble {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-bubble.user {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.chat-bubble.agent {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.bubble-content {
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.chat-bubble.user .bubble-content {
+  background: #007AFF;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.agent .bubble-content {
+  background: #E5E5EA;
+  color: #000;
+  border-bottom-left-radius: 4px;
+}
+
+.bubble-time {
+  font-size: 11px;
+  color: #8E8E93;
+  margin-top: 4px;
+  padding: 0 8px;
+}
+
+.no-conversation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #999;
+}
+
+.no-conversation .empty-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.no-conversation p {
+  font-size: 14px;
+  max-width: 250px;
+}
+
+.chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* User Input Section */
+.user-input-section {
+  border-top: 2px solid #f0f0f0;
+  padding-top: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-input-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+.user-input-textarea:focus {
+  outline: none;
+  border-color: #FF8C42;
+}
+
+.input-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.voice-btn {
+  padding: 10px 20px;
+  background: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.voice-btn:hover {
+  background: #e8e8e8;
+}
+
+.voice-btn.recording {
+  background: #ff4444;
+  color: white;
+  border-color: #ff4444;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.send-btn {
+  padding: 10px 30px;
+  background: #FF8C42;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.send-btn:hover:not(:disabled) {
+  background: #ff7a28;
+  transform: translateY(-1px);
+}
+
+.send-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+
+/* Skeleton loading */
+.skeleton-chat {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skeleton-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 75%;
+}
+
+.skeleton-bubble.user {
+  align-self: flex-end;
+}
+
+.skeleton-bubble.agent {
+  align-self: flex-start;
+}
+
+.skeleton-line {
+  height: 14px;
+  border-radius: 7px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skeleton-bubble.user .skeleton-line {
+  background: linear-gradient(90deg, #b8d4f0 25%, #d0e4f8 50%, #b8d4f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skeleton-line.wide { width: 90%; }
+.skeleton-line.medium { width: 65%; }
+.skeleton-line.narrow { width: 40%; }
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+/* Loading badge next to section title */
+.loading-badge {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 2px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #FF8C42;
+  background: #fff5ee;
+  border-radius: 10px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Skeleton scenario cards */
+.scenario-card.skeleton-card {
+  pointer-events: none;
+  background: #f4f4f4;
+  border-color: #eee;
+}

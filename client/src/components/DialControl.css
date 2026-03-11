@@ -1,0 +1,83 @@
+.dial-control {
+  margin-bottom: 4px;
+}
+
+.dial-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dial-svg {
+  cursor: grab;
+  touch-action: none;
+  flex-shrink: 0;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  transition: filter 0.15s;
+}
+
+.dial-svg:hover {
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.dial-svg:active {
+  cursor: grabbing;
+}
+
+.dial-slider-col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.dial-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #555;
+  font-weight: 500;
+}
+
+.dial-value {
+  font-size: 12px;
+  color: #FF8C42;
+  font-weight: 600;
+}
+
+.dial-slider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e0e0e0;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.dial-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FF8C42;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.dial-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.2);
+}
+
+.dial-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #FF8C42;
+  cursor: pointer;
+  border: none;
+}

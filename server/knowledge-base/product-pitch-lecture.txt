@@ -1,0 +1,4946 @@
+WEBVTT
+
+1
+00:03:33.090 --> 00:03:36.209
+Jason Levine: We're testing to make sure it's working. Yep, it's picking it up.
+
+2
+00:03:36.810 --> 00:03:42.790
+Jason Levine: Try not… try not to talk too loud. Okay, so that should work. And how do you set up the recording on this? You just see… oh, you already have it going.
+
+3
+00:03:42.980 --> 00:03:44.420
+Jason Levine: Right, sweet.
+
+4
+00:03:44.740 --> 00:03:46.730
+Jason Levine: Yeah, it looks like you already have it going. Cool.
+
+5
+00:03:47.080 --> 00:03:50.770
+Jason Levine: So I assume we also want to get this up to…
+
+6
+00:03:51.650 --> 00:03:58.789
+Jason Levine: USB-C here, so that should come up in a minute. There we go. Perfect. It looks like you're doing extended, is that fine? Yeah, that's perfect.
+
+7
+00:03:59.390 --> 00:04:06.369
+Jason Levine: Thank you. Oh yeah, okay, that's not as big of a deal, then. I was worried that it was gonna be, because if it's cloned, you know, it's funky. Yeah, yeah.
+
+8
+00:04:06.560 --> 00:04:20.369
+Jason Levine: Cool. Are you okay if I turn the projector on? I'll wait a little bit. I'll wait for folks to show up. Oh, and last but not least, we want to make sure the sound was going out to the speakers, right? Not for this one. I don't have any audio for this one. Next week, I will. But if I remember right.
+
+9
+00:04:20.910 --> 00:04:32.990
+Jason Levine: Yeah, it should be right here. It should… once I have this plugged in, that works, but sometimes I have to restart, is that right? Well, so this shouldn't have anything to do with the regular… No, it isn't? Okay. Yeah.
+
+10
+00:04:33.240 --> 00:04:43.309
+Jason Levine: The biggest thing… sometimes restarting is necessary. The biggest thing is just making sure that it's selected down here, as the Extron HDMI. Oh…
+
+11
+00:04:43.910 --> 00:04:55.740
+Jason Levine: And maybe that's why I restart, because I never knew to do that. Yeah. Well, sometimes it's also, M-series Macs also have an issue where if you leave them on for too long, the… it breaks with external audio.
+
+12
+00:04:55.910 --> 00:05:05.900
+Jason Levine: Oh. Yeah, that's a special feature. Yeah, supposedly it's fixed in the neurons, but… Okay. Are we good, or are you good? Yeah, thank you, thank you.
+
+13
+00:05:17.110 --> 00:05:19.490
+Jason Levine: Finish.
+
+14
+00:05:22.420 --> 00:05:24.150
+Jason Levine: Okay, audio is working.
+
+15
+00:05:28.370 --> 00:05:33.270
+Jason Levine: 2, 4, 6, 8, 10, 12, 14, 16.
+
+16
+00:05:34.060 --> 00:05:35.350
+Jason Levine: 17.
+
+17
+00:05:37.520 --> 00:05:40.389
+Jason Levine: Do not have a lot of students in the class.
+
+18
+00:05:59.530 --> 00:06:01.459
+Jason Levine: I'm not passionate in New York.
+
+19
+00:06:28.910 --> 00:06:31.180
+Jason Levine: Okay.
+
+20
+00:06:34.350 --> 00:06:39.810
+Jason Levine: Let me share screen… Share.
+
+21
+00:06:41.450 --> 00:06:46.120
+Jason Levine: And… We're in.
+
+22
+00:06:47.130 --> 00:06:54.940
+Jason Levine: Okay, so we're gonna just go over a little bit about what some of the outcomes are, we'll go over the syllabus, and then we'll do our lecture.
+
+23
+00:06:55.500 --> 00:06:58.720
+Jason Levine: So…
+
+24
+00:06:59.000 --> 00:07:06.449
+Jason Levine: Like I said, the outcomes for this class are specific… I like it when it moves. Come on, can you move for me? Yeah, that looks cool.
+
+25
+00:07:06.720 --> 00:07:16.689
+Jason Levine: The outcomes for this class is specifically so you learn, first of all, the skills necessary to work and operate within a UX studio.
+
+26
+00:07:16.960 --> 00:07:22.049
+Jason Levine: And second is to understand the fundamentals of
+
+27
+00:07:22.150 --> 00:07:34.840
+Jason Levine: AI, LLMs, generative AI, and agentic experiences, so that way you are able to operate understanding how to apply those in a product experience.
+
+28
+00:07:34.850 --> 00:07:43.870
+Jason Levine: And lastly, the most important one, is you walk out of here with something that you can sell yourself and get a job with.
+
+29
+00:07:44.720 --> 00:07:50.430
+Jason Levine: There's very few opportunities that exist in classes where you can just
+
+30
+00:07:51.400 --> 00:07:56.709
+Jason Levine: Show what you did in class, and they take you seriously. This is that class.
+
+31
+00:07:57.110 --> 00:07:59.479
+Jason Levine: So, the more effort you put in.
+
+32
+00:07:59.700 --> 00:08:05.159
+Jason Levine: The higher the chances you can leverage this for your future portfolio.
+
+33
+00:08:07.750 --> 00:08:08.500
+Jason Levine: Okay.
+
+34
+00:08:09.630 --> 00:08:19.619
+Jason Levine: So… The way that user experience design works… Is this iterative process.
+
+35
+00:08:20.710 --> 00:08:25.069
+Jason Levine: And it's these stages that we go through of…
+
+36
+00:08:25.420 --> 00:08:30.739
+Jason Levine: Understanding the goals that we are after to solve for and experience.
+
+37
+00:08:31.630 --> 00:08:38.510
+Jason Levine: Then, observe how users are behaving to solve for… on their own.
+
+38
+00:08:39.260 --> 00:08:43.079
+Jason Levine: We then ideate solutions to do that.
+
+39
+00:08:43.740 --> 00:08:51.699
+Jason Levine: Refine from what we have learned along the way, ship it, And call it good.
+
+40
+00:08:52.710 --> 00:09:05.229
+Jason Levine: The fun part is that we're trying to make it so that we can do this faster, because what ends up happening is that what we ship is 70% right, but 30% wrong.
+
+41
+00:09:05.440 --> 00:09:20.749
+Jason Levine: And what we want to do is have this iterative process where we learn quickly what we are needing to refine before it impacts the quality of your product experience. So we go back to observation for what we've shipped.
+
+42
+00:09:20.750 --> 00:09:25.850
+Jason Levine: And try to refine yet again, and go through this iterative cycle to improve.
+
+43
+00:09:27.450 --> 00:09:29.490
+Jason Levine: The way to look at that is this.
+
+44
+00:09:29.870 --> 00:09:35.100
+Jason Levine: Plan, do, check, adjust, do it again.
+
+45
+00:09:36.230 --> 00:09:51.589
+Jason Levine: And the more that we are operating within a generative AI approach for how we build these things, we can do a lot of what used to be only able to be validated once you shipped, we can do much earlier on.
+
+46
+00:09:51.590 --> 00:09:56.289
+Jason Levine: With a prototype that a designer can then own and produce.
+
+47
+00:09:57.430 --> 00:10:00.549
+Jason Levine: You will have that opportunity using Figma Make.
+
+48
+00:10:01.680 --> 00:10:17.130
+Jason Levine: In the real world, there are other tools that are, available to you that are more sophisticated, but will provide you an even deeper experience approach to be able to then demonstrate how that works with real data.
+
+49
+00:10:20.090 --> 00:10:26.889
+Jason Levine: The way you want to look at this class, and I shared this in my previous class as well, my UX research class.
+
+50
+00:10:27.130 --> 00:10:33.700
+Jason Levine: is… We all start… in the middle, Like that.
+
+51
+00:10:35.150 --> 00:10:40.340
+Jason Levine: And you're going to spend… The next… 10 weeks.
+
+52
+00:10:40.600 --> 00:10:44.650
+Jason Levine: Working your way through, The scribble.
+
+53
+00:10:44.870 --> 00:10:48.310
+Jason Levine: To have less scribble to get to your solution.
+
+54
+00:10:50.390 --> 00:10:56.729
+Jason Levine: Now… This is essentially the how design thinking works.
+
+55
+00:10:57.020 --> 00:11:10.469
+Jason Levine: is this ugly, ugly process. What we want to do is reduce the amount of scribble here, and the amount of distance here, and making sure that you have as best of an example of what you have as the ideal experience for your solution.
+
+56
+00:11:10.570 --> 00:11:12.340
+Jason Levine: As fast as possible.
+
+57
+00:11:13.190 --> 00:11:20.139
+Jason Levine: Generative AI allows you to be able to do those things with way less effort to be able to validate.
+
+58
+00:11:20.280 --> 00:11:22.159
+Jason Levine: How close you are to here.
+
+59
+00:11:22.540 --> 00:11:24.099
+Jason Levine: With less of this.
+
+60
+00:11:25.380 --> 00:11:33.119
+Jason Levine: Key thing, though, is that What we face in the real world is that people don't understand, yet.
+
+61
+00:11:33.220 --> 00:11:38.519
+Jason Levine: that the limitations of generative AI, just like it is for any other form of LLM,
+
+62
+00:11:38.840 --> 00:11:53.510
+Jason Levine: Because it looks high fidelity doesn't mean it solved it in the right way. It still requires a design eye. It still requires heuristics. It still requires understanding your persona. It still understands meeting your user where they're at.
+
+63
+00:11:53.700 --> 00:11:59.770
+Jason Levine: And achieving their goal as best you can, without reliance on the system
+
+64
+00:12:00.000 --> 00:12:02.159
+Jason Levine: That what it did is the right approach.
+
+65
+00:12:03.200 --> 00:12:06.639
+Jason Levine: What it's doing is simply throwing up
+
+66
+00:12:07.580 --> 00:12:10.350
+Jason Levine: What it thinks is the… is an approach.
+
+67
+00:12:10.750 --> 00:12:14.900
+Jason Levine: And because it looks good, from nothing.
+
+68
+00:12:15.340 --> 00:12:18.050
+Jason Levine: It's easy to assume that that means it's done.
+
+69
+00:12:18.310 --> 00:12:19.820
+Jason Levine: But it's not a person.
+
+70
+00:12:20.570 --> 00:12:23.719
+Jason Levine: It's just a machine outputting stuff.
+
+71
+00:12:24.270 --> 00:12:29.099
+Jason Levine: So the critical eye is still necessary for that scribble.
+
+72
+00:12:29.510 --> 00:12:37.470
+Jason Levine: So it is important that throughout this process that we go through, you lean on these generative AI, these LLM,
+
+73
+00:12:37.470 --> 00:12:52.349
+Jason Levine: these, tools that we are going to use throughout this class, but you're always using your… the human-in-the-loop critical eye of asking, does it help your users accomplish the goals? Will it help users minimize work to get there?
+
+74
+00:12:52.980 --> 00:13:00.479
+Jason Levine: You have to be asking yourself at every stage, at every deliverable, at every screen, at every touchpoint.
+
+75
+00:13:00.980 --> 00:13:05.889
+Jason Levine: If you rely on the machine, you've just left yourself out of a job.
+
+76
+00:13:06.610 --> 00:13:13.800
+Jason Levine: Because… The thing that's happening in this world right now, is that…
+
+77
+00:13:13.920 --> 00:13:18.199
+Jason Levine: Amazon just, announced an additional 18,000 layoffs?
+
+78
+00:13:18.510 --> 00:13:23.139
+Jason Levine: I don't know if anybody knows, on top of the $12,000 that they laid off in November.
+
+79
+00:13:24.130 --> 00:13:29.370
+Jason Levine: That's the largest amount of layoffs that Amazon has ever done in its history, 40,000.
+
+80
+00:13:30.030 --> 00:13:32.750
+Jason Levine: And where it went?
+
+81
+00:13:33.030 --> 00:13:35.170
+Jason Levine: To a… to take out people?
+
+82
+00:13:35.370 --> 00:13:38.730
+Jason Levine: were… Entry-level people?
+
+83
+00:13:39.710 --> 00:13:44.679
+Jason Levine: Repetitive jobs, like creating documentation, and middle management.
+
+84
+00:13:45.400 --> 00:13:47.660
+Jason Levine: It's, like, taking out all those.
+
+85
+00:13:48.520 --> 00:13:56.620
+Jason Levine: So, where you go to start your career? Gone. Where you go to grow your career? Gone.
+
+86
+00:13:57.660 --> 00:14:02.560
+Jason Levine: So… that's gonna happen because Amazon can get away with it, because there's…
+
+87
+00:14:02.780 --> 00:14:06.350
+Jason Levine: I don't know, 180,000 corporate workers?
+
+88
+00:14:07.090 --> 00:14:10.689
+Jason Levine: And it feels very little of a punch.
+
+89
+00:14:11.750 --> 00:14:15.390
+Jason Levine: But… It's gonna affect all of you.
+
+90
+00:14:15.580 --> 00:14:18.260
+Jason Levine: In your ability to find a hireable job.
+
+91
+00:14:18.580 --> 00:14:32.210
+Jason Levine: Unless you're able to take advantage of what I was talking about at the beginning of the class, solving for ambiguity, staying close to your user, and not reliant on the system to solve it for you, but instead to assist you.
+
+92
+00:14:33.630 --> 00:14:41.709
+Jason Levine: The human in the loop, your brain, your approach, your understanding of the human experience, is the difference between
+
+93
+00:14:42.350 --> 00:14:47.980
+Jason Levine: You having a job in the future, and your job being eliminated, or not possible in the future.
+
+94
+00:14:49.120 --> 00:14:53.590
+Jason Levine: So keep those two… Tenets in mind.
+
+95
+00:14:54.170 --> 00:15:01.510
+Jason Levine: For how you rely upon whatever you use generative approaches to how you solve for anything.
+
+96
+00:15:02.310 --> 00:15:03.310
+Jason Levine: Make sense?
+
+97
+00:15:04.140 --> 00:15:04.880
+Jason Levine: Okay
+
+98
+00:15:06.270 --> 00:15:17.260
+Jason Levine: So, our routine will be reviewing and sharing, our week's assignments, discussing them together, having a short lecture that could be anything from 45 minutes to an hour and a half.
+
+99
+00:15:17.530 --> 00:15:35.149
+Jason Levine: Working in teams and class, and then we will have… I haven't quite figured out if we're gonna… because I've been loading up this class with more technical needs, if I will have time for additional,
+
+100
+00:15:35.440 --> 00:15:39.630
+Jason Levine: support of… guest lecturers, I haven't…
+
+101
+00:15:40.020 --> 00:15:43.250
+Jason Levine: I think I'm gonna still keep the week 8, where we'll have…
+
+102
+00:15:43.580 --> 00:15:50.440
+Jason Levine: Colleagues and employees of mine come in to help assist your final… In… in Week 8.
+
+103
+00:15:53.100 --> 00:16:01.689
+Jason Levine: And then we'll reflect, so that way we can all discuss together what we learn. And that's not a lunch break, it's a dinner break. Okay.
+
+104
+00:16:02.490 --> 00:16:09.530
+Jason Levine: So… We have several stages that we go through for each of these things, and…
+
+105
+00:16:09.870 --> 00:16:13.799
+Jason Levine: Let me see if I can get through this stuff faster.
+
+106
+00:16:14.230 --> 00:16:15.240
+Jason Levine: So…
+
+107
+00:16:15.880 --> 00:16:29.910
+Jason Levine: We're going to ideate and understand and observe. This is going to be a core factor for how we learn what is the right approach. You all are going to be required to come up with a concept. We're going to discuss how… some of the mechanisms for how we do that concept in a little bit.
+
+108
+00:16:30.500 --> 00:16:33.300
+Jason Levine: And then we will visualize those concepts.
+
+109
+00:16:33.870 --> 00:16:37.879
+Jason Levine: And we'll use different types of techniques that are common through that process.
+
+110
+00:16:38.110 --> 00:16:53.769
+Jason Levine: Then we will work at, to figure out how those things work with testing with people. That will be, you all working together as, like a team, sharing with another team, as well as with other people.
+
+111
+00:16:54.460 --> 00:16:55.579
+Jason Levine: Outside.
+
+112
+00:16:55.730 --> 00:17:01.230
+Jason Levine: And then, we're gonna do a lot of group feedback, a lot of testing.
+
+113
+00:17:01.350 --> 00:17:10.290
+Jason Levine: And then when we do our final presentations, the core part in that is that you are assuring that you have in your presentation
+
+114
+00:17:11.150 --> 00:17:12.599
+Jason Levine: the journey…
+
+115
+00:17:13.329 --> 00:17:18.970
+Jason Levine: Is not going to be where you started this week, but the outcome of what you learned on top of it.
+
+116
+00:17:19.329 --> 00:17:24.330
+Jason Levine: So just keep in mind, this is a class chock-full of ambiguity.
+
+117
+00:17:24.450 --> 00:17:29.550
+Jason Levine: And your approaches that you're learning today will…
+
+118
+00:17:29.780 --> 00:17:35.570
+Jason Levine: Be refining what you do tomorrow, and the following week, and the following week.
+
+119
+00:17:35.680 --> 00:17:42.199
+Jason Levine: So… The hardest part of this class is knowing you're still in the middle of the scribble.
+
+120
+00:17:42.500 --> 00:17:54.779
+Jason Levine: And how far you are through that painful process, it feels like at first, of working your way through that principle of, I am 70% wrong before I'm 60% wrong, before I'm 10% wrong.
+
+121
+00:17:55.530 --> 00:18:00.489
+Jason Levine: It requires being able to accept that vulnerability.
+
+122
+00:18:00.960 --> 00:18:18.629
+Jason Levine: And with that is how we then get to our outcomes of the final, portion of the class, where we then have our final project, where you are going to be held accountable for the fidelity, for the usability, for the value, and the design, tenets.
+
+123
+00:18:18.670 --> 00:18:21.140
+Jason Levine: That you bring to the table for your product.
+
+124
+00:18:21.640 --> 00:18:22.630
+Jason Levine: Make sense?
+
+125
+00:18:24.300 --> 00:18:25.130
+Jason Levine: Alright.
+
+126
+00:18:25.770 --> 00:18:31.120
+Jason Levine: So… I've been planning this out for the past 6 months.
+
+127
+00:18:31.430 --> 00:18:33.000
+Jason Levine: for this class.
+
+128
+00:18:33.380 --> 00:18:36.920
+Jason Levine: But like I said, you are all my first go at it.
+
+129
+00:18:37.290 --> 00:18:40.579
+Jason Levine: I've taught a version of this class in the past.
+
+130
+00:18:40.890 --> 00:18:45.130
+Jason Levine: This… this version is… of this class is gonna be…
+
+131
+00:18:45.260 --> 00:18:48.759
+Jason Levine: Hopefully, a more exciting, more dynamic.
+
+132
+00:18:48.850 --> 00:18:57.919
+Jason Levine: Version that doesn't require being reliant on design skills, but instead on critical thinking skills to achieve the outcomes of the class.
+
+133
+00:18:57.990 --> 00:19:09.720
+Jason Levine: But it's all based on theory, and it's all based on tools that I've never used in a classroom before, so we may find that this stuff goes a little askew.
+
+134
+00:19:10.150 --> 00:19:13.359
+Jason Levine: I'm gonna be heavily dependent on all of you.
+
+135
+00:19:13.670 --> 00:19:17.960
+Jason Levine: Telling me where that, goes off track.
+
+136
+00:19:18.480 --> 00:19:38.260
+Jason Levine: So please allow me the deference to be wrong as well, and to help adjust, so that way we can get through the different deliverables of this class. I'm still considering introducing a section in Week 9 that normally I would never do.
+
+137
+00:19:38.410 --> 00:19:43.020
+Jason Levine: Because generative AI can take a design
+
+138
+00:19:43.930 --> 00:19:50.520
+Jason Levine: template and apply it to an entire set of screens, where that would have been a huge amount of effort.
+
+139
+00:19:50.630 --> 00:19:52.460
+Jason Levine: In a previous universe.
+
+140
+00:19:52.700 --> 00:20:10.260
+Jason Levine: So I may be still, like, modifying some of the deliverables. I'm having a developer, build out an LLM test bed, so we have that available for week 7. So, there's a lot of stuff still in the works.
+
+141
+00:20:10.570 --> 00:20:13.379
+Jason Levine: that I haven't… I'm just hoping…
+
+142
+00:20:13.820 --> 00:20:15.719
+Jason Levine: The plane will land with its wheels.
+
+143
+00:20:16.090 --> 00:20:19.010
+Jason Levine: So I do need your help in making sure we do that.
+
+144
+00:20:20.590 --> 00:20:25.080
+Jason Levine: Okay, any questions before we go through the, syllabus?
+
+145
+00:20:30.030 --> 00:20:33.429
+Jason Levine: You sure? You're good? Okay, let's go through the syllabus together.
+
+146
+00:20:47.150 --> 00:20:48.800
+Jason Levine: And…
+
+147
+00:20:52.230 --> 00:20:55.269
+Jason Levine: Okay, let me get to Canvas, and then I'll bring it up on screen.
+
+148
+00:21:07.120 --> 00:21:08.270
+Jason Levine: Wait, what?
+
+149
+00:21:17.310 --> 00:21:18.229
+Jason Levine: There we go.
+
+150
+00:21:30.740 --> 00:21:37.480
+Jason Levine: Alright, there's a few things to keep in mind for this class. The first one is… I've…
+
+151
+00:21:37.980 --> 00:21:41.099
+Jason Levine: Spent a lot of time trying to define what those
+
+152
+00:21:41.440 --> 00:21:58.770
+Jason Levine: learning objectives are, and the studio structure, in order to make sure that you are getting what you need out of this class the right way, to be focusing on agentic experiences. So the thing is…
+
+153
+00:21:59.130 --> 00:22:06.590
+Jason Levine: You're all, when you're working on your project, are going to be… relying on…
+
+154
+00:22:06.780 --> 00:22:10.839
+Jason Levine: your experience being a manual experience. In other words.
+
+155
+00:22:11.190 --> 00:22:17.679
+Jason Levine: having an LLM chat window, and the rest is happening the way you would with a normal experience.
+
+156
+00:22:18.490 --> 00:22:20.689
+Jason Levine: That is not going to make it.
+
+157
+00:22:21.070 --> 00:22:26.120
+Jason Levine: Because that application Will be going away.
+
+158
+00:22:26.590 --> 00:22:32.920
+Jason Levine: Over time, of what we rely upon, as… Heavy effort by the user.
+
+159
+00:22:33.390 --> 00:22:48.180
+Jason Levine: What we want to do is spend more time trying to solve for how we can reduce that effort and be accurate while we're doing it by having the system make assumptions for the user with guidance from the user, as opposed to actions by the user.
+
+160
+00:22:48.690 --> 00:23:04.560
+Jason Levine: That's going to require a fundamental shift for you all to be able to accomplish that. So expect lots of pushback from me in order for you to meet that higher bar that a regular application that you see in the, in the App Store
+
+161
+00:23:05.200 --> 00:23:10.530
+Jason Levine: May not, outside of a game, may not meet that bar.
+
+162
+00:23:10.650 --> 00:23:17.000
+Jason Levine: like, the process that we go through for Airbnb, for example, or on Delta Airlines.
+
+163
+00:23:17.220 --> 00:23:31.749
+Jason Levine: Those are all where I have to make all the decisions, and I have to make all of the choices, and I have to go through all those choices in order to figure out what is the best place, the best time, the best price, and the best,
+
+164
+00:23:32.010 --> 00:23:35.909
+Jason Levine: itinerary. That's a lot of work that…
+
+165
+00:23:36.180 --> 00:23:39.830
+Jason Levine: Products do really well in giving you those steps.
+
+166
+00:23:40.110 --> 00:23:44.950
+Jason Levine: But how would you be looking at that by reducing that effort?
+
+167
+00:23:45.380 --> 00:23:47.449
+Jason Levine: By thinking about what is the outcome.
+
+168
+00:23:47.570 --> 00:23:54.430
+Jason Levine: That's the key thing that we're trying to accomplish in this class that is different than just building an application.
+
+169
+00:23:56.290 --> 00:24:00.179
+Jason Levine: I do have a couple examples.
+
+170
+00:24:00.450 --> 00:24:05.859
+Jason Levine: Dlife is at a, is a really interesting one that the team… this team did.
+
+171
+00:24:06.110 --> 00:24:07.690
+Jason Levine: I will share with you.
+
+172
+00:24:08.760 --> 00:24:13.680
+Jason Levine: So this was… And a 4.0 project.
+
+173
+00:24:15.480 --> 00:24:17.350
+Jason Levine: And,
+
+174
+00:24:17.960 --> 00:24:22.869
+Jason Levine: I'm sharing it with you so you have an idea of the fidelity you can reach as a 4.0.
+
+175
+00:24:25.110 --> 00:24:26.410
+Jason Levine: So here…
+
+176
+00:24:27.130 --> 00:24:40.729
+Jason Levine: What they were building was a tool that assists people with type 1, type 2 diabetes, being able to manage their diabetes with an application that supports
+
+177
+00:24:40.750 --> 00:24:52.970
+Jason Levine: Their dietary restraints that they need to be considering, their blood sugar levels that they have to monitor, and guidance materials that are necessary to assure you don't
+
+178
+00:24:53.000 --> 00:24:56.359
+Jason Levine: Have any spikes or, dips?
+
+179
+00:24:59.790 --> 00:25:03.619
+Jason Levine: So let's get through some of the key screens there. Why isn't it…
+
+180
+00:25:03.720 --> 00:25:08.009
+Jason Levine: Showing it, let me see… minus… There we go.
+
+181
+00:25:08.220 --> 00:25:09.550
+Jason Levine: Here we go. Okay.
+
+182
+00:25:11.880 --> 00:25:14.339
+Jason Levine: Alright, so this is the presentation.
+
+183
+00:25:16.850 --> 00:25:28.139
+Jason Levine: That they did. This is the persona that they provided. And in their case, they have a person who's the person with diabetes, as well as a caretaker.
+
+184
+00:25:28.520 --> 00:25:35.340
+Jason Levine: So that way they have both, being managed, as being potential users for the product.
+
+185
+00:25:35.690 --> 00:25:52.880
+Jason Levine: They had done, a user journey map to identify where are the key aspects of when there would be an experience touchpoints in their life as a… daily life as a diabetic, where this application could provide value.
+
+186
+00:25:54.460 --> 00:25:55.780
+Jason Levine: Storyboards.
+
+187
+00:25:58.850 --> 00:26:02.009
+Jason Levine: And then, Lo-Fi Sketches.
+
+188
+00:26:02.740 --> 00:26:05.230
+Jason Levine: So these are examples of what the sketches look like.
+
+189
+00:26:09.250 --> 00:26:10.790
+Jason Levine: Then wireframes.
+
+190
+00:26:11.170 --> 00:26:15.169
+Jason Levine: Which are, low-resolution screens.
+
+191
+00:26:20.870 --> 00:26:26.490
+Jason Levine: And there's more low fidelity. These are the different application pieces that they did.
+
+192
+00:26:28.730 --> 00:26:33.060
+Jason Levine: This was the, some of the monitoring features that they introduced.
+
+193
+00:26:33.240 --> 00:26:35.809
+Jason Levine: And then the Hi-Fi prototype, which…
+
+194
+00:26:36.580 --> 00:26:42.169
+Jason Levine: This is what it looked like. We can actually go to it. I think we… hopefully it's still live.
+
+195
+00:26:44.980 --> 00:26:49.580
+Jason Levine: I think it's… Where is Oohu?
+
+196
+00:26:49.700 --> 00:26:51.349
+Jason Levine: Click here to experience prototype.
+
+197
+00:26:55.470 --> 00:26:57.019
+Jason Levine: Alright, you go into the prototype.
+
+198
+00:26:58.860 --> 00:26:59.580
+Jason Levine: Wink.
+
+199
+00:27:20.710 --> 00:27:27.350
+Jason Levine: Okay, so here they have… The tool to be able to manage.
+
+200
+00:27:27.550 --> 00:27:29.589
+Jason Levine: They can create a meal plan.
+
+201
+00:27:33.420 --> 00:27:36.939
+Jason Levine: The ingredients for it, add to their daily intake.
+
+202
+00:27:39.350 --> 00:27:52.679
+Jason Levine: We can look up the… Set up your plan… Firm… And set… There's meals…
+
+203
+00:27:53.280 --> 00:27:55.740
+Jason Levine: This is, going through what they're…
+
+204
+00:27:56.100 --> 00:28:01.140
+Jason Levine: Current glucose rates are, their insulin intake.
+
+205
+00:28:03.490 --> 00:28:06.759
+Jason Levine: We can share with others. It's kind of cool, let's see.
+
+206
+00:28:07.270 --> 00:28:08.450
+Jason Levine: Now we go back?
+
+207
+00:28:08.680 --> 00:28:14.239
+Jason Levine: I guess you can go… You can see, over weeks and months, the progression.
+
+208
+00:28:17.240 --> 00:28:25.030
+Jason Levine: Community aspect where you can learn from others, read articles, There's a profile…
+
+209
+00:28:29.880 --> 00:28:41.359
+Jason Levine: it gives dynamic tips based on what you can… what they've, accomplished, etc. So there's a lot going on here. It's all quite complicated in what they had to build.
+
+210
+00:28:41.490 --> 00:28:43.400
+Jason Levine: This was a team of 5.
+
+211
+00:28:43.740 --> 00:28:50.339
+Jason Levine: They did have the value of a, subject matter expert in that
+
+212
+00:28:50.470 --> 00:28:56.789
+Jason Levine: One of the team members, their grandmother was a type 1 diabetic, so they had…
+
+213
+00:28:57.070 --> 00:29:11.029
+Jason Levine: He had lots of experience with supporting his grandmother, as well as being able to use his grandmother as a… as user number one to test with and to receive feedback from.
+
+214
+00:29:11.180 --> 00:29:15.950
+Jason Levine: Plus he had a… the team had a passionate,
+
+215
+00:29:16.680 --> 00:29:27.570
+Jason Levine: Desire to build this application, specifically because of not just this grandmother, but two other members of the team also had family members that were diabetics.
+
+216
+00:29:28.050 --> 00:29:34.329
+Jason Levine: So they were willing to go over and beyond in order to demonstrate
+
+217
+00:29:34.570 --> 00:29:39.700
+Jason Levine: All the different features that they would want to build for this product.
+
+218
+00:29:40.030 --> 00:29:42.539
+Jason Levine: So it does a lot of cool stuff.
+
+219
+00:29:48.600 --> 00:29:50.670
+Jason Levine: So that's… this is a 4.0.
+
+220
+00:29:52.540 --> 00:29:54.399
+Jason Levine: I'm gonna show you a 3.8.
+
+221
+00:30:04.770 --> 00:30:07.099
+Jason Levine: Where do I go for that? Oh, close.
+
+222
+00:30:16.820 --> 00:30:17.830
+Jason Levine: So…
+
+223
+00:30:19.700 --> 00:30:38.539
+Jason Levine: So for this one, this was a tool that helped people, find peop… other, UW students to go on, a, to share a ride to travel for… on a, on a, break.
+
+224
+00:30:38.690 --> 00:30:41.730
+Jason Levine: So, during Christmas break, or during,
+
+225
+00:30:41.910 --> 00:30:54.089
+Jason Levine: the spring break, they were able to find other people that they could trust, that were for also students to take a day trip to Portland, or to share
+
+226
+00:30:54.470 --> 00:30:59.260
+Jason Levine: a hotel in Miami, or whatever.
+
+227
+00:30:59.400 --> 00:31:12.839
+Jason Levine: But they're… or day trips, to Tacoma, whatever, if they didn't have a car. So the idea here was, like, if you had something that allowed you to be able to trust other people, what would you do to be able to,
+
+228
+00:31:13.290 --> 00:31:18.240
+Jason Levine: What would be the things involved to be able to make that as trustworthy of an experience as possible?
+
+229
+00:31:19.450 --> 00:31:22.709
+Jason Levine: So in theirs, they had…
+
+230
+00:31:25.310 --> 00:31:33.119
+Jason Levine: the ability to be able to find existing trips that people had posted. You can then add your name to it.
+
+231
+00:31:34.520 --> 00:31:36.789
+Jason Levine: Or you can leave the group.
+
+232
+00:31:37.570 --> 00:31:45.220
+Jason Levine: In this case… And so this one is a lot more… straightforward.
+
+233
+00:31:45.520 --> 00:31:58.469
+Jason Levine: It has some capabilities for showing what is the scope that you could then do, but as you can tell, it's a lot less integrated in what that experience kind of looked like and felt like.
+
+234
+00:31:58.730 --> 00:32:08.330
+Jason Levine: It didn't really cover… Like, how do I… Let me go to here… Back to…
+
+235
+00:32:10.980 --> 00:32:21.869
+Jason Levine: It had filtering, you can apply… so it had some of the cool things that you would look for, but it was not a holistic approach.
+
+236
+00:32:22.250 --> 00:32:26.460
+Jason Levine: It didn't solve for… how…
+
+237
+00:32:26.710 --> 00:32:35.679
+Jason Levine: how do I trust that the people I'm chatting with are people that I would actually feel comfortable being on a trip with? How do I validate that those people are…
+
+238
+00:32:35.870 --> 00:32:50.040
+Jason Levine: afterward, that it was a… like, for others to share that information with, so that they're… they feel comfortable. How do I propose a place to go to and find people to be able to collaborate with? Instead, this was more of, like.
+
+239
+00:32:50.040 --> 00:33:09.490
+Jason Levine: You post something, and then other people add to it, and as you see, it's a pretty limited experience to be able to do that, which is fine. It's not easy to build, you know, these kinds of screens for it to be this approach, but it's making a lot of assumptions on the user for what it can and cannot do.
+
+240
+00:33:09.810 --> 00:33:16.740
+Jason Levine: And so, because of that, it was… Good enough.
+
+241
+00:33:17.610 --> 00:33:18.700
+Jason Levine: That's good enough.
+
+242
+00:33:19.030 --> 00:33:20.040
+Jason Levine: 3.8.
+
+243
+00:33:25.150 --> 00:33:31.700
+Jason Levine: Any questions on what you saw as examples of the prototype or the presentation?
+
+244
+00:33:35.770 --> 00:33:36.570
+Jason Levine: Nope.
+
+245
+00:33:36.920 --> 00:33:37.620
+Jason Levine: Okay.
+
+246
+00:33:37.990 --> 00:33:42.840
+Jason Levine: So here's a key thing to walk away with.
+
+247
+00:33:43.050 --> 00:33:45.500
+Jason Levine: I want you to use… where is it?
+
+248
+00:33:45.780 --> 00:33:46.620
+Jason Levine: Here we go.
+
+249
+00:33:47.130 --> 00:33:53.390
+Jason Levine: I want you to use AI and LLMs to do this stuff.
+
+250
+00:33:53.920 --> 00:34:01.230
+Jason Levine: If I sniff out that you're reliant on it to make your decisions, That's not gonna help you.
+
+251
+00:34:01.440 --> 00:34:04.999
+Jason Levine: It's not gonna help your teammates, it's not gonna help your grade.
+
+252
+00:34:05.190 --> 00:34:14.390
+Jason Levine: Don't do that. They're easy to sniff out, because… Llms… And, to produce your…
+
+253
+00:34:15.050 --> 00:34:19.030
+Jason Levine: personas, LLMs to produce your storyboards.
+
+254
+00:34:19.159 --> 00:34:31.669
+Jason Levine: You can use them to demonstrate your storyboard, but if you're reliant on it to define what the storyboard should contain, it's going to be
+
+255
+00:34:31.889 --> 00:34:34.379
+Jason Levine: Mid, at best.
+
+256
+00:34:34.820 --> 00:34:40.149
+Jason Levine: And mediocre is what the LLMs are really, really good at.
+
+257
+00:34:40.420 --> 00:34:45.810
+Jason Levine: So it's really easy for people like me to sniff that out.
+
+258
+00:34:46.340 --> 00:34:48.290
+Jason Levine: So please use it
+
+259
+00:34:48.530 --> 00:34:56.480
+Jason Levine: Not sparingly, rely on these tools, but rely on it for it assisting you, not doing the work for you.
+
+260
+00:34:57.280 --> 00:35:05.860
+Jason Levine: I will be looking… when I say it's going to be an EZA, the idea is that the EZA is you may… you… you did the rigor.
+
+261
+00:35:07.410 --> 00:35:08.360
+Jason Levine: Okay?
+
+262
+00:35:12.120 --> 00:35:17.999
+Jason Levine: Last thing to probably look at is that there's two ways to be able to look at the assignments.
+
+263
+00:35:22.250 --> 00:35:23.530
+Jason Levine: You as a student.
+
+264
+00:35:25.950 --> 00:35:30.839
+Jason Levine: So, the way that it builds the assignments is generally, this is how you see it.
+
+265
+00:35:31.610 --> 00:35:34.540
+Jason Levine: Show… make sure you click on Show by Type.
+
+266
+00:35:36.040 --> 00:35:42.659
+Jason Levine: The difference is that it simply breaks things up into the stage that you're at.
+
+267
+00:35:43.110 --> 00:35:58.769
+Jason Levine: to be able to better be able to chunk out how to relate to the information of, like, what is a dependency on the other thing? I will talk about, per assignment, what the dependencies are, for you to be able to learn from, but…
+
+268
+00:35:58.820 --> 00:36:05.620
+Jason Levine: The key thing that you want to make sure that you're doing per assignment is looking at it for, like.
+
+269
+00:36:06.190 --> 00:36:08.429
+Jason Levine: What stage are you at?
+
+270
+00:36:08.570 --> 00:36:10.039
+Jason Levine: So let me go back one.
+
+271
+00:36:12.120 --> 00:36:20.680
+Jason Levine: At the ideate stage, I'm not expecting you to have your product 100% thought through.
+
+272
+00:36:21.080 --> 00:36:25.089
+Jason Levine: The idea of a persona, the idea of a pitch.
+
+273
+00:36:25.240 --> 00:36:28.280
+Jason Levine: Is to help you get closer to that.
+
+274
+00:36:29.500 --> 00:36:34.139
+Jason Levine: So… As we go into the next stage of scoping.
+
+275
+00:36:35.010 --> 00:36:52.610
+Jason Levine: It's the same thing. I am not expecting that you've figured out every screen for your paper prototype, or every part of your customer journey. It's to allow you to be able to have a, a 1,000-foot view to see what you need.
+
+276
+00:36:52.750 --> 00:36:55.279
+Jason Levine: As you then go the next level deeper.
+
+277
+00:36:55.860 --> 00:36:58.330
+Jason Levine: So…
+
+278
+00:36:58.490 --> 00:37:02.899
+Jason Levine: It just helps to be able to see it in this kind of, like, chunking it into these groups.
+
+279
+00:37:03.490 --> 00:37:08.890
+Jason Levine: And each assignment does have
+
+280
+00:37:09.220 --> 00:37:15.209
+Jason Levine: what I'm hoping is enough detail to be able to rely upon for how to look at
+
+281
+00:37:15.700 --> 00:37:22.060
+Jason Levine: What is expected versus what… what you have as criterion that you need to come up with on your own.
+
+282
+00:37:24.270 --> 00:37:27.219
+Jason Levine: Any questions at all on the syllabus?
+
+283
+00:37:27.630 --> 00:37:33.529
+Jason Levine: Or… the… project needs, Or the final project.
+
+284
+00:37:34.800 --> 00:37:38.960
+Jason Levine: Anything at all. You guys have been… either a…
+
+285
+00:37:39.190 --> 00:37:47.030
+Jason Levine: really great at doing all this work ahead of time, so you have all the answers, or you're nervous to be able to speak up? But it's really important. Yes?
+
+286
+00:37:53.350 --> 00:38:11.009
+Jason Levine: So, in that class, it happened to have been 16 students. So, there were only 4 class… 4 teams.
+
+287
+00:38:11.190 --> 00:38:15.549
+Jason Levine: So because there were only 4 teams, they all had 40 minutes.
+
+288
+00:38:15.980 --> 00:38:19.120
+Jason Levine: And we… and I advised 30.
+
+289
+00:38:19.890 --> 00:38:22.560
+Jason Levine: For each of the presentations.
+
+290
+00:38:23.580 --> 00:38:29.889
+Jason Levine: But… they also went way over what was necessary. They showed every single
+
+291
+00:38:30.240 --> 00:38:38.570
+Jason Levine: Whiteboard session. Every single paper prototype, every single iteration of their design evolution.
+
+292
+00:38:38.880 --> 00:38:47.740
+Jason Levine: You don't need to go through all that. The criteria is already listed in the… in that example, the final, oops, the final presentation.
+
+293
+00:38:48.220 --> 00:38:49.120
+Jason Levine: Here.
+
+294
+00:38:51.950 --> 00:38:52.760
+Jason Levine: Come on.
+
+295
+00:38:52.970 --> 00:38:54.160
+Jason Levine: Final presentation.
+
+296
+00:38:56.460 --> 00:39:00.270
+Jason Levine: And so, you don't need to sweat
+
+297
+00:39:00.960 --> 00:39:04.470
+Jason Levine: The amount of blood, sweat, and tears that they did.
+
+298
+00:39:04.670 --> 00:39:15.190
+Jason Levine: Part of the reason why they did was because they were… they had… one of them had a cousin, or a nephew, or an uncle that was at Amgen.
+
+299
+00:39:15.390 --> 00:39:25.570
+Jason Levine: And so they wanted to go way over the top, because they were gonna… he was gonna pitch this to be, as an intern at Amgen. So I'm like, hey.
+
+300
+00:39:25.710 --> 00:39:32.449
+Jason Levine: You want to put in the midnight oil, more power to you. But I did have to, like, a couple times go, okay, let's move it on.
+
+301
+00:39:34.350 --> 00:39:35.390
+Jason Levine: You're welcome.
+
+302
+00:39:37.500 --> 00:39:38.540
+Jason Levine: Yes, please.
+
+303
+00:39:42.610 --> 00:39:51.159
+Jason Levine: Like, not for the presentation, but if we're going to use it for, like, our portfolio because I'm being added in on this slide.
+
+304
+00:39:53.440 --> 00:39:59.840
+Jason Levine: I've sat in on lots and lots and lots and lots of portfolio presentations for interviewees.
+
+305
+00:40:00.430 --> 00:40:06.220
+Jason Levine: Anything that is over about 17 minutes, You lose people.
+
+306
+00:40:06.660 --> 00:40:12.029
+Jason Levine: So, I… I had to… Tell them the same advice afterward.
+
+307
+00:40:12.180 --> 00:40:14.359
+Jason Levine: That you want to show
+
+308
+00:40:14.610 --> 00:40:19.790
+Jason Levine: You did the hard work. You had to do the… the iterative thinking. Don't focus on it.
+
+309
+00:40:19.900 --> 00:40:26.200
+Jason Levine: Move on to what was the outcome in your… your contribution to get to that outcome.
+
+310
+00:40:26.730 --> 00:40:30.510
+Jason Levine: Because we're not hiring you to rebuild the prototype.
+
+311
+00:40:30.860 --> 00:40:34.029
+Jason Levine: I'm hiring you because you did great work.
+
+312
+00:40:34.230 --> 00:40:38.399
+Jason Levine: So, that required them to have to recalibrate.
+
+313
+00:40:38.600 --> 00:40:43.119
+Jason Levine: But they figured, hey, this is hard work, I want to share the hard work.
+
+314
+00:40:44.040 --> 00:40:47.650
+Jason Levine: Because they knew they had a 4.0 on their hands, I think is what it was.
+
+315
+00:40:49.910 --> 00:40:51.150
+Jason Levine: Any other questions?
+
+316
+00:40:56.120 --> 00:40:59.170
+Jason Levine: Okay, you will see… Yes, please.
+
+317
+00:41:02.790 --> 00:41:03.710
+Jason Levine: Understood.
+
+318
+00:41:04.200 --> 00:41:10.980
+Jason Levine: No, you're sub… one person will submit it as a team member, and it will submit it for all of you.
+
+319
+00:41:19.190 --> 00:41:27.379
+Jason Levine: You are going to choose your own teammates, yes. And if there's any stragglers that need to find a teammate, I'll match you up.
+
+320
+00:41:31.000 --> 00:41:32.260
+Jason Levine: Any other questions?
+
+321
+00:41:36.180 --> 00:41:38.029
+Jason Levine: Are you nervous or excited?
+
+322
+00:41:39.100 --> 00:41:42.090
+Jason Levine: Scale of 1 to 10, who's below a 5?
+
+323
+00:41:43.200 --> 00:41:47.620
+Jason Levine: Okay, that's good, that's good. You're all above a 5, that's a good sign. Okay.
+
+324
+00:41:48.160 --> 00:41:55.010
+Jason Levine: Alright, any last questions before we move on to the actual lecture on product pitching?
+
+325
+00:41:57.010 --> 00:41:57.830
+Jason Levine: Yes?
+
+326
+00:42:01.470 --> 00:42:08.719
+Jason Levine: So… You will need to discuss that amongst your team to figure that out.
+
+327
+00:42:09.670 --> 00:42:14.659
+Jason Levine: You are more than welcome, like I said, and now let's go to assignment number one.
+
+328
+00:42:21.380 --> 00:42:28.450
+Jason Levine: You can pick one of these three, That being… CarMax, Carnival Cruises, City Sightseeing.
+
+329
+00:42:28.990 --> 00:42:36.459
+Jason Levine: It has within it All of the scenario information to consider.
+
+330
+00:42:39.440 --> 00:42:40.909
+Jason Levine: for that project.
+
+331
+00:42:44.040 --> 00:42:46.750
+Jason Levine: It's canned, but it gives you enough…
+
+332
+00:42:49.180 --> 00:42:53.180
+Jason Levine: Ideas to get started on where to go with it.
+
+333
+00:42:55.780 --> 00:42:58.290
+Jason Levine: In this case, it's…
+
+334
+00:42:59.190 --> 00:43:05.299
+Jason Levine: I… I need something to assist me while I'm on a cruise, to take advantage of all the…
+
+335
+00:43:06.830 --> 00:43:09.240
+Jason Levine: And amenities on a cruise ship.
+
+336
+00:43:09.930 --> 00:43:15.349
+Jason Levine: And I… and so that's it. That's what you start with, so that way you at least have
+
+337
+00:43:16.180 --> 00:43:17.460
+Jason Levine: A starting point.
+
+338
+00:43:17.630 --> 00:43:21.470
+Jason Levine: You can either come up with your own whatever it might be.
+
+339
+00:43:21.920 --> 00:43:34.789
+Jason Levine: We've had, like, what you saw are those two examples that were one was thinking about as a student, this is something I'd really like to solve for, is a trustworthy way to be able to travel other places cheaply.
+
+340
+00:43:36.410 --> 00:43:41.420
+Jason Levine: And the other one was like, I have a grandmother, I would love to build a product just for them.
+
+341
+00:43:41.830 --> 00:43:47.539
+Jason Levine: You can also, like, decide, I wanna make…
+
+342
+00:43:47.680 --> 00:43:55.720
+Jason Levine: a kick-ass version of Spotify, because Spotify drives me crazy on how much effort it is just to create a playlist and find new music.
+
+343
+00:43:56.380 --> 00:43:59.010
+Jason Levine: Okay, take on an existing product.
+
+344
+00:43:59.590 --> 00:44:13.740
+Jason Levine: Or, you can use one of these. They're canned, ready to go, if you can't come up with your own ideas. It's completely up to you all. The key factor is you want to find something that
+
+345
+00:44:14.070 --> 00:44:19.370
+Jason Levine: an… an AI agent, Would have value in the experience?
+
+346
+00:44:19.520 --> 00:44:22.520
+Jason Levine: There's complexity in solving for that problem.
+
+347
+00:44:22.630 --> 00:44:25.459
+Jason Levine: And you would enjoy working on for 10 weeks.
+
+348
+00:44:31.930 --> 00:44:33.650
+Jason Levine: Any other questions on the assignment?
+
+349
+00:44:36.750 --> 00:44:38.590
+Jason Levine: Or on the syllabus.
+
+350
+00:44:41.790 --> 00:44:42.570
+Jason Levine: Okay.
+
+351
+00:44:44.620 --> 00:44:47.729
+Jason Levine: Let's go to our lecture!
+
+352
+00:44:51.270 --> 00:44:53.169
+Jason Levine: Zoom… where am I?
+
+353
+00:44:53.670 --> 00:44:54.899
+Jason Levine: This guy…
+
+354
+00:45:02.270 --> 00:45:03.319
+Jason Levine: Who are you?
+
+355
+00:45:04.830 --> 00:45:07.390
+Jason Levine: Open… concept design.
+
+356
+00:45:08.540 --> 00:45:09.450
+Jason Levine: There we go.
+
+357
+00:45:14.490 --> 00:45:15.370
+Jason Levine: Okay.
+
+358
+00:45:16.510 --> 00:45:17.520
+Jason Levine: Product pitch.
+
+359
+00:45:18.160 --> 00:45:23.500
+Jason Levine: So, you're going to have… Probably a half hour.
+
+360
+00:45:23.650 --> 00:45:29.150
+Jason Levine: To work out the details as, like, who's your team tonight.
+
+361
+00:45:29.260 --> 00:45:30.550
+Jason Levine: And…
+
+362
+00:45:30.670 --> 00:45:39.339
+Jason Levine: maybe have time to, like, talk about the kinds of things you want to do, and when to meet as a team. But…
+
+363
+00:45:39.470 --> 00:45:55.899
+Jason Levine: we've got a lot to cover in an hour, so I'm gonna… if, so, what I think we're gonna do, just so we can get through it in an hour, is if you just need to take a bio break, just go ahead and walk out. I'm recording the session. I will have the slides uploaded so you have them available.
+
+364
+00:45:57.590 --> 00:45:58.420
+Jason Levine: Okay.
+
+365
+00:45:59.610 --> 00:46:03.049
+Jason Levine: The whole thing about building a product.
+
+366
+00:46:03.620 --> 00:46:15.079
+Jason Levine: Is that you are working with the confines of a problem, that… Has some definition
+
+367
+00:46:15.200 --> 00:46:20.550
+Jason Levine: But has a barrier that… Is keeping a better solution out there.
+
+368
+00:46:21.090 --> 00:46:28.230
+Jason Levine: The best example that I've ever seen of that is the Citigroup Center building in New York City. Anybody ever seen this building?
+
+369
+00:46:30.840 --> 00:46:31.510
+Jason Levine: Nope.
+
+370
+00:46:32.440 --> 00:46:42.960
+Jason Levine: So… The Citigroup building was… is a, 65-story building in New York City.
+
+371
+00:46:43.970 --> 00:46:50.720
+Jason Levine: And… Like any other building, You gotta just create floors and make it go up.
+
+372
+00:46:51.560 --> 00:46:56.029
+Jason Levine: But here's the thing that made this building solve for the improbable.
+
+373
+00:46:58.230 --> 00:47:00.430
+Jason Levine: They owned the air.
+
+374
+00:47:01.810 --> 00:47:03.619
+Jason Levine: Forest 65 swimming bill.
+
+375
+00:47:04.300 --> 00:47:08.979
+Jason Levine: What they had as a footprint, was an L.
+
+376
+00:47:10.340 --> 00:47:12.500
+Jason Levine: And not a square.
+
+377
+00:47:13.200 --> 00:47:17.199
+Jason Levine: Because… This thing right here?
+
+378
+00:47:18.080 --> 00:47:23.609
+Jason Levine: was part of a church. This is the parking structure for the church that's right over there.
+
+379
+00:47:26.250 --> 00:47:33.959
+Jason Levine: So what they had to do was build, for the footprint they had available, Which, this was…
+
+380
+00:47:34.120 --> 00:47:38.270
+Jason Levine: Taking up a fourth of the footprint on.
+
+381
+00:47:38.820 --> 00:47:41.860
+Jason Levine: In order to have the air above it.
+
+382
+00:47:43.350 --> 00:47:48.940
+Jason Levine: Which means they can't create a standard building with four corners at the bottom.
+
+383
+00:47:49.710 --> 00:47:51.229
+Jason Levine: So how do you solve for that?
+
+384
+00:47:51.540 --> 00:47:53.270
+Jason Levine: Will they put it on stilts?
+
+385
+00:47:55.500 --> 00:48:04.540
+Jason Levine: And they can't put the stilts on the corners, like in the other normal building, because that would go right through the middle of the parking structure of the church.
+
+386
+00:48:05.550 --> 00:48:11.340
+Jason Levine: So what they had to do was build the stilts for a 65-story building, In the middle.
+
+387
+00:48:13.430 --> 00:48:15.329
+Jason Levine: Which sounds freaking insane!
+
+388
+00:48:16.810 --> 00:48:24.080
+Jason Levine: So, solving for the improbable was how do you work around the limitations?
+
+389
+00:48:25.000 --> 00:48:29.649
+Jason Levine: And they invented new ways to solve based on those limitations.
+
+390
+00:48:30.260 --> 00:48:37.750
+Jason Levine: The limitations in this case introduced lots of new, brilliant ideas. So the first thing they did
+
+391
+00:48:38.060 --> 00:48:57.010
+Jason Levine: Was they had the structure, instead of having the weight move to the corners, like any other building, like when you hear when they say cornerstone, that's because the cornerstones of the building, of any building, is where the weight ends up being the most, is in the bottom corners of a building.
+
+392
+00:48:57.180 --> 00:49:04.849
+Jason Levine: Well, in this case, they needed to move the cornerstone weight into the middle across all four sides of the building.
+
+393
+00:49:05.250 --> 00:49:08.029
+Jason Levine: And the way you do that is creating chevrons.
+
+394
+00:49:08.200 --> 00:49:14.409
+Jason Levine: And the chevrons push the weight of the sides into these middle columns of the silts.
+
+395
+00:49:15.720 --> 00:49:21.210
+Jason Levine: But now, all of a sudden, you've got this narrow bottom that's super tall. It had to be, I think it was…
+
+396
+00:49:21.630 --> 00:49:26.979
+Jason Levine: 4 or 5 stories tall, just before they could own the air above the parking structure.
+
+397
+00:49:27.240 --> 00:49:31.980
+Jason Levine: And so, they end up building this giant cement Top.
+
+398
+00:49:32.920 --> 00:49:36.090
+Jason Levine: And at the bottom, it's on wheels.
+
+399
+00:49:36.420 --> 00:49:38.449
+Jason Levine: So it works like a pendulum.
+
+400
+00:49:38.720 --> 00:49:41.930
+Jason Levine: That way you can swing, When there's wind.
+
+401
+00:49:43.280 --> 00:49:50.590
+Jason Levine: And so, based on… The limitations that they faced… They're able to innovate.
+
+402
+00:49:50.730 --> 00:50:00.510
+Jason Levine: a better solution. And now they use this kind of construction for all kinds of crazy buildings now, that you can even see, when you look at the
+
+403
+00:50:00.710 --> 00:50:18.389
+Jason Levine: new convention center in downtown Seattle, you'll see these diagonal pylons that they have windows you can see them into. And so it's able to build a very different styled structure because it's using the innovations that came from the Citigroup building.
+
+404
+00:50:19.170 --> 00:50:21.100
+Jason Levine: Interesting side note about this building.
+
+405
+00:50:22.570 --> 00:50:27.689
+Jason Levine: There was an architecture class, Where the students learned about this building.
+
+406
+00:50:28.230 --> 00:50:35.109
+Jason Levine: And there was a student, Who looked at the, the, blueprints
+
+407
+00:50:35.580 --> 00:50:42.769
+Jason Levine: And ran it through a simulator, and said, if there's ever a 50 mile per hour wind.
+
+408
+00:50:43.170 --> 00:50:48.449
+Jason Levine: or higher, coming from the northwest, The building will topple over.
+
+409
+00:50:49.200 --> 00:50:51.020
+Jason Levine: And he shared it with…
+
+410
+00:50:51.160 --> 00:50:57.190
+Jason Levine: The students shared it with the instructor, the instructor said, no, you're doing something wrong.
+
+411
+00:50:57.800 --> 00:51:06.139
+Jason Levine: And so, they… he decided, well, I can't find where the problem is. He went to the architects.
+
+412
+00:51:06.980 --> 00:51:08.590
+Jason Levine: Took the blueprints back.
+
+413
+00:51:08.730 --> 00:51:10.810
+Jason Levine: Showed him the simulation.
+
+414
+00:51:11.340 --> 00:51:17.840
+Jason Levine: And the architects were like, you're high. And then they looked at the simulation.
+
+415
+00:51:18.550 --> 00:51:22.870
+Jason Levine: And they're like, no, there's no way that would happen. Then they looked at the blueprints.
+
+416
+00:51:23.030 --> 00:51:24.909
+Jason Levine: And the blueprints were different.
+
+417
+00:51:25.550 --> 00:51:38.380
+Jason Levine: Because… In the original Blueprints, At each one of these spots, It was supposed to have… a bolt.
+
+418
+00:51:38.700 --> 00:51:42.099
+Jason Levine: That was welded to each one of these chevrons.
+
+419
+00:51:42.730 --> 00:51:46.860
+Jason Levine: And instead, they decided to weld it without the bolts.
+
+420
+00:51:48.140 --> 00:51:51.699
+Jason Levine: Because it saved in… when the builder built it.
+
+421
+00:51:52.620 --> 00:51:54.260
+Jason Levine: They thought it could save them money.
+
+422
+00:51:55.310 --> 00:52:04.509
+Jason Levine: So what ended up happening was the structure ended up having too much stress on the bottom where there weren't bolts.
+
+423
+00:52:05.210 --> 00:52:06.230
+Jason Levine: So…
+
+424
+00:52:07.080 --> 00:52:16.649
+Jason Levine: the student figured that out. The architects freaked out. It was true it would fall over if there was a 55 mile per hour wind or higher, and so in…
+
+425
+00:52:16.840 --> 00:52:22.080
+Jason Levine: perfect New York form, For those that don't know New York, it is,
+
+426
+00:52:22.740 --> 00:52:28.530
+Jason Levine: rife with, Teamsters and with, organized crime.
+
+427
+00:52:28.980 --> 00:52:32.620
+Jason Levine: What they did was not tell anyone in the building.
+
+428
+00:52:33.320 --> 00:52:40.989
+Jason Levine: And so what they did was they said, we're doing renovations, and floor by floor, they would close the floor at night.
+
+429
+00:52:41.490 --> 00:52:43.229
+Jason Levine: And add the bolt.
+
+430
+00:52:44.550 --> 00:52:46.040
+Jason Levine: And not tell anyone.
+
+431
+00:52:47.650 --> 00:52:51.560
+Jason Levine: Until they finish the entire… Building.
+
+432
+00:52:52.430 --> 00:52:53.700
+Jason Levine: Only in New York.
+
+433
+00:52:55.620 --> 00:52:58.049
+Jason Levine: The reason why I bring that up is because…
+
+434
+00:52:58.230 --> 00:53:07.150
+Jason Levine: The value that came from those innovations were because of what it couldn't do.
+
+435
+00:53:08.380 --> 00:53:20.040
+Jason Levine: And so, what you want to be thinking through when you're coming up with your own solutions is where are those barriers? Those barriers are good things, because that's where innovation lies.
+
+436
+00:53:21.000 --> 00:53:21.940
+Jason Levine: Okay?
+
+437
+00:53:24.320 --> 00:53:36.110
+Jason Levine: One of the reasons why this becomes possible now versus any time in the past, is because…
+
+438
+00:53:36.540 --> 00:53:42.619
+Jason Levine: the cost of innovation has significantly reduced over time. So what you're seeing here…
+
+439
+00:53:42.910 --> 00:53:47.869
+Jason Levine: Are the costs per gigabyte for hard drives.
+
+440
+00:53:48.810 --> 00:53:52.579
+Jason Levine: And there was a time, in 1980,
+
+441
+00:53:52.810 --> 00:53:57.659
+Jason Levine: Where the cost per gigabyte was a million dollars per gigabyte.
+
+442
+00:53:59.810 --> 00:54:06.850
+Jason Levine: Now… I can get a 64GB SSD drive?
+
+443
+00:54:07.150 --> 00:54:09.260
+Jason Levine: For about $6.
+
+444
+00:54:09.820 --> 00:54:11.280
+Jason Levine: That you can get on Amazon.
+
+445
+00:54:11.570 --> 00:54:14.369
+Jason Levine: You can stick in your phone. Or your… I'm sorry, your camera.
+
+446
+00:54:15.910 --> 00:54:21.630
+Jason Levine: And… That…
+
+447
+00:54:22.210 --> 00:54:36.029
+Jason Levine: Innovation is just an example of many innovations that makes the cost of being able to compute, the cost of being able to store, the cost of being able to, to transfer data.
+
+448
+00:54:36.320 --> 00:54:38.030
+Jason Levine: Extremely cheap.
+
+449
+00:54:39.350 --> 00:54:43.710
+Jason Levine: We all talk about NVIDIA making gajillions of dollars.
+
+450
+00:54:44.090 --> 00:54:49.479
+Jason Levine: Well, the reason why they're able to make gajillions of dollars is not because they make an innovative chip.
+
+451
+00:54:50.050 --> 00:54:58.960
+Jason Levine: there are lots and lots of other manufacturers creating the same type of chip. Amazon has one called Tranium.
+
+452
+00:54:59.820 --> 00:55:02.500
+Jason Levine: The reason why NVIDIA's making so much money
+
+453
+00:55:02.790 --> 00:55:06.779
+Jason Levine: Is because they can make more of them than anyone else.
+
+454
+00:55:07.300 --> 00:55:14.209
+Jason Levine: So the fact that they can create 30,000 chips versus 3,000 chips is why they're so valuable.
+
+455
+00:55:14.940 --> 00:55:16.810
+Jason Levine: Because it's cheap to do for them.
+
+456
+00:55:17.580 --> 00:55:26.099
+Jason Levine: Meanwhile, everyone else, it's the cost per chip is much more expensive and slower, so therefore, NVIDIA has the advantage.
+
+457
+00:55:28.810 --> 00:55:29.570
+Jason Levine: Oops.
+
+458
+00:55:31.510 --> 00:55:32.850
+Jason Levine: So how do we innovate?
+
+459
+00:55:34.900 --> 00:55:41.370
+Jason Levine: Steve Jobs had a very important factor for how he looked at how to innovate.
+
+460
+00:55:42.210 --> 00:55:45.499
+Jason Levine: And that was, he used the intuition
+
+461
+00:55:45.810 --> 00:55:47.880
+Jason Levine: Of what was best for the customer.
+
+462
+00:55:48.580 --> 00:55:51.830
+Jason Levine: And not reliant on the customer to tell them.
+
+463
+00:55:52.120 --> 00:55:53.890
+Jason Levine: What was best for the customer.
+
+464
+00:55:54.940 --> 00:56:00.010
+Jason Levine: And that intuition led to many, many, many innovations.
+
+465
+00:56:00.470 --> 00:56:05.760
+Jason Levine: It also meant that when the innovation wasn't able to be met yet.
+
+466
+00:56:06.140 --> 00:56:12.060
+Jason Levine: Well, then he just waited it out until he could build what was the ideal experience.
+
+467
+00:56:14.570 --> 00:56:23.020
+Jason Levine: And this also led to other types of innovation. So, what you see here is the Macintosh, the 1984's Macintosh.
+
+468
+00:56:23.670 --> 00:56:33.459
+Jason Levine: It had an underpowered hard drive, an underpowered CPU, and used Diskettes for the first model that came out in order to store information.
+
+469
+00:56:33.880 --> 00:56:34.900
+Jason Levine: And it was slow.
+
+470
+00:56:35.440 --> 00:56:36.880
+Jason Levine: It also crashed a lot.
+
+471
+00:56:37.830 --> 00:56:42.249
+Jason Levine: So… The way to get around those problems…
+
+472
+00:56:42.830 --> 00:56:46.850
+Jason Levine: Was things that technology hadn't met up with yet.
+
+473
+00:56:47.830 --> 00:56:56.380
+Jason Levine: But it did a lot of things really, really, really, really, really well. Had a great interface. Had a really, high-resolution screen.
+
+474
+00:56:56.540 --> 00:56:58.200
+Jason Levine: It had a mouse.
+
+475
+00:56:58.540 --> 00:57:01.429
+Jason Levine: That other computers didn't have yet.
+
+476
+00:57:02.450 --> 00:57:07.159
+Jason Levine: And so you could point and click. So you knew those advantages were worth the shortcomings.
+
+477
+00:57:07.330 --> 00:57:12.560
+Jason Levine: So one of the things they spent a lot of time doing was creating sound effects.
+
+478
+00:57:13.250 --> 00:57:17.440
+Jason Levine: Because if he made it fun, then…
+
+479
+00:57:17.590 --> 00:57:23.249
+Jason Levine: that calming bong sound that Wally makes when he reboots.
+
+480
+00:57:23.860 --> 00:57:30.960
+Jason Levine: And your… some of your computers will do when you restart, you know that sound? That's the Apple restart sound?
+
+481
+00:57:31.470 --> 00:57:46.199
+Jason Levine: they introduced that calming sound specifically because they knew when you hear it, it's because the computer crashed, and you had to restart it. And so they needed to have
+
+482
+00:57:46.410 --> 00:57:51.840
+Jason Levine: you saw a little icon of a little mini Mac that would show up with a smile as it booted up.
+
+483
+00:57:52.370 --> 00:57:54.870
+Jason Levine: And it had this calming sound as it rebooted.
+
+484
+00:57:55.090 --> 00:58:01.220
+Jason Levine: And when you had to throw things away, it had a crumpled whiskey sound when you threw it in the trash.
+
+485
+00:58:01.940 --> 00:58:07.069
+Jason Levine: There were all these little mini things, like, just small considerations.
+
+486
+00:58:07.230 --> 00:58:10.419
+Jason Levine: To make the experience delightful.
+
+487
+00:58:10.610 --> 00:58:14.390
+Jason Levine: In order to be able to meet what it could do well.
+
+488
+00:58:14.520 --> 00:58:21.720
+Jason Levine: Which was a visual experience, as opposed to a program-type command line experience.
+
+489
+00:58:23.450 --> 00:58:30.319
+Jason Levine: This meant that you could, if you think from that point of view, where the goal is what's important.
+
+490
+00:58:30.750 --> 00:58:34.779
+Jason Levine: Then it eliminates a lot of the noise of trying to perfect everything.
+
+491
+00:58:37.670 --> 00:58:38.919
+Jason Levine: place I work.
+
+492
+00:58:40.600 --> 00:58:45.330
+Jason Levine: that very rich… egocentric guy, Jeff Bezos.
+
+493
+00:58:45.810 --> 00:58:51.940
+Jason Levine: worked on solving for how Amazon works as a business.
+
+494
+00:58:52.160 --> 00:58:55.890
+Jason Levine: And the way that they did, was…
+
+495
+00:58:56.180 --> 00:59:05.159
+Jason Levine: By considering the ecosystem, that they could iterate on each element of the ecosystem to increase its growth.
+
+496
+00:59:05.280 --> 00:59:13.829
+Jason Levine: Because he understood that if you had infinite growth, You had infinite… Value for customer.
+
+497
+00:59:14.080 --> 00:59:19.799
+Jason Levine: And so there were different elements that they were considering for where that growth would come from. And so…
+
+498
+00:59:20.020 --> 00:59:29.830
+Jason Levine: This, virtuous cycle that they wrote on a napkin back in, I don't know, 2000… 2.
+
+499
+00:59:30.480 --> 00:59:32.090
+Jason Levine: Was to solve for that.
+
+500
+00:59:32.940 --> 00:59:38.430
+Jason Levine: They understood a key factor for anything was in their customer experience.
+
+501
+00:59:39.240 --> 00:59:43.520
+Jason Levine: So the flywheel required having an optimal customer experience.
+
+502
+00:59:43.640 --> 00:59:48.029
+Jason Levine: So that meant… Easy to purchase, easy to return.
+
+503
+00:59:48.160 --> 00:59:51.040
+Jason Levine: Easy to be able to search on things, etc.
+
+504
+00:59:51.340 --> 00:59:52.719
+Jason Levine: Customer experience.
+
+505
+00:59:53.680 --> 00:59:55.819
+Jason Levine: Which ideally drives traffic.
+
+506
+00:59:56.840 --> 01:00:01.840
+Jason Levine: The more traffic you have, You attract more sellers.
+
+507
+01:00:02.660 --> 01:00:08.839
+Jason Levine: So everything you buy on Amazon is actually, like, 60%, 70% of it is from a third-party seller.
+
+508
+01:00:09.120 --> 01:00:12.170
+Jason Levine: The more sellers you have, more selection.
+
+509
+01:00:12.730 --> 01:00:16.390
+Jason Levine: The more selection, The lower your prices.
+
+510
+01:00:16.620 --> 01:00:18.839
+Jason Levine: Which improves your customer experience.
+
+511
+01:00:19.100 --> 01:00:29.030
+Jason Levine: As you grow with more customers, with higher traffic, more sellers, and your growth, that allows you to be able to then consider a lower cost structure.
+
+512
+01:00:31.150 --> 01:00:33.759
+Jason Levine: That's the 40,000 people laid off.
+
+513
+01:00:34.780 --> 01:00:40.479
+Jason Levine: But it also meant that, like, you probably…
+
+514
+01:00:40.620 --> 01:00:57.459
+Jason Levine: I don't know how many of you have Amazon Deliver, but you will notice less and less of a UPS driver or a U.S. Postal Service person delivering your product that you ordered, and more and more of Sonny wearing a blue vest.
+
+515
+01:00:57.800 --> 01:01:01.099
+Jason Levine: Because our cost structure
+
+516
+01:01:01.200 --> 01:01:14.019
+Jason Levine: is able to lower prices by, instead of outsourcing the delivery, the last mile delivery, or the cross-country delivery on the Postal Service or on UPS,
+
+517
+01:01:14.100 --> 01:01:25.059
+Jason Levine: But instead, doing it ourselves, we can have higher volume at a lower price for those deliveries, therefore making it cheaper to order from Amazon because it costs us less to be able to deliver.
+
+518
+01:01:25.280 --> 01:01:26.280
+Jason Levine: Make sense?
+
+519
+01:01:26.500 --> 01:01:28.360
+Jason Levine: That improves customer experience.
+
+520
+01:01:28.730 --> 01:01:31.329
+Jason Levine: More people rely on it, et cetera, et cetera.
+
+521
+01:01:31.590 --> 01:01:34.450
+Jason Levine: That's… The flywheel, the Amazon Flywing.
+
+522
+01:01:35.510 --> 01:01:49.550
+Jason Levine: And the reason why I explain that is because customer experience lies at the heart of that growth. So anytime there's an innovation, it comes from what we call, in our tenets, our leadership principles, customer obsession.
+
+523
+01:01:52.450 --> 01:01:55.780
+Jason Levine: Which leads to… How we build stuff.
+
+524
+01:01:56.620 --> 01:02:06.840
+Jason Levine: And the way we build stuff is with this idea of working back from the customer. Meaning, we have a user goal, and we use that user goal to make decisions from.
+
+525
+01:02:07.730 --> 01:02:19.780
+Jason Levine: And so, we don't work on what is the innovation, what is the technology, what is the opportunity of the product space or the vertical. Instead, we work from
+
+526
+01:02:20.050 --> 01:02:27.180
+Jason Levine: What is the goal of the user, and what do they face as current obstacles
+
+527
+01:02:27.430 --> 01:02:33.629
+Jason Levine: to meet that need. Where will that innovation lie, working back from the customer?
+
+528
+01:02:37.370 --> 01:02:42.249
+Jason Levine: So… An example of that…
+
+529
+01:02:43.240 --> 01:02:58.939
+Jason Levine: is that we… I haven't seen it lately, but maybe that's because I'm in AWS and not Amazon, the Amazon side, is that we all have an opportunity as managers to work at a fulfillment center for a week.
+
+530
+01:02:59.560 --> 01:03:02.910
+Jason Levine: Or we can sit in on customer service calls.
+
+531
+01:03:03.930 --> 01:03:06.419
+Jason Levine: And that's required per year for…
+
+532
+01:03:06.630 --> 01:03:09.429
+Jason Levine: managers to do that. So you sit in on these
+
+533
+01:03:09.680 --> 01:03:13.509
+Jason Levine: people calling with complaints. I've done it probably 4 or 5 times.
+
+534
+01:03:13.890 --> 01:03:15.970
+Jason Levine: As well as going to fulfillment centers.
+
+535
+01:03:17.050 --> 01:03:18.810
+Jason Levine: And the reason why…
+
+536
+01:03:19.000 --> 01:03:31.580
+Jason Levine: is working back from the customer is always at the heart, so to solve for customer problems, you have to look through all chains of where those dependencies lie to solve for them. Because as you saw, innovations lie
+
+537
+01:03:33.240 --> 01:03:35.030
+Jason Levine: At the lower cost structure.
+
+538
+01:03:37.570 --> 01:03:39.049
+Jason Levine: In order to draw growth.
+
+539
+01:03:39.520 --> 01:03:44.700
+Jason Levine: They lie at improving selection. They lie at customer experience solutions.
+
+540
+01:03:45.030 --> 01:03:49.260
+Jason Levine: So… There was one day where…
+
+541
+01:03:49.370 --> 01:03:57.269
+Jason Levine: Jeff Bezos was sitting on one of the customer service call centers and listening in on a customer support call.
+
+542
+01:03:57.790 --> 01:04:02.410
+Jason Levine: And somebody was calling about… that table.
+
+543
+01:04:02.510 --> 01:04:04.490
+Jason Levine: It's a coffee table, or end table.
+
+544
+01:04:05.320 --> 01:04:16.949
+Jason Levine: And they were complaining to the customer support person that they opened up the table from the packaging, and it had a scratch right down the side of the top of the tabletop.
+
+545
+01:04:17.720 --> 01:04:21.720
+Jason Levine: And… customer service person Apologized?
+
+546
+01:04:22.580 --> 01:04:27.010
+Jason Levine: said, I'll send you out another one, or give you a refund, you choose.
+
+547
+01:04:27.200 --> 01:04:30.030
+Jason Levine: And, we'll do what we can for you.
+
+548
+01:04:30.250 --> 01:04:31.319
+Jason Levine: Went great.
+
+549
+01:04:33.090 --> 01:04:44.199
+Jason Levine: About 4 hours later, Somebody complained about the exact same thing, From the exact same table.
+
+550
+01:04:45.300 --> 01:04:47.820
+Jason Levine: And Jeff Bezos said, hey, I remember we…
+
+551
+01:04:48.260 --> 01:04:51.900
+Jason Levine: Had a call a few hours back. Same thing happened.
+
+552
+01:04:52.190 --> 01:04:56.410
+Jason Levine: And she's like, yeah, you know, this happens, you know, a few times a week.
+
+553
+01:04:56.690 --> 01:04:58.870
+Jason Levine: We'll get a call about this table.
+
+554
+01:04:59.350 --> 01:05:02.990
+Jason Levine: And he's like, well, that's really weird. Have you said anything to anyone?
+
+555
+01:05:03.490 --> 01:05:08.110
+Jason Levine: And the customer support person said, yeah, actually, I filed a ticket.
+
+556
+01:05:08.280 --> 01:05:10.590
+Jason Levine: And I haven't heard back.
+
+557
+01:05:10.860 --> 01:05:13.920
+Jason Levine: So, Jeff Bezos, being CEO of…
+
+558
+01:05:14.030 --> 01:05:22.269
+Jason Levine: one of the largest, dot-coms to ever exist, went and found out who that manager was that received the ticket and said, hey.
+
+559
+01:05:23.420 --> 01:05:26.629
+Jason Levine: We're trying to figure out what happened with this table.
+
+560
+01:05:26.930 --> 01:05:44.770
+Jason Levine: And the manager said, yeah, I got that ticket. We filed it with the company to find out what… what they have as feedback on what might be wrong as a defect. And they said there's nothing wrong with their table, so then we went…
+
+561
+01:05:44.780 --> 01:05:52.640
+Jason Levine: We went and, did an inquiry with, the, shipping, department.
+
+562
+01:05:53.270 --> 01:05:55.570
+Jason Levine: And so he went and talked to the shipping department.
+
+563
+01:05:55.850 --> 01:06:02.149
+Jason Levine: And the shipping department's like, yeah, we don't know what's causing it, but, you know, we'll figure it out, and we'll get back to you.
+
+564
+01:06:02.710 --> 01:06:06.459
+Jason Levine: And so this is like him chasing down a single problem.
+
+565
+01:06:07.160 --> 01:06:10.310
+Jason Levine: Meanwhile, every 20th?
+
+566
+01:06:10.900 --> 01:06:15.470
+Jason Levine: tabletop, Coming back, returned. Over and over and over again.
+
+567
+01:06:16.630 --> 01:06:18.299
+Jason Levine: While this is all going on.
+
+568
+01:06:19.820 --> 01:06:27.710
+Jason Levine: So… what Jeff Bezos did was take an important Japanese concept, that they have at Toyota.
+
+569
+01:06:29.120 --> 01:06:34.229
+Jason Levine: What is the key thing that you think about?
+
+570
+01:06:34.630 --> 01:06:36.940
+Jason Levine: when it comes to Toyota cars.
+
+571
+01:06:38.460 --> 01:06:42.250
+Jason Levine: What's… if you had one word to describe?
+
+572
+01:06:43.010 --> 01:06:46.099
+Jason Levine: What's important about why you would buy a towing?
+
+573
+01:06:46.880 --> 01:06:47.760
+Jason Levine: Who would that be?
+
+574
+01:06:49.310 --> 01:06:53.020
+Jason Levine: Yes. They last for reliability.
+
+575
+01:06:53.590 --> 01:06:55.210
+Jason Levine: There's a reason for that.
+
+576
+01:06:55.840 --> 01:06:58.629
+Jason Levine: So, for example, I have a Volvo.
+
+577
+01:06:59.230 --> 01:07:02.149
+Jason Levine: And it has all these super cool features.
+
+578
+01:07:02.490 --> 01:07:06.790
+Jason Levine: It's got, like, a touchscreen, and it's got plug-in, and it's got…
+
+579
+01:07:07.190 --> 01:07:14.920
+Jason Levine: Wireless attachments for, my, maps and all kinds of cool things that it can do.
+
+580
+01:07:15.610 --> 01:07:20.520
+Jason Levine: But every… 15th time I'm in the car.
+
+581
+01:07:20.930 --> 01:07:25.530
+Jason Levine: something won't work, and I have to add a stoplight, turn the car off.
+
+582
+01:07:26.170 --> 01:07:33.959
+Jason Levine: Wait about 45 seconds, turn the car on, it reboots the interface, and then it works again.
+
+583
+01:07:34.770 --> 01:07:36.060
+Jason Levine: Toyotas?
+
+584
+01:07:36.250 --> 01:07:37.690
+Jason Levine: Never have that problem.
+
+585
+01:07:38.000 --> 01:07:44.880
+Jason Levine: Because they will have technology that's been around for 5 years, not 2 years or 1 year.
+
+586
+01:07:45.190 --> 01:07:54.370
+Jason Levine: Because they make sure that not only does it work the first time, the second time, the third time, but it always works. And won't break.
+
+587
+01:07:54.520 --> 01:07:55.460
+Jason Levine: Ever.
+
+588
+01:07:55.760 --> 01:08:09.989
+Jason Levine: And so one of the ways that they do that is by making it the accountability of every single worker on a factory floor responsible for the quality of what they produce. So they have these Andon cords.
+
+589
+01:08:10.870 --> 01:08:13.470
+Jason Levine: These little red arrows are pointing to.
+
+590
+01:08:13.950 --> 01:08:21.230
+Jason Levine: Those agon cords Are where any person on the factory floor Who sees any flaw.
+
+591
+01:08:22.260 --> 01:08:28.379
+Jason Levine: say a scratch, or a dent, or something that's a little loose. They pull that cord.
+
+592
+01:08:29.050 --> 01:08:32.050
+Jason Levine: And the entire factory floor stops.
+
+593
+01:08:34.250 --> 01:08:36.489
+Jason Levine: The managers come out onto the floor.
+
+594
+01:08:36.870 --> 01:08:39.640
+Jason Levine: Talk to the person who pulled the cord?
+
+595
+01:08:39.899 --> 01:08:43.990
+Jason Levine: Thank them, reward them, and then they find out why that happened.
+
+596
+01:08:44.830 --> 01:08:45.800
+Jason Levine: the flaw.
+
+597
+01:08:46.819 --> 01:08:48.280
+Jason Levine: And they fixed the flaw.
+
+598
+01:08:48.800 --> 01:08:53.109
+Jason Levine: Once that flaw has been resolved, Factory line goes back online.
+
+599
+01:08:54.660 --> 01:08:55.910
+Jason Levine: It's a lot of effort.
+
+600
+01:08:56.430 --> 01:09:01.890
+Jason Levine: But, the outcome is, Whenever you think of Toyota, you think it lasts forever.
+
+601
+01:09:03.500 --> 01:09:07.299
+Jason Levine: So, he wanted to do the same thing. Empower the workers.
+
+602
+01:09:07.890 --> 01:09:09.619
+Jason Levine: So what they ended up doing…
+
+603
+01:09:09.779 --> 01:09:13.849
+Jason Levine: was introducing an Andon cord for any product page.
+
+604
+01:09:14.310 --> 01:09:28.570
+Jason Levine: And so what it would do is that the next time somebody saw a pattern with a return, they can pull the Andon cord on that product, and will automatically pause all shipments
+
+605
+01:09:28.700 --> 01:09:34.229
+Jason Levine: For that item, Pull it from the website, so it's no longer sellable.
+
+606
+01:09:34.609 --> 01:09:37.469
+Jason Levine: Until they're able to solve for it.
+
+607
+01:09:38.640 --> 01:09:40.369
+Jason Levine: Once they're able to solve for it.
+
+608
+01:09:40.500 --> 01:09:43.689
+Jason Levine: Then it's back on the website, and shipments continue.
+
+609
+01:09:45.450 --> 01:09:50.500
+Jason Levine: Every single customer service person has that empowerment.
+
+610
+01:09:51.370 --> 01:09:52.529
+Jason Levine: Same idea.
+
+611
+01:09:52.910 --> 01:09:59.720
+Jason Levine: Customer obsession. Customer experience, Reliability, Therefore, you gain a customer.
+
+612
+01:09:59.880 --> 01:10:00.850
+Jason Levine: Make sense?
+
+613
+01:10:02.820 --> 01:10:03.939
+Jason Levine: Another example.
+
+614
+01:10:05.070 --> 01:10:08.319
+Jason Levine: When Amazon first went into China.
+
+615
+01:10:10.730 --> 01:10:14.480
+Jason Levine: At the time, in the mid…
+
+616
+01:10:14.920 --> 01:10:18.740
+Jason Levine: I want to say it was, like, 2014, 2016, somewhere around there?
+
+617
+01:10:19.690 --> 01:10:22.799
+Jason Levine: Most people… We're cash only.
+
+618
+01:10:23.610 --> 01:10:29.720
+Jason Levine: Very few people had credit cards to pay for things, or credit used online payments.
+
+619
+01:10:30.540 --> 01:10:34.239
+Jason Levine: There also was, no last mile
+
+620
+01:10:35.280 --> 01:10:49.009
+Jason Levine: A way to solve for how you got a product from a shipping center that may be in the middle of a town to the final destination without having to go through many, many, many, many different types of logistical problems.
+
+621
+01:10:49.430 --> 01:10:56.380
+Jason Levine: So, in order for Amazon to introduce themselves into the market, they decided to solve for it by having people on bikes.
+
+622
+01:10:56.660 --> 01:11:04.480
+Jason Levine: That way they don't have to worry about traffic, because traffic in Beijing, I'm sure all of you can… who've been to Beijing can attest, not a great place to drive.
+
+623
+01:11:05.370 --> 01:11:17.969
+Jason Levine: So, they introduced bicycles, big bike lanes. So that way, they would be the last mile, which would be where the distribution center would be, and where they would then deliver, or within a 2-mile, 3-mile radius.
+
+624
+01:11:18.420 --> 01:11:19.749
+Jason Levine: They'd show up on a bike.
+
+625
+01:11:20.320 --> 01:11:24.470
+Jason Levine: And they would then take cash, upon delivery.
+
+626
+01:11:25.150 --> 01:11:31.410
+Jason Levine: To solve for the fact that, at the time, only 40% of people in the major cities
+
+627
+01:11:31.780 --> 01:11:36.090
+Jason Levine: Had any other form of payment that they could do for online payments?
+
+628
+01:11:36.230 --> 01:11:47.109
+Jason Levine: And then once those things became available, once there was a better form of transportation available, well, then they updated it. But allow them to be able to overcome the limitations
+
+629
+01:11:47.390 --> 01:11:53.250
+Jason Levine: Before having to wait for them to be solved to then do the right thing for customers.
+
+630
+01:11:53.590 --> 01:11:54.540
+Jason Levine: Make sense?
+
+631
+01:11:55.820 --> 01:12:04.420
+Jason Levine: So every single time we have one of these ideas, we use this idea called a working backwards document, a PR FAQ,
+
+632
+01:12:04.590 --> 01:12:12.769
+Jason Levine: It's, and the working backwards document essentially is answering these core questions.
+
+633
+01:12:13.160 --> 01:12:14.959
+Jason Levine: Who, what, why, and how.
+
+634
+01:12:17.220 --> 01:12:20.350
+Jason Levine: And the way this works, Is that…
+
+635
+01:12:20.610 --> 01:12:23.700
+Jason Levine: You solve for it by going back to the customer.
+
+636
+01:12:24.780 --> 01:12:28.760
+Jason Levine: Who is your core customer? What makes them unique? To the opportunity.
+
+637
+01:12:30.190 --> 01:12:33.499
+Jason Levine: What is the customer problem or opportunity that you're trying to solve?
+
+638
+01:12:33.740 --> 01:12:37.779
+Jason Levine: What would your customer say in one sentence that they're looking to solve to do it?
+
+639
+01:12:38.880 --> 01:12:40.880
+Jason Levine: Why is it important to your customer?
+
+640
+01:12:41.900 --> 01:12:45.090
+Jason Levine: Describe the most important customer benefit that comes from that.
+
+641
+01:12:46.830 --> 01:12:49.980
+Jason Levine: So, we'll use the example we just talked about.
+
+642
+01:12:52.340 --> 01:12:58.280
+Jason Levine: The core customer is… an urban Beijing customer of Amazon.
+
+643
+01:12:59.280 --> 01:13:08.999
+Jason Levine: What is the customer problem? I'm limited on being able to buy things from Amazon because I don't have access to a online payment model.
+
+644
+01:13:10.980 --> 01:13:16.049
+Jason Levine: Why is it important to the customer? Well, they can't buy without it, so they go to stores instead.
+
+645
+01:13:17.690 --> 01:13:21.800
+Jason Levine: How do I envision it working? Well, we just talked about that. Make it cash-only.
+
+646
+01:13:21.960 --> 01:13:26.729
+Jason Levine: Allow a slew of bicycle delivery people. Problem solved.
+
+647
+01:13:26.910 --> 01:13:31.650
+Jason Levine: And then they revisit that as an approach as new innovations become available.
+
+648
+01:13:33.620 --> 01:13:34.570
+Jason Levine: Make sense?
+
+649
+01:13:35.290 --> 01:13:36.210
+Jason Levine: Okay.
+
+650
+01:13:38.300 --> 01:13:44.700
+Jason Levine: I'd like somebody to tell me what it is like to return something from Sheen.
+
+651
+01:13:47.960 --> 01:13:50.000
+Jason Levine: What's it like to return something on cheap?
+
+652
+01:13:53.640 --> 01:13:54.820
+Jason Levine: This is all you loop.
+
+653
+01:13:55.110 --> 01:13:58.989
+Jason Levine: bottom sheen? Seriously?
+
+654
+01:14:00.120 --> 01:14:01.370
+Jason Levine: Okay.
+
+655
+01:14:01.630 --> 01:14:02.410
+Jason Levine: Pute.
+
+656
+01:14:03.340 --> 01:14:05.350
+Jason Levine: What's it like to return something?
+
+657
+01:14:05.490 --> 01:14:06.380
+Jason Levine: Continue.
+
+658
+01:14:06.600 --> 01:14:07.449
+Jason Levine: What's a lot.
+
+659
+01:14:11.370 --> 01:14:12.479
+Jason Levine: What do you have to do?
+
+660
+01:14:17.680 --> 01:14:18.670
+Jason Levine: PS4.
+
+661
+01:14:19.910 --> 01:14:25.650
+Jason Levine: Oh, that's right, they just innovated. They're not using Amazon's return system. I forgot. He was now using…
+
+662
+01:14:28.150 --> 01:14:32.019
+Jason Levine: That example, I forgot. They're now using Amazon's return system.
+
+663
+01:14:32.810 --> 01:14:37.700
+Jason Levine: Okay.
+
+664
+01:14:38.100 --> 01:14:40.080
+Jason Levine: Rewind a year ago.
+
+665
+01:14:40.260 --> 01:14:44.529
+Jason Levine: A year ago, did anybody you've seen it?
+
+666
+01:14:44.810 --> 01:14:46.989
+Jason Levine: Did anybody use Teemo to return something?
+
+667
+01:14:49.720 --> 01:14:50.960
+Jason Levine: Nope. Okay.
+
+668
+01:14:51.100 --> 01:14:54.910
+Jason Levine: So, the way most of these places work, Appreciate it.
+
+669
+01:14:55.060 --> 01:14:56.400
+Jason Levine: Including Team Room.
+
+670
+01:14:56.820 --> 01:15:00.579
+Jason Levine: Was that what you had to do was get
+
+671
+01:15:00.880 --> 01:15:05.030
+Jason Levine: Approval for a return by contacting customer support.
+
+672
+01:15:06.300 --> 01:15:12.730
+Jason Levine: You'd send an email to customer support, It would say, Send me a picture, Tell me the reason.
+
+673
+01:15:13.030 --> 01:15:20.260
+Jason Levine: You send them a picture, give them a reason, they then give you an authorized return form. If it was below a certain amount.
+
+674
+01:15:20.400 --> 01:15:26.030
+Jason Levine: Well, because it's over China, it would let you keep money. That's one small percentage of amusement.
+
+675
+01:15:26.580 --> 01:15:32.850
+Jason Levine: But in most cases, it was over a certain amount. Like, my daughter bought, like, 6 dresses for her prom.
+
+676
+01:15:33.100 --> 01:15:35.290
+Jason Levine: It doesn't work that way. They're too expensive.
+
+677
+01:15:35.670 --> 01:15:40.359
+Jason Levine: And there were 6 of them. She didn't want any sets. They fit weird, or they look wrong, I don't…
+
+678
+01:15:40.920 --> 01:15:46.229
+Jason Levine: So, what she had to do was get authorization, For all six.
+
+679
+01:15:46.520 --> 01:15:54.030
+Jason Levine: They were all done at different times for the purchases, so it required 6 separate purchase authorization returns.
+
+680
+01:15:54.150 --> 01:15:56.629
+Jason Levine: Then, you're required sending
+
+681
+01:15:57.440 --> 01:16:05.190
+Jason Levine: A package, individually, all 6, that you had to then slap a label on, return slip inside.
+
+682
+01:16:05.430 --> 01:16:15.239
+Jason Levine: and then go to the U.S, the U.S. Postal Service, wait in line, to be in… get it, in most cases, shared to pay for the shipping, to then send it out.
+
+683
+01:16:15.960 --> 01:16:21.760
+Jason Levine: Then, 7 weeks later, she would get… a refund.
+
+684
+01:16:24.340 --> 01:16:27.439
+Jason Levine: That's how all places used to work for a return.
+
+685
+01:16:27.950 --> 01:16:28.770
+Jason Levine: That'll work.
+
+686
+01:16:29.320 --> 01:16:30.529
+Jason Levine: Including Amazon.
+
+687
+01:16:32.050 --> 01:16:35.820
+Jason Levine: So… When we were looking to solve for that.
+
+688
+01:16:36.150 --> 01:16:42.930
+Jason Levine: It was considering all of the things that make life horrible for a return.
+
+689
+01:16:43.740 --> 01:16:48.160
+Jason Levine: And it was exactly those things. I don't trust the customer, you're gonna have to prove it.
+
+690
+01:16:48.450 --> 01:16:51.750
+Jason Levine: I don't want to give you money, because you haven't given it to me yet.
+
+691
+01:16:51.970 --> 01:16:53.950
+Jason Levine: I don't want you to just…
+
+692
+01:16:54.060 --> 01:16:58.760
+Jason Levine: Keep it, so you better ship it to me, so you better figure out how to get it to me.
+
+693
+01:17:00.280 --> 01:17:04.700
+Jason Levine: all made sense. All those things are in benefit of the company.
+
+694
+01:17:04.820 --> 01:17:06.260
+Jason Levine: Not the customer.
+
+695
+01:17:07.070 --> 01:17:10.839
+Jason Levine: So what Timu's using now… as a return…
+
+696
+01:17:11.030 --> 01:17:18.489
+Jason Levine: is because they're actually using Amazon for its logistics. It's going through Amazon.
+
+697
+01:17:19.650 --> 01:17:26.609
+Jason Levine: So, what they had to think through was, how do I simplify those problems?
+
+698
+01:17:29.870 --> 01:17:33.389
+Jason Levine: Core problem, who is the core user for regularly returning at Amazon?
+
+699
+01:17:34.960 --> 01:17:37.099
+Jason Levine: Who is it? Oops, I'm gonna head.
+
+700
+01:17:40.010 --> 01:17:40.920
+Jason Levine: Who is it?
+
+701
+01:17:43.530 --> 01:17:45.060
+Jason Levine: Yes.
+
+702
+01:17:45.410 --> 01:17:49.030
+Jason Levine: And here's the fun fact about people who buy on Amazon.
+
+703
+01:17:49.530 --> 01:17:50.739
+Jason Levine: It's all of you.
+
+704
+01:17:51.270 --> 01:17:55.410
+Jason Levine: And you're buying, on average, two and a half things a week.
+
+705
+01:17:57.090 --> 01:18:01.500
+Jason Levine: That's a lot of purchases, which also means there's a lot of returns.
+
+706
+01:18:03.170 --> 01:18:04.080
+Jason Levine: But…
+
+707
+01:18:04.210 --> 01:18:13.419
+Jason Levine: Here's the thing. What we used to do was make it super easy that whatever you wanted to return, we would say yes to, getting rid of the authorization part.
+
+708
+01:18:14.350 --> 01:18:20.219
+Jason Levine: So, we give you from, instead of it being a two-week window, like, okay, perfect example.
+
+709
+01:18:21.450 --> 01:18:26.750
+Jason Levine: Who here is sucker enough to go and buy something from Brandy Melville?
+
+710
+01:18:28.340 --> 01:18:32.330
+Jason Levine: 1… Tell me what the return process is at Brandy Melville.
+
+711
+01:18:35.590 --> 01:18:36.420
+Jason Levine: Tim?
+
+712
+01:18:37.990 --> 01:18:44.500
+Jason Levine: You can, as long as it's within the first 14 days, And… You get a credit.
+
+713
+01:18:44.870 --> 01:18:47.130
+Jason Levine: And you didn't touch it.
+
+714
+01:18:47.630 --> 01:19:03.369
+Jason Levine: Yeah, I used to work in fashion, and that was the rule, too. It was 14 days, store credit, if you wore it or something, they just send it right back to you. Yep. And they don't care that they're actually spending more money to send it back to you than just to give you their refund. Correct. Yeah, because they don't want you to return.
+
+715
+01:19:04.400 --> 01:19:06.390
+Jason Levine: Amazon figured out the secret.
+
+716
+01:19:07.740 --> 01:19:11.370
+Jason Levine: If we make returning, Zero friction.
+
+717
+01:19:11.700 --> 01:19:17.140
+Jason Levine: Yeah, we made it so you have to return more, but it also means we've reduced the bar.
+
+718
+01:19:17.360 --> 01:19:20.550
+Jason Levine: Of making sure you got it right before you bought.
+
+719
+01:19:20.750 --> 01:19:22.630
+Jason Levine: So therefore, we buy more.
+
+720
+01:19:23.700 --> 01:19:25.809
+Jason Levine: Sounds pretty good. Remember that growth?
+
+721
+01:19:25.930 --> 01:19:27.080
+Jason Levine: Finewheel?
+
+722
+01:19:27.370 --> 01:19:31.120
+Jason Levine: I just… Big Site 500, right there. Growth.
+
+723
+01:19:33.660 --> 01:19:34.460
+Jason Levine: So…
+
+724
+01:19:34.590 --> 01:19:44.660
+Jason Levine: it's not just thinking about the user who's regularly returning at Amazon, it's the other way to look at it is, how do I influence buying more?
+
+725
+01:19:45.210 --> 01:19:50.310
+Jason Levine: And that's by reducing the barrier of being wrong what you buy.
+
+726
+01:19:54.080 --> 01:19:58.199
+Jason Levine: What are the frustrations we are looking at to resolve in the returning process? Now, mind you.
+
+727
+01:19:58.480 --> 01:20:01.120
+Jason Levine: Minus the super simple approach.
+
+728
+01:20:01.280 --> 01:20:02.669
+Jason Levine: The one that we just talked about.
+
+729
+01:20:03.420 --> 01:20:04.699
+Jason Levine: What are those barriers?
+
+730
+01:20:07.270 --> 01:20:08.100
+Jason Levine: You're telling me.
+
+731
+01:20:16.060 --> 01:20:19.560
+Jason Levine: What are the things that are frustrations people have to face?
+
+732
+01:20:21.650 --> 01:20:26.099
+Jason Levine: It's time to… So far from the 12%?
+
+733
+01:20:26.650 --> 01:20:30.889
+Jason Levine: And we have to, that's when the packages.
+
+734
+01:20:31.080 --> 01:20:32.379
+Jason Levine: Oversized.
+
+735
+01:20:35.810 --> 01:20:36.970
+Jason Levine: The packaging.
+
+736
+01:20:37.160 --> 01:20:40.770
+Jason Levine: Yeah. The packaging. All of a sudden, it's on me to find a box.
+
+737
+01:20:40.910 --> 01:20:42.180
+Jason Levine: Make sure it fits.
+
+738
+01:20:42.840 --> 01:20:46.740
+Jason Levine: I'm padding it appropriately, so that way it won't jumble around.
+
+739
+01:20:48.120 --> 01:20:49.190
+Jason Levine: I have the tape.
+
+740
+01:20:49.650 --> 01:20:50.960
+Jason Levine: I have a printer.
+
+741
+01:20:52.090 --> 01:21:01.010
+Jason Levine: So, fun fact, we had a team, for our research class last quarter do one on the U.S. Postal Service.
+
+742
+01:21:01.340 --> 01:21:07.460
+Jason Levine: And one of the things that they had identified was that if you are shipping something with a battery.
+
+743
+01:21:07.650 --> 01:21:13.700
+Jason Levine: You have to have a label on the box that says that it has
+
+744
+01:21:13.850 --> 01:21:19.220
+Jason Levine: A battery on the front of the box, because it can only go by ground, it can't go by plane.
+
+745
+01:21:19.740 --> 01:21:21.450
+Jason Levine: And you have to have that label.
+
+746
+01:21:23.150 --> 01:21:25.650
+Jason Levine: So, you show up with your box.
+
+747
+01:21:26.160 --> 01:21:35.940
+Jason Levine: You go to ship it, they ask you, does it have a lithium battery in it? And if you say yes, they say, where's your label?
+
+748
+01:21:36.850 --> 01:21:44.329
+Jason Levine: And you have to say, I don't have one. And that's when they say, go back home and print one.
+
+749
+01:21:49.000 --> 01:21:50.309
+Jason Levine: Who's the customer?
+
+750
+01:21:50.640 --> 01:21:51.640
+Jason Levine: They aren't.
+
+751
+01:21:51.910 --> 01:21:52.970
+Jason Levine: Not you.
+
+752
+01:21:54.260 --> 01:22:02.600
+Jason Levine: So, the idea is to… is that the frustrations that we're looking to solve Are placing the onus
+
+753
+01:22:02.850 --> 01:22:08.860
+Jason Levine: on Amazon to solve for the effort to return.
+
+754
+01:22:08.970 --> 01:22:10.870
+Jason Levine: Not the user.
+
+755
+01:22:11.310 --> 01:22:17.349
+Jason Levine: So here's the other part. If I'm in the middle of Kansas, And I am…
+
+756
+01:22:17.850 --> 01:22:24.250
+Jason Levine: 17 miles from the closest UPS or USPS, post office.
+
+757
+01:22:24.640 --> 01:22:28.130
+Jason Levine: I have to drive 17 miles to return something.
+
+758
+01:22:28.750 --> 01:22:33.340
+Jason Levine: And then I find out that I don't have the right label, that I have to go home and print
+
+759
+01:22:33.980 --> 01:22:35.610
+Jason Levine: the battery.
+
+760
+01:22:36.180 --> 01:22:38.930
+Jason Levine: Warning on top of the box for.
+
+761
+01:22:39.910 --> 01:22:43.309
+Jason Levine: So there's lots and lots of effort we're putting on users.
+
+762
+01:22:44.290 --> 01:22:45.430
+Jason Levine: time frame.
+
+763
+01:22:45.710 --> 01:22:46.940
+Jason Levine: I have to wait.
+
+764
+01:22:47.880 --> 01:22:54.920
+Jason Levine: for that item to be received, processed, and then I will eventually get my credit, usually credit, not payment.
+
+765
+01:22:55.750 --> 01:22:57.189
+Jason Levine: That'll return back.
+
+766
+01:22:58.800 --> 01:23:01.430
+Jason Levine: So, we need to eliminate those things as well.
+
+767
+01:23:03.580 --> 01:23:08.169
+Jason Levine: Why is that important to the users, to improve the returning process?
+
+768
+01:23:08.690 --> 01:23:10.369
+Jason Levine: You tell me, why is it important?
+
+769
+01:23:14.580 --> 01:23:19.260
+Jason Levine: Yes. Did you need to return one nightly to repurchase the item?
+
+770
+01:23:19.420 --> 01:23:20.170
+Jason Levine: Yeah.
+
+771
+01:23:20.390 --> 01:23:26.150
+Jason Levine: So the way you can look at it is, like, But instead of me buying a size…
+
+772
+01:23:26.420 --> 01:23:35.940
+Jason Levine: 8 chew, I'll buy the 7, and the 7.5, the 8, and the 8.5, and the not, because it's no problem to return the ones that don't fit.
+
+773
+01:23:36.380 --> 01:23:39.550
+Jason Levine: Guess what I just guaranteed? One of those you just bought.
+
+774
+01:23:42.560 --> 01:23:46.310
+Jason Levine: So, the more I make the return process.
+
+775
+01:23:47.370 --> 01:23:55.350
+Jason Levine: without barriers, I've now made my overall customer experience better. So what does that do to an Amazon customer?
+
+776
+01:23:55.640 --> 01:23:57.449
+Jason Levine: Makes them more loyal.
+
+777
+01:23:58.150 --> 01:24:11.200
+Jason Levine: Because now, I have full reliance, and no matter what I have, I'm gonna return, and no matter what it is that I will get my money back, and no matter what it is that I have to return, has the least amount of effort to do.
+
+778
+01:24:11.610 --> 01:24:13.569
+Jason Levine: Over any other online option.
+
+779
+01:24:17.620 --> 01:24:21.849
+Jason Levine: So, how do we envision an improvement to the user experience? That's where it gets fun.
+
+780
+01:24:22.400 --> 01:24:27.070
+Jason Levine: So, we created a prototype For what that experience would be like.
+
+781
+01:24:28.580 --> 01:24:37.630
+Jason Levine: I think I show you sketches in a later class, in a later… I think the User Journey Storyboard class in 3 weeks?
+
+782
+01:24:37.790 --> 01:24:40.109
+Jason Levine: I'll share with you the actual…
+
+783
+01:24:40.250 --> 01:24:46.150
+Jason Levine: storyboard that I wrote for the return process that now is available for even Timu.
+
+784
+01:24:47.690 --> 01:24:56.620
+Jason Levine: And that's that… You can return almost anywhere now. Staples, Kohl's, UPS stores, And you just show up.
+
+785
+01:24:57.170 --> 01:25:04.370
+Jason Levine: with the item, And your phone with the identification of the return.
+
+786
+01:25:05.370 --> 01:25:11.319
+Jason Levine: You get paid the moment they say, I'll take that off your hands, thank you.
+
+787
+01:25:13.960 --> 01:25:15.460
+Jason Levine: You're paid immediately.
+
+788
+01:25:17.360 --> 01:25:33.829
+Jason Levine: And the reason why is because they're doing the hard work of saying, oh, this is a reliable customer, they have money in the bank if they ended up screwing me over, and I can trust them. So therefore, I will give them money up front.
+
+789
+01:25:34.040 --> 01:25:35.860
+Jason Levine: before I've actually received the item.
+
+790
+01:25:37.390 --> 01:25:53.409
+Jason Levine: So that's the… that's the logistics they had to solve for. Then, they had to think through, like, okay, what are the ways that we can make this cost-effective? Well, instead of having to process 7,000 individual boxes that you have to unwrap.
+
+791
+01:25:53.790 --> 01:25:55.200
+Jason Levine: We're gonna get a pallet.
+
+792
+01:25:56.010 --> 01:26:01.500
+Jason Levine: that has… 175 items all at once.
+
+793
+01:26:02.340 --> 01:26:06.400
+Jason Levine: And so if I'm able to send a pallet of 175 items at once.
+
+794
+01:26:06.570 --> 01:26:10.130
+Jason Levine: How many less shipments am I sending?
+
+795
+01:26:10.550 --> 01:26:12.470
+Jason Levine: Not 175.
+
+796
+01:26:12.710 --> 01:26:13.660
+Jason Levine: 1.
+
+797
+01:26:14.680 --> 01:26:18.160
+Jason Levine: So it's way cost-effective for Amazon.
+
+798
+01:26:19.390 --> 01:26:26.049
+Jason Levine: By giving you availability, of how to ship it. Because they're giving you the money up front.
+
+799
+01:26:26.440 --> 01:26:33.230
+Jason Levine: They can then wait till they hit the $150 item amount before putting it on a pallet to send out.
+
+800
+01:26:33.460 --> 01:26:42.120
+Jason Levine: Because they don't need to wait, they don't have to immediately process it to give you your refund, because you already got your refund the moment they took it off your hands.
+
+801
+01:26:43.860 --> 01:26:48.809
+Jason Levine: So, the idea here is that it becomes a symbiotic relationship.
+
+802
+01:26:49.700 --> 01:26:59.240
+Jason Levine: They're able to make it cost-effective by giving value back to the customer, so now they're getting more sales, as well as they've reduced the cost of per item that is returned.
+
+803
+01:27:00.210 --> 01:27:01.530
+Jason Levine: Everyone's happy.
+
+804
+01:27:02.260 --> 01:27:03.260
+Jason Levine: Make sense?
+
+805
+01:27:04.730 --> 01:27:05.420
+Jason Levine: Okay.
+
+806
+01:27:05.570 --> 01:27:11.960
+Jason Levine: Any questions on how these Work.
+
+807
+01:27:12.500 --> 01:27:13.739
+Jason Levine: Any questions at all?
+
+808
+01:27:14.970 --> 01:27:16.240
+Jason Levine: We're gonna now do it.
+
+809
+01:27:17.390 --> 01:27:20.830
+Jason Levine: So you'll find in a folder.
+
+810
+01:27:21.000 --> 01:27:26.250
+Jason Levine: these questions. I think I can send it to you in…
+
+811
+01:27:26.360 --> 01:27:31.470
+Jason Levine: But where there's a… essentially, these questions are then available to you.
+
+812
+01:27:31.580 --> 01:27:33.780
+Jason Levine: I'll send… I can send it as an announcement.
+
+813
+01:27:35.030 --> 01:27:37.950
+Jason Levine: Because we kind of need this in your back pocket. Okay, one sec.
+
+814
+01:27:43.230 --> 01:27:44.779
+Jason Levine: Student view…
+
+815
+01:27:47.900 --> 01:27:51.360
+Jason Levine: Yeah, go ahead and take your bio break if you need while I'm grabbing this thing.
+
+816
+01:27:52.100 --> 01:27:53.320
+Jason Levine: materials…
+
+817
+01:28:00.510 --> 01:28:01.800
+Jason Levine: What was here?
+
+818
+01:28:08.290 --> 01:28:09.040
+Jason Levine: Here?
+
+819
+01:28:09.830 --> 01:28:10.970
+Jason Levine: That's not it.
+
+820
+01:28:12.150 --> 01:28:13.319
+Jason Levine: Yeah, that's not it.
+
+821
+01:28:17.980 --> 01:28:21.820
+Jason Levine: There we go. Yeah, just go to the product pitch page. They're all there.
+
+822
+01:28:23.490 --> 01:28:25.759
+Jason Levine: The who, what, why, how.
+
+823
+01:28:26.300 --> 01:28:27.390
+Jason Levine: You'll see him there.
+
+824
+01:28:28.490 --> 01:28:37.259
+Jason Levine: Okay, so now we're going to create our own version of how we solve for this. And so what I want you to do is talk to the people next to you and
+
+825
+01:28:37.420 --> 01:28:45.760
+Jason Levine: Talk through the answers to each of these questions, and then we're gonna start with… the… Where is it?
+
+826
+01:28:47.430 --> 01:28:49.659
+Jason Levine: you know, here.
+
+827
+01:28:52.480 --> 01:28:54.479
+Jason Levine: We're gonna start with two personas.
+
+828
+01:28:57.120 --> 01:28:59.280
+Jason Levine: Now, here's the rules of the game.
+
+829
+01:29:00.590 --> 01:29:06.349
+Jason Levine: We're talking about… The largest online retailer in the world.
+
+830
+01:29:07.560 --> 01:29:14.910
+Jason Levine: We have millions of users, Millions of products, And…
+
+831
+01:29:15.220 --> 01:29:20.730
+Jason Levine: All those users have at least the application on their phone. Many of them
+
+832
+01:29:21.180 --> 01:29:23.840
+Jason Levine: an Amazon device. In their home.
+
+833
+01:29:24.240 --> 01:29:28.020
+Jason Levine: not being Echo, Kindle, What's up?
+
+834
+01:29:28.380 --> 01:29:29.130
+Jason Levine: Right?
+
+835
+01:29:32.990 --> 01:29:36.479
+Jason Levine: So… Let's start with Corey user number one.
+
+836
+01:29:36.730 --> 01:29:40.189
+Jason Levine: It's a middle-income mother with a small family and little free time.
+
+837
+01:29:42.020 --> 01:29:43.549
+Jason Levine: Let's call her Tara.
+
+838
+01:29:43.990 --> 01:29:48.380
+Jason Levine: Tara is a 35-year-old working mom who has two kids at a full-time job.
+
+839
+01:29:48.610 --> 01:29:54.160
+Jason Levine: When she isn't working, she's taking care of her young children while maintaining her household with her husband.
+
+840
+01:29:58.200 --> 01:30:08.439
+Jason Levine: Frustration. Since time is limited for Tara, she wants to spend more time with her kids if she can. She gets frustrated being stuck in traffic and waiting in line for weekly groceries.
+
+841
+01:30:13.430 --> 01:30:23.129
+Jason Levine: Satisfactions. Terra loves whenever a small efficiencies are found that itch that ever-growing need for convenience and saving time.
+
+842
+01:30:25.050 --> 01:30:25.880
+Jason Levine: Okay?
+
+843
+01:30:26.780 --> 01:30:28.309
+Jason Levine: Any questions on Terra?
+
+844
+01:30:28.710 --> 01:30:30.770
+Jason Levine: Before we move to the problem space.
+
+845
+01:30:31.740 --> 01:30:35.980
+Jason Levine: Again, what we want to solve for is her frustration.
+
+846
+01:30:36.830 --> 01:30:38.340
+Jason Levine: time limitation?
+
+847
+01:30:40.520 --> 01:30:43.140
+Jason Levine: Freeing up time with… with her family.
+
+848
+01:30:44.330 --> 01:30:53.960
+Jason Levine: The effort of getting in line, Sitting in traffic, Every single week for groceries.
+
+849
+01:30:54.090 --> 01:30:54.910
+Jason Levine: Okay?
+
+850
+01:30:55.160 --> 01:30:58.039
+Jason Levine: Alright, let's move on to Leah.
+
+851
+01:30:58.440 --> 01:31:11.429
+Jason Levine: Leah is a 70-year-old grandmother in Barstow. Her children recently moved 90 miles away to Los Angeles, and visit often. Leah has found it much harder than before to do her weekly groceries with her chronic leg pain.
+
+852
+01:31:15.330 --> 01:31:27.269
+Jason Levine: Frustration. Leah is living in a world that has become more reliant on technology. Though her family is willing to get her set up, her husband passing away has made using technology even less accessible.
+
+853
+01:31:31.210 --> 01:31:37.719
+Jason Levine: Satisfaction. Leah loves things straightforward and no-nonsense. She doesn't mind if things seem like black magic.
+
+854
+01:31:39.620 --> 01:31:42.869
+Jason Levine: Meaning, You have two different users.
+
+855
+01:31:43.170 --> 01:31:46.620
+Jason Levine: That each need to solve for how they get groceries.
+
+856
+01:31:47.030 --> 01:31:51.700
+Jason Levine: One wants something super efficient, The other one wants it.
+
+857
+01:31:51.960 --> 01:31:54.210
+Jason Levine: Super low effort.
+
+858
+01:31:55.110 --> 01:31:56.880
+Jason Levine: They have a lot of overlaps.
+
+859
+01:31:57.000 --> 01:32:01.630
+Jason Levine: So therefore, Even though those personas have very different needs.
+
+860
+01:32:01.810 --> 01:32:04.870
+Jason Levine: We're talking about one solution that can solve for both of them.
+
+861
+01:32:05.650 --> 01:32:06.629
+Jason Levine: Make sense?
+
+862
+01:32:07.120 --> 01:32:13.590
+Jason Levine: Okay, so… What I'd like you to do is… Where did you go?
+
+863
+01:32:14.270 --> 01:32:15.090
+Jason Levine: There we go.
+
+864
+01:32:16.850 --> 01:32:18.609
+Jason Levine: Talk as team members.
+
+865
+01:32:20.060 --> 01:32:27.910
+Jason Levine: You can make it two, three people, whatever you're likely to do, but discuss the first one. Who is your core customer? What makes them unique in this opportunity?
+
+866
+01:32:28.630 --> 01:32:32.390
+Jason Levine: Okay, I'll give you 5 minutes. Sound good?
+
+867
+01:32:33.320 --> 01:32:34.050
+Jason Levine: Okay.
+
+868
+01:32:40.290 --> 01:32:43.139
+Jason Levine: In the meantime, I will send you that list.
+
+869
+01:33:06.210 --> 01:33:15.170
+Jason Levine: Okay, if you go to the, assignment of product pitch, You will see a link
+
+870
+01:33:18.420 --> 01:33:20.720
+Jason Levine: Here… wait, where is it?
+
+871
+01:33:21.180 --> 01:33:26.430
+Jason Levine: There we go. Pitch exercise we did in class. If you go there, you will see the slides.
+
+872
+01:33:27.490 --> 01:33:31.090
+Jason Levine: for… Both Leah and Tara.
+
+873
+01:33:31.700 --> 01:33:32.660
+Jason Levine: Okay?
+
+874
+01:33:32.860 --> 01:33:34.840
+Jason Levine: So if you want to reference those, you can.
+
+875
+01:33:37.440 --> 01:33:42.159
+Jason Levine: But we're solving for the first question first. Who is your core customer? What makes them unique to this opportunity?
+
+876
+01:34:07.660 --> 01:34:08.560
+Jason Levine: That's funny.
+
+877
+01:34:10.940 --> 01:34:11.700
+Jason Levine: Absolutely.
+
+878
+01:34:19.530 --> 01:34:20.930
+Jason Levine: But there's a lot of people.
+
+879
+01:34:21.860 --> 01:34:23.209
+Jason Levine: President's my favorite movie.
+
+880
+01:34:26.680 --> 01:34:27.790
+Jason Levine: Yeah, she gets.
+
+881
+01:34:28.180 --> 01:34:29.439
+Jason Levine: It's a grand animal.
+
+882
+01:34:30.870 --> 01:34:35.429
+Jason Levine: I pledge on the Son of Yeshua.
+
+883
+01:35:02.920 --> 01:35:30.830
+Jason Levine: Yeah, I think it's so, like… Because it's not just… No, it's, it's a…
+
+884
+01:35:42.380 --> 01:35:57.619
+Jason Levine: So, okay, so, like, from your sense, like, mother is too, I don't know, like… or the…
+
+885
+01:35:57.780 --> 01:36:03.699
+Jason Levine: A large amount of guacamole. So competitive.
+
+886
+01:36:04.520 --> 01:36:17.810
+Jason Levine: I don't believe this is the answer.
+
+887
+01:36:18.070 --> 01:36:21.160
+Jason Levine: upholding.
+
+888
+01:36:21.870 --> 01:36:26.299
+Jason Levine: I have time.
+
+889
+01:36:27.000 --> 01:36:32.210
+Jason Levine: But they eat groceries?
+
+890
+01:36:32.860 --> 01:36:39.390
+Jason Levine: Okay, let's discuss… The Who Together.
+
+891
+01:36:41.050 --> 01:36:48.980
+Jason Levine: What have you figured out that makes a unique opportunity for This type of customer.
+
+892
+01:36:53.090 --> 01:36:55.310
+Jason Levine: You guys have been talking for, I don't know, 6 minutes?
+
+893
+01:36:55.520 --> 01:36:56.660
+Jason Levine: Any ideas?
+
+894
+01:36:57.400 --> 01:37:02.189
+Jason Levine: I want to help refine it for you, so just tell me where you're at so far with your thinking.
+
+895
+01:37:06.090 --> 01:37:07.189
+Jason Levine: It's okay.
+
+896
+01:37:07.540 --> 01:37:09.530
+Jason Levine: There's no wrong answer. Go for it.
+
+897
+01:37:14.450 --> 01:37:16.500
+Jason Levine: Someone… Bye.
+
+898
+01:37:16.770 --> 01:37:22.029
+Jason Levine: have either a small family or, like, a small need for groceries, not someone who's…
+
+899
+01:37:22.220 --> 01:37:27.809
+Jason Levine: ordering, like, a bunch of groceries. Yeah. They probably not have a lot of free time.
+
+900
+01:37:27.920 --> 01:37:34.910
+Jason Levine: like it said, either they're busy with work, or they could have, like.
+
+901
+01:37:36.430 --> 01:37:49.450
+Jason Levine: Be a mom who, like, has other responsibilities, or maybe they have, like, multiple jobs, but they would need to have a higher income, but not, like, too high, because then they'd probably have other resources.
+
+902
+01:37:50.130 --> 01:37:51.030
+Jason Levine: Yes.
+
+903
+01:37:51.580 --> 01:37:56.590
+Jason Levine: That's a good way to put it. So, I will encapsulate what I heard from you, and that's that
+
+904
+01:37:57.210 --> 01:37:58.320
+Jason Levine: time?
+
+905
+01:37:58.450 --> 01:38:00.319
+Jason Levine: It is a high commodity.
+
+906
+01:38:01.470 --> 01:38:03.869
+Jason Levine: Cost is second to that.
+
+907
+01:38:05.850 --> 01:38:07.100
+Jason Levine: Okay, great.
+
+908
+01:38:07.800 --> 01:38:11.290
+Jason Levine: Now that we've defined that, time as a high commodity
+
+909
+01:38:12.070 --> 01:38:14.599
+Jason Levine: What is the customer problem or opportunity?
+
+910
+01:38:15.990 --> 01:38:18.960
+Jason Levine: And with that, you kind of have to solve for the why.
+
+911
+01:38:23.080 --> 01:38:28.120
+Jason Levine: So go ahead and discuss as a team, or as… Neighbors?
+
+912
+01:38:28.900 --> 01:38:36.499
+Jason Levine: What is the customer problem or opportunity? What would your customer say in one sentence they are looking to solve? And then answer, why is it important to your customer?
+
+913
+01:38:38.930 --> 01:38:41.270
+Jason Levine: Describe the most important customer benefit.
+
+914
+01:38:43.360 --> 01:38:46.719
+Jason Levine: So now take that idea, time is a commodity.
+
+915
+01:38:47.540 --> 01:38:51.560
+Jason Levine: Convert that into answering the next two questions, one.
+
+916
+01:38:52.270 --> 01:38:53.949
+Jason Levine: I'll give you another 5 minutes.
+
+917
+01:39:05.850 --> 01:39:09.389
+Jason Levine: Alliance. One size per liter.
+
+918
+01:39:09.580 --> 01:39:10.520
+Jason Levine: Tulu.
+
+919
+01:39:27.020 --> 01:39:28.709
+Jason Levine: Yeah, they couldn't include it.
+
+920
+01:39:42.740 --> 01:39:46.500
+Jason Levine: All we're speaking about today produce.
+
+921
+01:39:51.210 --> 01:39:54.290
+Jason Levine: Sort of water being flush.
+
+922
+01:39:54.730 --> 01:39:55.780
+Jason Levine: Unfortunately.
+
+923
+01:39:56.160 --> 01:40:16.140
+Jason Levine: So… put out of the transformation.
+
+924
+01:40:24.520 --> 01:40:29.199
+Jason Levine: I'll give it to you.
+
+925
+01:40:32.070 --> 01:40:33.470
+Jason Levine: What's the problem?
+
+926
+01:40:40.610 --> 01:40:41.870
+Jason Levine: Possibly.
+
+927
+01:40:53.290 --> 01:40:55.550
+Jason Levine: I think it's confidence.
+
+928
+01:41:02.420 --> 01:41:06.860
+Jason Levine: Do you know who's I'm dangerous, yeah.
+
+929
+01:41:11.430 --> 01:41:17.090
+Jason Levine: I mean, if you're on this call…
+
+930
+01:41:49.600 --> 01:41:55.209
+Jason Levine: I mean, they either used to shop at Bucket.
+
+931
+01:41:55.360 --> 01:41:56.580
+Jason Levine: But no, I'm kidding.
+
+932
+01:42:16.000 --> 01:42:17.359
+Jason Levine: Sarah Williams Bale.
+
+933
+01:42:21.930 --> 01:42:23.080
+Jason Levine: Goodbye.
+
+934
+01:42:27.340 --> 01:42:33.200
+Jason Levine: 2, 4, 6, 8, 10, 12, 14, 16, 18, 20.
+
+935
+01:42:51.280 --> 01:42:54.680
+Jason Levine: Okay, one more minute, and then we'll discuss.
+
+936
+01:43:03.120 --> 01:43:12.530
+Jason Levine: Oh, I made everyone quiet. Okay, I guess we just are now. Let's go with answering, what would your customer say in one sentence they are looking to solve?
+
+937
+01:43:19.120 --> 01:43:20.060
+Jason Levine: What you got?
+
+938
+01:43:24.930 --> 01:43:26.459
+Jason Levine: I want to save time.
+
+939
+01:43:27.490 --> 01:43:28.210
+Jason Levine: grabbed it.
+
+940
+01:43:28.980 --> 01:43:33.830
+Jason Levine: I want to save time and the energy involved for weekly groceries.
+
+941
+01:43:34.030 --> 01:43:34.840
+Jason Levine: Okay.
+
+942
+01:43:35.030 --> 01:43:36.409
+Jason Levine: Let us start in the back.
+
+943
+01:43:37.360 --> 01:43:38.940
+Jason Levine: Yeah, totally. Save it.
+
+944
+01:43:39.390 --> 01:43:40.770
+Jason Levine: Anyone have anything different?
+
+945
+01:43:41.950 --> 01:43:44.130
+Jason Levine: Yes.
+
+946
+01:43:44.410 --> 01:43:47.270
+Jason Levine: Higher assessment wouldn't deposits.
+
+947
+01:43:47.450 --> 01:43:50.280
+Jason Levine: higher accessibility. That speaks a lot to Leah.
+
+948
+01:43:50.510 --> 01:43:54.200
+Jason Levine: And Ben could probably have value to tariff.
+
+949
+01:43:54.760 --> 01:43:56.759
+Jason Levine: That's a very important factor.
+
+950
+01:43:57.830 --> 01:44:01.959
+Jason Levine: So… We don't want to make it overly complicated.
+
+951
+01:44:02.260 --> 01:44:05.299
+Jason Levine: As the technical solution to their
+
+952
+01:44:05.610 --> 01:44:15.680
+Jason Levine: Access to how we solve for them no longer waiting and running as long, or at all, and no longer having to deal with traffic as long or at all.
+
+953
+01:44:16.760 --> 01:44:18.530
+Jason Levine: Yet, that becomes a key factor.
+
+954
+01:44:19.040 --> 01:44:25.169
+Jason Levine: That's a good unholy. So, in other words, we're trying to solve for not just the use case.
+
+955
+01:44:25.420 --> 01:44:31.799
+Jason Levine: But the limitation That we want to overcome for our innovation to happen.
+
+956
+01:44:32.580 --> 01:44:33.830
+Jason Levine: be a problem.
+
+957
+01:44:34.570 --> 01:44:39.370
+Jason Levine: How do we make it not just Shorter amount of time.
+
+958
+01:44:39.810 --> 01:44:45.799
+Jason Levine: But also overcome the effort involved to do it in some other form.
+
+959
+01:44:46.530 --> 01:44:48.109
+Jason Levine: Okay? Does that make sense?
+
+960
+01:44:48.420 --> 01:44:52.330
+Jason Levine: So, now that we've defined the problem, tighter.
+
+961
+01:44:52.870 --> 01:44:57.939
+Jason Levine: Now discuss ideas for how you would envision solving for it.
+
+962
+01:44:58.800 --> 01:45:01.770
+Jason Levine: Now remember, this is not a mom-and-pop shop.
+
+963
+01:45:01.920 --> 01:45:07.429
+Jason Levine: This is a $1 trillion evaluated company.
+
+964
+01:45:07.640 --> 01:45:15.049
+Jason Levine: So, if you can think it, and it isn't magical rainbows, Amazon can do it.
+
+965
+01:45:16.140 --> 01:45:20.979
+Jason Levine: Okay? So, I'll give you another 5 minutes. How do you envision it working?
+
+966
+01:45:21.850 --> 01:45:26.590
+Jason Levine: Anything is on the table. Remember, technical constraints we can remove.
+
+967
+01:45:27.090 --> 01:45:29.890
+Jason Levine: At scale, costs we can remove.
+
+968
+01:45:34.180 --> 01:45:40.790
+Jason Levine: Okay? Go ahead and talk amongst yourselves, come up with some ideas, write them down, and then we'll talk about how you envision it working.
+
+969
+01:45:40.950 --> 01:45:41.830
+Jason Levine: Okay?
+
+970
+01:46:20.700 --> 01:46:22.830
+Jason Levine: I don't know what's happening?
+
+971
+01:46:23.340 --> 01:46:25.419
+Jason Levine: So this was a few weeks ago.
+
+972
+01:46:26.570 --> 01:46:27.370
+Jason Levine: Nice.
+
+973
+01:46:32.660 --> 01:46:35.480
+Jason Levine: Awesome.
+
+974
+01:46:36.010 --> 01:46:42.989
+Jason Levine: Yeah, they ordered their last month.
+
+975
+01:46:59.690 --> 01:47:02.579
+Jason Levine: Okay, I'm talking about.
+
+976
+01:47:55.040 --> 01:48:09.060
+Jason Levine: But they're not undesound.
+
+977
+01:48:24.170 --> 01:48:38.519
+Jason Levine: But their goal has been green.
+
+978
+01:48:54.550 --> 01:49:00.240
+Jason Levine: No, it's not cute, but it's looking awesome.
+
+979
+01:49:15.440 --> 01:49:22.179
+Jason Levine: I don't want to come.
+
+980
+01:49:22.410 --> 01:49:23.680
+Jason Levine: What am I doing?
+
+981
+01:49:24.170 --> 01:49:27.990
+Jason Levine: You know, I can probably just think of my head as well.
+
+982
+01:49:47.680 --> 01:50:06.399
+Jason Levine: Like, it's a lot thicker.
+
+983
+01:50:06.410 --> 01:50:09.180
+Jason Levine: And that's what I want you to stop.
+
+984
+01:50:09.200 --> 01:50:17.170
+Jason Levine: This is not engineering material.
+
+985
+01:50:29.240 --> 01:50:43.670
+Jason Levine: But, like, that's too good.
+
+986
+01:51:39.060 --> 01:51:39.910
+Jason Levine: Lord.
+
+987
+01:52:51.990 --> 01:52:55.019
+Jason Levine: I was like, let's do not wear that icon, please.
+
+988
+01:53:06.730 --> 01:53:08.270
+Jason Levine: Okay.
+
+989
+01:53:08.490 --> 01:53:12.960
+Jason Levine: We're at a good stopping point. I would love to hear… whoops.
+
+990
+01:53:13.880 --> 01:53:15.110
+Jason Levine: Put up the wrong screen.
+
+991
+01:53:17.850 --> 01:53:24.110
+Jason Levine: I'd like to hear, from a couple people what you've had as a how you envision it working solution.
+
+992
+01:53:24.730 --> 01:53:25.410
+Jason Levine: Yes.
+
+993
+01:53:27.640 --> 01:53:40.819
+Jason Levine: I would like to talk about AI assistance, like, based on three factors. One is, my family size, and based on my previous order, purchase.
+
+994
+01:53:40.920 --> 01:53:58.129
+Jason Levine: record, and also the current promotion on Amazon. And the AI will create a weekly plan for me. Once I confirm this plan, the AI will buy all this… make the order, and buy this
+
+995
+01:53:58.410 --> 01:54:01.579
+Jason Levine: And to halt the whole process for me.
+
+996
+01:54:02.340 --> 01:54:07.930
+Jason Levine: So, I'm trying to understand what the AI is doing specifically. It's analyzing the…
+
+997
+01:54:08.160 --> 01:54:13.060
+Jason Levine: previous purchases? To, like, tool… Customized.
+
+998
+01:54:13.240 --> 01:54:18.189
+Jason Levine: My needs to create a weekly purchase plan for me.
+
+999
+01:54:18.840 --> 01:54:19.650
+Jason Levine: Okay.
+
+1000
+01:54:20.660 --> 01:54:23.370
+Jason Levine: Weekly purchase time reporting based on…
+
+1001
+01:54:24.130 --> 01:54:41.870
+Jason Levine: previous purchase through it, so… I don't need to, see what the promotion are. I don't need to read the customer read or comment anymore. I just talk to my phone, hi Siri, I would like to make the weekly, purchase plan this week. Can you do the plan for me?
+
+1002
+01:54:43.010 --> 01:54:49.040
+Jason Levine: Based on what it understands of your previous purchases, and your cadence for how often you do. Yeah.
+
+1003
+01:54:50.050 --> 01:54:55.459
+Jason Levine: That's a good start. I like it. That… is determining the…
+
+1004
+01:54:55.650 --> 01:54:58.360
+Jason Levine: What is an anniversary max?
+
+1005
+01:54:58.880 --> 01:55:01.949
+Jason Levine: And also, for the old person, no need to, like.
+
+1006
+01:55:02.130 --> 01:55:15.290
+Jason Levine: it's easy or her can just talk to the phone. So, the… I like the idea of having it conversational, I like the idea of an AI assistant eliminating the weekly effort.
+
+1007
+01:55:15.870 --> 01:55:18.749
+Jason Levine: It still sounds like there's a lot of effort to set it up.
+
+1008
+01:55:18.980 --> 01:55:25.060
+Jason Levine: So I'm not getting… a third jar of… Cleanup.
+
+1009
+01:55:25.790 --> 01:55:31.449
+Jason Levine: for that… I got fish one week, that doesn't mean I want to get fish every week.
+
+1010
+01:55:32.050 --> 01:55:37.580
+Jason Levine: Like, I… like, that part… We'd still need some form of
+
+1011
+01:55:38.080 --> 01:55:41.100
+Jason Levine: a solution, meaning I need more interface.
+
+1012
+01:55:41.810 --> 01:55:50.740
+Jason Levine: So, you're on the right track, but you're exactly on the right track, which is, I can use automation, I can use intelligence to make assumptions on behalf of the user.
+
+1013
+01:55:50.970 --> 01:55:51.640
+Jason Levine: Great.
+
+1014
+01:55:52.600 --> 01:55:54.170
+Jason Levine: Anyone else?
+
+1015
+01:55:56.740 --> 01:55:58.670
+Jason Levine: Okay, there's no such thing as a wrong answer.
+
+1016
+01:56:01.460 --> 01:56:04.900
+Jason Levine: Actually, the wrong answer is that you think that your idea isn't good enough to talk with them.
+
+1017
+01:56:05.260 --> 01:56:07.510
+Jason Levine: So I want to hear the period of that one.
+
+1018
+01:56:09.920 --> 01:56:10.949
+Jason Levine: What do we have?
+
+1019
+01:56:11.240 --> 01:56:12.530
+Jason Levine: Envision your work.
+
+1020
+01:56:13.850 --> 01:56:23.560
+Jason Levine: Yes, so… So… You do have, invoice after Google.
+
+1021
+01:56:23.830 --> 01:56:25.719
+Jason Levine: 12.
+
+1022
+01:56:26.280 --> 01:56:27.530
+Jason Levine: So…
+
+1023
+01:56:27.700 --> 01:56:36.029
+Jason Levine: You can tell a lot of, you can find a lot of information from the invoice, if you do weekly groceries.
+
+1024
+01:56:36.280 --> 01:56:40.729
+Jason Levine: What about just offer coupons to the…
+
+1025
+01:56:40.940 --> 01:56:47.750
+Jason Levine: Consumers, and encouraging them to upload their, invoices.
+
+1026
+01:56:47.960 --> 01:56:52.159
+Jason Levine: so that the, the AI agent can…
+
+1027
+01:56:52.310 --> 01:56:59.030
+Jason Levine: Train itself and figure out, all you, might…
+
+1028
+01:56:59.200 --> 01:57:09.980
+Jason Levine: Like this, and this, this week, and… In Rome, The consumers were… gorgeous.
+
+1029
+01:57:10.120 --> 01:57:14.070
+Jason Levine: Nice, accustomed to this, kind of AI service.
+
+1030
+01:57:14.390 --> 01:57:21.169
+Jason Levine: I really like that idea because it solves for the pushback I gave to you, which was, how do I train it?
+
+1031
+01:57:21.330 --> 01:57:35.260
+Jason Levine: So all I need to do is take a picture of, like, 3 or 4 receipts over 3 or 4 weeks. And in the long term, it's… I'm encouraging the groceries to the InstaFresh, right?
+
+1032
+01:57:37.350 --> 01:57:38.390
+Jason Levine: So…
+
+1033
+01:57:38.470 --> 01:57:50.249
+Jason Levine: That… that looks like a way to be able to train the AI with low effort. Now, here comes the hard part. How do I solve for… Yeah, go. How do I say the invoice are the…
+
+1034
+01:57:50.310 --> 01:58:03.500
+Jason Levine: a really valuable data source that was their state, right, and their, items, and how much of each item, and the price, right?
+
+1035
+01:58:04.380 --> 01:58:06.870
+Jason Levine: So, and that's the whole idea.
+
+1036
+01:58:07.490 --> 01:58:09.750
+Jason Levine: I like it. I like it. So here's…
+
+1037
+01:58:09.850 --> 01:58:13.350
+Jason Levine: So, the way that that solves for our answer here is.
+
+1038
+01:58:13.480 --> 01:58:18.760
+Jason Levine: The solving for what's important to the customer.
+
+1039
+01:58:19.060 --> 01:58:23.589
+Jason Levine: And the… and who the customer is, the effort involved… oops, sorry.
+
+1040
+01:58:25.290 --> 01:58:30.359
+Jason Levine: So this… so here's the… here's the thing that happens, is that what we define is the happy path.
+
+1041
+01:58:31.050 --> 01:58:32.220
+Jason Levine: Between the two of you.
+
+1042
+01:58:32.660 --> 01:58:37.529
+Jason Levine: we have… An easy way to be able to train the AI model
+
+1043
+01:58:37.760 --> 01:58:40.340
+Jason Levine: And an easy way to be able to
+
+1044
+01:58:40.600 --> 01:58:45.720
+Jason Levine: Define what is the cadence of the shopping bag.
+
+1045
+01:58:46.100 --> 01:58:49.889
+Jason Levine: That sounds like it's gonna solve for the regular needs.
+
+1046
+01:58:50.420 --> 01:58:55.120
+Jason Levine: So how do I then resolve I don't need another…
+
+1047
+01:58:56.520 --> 01:59:05.740
+Jason Levine: jar of peanut butter, or I don't… I want… I want, steak this week, but I've never ordered steak. I'm feeling…
+
+1048
+01:59:05.970 --> 01:59:07.770
+Jason Levine: I'm feeling like it's time for a T-built.
+
+1049
+01:59:08.360 --> 01:59:18.029
+Jason Levine: Yes. I think that there could be, like, a setting that you could put on it that would then, like, prompt it to ask you questions, like.
+
+1050
+01:59:18.320 --> 01:59:34.040
+Jason Levine: like, I was… I mentioned this, like, hey, Alexa, can you order my cart from last week? And then, like, there's, like, a setting, and it goes, oh, are you sure you want to order the whole cart? You ordered 3 peanut butters.
+
+1051
+01:59:34.800 --> 01:59:41.590
+Jason Levine: Instead of, and then you'd be like, actually, no, I don't want peanut butter, and then you'd be like, okay, do you want anything new?
+
+1052
+01:59:41.700 --> 01:59:48.409
+Jason Levine: And then you'd be like, actually, I was thinking about steak this week. And then you'd be like, okay, do you want me to remove the salmon?
+
+1053
+01:59:48.840 --> 01:59:55.330
+Jason Levine: So, I like where you're going with this, and there's a logic of how you can apply it, and this is what we do for an AI model.
+
+1054
+01:59:55.600 --> 02:00:01.189
+Jason Levine: is you can categorize types of things. So if you… was anybody who subscribed to say?
+
+1055
+02:00:01.820 --> 02:00:02.799
+Jason Levine: On Amazon?
+
+1056
+02:00:03.680 --> 02:00:14.300
+Jason Levine: So the way Subscribe to save works is that there are certain things they know that you order on a regular basis at a certain cadence. So in our house, it's Nespresso capsules.
+
+1057
+02:00:14.450 --> 02:00:17.369
+Jason Levine: For the espresso coffee machine.
+
+1058
+02:00:17.710 --> 02:00:21.409
+Jason Levine: You go through it every… Three and a half weeks.
+
+1059
+02:00:21.690 --> 02:00:27.130
+Jason Levine: So I've set it up so that every 3 weeks, it automatically Orders for me.
+
+1060
+02:00:27.500 --> 02:00:34.119
+Jason Levine: the thing that… Is a regular use item that we want to replenish the supply of.
+
+1061
+02:00:34.460 --> 02:00:37.410
+Jason Levine: Which is very different, than carrots.
+
+1062
+02:00:38.160 --> 02:00:41.170
+Jason Levine: Carrots have an expiration of how long they last.
+
+1063
+02:00:41.730 --> 02:00:49.610
+Jason Levine: Better yet, something that goes bad fast. Let's say it's, coriander, cilantro.
+
+1064
+02:00:50.170 --> 02:00:53.250
+Jason Levine: So, cilantro, it only lasts in your fridge for about
+
+1065
+02:00:53.400 --> 02:00:57.610
+Jason Levine: 6 days. Avocados, even worse. It lasts for 3 days.
+
+1066
+02:00:58.300 --> 02:01:04.920
+Jason Levine: So… I can then determine The regularness of those things
+
+1067
+02:01:05.260 --> 02:01:10.540
+Jason Levine: For it to make those decisions for me on things like dishwashing soap.
+
+1068
+02:01:11.320 --> 02:01:12.469
+Jason Levine: the special counsel.
+
+1069
+02:01:12.860 --> 02:01:15.220
+Jason Levine: Versus… Fish.
+
+1070
+02:01:16.780 --> 02:01:19.399
+Jason Levine: Which will be, like, a main ingredient dish.
+
+1071
+02:01:20.430 --> 02:01:36.819
+Jason Levine: So, it can eliminate some of the effort you're describing by using a model on top of it. So, what we call that is a sub-agent. So you have an agent, what we've heard so far is there's one agent that's able to determine the shopping cart.
+
+1072
+02:01:37.270 --> 02:01:40.869
+Jason Levine: Another agent that is ingesting the shopping cart.
+
+1073
+02:01:41.100 --> 02:01:47.280
+Jason Levine: And another agent that is determining what are my regular things and the cadence of those things.
+
+1074
+02:01:47.870 --> 02:01:51.040
+Jason Levine: And then I have a super agent that then owns those things.
+
+1075
+02:01:51.210 --> 02:01:53.990
+Jason Levine: As decisions from all three data points.
+
+1076
+02:01:54.520 --> 02:01:55.480
+Jason Levine: Makes sense.
+
+1077
+02:01:57.220 --> 02:02:00.169
+Jason Levine: Okay, let's hear one more idea that anybody has.
+
+1078
+02:02:00.730 --> 02:02:01.430
+Jason Levine: Yes.
+
+1079
+02:02:02.240 --> 02:02:03.969
+Jason Levine: I think they're all, like, big camps.
+
+1080
+02:02:04.500 --> 02:02:06.580
+Jason Levine: And… -Oh.
+
+1081
+02:02:07.160 --> 02:02:14.520
+Jason Levine: into, for example, like, customers can take a picture of what the bar.
+
+1082
+02:02:14.710 --> 02:02:18.210
+Jason Levine: Okay, I don't want to generate, like,
+
+1083
+02:02:18.530 --> 02:02:32.219
+Jason Levine: your custom minds. You can menu, order the recipe, and… and also, like, the cinema, you know, they could… they may love, and they can just choose the recipe, and then the card will generally happen.
+
+1084
+02:02:32.380 --> 02:02:44.520
+Jason Levine: all the things they need. And also, they can take a picture of their, their refrigeration, and also AI can generate one thing that they may need, or the thing that they already have.
+
+1085
+02:02:45.280 --> 02:02:50.490
+Jason Levine: So, okay, so I'm going to interpret what you're saying, or how that agent would work.
+
+1086
+02:02:50.980 --> 02:02:57.630
+Jason Levine: So before, we were talking about ingestion being Based on cadence, Based on receipts.
+
+1087
+02:02:58.520 --> 02:03:03.479
+Jason Levine: And then from that, it's able to determine what are my regulars.
+
+1088
+02:03:03.820 --> 02:03:13.139
+Jason Levine: cadence items that I need to buy based on what I'm looking at in my shopping cart. What you're describing is an easy way for ingestion to be above and beyond
+
+1089
+02:03:13.590 --> 02:03:15.290
+Jason Levine: A previous receipt.
+
+1090
+02:03:16.110 --> 02:03:19.919
+Jason Levine: And so, Leah can take a picture of
+
+1091
+02:03:20.080 --> 02:03:25.279
+Jason Levine: Her recipe in her recipe book and say, get me all these things except the salt.
+
+1092
+02:03:26.880 --> 02:03:28.050
+Jason Levine: And then he'll do it.
+
+1093
+02:03:28.770 --> 02:03:30.580
+Jason Levine: And so it has a special order.
+
+1094
+02:03:30.800 --> 02:03:33.830
+Jason Levine: So that one would require one that is able to
+
+1095
+02:03:34.250 --> 02:03:38.500
+Jason Levine: Ingest from multiple different sources, even if it's handwritten.
+
+1096
+02:03:39.560 --> 02:03:41.570
+Jason Levine: Even if it's from another website.
+
+1097
+02:03:42.570 --> 02:03:51.750
+Jason Levine: And so you can point to it, and tell it, these are the things I need, and this is what I don't need from it, or it's able to figure that out on its own. I just ordered for you salt 2 weeks ago, you probably don't need salt.
+
+1098
+02:03:52.250 --> 02:03:56.480
+Jason Levine: What I'm thinking about, because, we have a picture of their day.
+
+1099
+02:03:57.090 --> 02:03:59.389
+Jason Levine: And then AI could…
+
+1100
+02:03:59.690 --> 02:04:08.789
+Jason Levine: suggest that what others who may have, they would love to have. So, what's the most important part about the vaccine is that
+
+1101
+02:04:08.860 --> 02:04:20.139
+Jason Levine: For the recipe, you usually have, like, some items, but you would like to help your meal, and I would suggest that you can… a thing that you may also like, you can also choose others.
+
+1102
+02:04:20.700 --> 02:04:25.789
+Jason Levine: I can… I'm liking where you're going.
+
+1103
+02:04:26.440 --> 02:04:34.250
+Jason Levine: So, as you're seeing, The more we're thinking about the holistic experience, Bet.
+
+1104
+02:04:34.880 --> 02:04:43.449
+Jason Levine: And how we break apart the holistic experience as actions that the system can take to eliminate Frustrations, plural.
+
+1105
+02:04:44.070 --> 02:04:50.069
+Jason Levine: I'm then able to shape a more holistic approach for how the offering would work.
+
+1106
+02:04:50.720 --> 02:04:56.969
+Jason Levine: As a solution for the breadth of the needs between my two core customers.
+
+1107
+02:04:58.650 --> 02:04:59.839
+Jason Levine: All make sense?
+
+1108
+02:05:00.770 --> 02:05:06.340
+Jason Levine: That's exactly what you're going to do, working back from the customer, for your project assignment.
+
+1109
+02:05:07.270 --> 02:05:16.039
+Jason Levine: Okay? So, let's all look it up. Anybody have any questions on the process, or any concerns, or any open-ended issues about
+
+1110
+02:05:16.230 --> 02:05:20.440
+Jason Levine: how we do that at Amazon in general, that I'm happy to answer before I move on to the assignment.
+
+1111
+02:05:23.160 --> 02:05:23.930
+Jason Levine: Yes.
+
+1112
+02:05:29.420 --> 02:05:36.350
+Jason Levine: Sorry, I… so I heard something about a fridge, and something about… It was unfortunate.
+
+1113
+02:05:41.900 --> 02:05:44.300
+Jason Levine: I do not think so.
+
+1114
+02:05:44.620 --> 02:05:49.269
+Jason Levine: is I use… I've used Amazon Fresh recently, and it was an awful experience.
+
+1115
+02:05:50.810 --> 02:05:53.630
+Jason Levine: So, my guess is no.
+
+1116
+02:05:54.610 --> 02:06:00.659
+Jason Levine: I think that there are… Much, much better.
+
+1117
+02:06:00.790 --> 02:06:04.850
+Jason Levine: manual processes that, like, there's the subscription for HelloFresh.
+
+1118
+02:06:05.220 --> 02:06:07.780
+Jason Levine: I think they do a really good job of just…
+
+1119
+02:06:08.620 --> 02:06:11.270
+Jason Levine: You tell it what kinds of foods you like.
+
+1120
+02:06:11.400 --> 02:06:16.409
+Jason Levine: You tell it how many people it's for, and how much money you're willing to spend.
+
+1121
+02:06:16.750 --> 02:06:22.730
+Jason Levine: And how often you want to use it, whether you want it for leftovers or not. And then it'll just go do it.
+
+1122
+02:06:23.440 --> 02:06:31.010
+Jason Levine: And they'll create a prepackaged meal that either you just stick in the microwave, or comes with all the ingredients with instructions.
+
+1123
+02:06:31.310 --> 02:06:37.689
+Jason Levine: HelloFresh is, like, one of the ways you solve for that problem, that Amazon is not terrible.
+
+1124
+02:06:38.190 --> 02:06:45.769
+Jason Levine: We do have online, shopping from somewhere like,
+
+1125
+02:06:46.070 --> 02:06:49.130
+Jason Levine: from Whole Foods that we've integrated.
+
+1126
+02:06:49.650 --> 02:06:51.510
+Jason Levine: But the problem is, is that
+
+1127
+02:06:52.140 --> 02:06:55.090
+Jason Levine: We also offer those same items.
+
+1128
+02:06:56.170 --> 02:07:00.210
+Jason Levine: on the Amazon website outside of Whole Foods or Fresh.
+
+1129
+02:07:00.310 --> 02:07:02.379
+Jason Levine: We have to figure out the difference between them.
+
+1130
+02:07:02.830 --> 02:07:07.810
+Jason Levine: And… It has separate carts for each one.
+
+1131
+02:07:08.190 --> 02:07:12.930
+Jason Levine: And so it has all these weird limitations. Meanwhile, my QFC?
+
+1132
+02:07:13.260 --> 02:07:14.000
+Jason Levine: app?
+
+1133
+02:07:14.220 --> 02:07:15.779
+Jason Levine: It's highly manual.
+
+1134
+02:07:15.930 --> 02:07:18.039
+Jason Levine: But it is really low effort.
+
+1135
+02:07:18.350 --> 02:07:21.710
+Jason Levine: So once I'm willing to do a highly manual effort.
+
+1136
+02:07:22.500 --> 02:07:28.549
+Jason Levine: Me being able to reorder the same thing and subtract a couple things, and then hunt for the
+
+1137
+02:07:28.740 --> 02:07:33.359
+Jason Levine: the one thing, it didn't… I didn't… order last time. Super easy.
+
+1138
+02:07:34.210 --> 02:07:37.380
+Jason Levine: It's still very manual. It's not agente.
+
+1139
+02:07:37.510 --> 02:07:40.289
+Jason Levine: But, I picked that over Amazon.
+
+1140
+02:07:40.500 --> 02:07:48.370
+Jason Levine: doesn't mean that Amazon isn't solved for that. They have a directive that everything is going to have an agentic solution attached to it.
+
+1141
+02:07:48.650 --> 02:07:52.890
+Jason Levine: And they're already seeing huge benefits, like, has anybody used Rufus?
+
+1142
+02:07:55.560 --> 02:07:56.340
+Jason Levine: Yes?
+
+1143
+02:07:56.670 --> 02:08:01.780
+Jason Levine: Do you want to tell me… tell the team, telling the class about this, and how you can sit?
+
+1144
+02:08:02.590 --> 02:08:03.610
+Jason Levine: Yep.
+
+1145
+02:08:04.710 --> 02:08:07.810
+Jason Levine: So… I don't like shopping.
+
+1146
+02:08:11.770 --> 02:08:13.660
+Jason Levine: Doesn't have any confidence?
+
+1147
+02:08:13.940 --> 02:08:19.209
+Jason Levine: Thank you, kind of… 5 items with a minimum of 5 items.
+
+1148
+02:08:19.390 --> 02:08:21.050
+Jason Levine: And then breaking it down.
+
+1149
+02:08:22.100 --> 02:08:25.500
+Jason Levine: Also, I think it was, like, 595.
+
+1150
+02:08:25.790 --> 02:08:30.996
+Jason Levine: short detail of when it carries, Good evening.
+
+1151
+02:08:31.500 --> 02:08:32.459
+Jason Levine: Good morning.
+
+1152
+02:08:32.870 --> 02:08:37.420
+Jason Levine: So it's just, like, a little 5x5… Quick AI.
+
+1153
+02:08:38.670 --> 02:08:39.570
+Jason Levine: Okay.
+
+1154
+02:08:39.690 --> 02:08:41.040
+Jason Levine: To compare.
+
+1155
+02:08:41.820 --> 02:08:45.280
+Jason Levine: Yeah, you can also ask me questions.
+
+1156
+02:08:45.480 --> 02:08:51.220
+Jason Levine: So, I was buying, headphones.
+
+1157
+02:08:51.820 --> 02:08:58.739
+Jason Levine: for, one of my kids, and I want to make sure that they would fit their egg, because they're…
+
+1158
+02:08:59.060 --> 02:08:59.830
+Jason Levine: Yum.
+
+1159
+02:09:00.010 --> 02:09:03.490
+Jason Levine: I wanted to make sure that it didn't get returned a lot.
+
+1160
+02:09:03.830 --> 02:09:05.600
+Jason Levine: I'd love to make sure that…
+
+1161
+02:09:05.870 --> 02:09:16.860
+Jason Levine: It was easy to, have Bluetooth work, and so I was able to go through all the comments of what people had as feedback, and tell me what other people said.
+
+1162
+02:09:17.430 --> 02:09:19.879
+Jason Levine: And then it suggested a different…
+
+1163
+02:09:20.770 --> 02:09:23.560
+Jason Levine: product instead. That was for the… a little bit cheaper.
+
+1164
+02:09:23.800 --> 02:09:24.800
+Jason Levine: Based on…
+
+1165
+02:09:24.970 --> 02:09:31.720
+Jason Levine: it's just trying to be helpful. And what happened, once they introduced that, sales went up by 7%.
+
+1166
+02:09:32.770 --> 02:09:34.660
+Jason Levine: Because all of a sudden, they were able to trust
+
+1167
+02:09:35.130 --> 02:09:38.779
+Jason Levine: What to buy without having to hunt and hunt and hunt and hunt and hunt.
+
+1168
+02:09:40.360 --> 02:09:41.270
+Jason Levine: Pretty cool.
+
+1169
+02:09:41.670 --> 02:09:46.410
+Jason Levine: Okay, so, let's go to the assignment.
+
+1170
+02:09:58.960 --> 02:10:10.379
+Jason Levine: A gender guy represents a fundamental shift from traditional interfaces. An agent is a software-based entity that can perceive, reason, and act on behalf of… to help achieve specific goals. Unlike smart features, agents behave
+
+1171
+02:10:10.700 --> 02:10:18.509
+Jason Levine: They can take initiative, adapt to context, build trust through transparency, as we just described in this exercise.
+
+1172
+02:10:19.000 --> 02:10:35.029
+Jason Levine: Today's AI agents leverage large language models to perceive context, we talked about what an LLM is, reason through problems and take action using tools and APIs, representing a return to the original promise of autonomous, goal-driven, assistive software entities.
+
+1173
+02:10:35.510 --> 02:10:46.299
+Jason Levine: So, your job is to produce a pitch for your course project and pick a team name, business application name, whatever, that leverages Agentic AI.
+
+1174
+02:10:46.830 --> 02:11:06.469
+Jason Levine: The concept can be any software idea that is based on existing technologies that can be replicated through a prototype, which you will work on the remainder of the quarter. It can be mobile-only app or web-based, but must leverage Agentic AI, meaning it provides some form of assistance, or generative LLM, meaning
+
+1175
+02:11:06.700 --> 02:11:12.019
+Jason Levine: it will… It will conversate with you to solve for your user problem.
+
+1176
+02:11:13.370 --> 02:11:30.140
+Jason Levine: as part of the value, for the customer experience. For each bullet point, start with one single sentence to encapsulate the answer to the question, and follow up with further details by writing at least one short paragraph for each of the following. Who, what, why, how? Just like what we talked about.
+
+1177
+02:11:30.890 --> 02:11:31.860
+Jason Levine: Okay?
+
+1178
+02:11:32.170 --> 02:11:42.149
+Jason Levine: So… It can be mobile, web-based, or cross-platform, existing or plausible near-term technology.
+
+1179
+02:11:42.430 --> 02:11:45.320
+Jason Levine: In other words, not magical thinking.
+
+1180
+02:11:45.680 --> 02:11:47.240
+Jason Levine: meaningfully
+
+1181
+02:11:48.040 --> 02:11:56.730
+Jason Levine: leveraging agentic AI and generative LLMs, and feasible to prototype and iterate. So, I don't want you to, like, like, one team
+
+1182
+02:11:56.880 --> 02:12:06.829
+Jason Levine: had this great idea of having an inventory machine that was in your garage, and it would automatically create your inventory. Well.
+
+1183
+02:12:07.010 --> 02:12:11.089
+Jason Levine: you're not gonna be able to prototype that. So…
+
+1184
+02:12:11.410 --> 02:12:13.709
+Jason Levine: Think about what you can demonstrate.
+
+1185
+02:12:14.050 --> 02:12:17.949
+Jason Levine: It's a product vision.
+
+1186
+02:12:18.860 --> 02:12:24.280
+Jason Levine: So, there's also this extra credit.
+
+1187
+02:12:24.790 --> 02:12:33.290
+Jason Levine: If you would like, you can create what we do at Amazon, which is called a PRFAQ. It's a mock press release.
+
+1188
+02:12:33.790 --> 02:12:38.279
+Jason Levine: That demonstrates the value the customer receives.
+
+1189
+02:12:38.810 --> 02:12:43.680
+Jason Levine: And that's an extra credit item. You are not required to do it, but they're, kind of fun to do.
+
+1190
+02:12:44.800 --> 02:12:48.179
+Jason Levine: Where's an example? Here's an example.
+
+1191
+02:12:53.960 --> 02:12:56.040
+Jason Levine: It's usually 3 paragraphs.
+
+1192
+02:12:58.040 --> 02:13:02.770
+Jason Levine: And announces as if it went live, that feature.
+
+1193
+02:13:03.960 --> 02:13:05.330
+Jason Levine: Or that product.
+
+1194
+02:13:05.660 --> 02:13:14.649
+Jason Levine: So in this case, Seattle, June 2018, today launched a rewards program for Amazon trade-in, offering extra gift card money to frequent customers. Trade-in
+
+1195
+02:13:14.900 --> 02:13:19.459
+Jason Levine: Is it an Amazon program, blah blah blah, and then it talks through what is that experience?
+
+1196
+02:13:19.610 --> 02:13:32.829
+Jason Levine: a mock example of a quote, now I trade them in regardless, because I find the thought of getting closer to earning 15% extra pretty exciting. In other words, it's…
+
+1197
+02:13:32.850 --> 02:13:41.609
+Jason Levine: It's trying to envision what the final version of this would be, minus all the barriers of the effort involved to build it.
+
+1198
+02:13:42.410 --> 02:13:48.070
+Jason Levine: And you use this PRFAQ to make sure that you've defined your North Star.
+
+1199
+02:13:49.040 --> 02:13:53.649
+Jason Levine: So we use this at Amazon in order to get funding for a new idea.
+
+1200
+02:13:53.790 --> 02:14:06.809
+Jason Levine: We have probably 2,500 PRFAQs that run through some form of VP management with 10% of them being approved.
+
+1201
+02:14:08.450 --> 02:14:09.970
+Jason Levine: per year.
+
+1202
+02:14:10.100 --> 02:14:11.389
+Jason Levine: That would be my guess.
+
+1203
+02:14:12.480 --> 02:14:21.229
+Jason Levine: So you are more than welcome to use this, as an additional, addendum to your assignment for extra credit.
+
+1204
+02:14:23.790 --> 02:14:28.830
+Jason Levine: So, you'll find on here…
+
+1205
+02:14:33.740 --> 02:14:38.369
+Jason Levine: under… let's look at… based on… can I… project teams.
+
+1206
+02:14:41.060 --> 02:14:47.790
+Jason Levine: Here are the project teams. Right now, there's 4. Right, as of this hour, we have 21 students.
+
+1207
+02:14:48.550 --> 02:14:51.320
+Jason Levine: So one team will have to be 5.
+
+1208
+02:14:52.110 --> 02:15:07.909
+Jason Levine: But ideally, we stick with the number 4 for each of the teams. I will change these so each of these can have 5, so we can add the 21st person, assuming that all of you want to stay in the class.
+
+1209
+02:15:08.050 --> 02:15:12.980
+Jason Levine: So, you will need to nominate yourself into one of these groups.
+
+1210
+02:15:13.450 --> 02:15:17.850
+Jason Levine: Coordinate with yourselves as you nominate yourself into a group.
+
+1211
+02:15:18.020 --> 02:15:30.560
+Jason Levine: to be able to do this work of court… of collaborating to come up with what is your pitch? You're more than welcome to have more than one pitch, if you'd like, and then when we present next week.
+
+1212
+02:15:30.740 --> 02:15:35.320
+Jason Levine: We as a… as a class can help narrow down which is the best one to take.
+
+1213
+02:15:35.880 --> 02:15:46.999
+Jason Levine: So, don't feel like you have to have a knife fight on what is the best idea. If you're really at odds of which one is the best one to go forward on, just do both. It's okay.
+
+1214
+02:15:50.060 --> 02:16:04.260
+Jason Levine: What else can I answer for you? If there's anybody who's not nominated in a team by, let's say, Friday this week, I will just airdrop you into one of the classes… into one of the teams.
+
+1215
+02:16:04.660 --> 02:16:07.130
+Jason Levine: And then it'll be your responsibility to meet up with that team.
+
+1216
+02:16:07.770 --> 02:16:08.710
+Jason Levine: Okay?
+
+1217
+02:16:10.180 --> 02:16:12.069
+Jason Levine: Any questions on the assignment?
+
+1218
+02:16:13.030 --> 02:16:13.850
+Jason Levine: Yes.
+
+1219
+02:16:16.200 --> 02:16:18.890
+Jason Levine: Just drop your name into a project team.
+
+1220
+02:16:27.170 --> 02:16:29.929
+Jason Levine: I don't know what your student version looks like.
+
+1221
+02:16:33.430 --> 02:16:35.809
+Jason Levine: It's locked? Oh, 7.
+
+1222
+02:16:43.110 --> 02:16:44.870
+Jason Levine: Of course. Let me see.
+
+1223
+02:16:49.209 --> 02:16:51.190
+Jason Levine: Allow self-silent.
+
+1224
+02:16:54.209 --> 02:17:00.419
+Jason Levine: does it start till midstream? Oh!
+
+1225
+02:17:00.709 --> 02:17:03.849
+Jason Levine: It's a dumb setting. Okay, okay, let me fix that.
+
+1226
+02:17:08.549 --> 02:17:11.730
+Jason Levine: Start… oh yeah, there we go. Why would it do that?
+
+1227
+02:17:13.430 --> 02:17:16.089
+Jason Levine: Today is the 7th. Yes.
+
+1228
+02:17:20.370 --> 02:17:21.949
+Jason Levine: Alright, see if that fixed it.
+
+1229
+02:17:25.530 --> 02:17:28.100
+Jason Levine: Yes. Yay! Okay.
+
+1230
+02:17:30.260 --> 02:17:34.710
+Jason Levine: Alright, so I have a weird, also… so I'll let you all just talk…
+
+1231
+02:17:35.120 --> 02:17:41.670
+Jason Levine: And figure out who you want on your team, when you're gonna meet, etc.
+
+1232
+02:17:42.059 --> 02:17:45.300
+Jason Levine: But I do ask, before you leave.
+
+1233
+02:17:45.670 --> 02:17:51.479
+Jason Levine: I need to take role, so if you can, come by and add your alias…
+
+1234
+02:17:51.809 --> 02:18:00.779
+Jason Levine: to, an email I need to send to Heather before you leave for tonight. I'll then have you logged as being added to the class.
+
+1235
+02:18:00.950 --> 02:18:01.850
+Jason Levine: Okay?
+
+1236
+02:18:12.920 --> 02:18:13.620
+Jason Levine: Clap?
+
