@@ -29,7 +29,7 @@ Since you don't have CLI permissions, you'll need to upload via the AWS Console:
    - Click "Environment variables"
    - Confirm these are set:
      - `BEDROCK_MODEL_ID`: us.anthropic.claude-3-haiku-20240307-v1:0
-     - `ELEVENLABS_API_KEY`: sk_056db134bc26b4a70766c7b9442e5d5b27805389213bdcfb
+     - `ELEVENLABS_API_KEY`: <your-key-from-elevenlabs-dashboard>
      - `ELEVENLABS_MODEL_ID`: eleven_monolingual_v1
      - `NODE_ENV`: production
    - DO NOT set AWS_REGION (it's automatically provided by Lambda)

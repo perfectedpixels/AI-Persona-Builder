@@ -2,22 +2,22 @@
 
 ## 1. Configure AWS for Personal Account
 
-You need credentials for account `582234715800`. From AWS_MIGRATION.md, the `perfectpixels-bot` user has access key `AKIAYPD7EW2MCA4YC35R`.
+You need credentials for account `582234715800`. Create an IAM user with deploy permissions or use existing credentials.
 
 **Option A: Use a named profile**
 
 ```bash
 aws configure --profile personal
 # Enter:
-#   AWS Access Key ID: AKIAYPD7EW2MCA4YC35R
-#   AWS Secret Access Key: <your secret from pythonchatbot-integration/.env or Railway>
+#   AWS Access Key ID: <your-access-key>
+#   AWS Secret Access Key: <your-secret-key>
 #   Default region: us-east-1
 ```
 
 **Option B: Set environment variables**
 
 ```bash
-export AWS_ACCESS_KEY_ID=AKIAYPD7EW2MCA4YC35R
+export AWS_ACCESS_KEY_ID=<your-access-key>
 export AWS_SECRET_ACCESS_KEY=<your-secret-key>
 export AWS_DEFAULT_REGION=us-east-1
 ```
