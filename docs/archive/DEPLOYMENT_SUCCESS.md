@@ -30,7 +30,7 @@ Successfully deployed Conversation Maker with **zero-credential architecture** u
   - Bedrock: `AmazonBedrockFullAccess`
   - CloudWatch: `AWSLambdaBasicExecutionRole`
 - **Environment Variables** (ONLY third-party API keys):
-  - `ELEVENLABS_API_KEY`: `sk_056db134bc26b4a70766c7b9442e5d5b27805389213bdcfb`
+  - `ELEVENLABS_API_KEY`: `your_elevenlabs_key_here`
   - `ELEVENLABS_MODEL_ID`: `eleven_monolingual_v1`
   - `BEDROCK_MODEL_ID`: `us.anthropic.claude-3-haiku-20240307-v1:0`
   - `NODE_ENV`: `production`
@@ -193,7 +193,7 @@ aws amplify list-jobs --app-id d2b3efwoc19bjt --branch-name main --max-results 5
 ### Update Lambda Code
 ```bash
 cd conversation-tool
-export ELEVENLABS_API_KEY=sk_056db134bc26b4a70766c7b9442e5d5b27805389213bdcfb
+export ELEVENLABS_API_KEY=your_elevenlabs_key_here
 ./deploy-lambda.sh
 ```
 

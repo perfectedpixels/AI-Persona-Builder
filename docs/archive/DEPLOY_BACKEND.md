@@ -29,7 +29,7 @@ Once the environment is created:
    ```
    NODE_ENV=production
    PORT=8081
-   ELEVENLABS_API_KEY=sk_056db134bc26b4a70766c7b9442e5d5b27805389213bdcfb
+   ELEVENLABS_API_KEY=your_elevenlabs_key_here
    ELEVENLABS_MODEL_ID=eleven_monolingual_v1
    BEDROCK_MODEL_ID=us.anthropic.claude-3-haiku-20240307-v1:0
    ```
@@ -47,7 +47,7 @@ Update the Amplify app to use the backend URL:
 aws amplify update-app --app-id d2b3efwoc19bjt \
   --environment-variables \
   BEDROCK_MODEL_ID=us.anthropic.claude-3-haiku-20240307-v1:0,\
-ELEVENLABS_API_KEY=sk_056db134bc26b4a70766c7b9442e5d5b27805389213bdcfb,\
+ELEVENLABS_API_KEY=your_elevenlabs_key_here,\
 ELEVENLABS_MODEL_ID=eleven_monolingual_v1,\
 NODE_ENV=production,\
 PORT=3001,\

@@ -95,7 +95,7 @@ cat .env
 ### 2.1 Set ElevenLabs API Key
 
 ```bash
-export ELEVENLABS_API_KEY=sk_056db134bc26b4a70766c7b9442e5d5b27805389213bdcfb
+export ELEVENLABS_API_KEY=your_elevenlabs_key_here
 ```
 
 ### 2.2 Run Deployment Script

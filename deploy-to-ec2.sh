@@ -42,7 +42,7 @@ fi
 cat > deploy-temp/server/.env <<EOF
 PORT=3001
 NODE_ENV=production
-ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY:-sk_056db134bc26b4a70766c7b9442e5d5b27805389213bdcfb}
+ELEVENLABS_API_KEY=${ELEVENLABS_API_KEY:-your_elevenlabs_key_here}
 ELEVENLABS_MODEL_ID=eleven_monolingual_v1
 BEDROCK_MODEL_ID=us.anthropic.claude-3-haiku-20240307-v1:0
 EOF
