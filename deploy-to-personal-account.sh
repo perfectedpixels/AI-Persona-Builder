@@ -228,6 +228,14 @@ if [ ! -z "$API_ID" ]; then
       --region $REGION 2>/dev/null || true
   done
   aws apigateway create-deployment --rest-api-id $API_ID --stage-name prod --region $REGION > /dev/null 2>&1 || true
+
+  # Enable binary media type for zip export (fixes "Inappropriate file type" on macOS)
+  echo "  Enabling application/zip binary media type..."
+  aws apigateway update-rest-api \
+    --rest-api-id $API_ID \
+    --patch-operations op=add,path=/binaryMediaTypes/application~1zip \
+    --region $REGION 2>/dev/null || true
+  aws apigateway create-deployment --rest-api-id $API_ID --stage-name prod --region $REGION > /dev/null 2>&1 || true
 fi
 
 if [ -z "$API_ID" ]; then
@@ -326,6 +334,7 @@ if [ -z "$API_ID" ]; then
       --response-parameters '{"gatewayresponse.header.Access-Control-Allow-Origin":"*","gatewayresponse.header.Access-Control-Allow-Headers":"Content-Type,Authorization,Accept,Origin,X-Requested-With"}' \
       --region $REGION 2>/dev/null || true
   done
+  aws apigateway update-rest-api --rest-api-id $API_ID --patch-operations op=add,path=/binaryMediaTypes/application~1zip --region $REGION 2>/dev/null || true
   aws apigateway create-deployment --rest-api-id $API_ID --stage-name prod --region $REGION > /dev/null 2>&1 || true
 fi
 

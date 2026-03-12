@@ -248,15 +248,28 @@ const AgentBehaviorMaker = () => {
     try {
       const response = await fetchWithTimeout(`${API_URL}/api/abm/export-framework`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/zip' },
         body: JSON.stringify({
           processedData,
           agentControls,
           conversations
         })
       });
-      
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({ error: `Export failed (${response.status})` }));
+        throw new Error(err.error || 'Export failed');
+      }
+
+      const contentType = response.headers.get('Content-Type') || '';
       const blob = await response.blob();
+      if (!contentType.includes('zip') && blob.size < 100) {
+        const text = await blob.text();
+        if (text.startsWith('{') || text.startsWith('<')) {
+          throw new Error('Server returned an error instead of a zip file. Check console.');
+        }
+      }
+
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
@@ -265,6 +278,7 @@ const AgentBehaviorMaker = () => {
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error exporting framework:', error);
+      setProcessingStatus({ currentStep: 'error', error: error.message });
     }
   };
 
