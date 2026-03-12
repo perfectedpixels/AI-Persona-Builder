@@ -1,44 +1,159 @@
-async function exportFramework({ documents, agentControls, conversations }) {
-  // Generate updated agent framework document based on customizations
-  
-  const frameworkDoc = `UPDATED AGENT FRAMEWORK
+const archiver = require('archiver');
+const { PassThrough } = require('stream');
+
+function buildPersonaDoc({ processedData, agentControls, conversations }) {
+  const p = processedData?.persona || {};
+  const a = processedData?.agent || {};
+  const prod = processedData?.product || {};
+
+  return `# Updated User Persona — ${p.name || 'PersonaUser'}
 Generated: ${new Date().toISOString()}
 
-=== AGENT PERSONALITY ===
-Tone: ${agentControls.tone}
-Formality: ${agentControls.formality}%
-Verbosity: ${agentControls.verbosity}%
-Empathy: ${agentControls.empathy}%
-Proactivity: ${agentControls.proactivity}%
-Creativity: ${agentControls.creativity}%
-Technical Depth: ${agentControls.technicalDepth}%
+## Demographics
+${p.demographics || 'Not specified'}
 
-=== ORIGINAL FRAMEWORK ===
-${documents.agentFramework?.content || 'Not provided'}
+## Technical Level
+${p.technicalLevel || 'intermediate'}
 
-=== CONVERSATION INSIGHTS ===
-Total conversations tested: ${conversations.length}
+## Goals
+${(p.goals || []).map(g => `- ${g}`).join('\n') || '- Not specified'}
 
-Based on the ${conversations.length} conversation(s) tested, the agent demonstrated:
-- Consistent ${agentControls.tone} tone
-- ${agentControls.empathy > 70 ? 'High' : agentControls.empathy > 40 ? 'Moderate' : 'Low'} empathy in responses
-- ${agentControls.proactivity > 70 ? 'Proactive' : agentControls.proactivity > 40 ? 'Balanced' : 'Reactive'} engagement style
-- ${agentControls.verbosity > 70 ? 'Detailed' : agentControls.verbosity > 40 ? 'Moderate' : 'Concise'} response length
+## Pain Points
+${(p.painPoints || []).map(pp => `- ${pp}`).join('\n') || '- Not specified'}
 
-=== RECOMMENDATIONS ===
-Consider these adjustments for your production agent:
-1. Maintain ${agentControls.tone} tone for consistency with user expectations
-2. ${agentControls.empathy > 70 ? 'Continue high empathy for support scenarios' : 'Consider increasing empathy for better user connection'}
-3. ${agentControls.technicalDepth > 70 ? 'Ensure users have technical background' : 'Good balance for general audience'}
+## Motivations
+${(p.motivations || []).map(m => `- ${m}`).join('\n') || '- Not specified'}
 
-=== IMPLEMENTATION NOTES ===
-Use these settings in your LLM system prompt:
-- Personality: ${agentControls.tone}, ${agentControls.formality > 70 ? 'formal' : agentControls.formality > 40 ? 'semi-formal' : 'casual'}
-- Response style: ${agentControls.verbosity > 70 ? 'comprehensive' : agentControls.verbosity > 40 ? 'balanced' : 'concise'}
-- User engagement: ${agentControls.proactivity > 70 ? 'proactive with suggestions' : agentControls.proactivity > 40 ? 'responsive with occasional guidance' : 'reactive to user requests'}
+## Product Context
+- **Product**: ${prod.what || 'Not specified'}
+- **Target audience**: ${prod.who || 'Not specified'}
+- **Value prop**: ${prod.why || 'Not specified'}
+
+## Interaction Preferences
+Based on ${conversations.length} tested conversation(s), this persona responds best to:
+- **Tone**: ${agentControls.tone}
+- **Formality**: ${agentControls.formality > 70 ? 'Formal' : agentControls.formality > 40 ? 'Semi-formal' : 'Casual'} (${agentControls.formality}%)
+- **Detail level**: ${agentControls.verbosity > 70 ? 'Comprehensive explanations' : agentControls.verbosity > 40 ? 'Balanced detail' : 'Brief and to the point'} (${agentControls.verbosity}%)
+- **Empathy need**: ${agentControls.empathy > 70 ? 'High — needs emotional acknowledgment' : agentControls.empathy > 40 ? 'Moderate' : 'Low — prefers directness'} (${agentControls.empathy}%)
+- **Guidance style**: ${agentControls.proactivity > 70 ? 'Proactive suggestions welcome' : agentControls.proactivity > 40 ? 'Balanced guidance' : 'Responds only when asked'} (${agentControls.proactivity}%)
 `;
+}
 
-  return frameworkDoc;
+function buildSteeringDoc({ processedData, agentControls, conversations }) {
+  const a = processedData?.agent || {};
+  const p = processedData?.persona || {};
+  const prod = processedData?.product || {};
+
+  // Build example conversation snippet from the most recent conversation
+  let exampleSnippet = '';
+  if (conversations.length > 0) {
+    const latest = conversations[conversations.length - 1];
+    const msgs = (latest.messages || []).slice(0, 4);
+    exampleSnippet = msgs.map(m =>
+      `${m.speaker === 'PersonaUser' ? 'User' : 'Agent'}: ${m.text}`
+    ).join('\n');
+  }
+
+  // Map slider values to descriptive language for the steering prompt
+  const formalityDesc = agentControls.formality > 70 ? 'formal and polished'
+    : agentControls.formality > 40 ? 'conversational but professional' : 'casual and relaxed';
+  const verbosityDesc = agentControls.verbosity > 70 ? 'thorough and detailed'
+    : agentControls.verbosity > 40 ? 'balanced — enough detail without overwhelming' : 'concise and to the point';
+  const empathyDesc = agentControls.empathy > 70 ? 'highly empathetic — acknowledge feelings before solving'
+    : agentControls.empathy > 40 ? 'warm but solution-focused' : 'direct and efficient';
+  const proactivityDesc = agentControls.proactivity > 70 ? 'proactively suggest next steps and related topics'
+    : agentControls.proactivity > 40 ? 'offer suggestions when relevant' : 'respond only to what is asked';
+  const creativityDesc = agentControls.creativity > 70 ? 'creative and exploratory — offer novel approaches'
+    : agentControls.creativity > 40 ? 'balanced — stick to proven methods with occasional alternatives' : 'conservative — stick to established patterns';
+  const techDesc = agentControls.technicalDepth > 70 ? 'deep technical detail with jargon appropriate for experts'
+    : agentControls.technicalDepth > 40 ? 'moderate technical depth — explain concepts when needed' : 'minimal jargon — explain everything in plain language';
+
+  return `---
+inclusion: auto
+---
+
+# AI Persona Steering — ${a.purpose || 'Agent'}
+
+> This steering document defines the AI persona for ${prod.what || 'the product'}.
+> It was generated by Agent Behavior Maker based on analyzed product, persona, and framework documents,
+> then refined through ${conversations.length} test conversation(s).
+
+## Identity
+
+You are an AI assistant for **${prod.what || 'the product'}**.
+Your primary purpose is: ${a.purpose || 'to assist users'}.
+Your personality is: ${a.personality || agentControls.tone}.
+
+## Target User
+
+You are speaking with **${p.name || 'the user'}** — ${p.demographics || 'a typical user'}.
+Their technical level is **${p.technicalLevel || 'intermediate'}**.
+Their primary goals are:
+${(p.goals || ['General assistance']).map(g => `- ${g}`).join('\n')}
+
+Their pain points to be mindful of:
+${(p.painPoints || ['None specified']).map(pp => `- ${pp}`).join('\n')}
+
+## Voice & Tone
+
+- **Tone**: ${agentControls.tone}
+- **Formality**: ${formalityDesc} (${agentControls.formality}/100)
+- **Verbosity**: ${verbosityDesc} (${agentControls.verbosity}/100)
+- **Empathy**: ${empathyDesc} (${agentControls.empathy}/100)
+- **Proactivity**: ${proactivityDesc} (${agentControls.proactivity}/100)
+- **Creativity**: ${creativityDesc} (${agentControls.creativity}/100)
+- **Technical depth**: ${techDesc} (${agentControls.technicalDepth}/100)
+
+## Capabilities
+
+${(a.capabilities || []).map(c => `- ${c}`).join('\n') || '- General assistance'}
+
+## Tools Available
+
+${(a.tools || []).map(t => `- ${t}`).join('\n') || '- None specified'}
+
+## Constraints
+
+${(a.constraints || []).map(c => `- ${c}`).join('\n') || '- Follow standard safety guidelines'}
+
+## Behavioral Rules
+
+1. Always match the tone and formality described above.
+2. ${agentControls.empathy > 60 ? 'Acknowledge the user\'s situation or feelings before jumping to solutions.' : 'Be direct and get to the solution quickly.'}
+3. ${agentControls.proactivity > 60 ? 'After answering, suggest a logical next step or related topic.' : 'Answer what is asked without unsolicited additions.'}
+4. ${agentControls.verbosity > 60 ? 'Provide thorough explanations with examples when helpful.' : 'Keep responses short. Use bullet points over paragraphs.'}
+5. ${agentControls.technicalDepth > 60 ? 'Use domain-specific terminology appropriate for the user\'s level.' : 'Avoid jargon. Explain technical concepts in plain language.'}
+6. ${agentControls.creativity > 60 ? 'Offer creative alternatives and novel approaches when appropriate.' : 'Stick to proven, conventional approaches.'}
+${exampleSnippet ? `
+## Example Interaction
+
+\`\`\`
+${exampleSnippet}
+\`\`\`
+` : ''}
+## Product Context
+
+- **What**: ${prod.what || 'Not specified'}
+- **Who**: ${prod.who || 'Not specified'}
+- **Why**: ${prod.why || 'Not specified'}
+- **How**: ${prod.how || 'Not specified'}
+`;
+}
+
+async function exportFramework({ processedData, agentControls, conversations }) {
+  const personaDoc = buildPersonaDoc({ processedData, agentControls, conversations });
+  const steeringDoc = buildSteeringDoc({ processedData, agentControls, conversations });
+
+  // Create a ZIP archive with both files
+  const passthrough = new PassThrough();
+  const archive = archiver('zip', { zlib: { level: 9 } });
+
+  archive.pipe(passthrough);
+  archive.append(personaDoc, { name: 'updated-persona.md' });
+  archive.append(steeringDoc, { name: 'ai-persona-steering.md' });
+  archive.finalize();
+
+  return passthrough;
 }
 
 module.exports = {

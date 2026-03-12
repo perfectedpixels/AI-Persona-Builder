@@ -4,46 +4,40 @@ const { processDocuments, generateScenarios } = require('../services/abm-process
 const { generateConversation, refreshConversations } = require('../services/abm-conversation');
 const { exportFramework } = require('../services/abm-export');
 
-// Process uploaded documents and generate scenarios
+// Validate documents helper
+const validateDocuments = (productProposal, userPersona, agentFramework) => {
+  if (!productProposal || !userPersona || !agentFramework) {
+    return 'All three documents (Product Proposal, User Persona, Agent Framework) are required.';
+  }
+  const hasContent = (doc) => {
+    if (!doc || !doc.type) return false;
+    if (doc.type === 'text' || doc.type === 'file') return !!(doc.content && doc.content.trim());
+    if (doc.type === 'url') return !!(doc.url && doc.url.trim());
+    return false;
+  };
+  if (!hasContent(productProposal) || !hasContent(userPersona) || !hasContent(agentFramework)) {
+    return 'All three documents must have content. Please check that your files were uploaded correctly.';
+  }
+  return null;
+};
+
+// Step 1: Extract key info from documents (single Bedrock call, ~15-25s)
+// Split from scenario generation to stay under API Gateway 29s timeout
 router.post('/process-documents', async (req, res) => {
   try {
     const { productProposal, userPersona, agentFramework } = req.body;
-    
-    // Validate that all three documents are present and have content
-    if (!productProposal || !userPersona || !agentFramework) {
-      return res.status(400).json({ 
-        error: 'All three documents (Product Proposal, User Persona, Agent Framework) are required.' 
-      });
-    }
-    
-    const hasContent = (doc) => {
-      if (!doc || !doc.type) return false;
-      if (doc.type === 'text' || doc.type === 'file') return !!(doc.content && doc.content.trim());
-      if (doc.type === 'url') return !!(doc.url && doc.url.trim());
-      return false;
-    };
-    
-    if (!hasContent(productProposal) || !hasContent(userPersona) || !hasContent(agentFramework)) {
-      return res.status(400).json({ 
-        error: 'All three documents must have content. Please check that your files were uploaded correctly.' 
-      });
-    }
-    
-    console.log('Processing ABM documents...');
-    
-    // Process and extract key information from documents
+    const err = validateDocuments(productProposal, userPersona, agentFramework);
+    if (err) return res.status(400).json({ error: err });
+
+    console.log('Extracting from ABM documents...');
     const processedDocs = await processDocuments({
       productProposal,
       userPersona,
       agentFramework
     });
-    
-    // Generate 3-5 scenarios based on PersonaUser needs
-    const scenarios = await generateScenarios(processedDocs);
-    
+
     res.json({
       success: true,
-      scenarios,
       processedData: processedDocs,
       suggestedControls: processedDocs.suggestedControls || null
     });
@@ -53,15 +47,37 @@ router.post('/process-documents', async (req, res) => {
   }
 });
 
+// Step 2: Generate scenarios from extracted data (single Bedrock call, ~10-20s)
+// Separate call keeps each request under API Gateway 29s limit
+router.post('/generate-scenarios', async (req, res) => {
+  try {
+    const { processedData } = req.body;
+    if (!processedData || !processedData.product || !processedData.persona || !processedData.agent) {
+      return res.status(400).json({ error: 'processedData with product, persona, and agent is required.' });
+    }
+
+    console.log('Generating ABM scenarios...');
+    const scenarios = await generateScenarios(processedData);
+
+    res.json({
+      success: true,
+      scenarios
+    });
+  } catch (error) {
+    console.error('Error generating scenarios:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 // Generate conversation for a selected scenario
 router.post('/generate-conversation', async (req, res) => {
   try {
-    const { scenarioId, processedData, agentControls } = req.body;
+    const { scenario, processedData, agentControls } = req.body;
     
-    console.log(`Generating conversation for scenario: ${scenarioId}`);
+    console.log(`Generating conversation for scenario:`, scenario?.title || scenario?.id);
     
     const conversation = await generateConversation({
-      scenarioId,
+      scenario,
       processedData,
       agentControls
     });

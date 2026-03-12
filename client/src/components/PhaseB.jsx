@@ -55,7 +55,7 @@ const PhaseB = ({ scenarios = [], conversations = [], onScenarioSelect, onUserIn
 
   const handleScenarioClick = (scenario) => {
     setSelectedScenario(scenario);
-    onScenarioSelect(scenario.id);
+    onScenarioSelect(scenario);
   };
 
   const handleUserInterrupt = async () => {

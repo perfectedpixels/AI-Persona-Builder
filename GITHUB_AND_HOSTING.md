@@ -43,8 +43,9 @@ Vercel auto-deploys from GitHub and works well with Vite.
    - **Build Command:** `npm run build`
    - **Output Directory:** `build`
 5. **Environment Variables** (critical):
-   - `VITE_API_URL` = `https://k7ocis6k3l.execute-api.us-east-1.amazonaws.com/prod`
-   - (Use your actual API Gateway URL from the deploy output)
+   - `VITE_API_URL` = your API Gateway URL (see below)
+   - **Personal account (582234715800):** Deploy first with `AWS_PROFILE=personal ./deploy-to-personal-account.sh`, then use the API URL from the output
+   - **Other account:** Use the API URL from your deployment (e.g. `https://xxxxx.execute-api.us-east-1.amazonaws.com/prod`)
 6. Deploy
 
 Your app will be live at `https://conversation-maker-xxx.vercel.app` (or your custom domain).
@@ -69,12 +70,27 @@ If you prefer to stay on AWS:
 3. Request/attach SSL cert in ACM
 4. Add CNAME in DNS pointing to CloudFront
 
-## 5. Backend (Already Deployed)
+## 5. Backend (Personal Account)
 
-Your API is already on AWS Lambda + API Gateway:
-- **API URL:** `https://k7ocis6k3l.execute-api.us-east-1.amazonaws.com/prod`
+To use the **personal account** API (582234715800):
 
-Ensure `VITE_API_URL` in Vercel matches this. The frontend will call it for:
+1. Configure AWS for personal account:
+   ```bash
+   aws configure --profile personal
+   # Enter Access Key + Secret for account 582234715800
+   ```
+
+2. Deploy to personal account:
+   ```bash
+   export ELEVENLABS_API_KEY=your_key
+   AWS_PROFILE=personal ./deploy-to-personal-account.sh
+   ```
+
+3. Copy the **API URL** from the deploy output and set it in Vercel:
+   - Vercel → Project → Settings → Environment Variables
+   - `VITE_API_URL` = `https://xxxxx.execute-api.us-east-1.amazonaws.com/prod`
+
+The frontend will call it for:
 - `/api/voices` — ElevenLabs voices
 - `/api/conversation/*` — Script generation, synthesis
 - `/api/abm/*` — Agent Behavior Maker
@@ -91,7 +107,7 @@ AWS_PROFILE=personal ./deploy-to-personal-account.sh
 
 | Item | Value |
 |------|-------|
-| GitHub remote | `git remote add github https://github.com/USER/REPO.git` |
-| Vercel env var | `VITE_API_URL` = API Gateway URL |
-| API Gateway | `https://k7ocis6k3l.execute-api.us-east-1.amazonaws.com/prod` |
-| S3 (current) | `http://conversation-maker-app-582234715800.s3-website-us-east-1.amazonaws.com` |
+| Personal account | 582234715800 |
+| Deploy command | `AWS_PROFILE=personal ./deploy-to-personal-account.sh` |
+| Vercel env var | `VITE_API_URL` = API URL from deploy output |
+| S3 (personal) | `http://conversation-maker-app-582234715800.s3-website-us-east-1.amazonaws.com` |

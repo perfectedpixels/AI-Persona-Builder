@@ -133,6 +133,7 @@ Extract and return a JSON object with:
     "tone": "Communication tone",
     "constraints": ["Limitations or boundaries"]
   },
+  "keyGuidelines": ["Specific rule or phrase from doc 1", "Domain term or behavior from doc 2", "Do not do X"],
   "suggestedControls": {
     "tone": "best-fit tone from: professional|friendly|casual|formal|empathetic|authoritative",
     "formality": "0-100 number based on the agent framework's implied formality",
@@ -149,56 +150,153 @@ For suggestedControls, infer the best defaults from the documents:
 - If the agent framework specifies a casual/friendly tone, set tone accordingly and lower formality
 - If the product is support-oriented, raise empathy and proactivity
 - If the agent is creative (writing, design), raise creativity
-- Match the values to what the documents imply or explicitly state`;
+- Match the values to what the documents imply or explicitly state
 
-  try {
-    console.log('Calling Bedrock to process documents...');
-    
+For keyGuidelines: Extract 5-10 concrete items from the documents: domain vocabulary (e.g. exhibition, wayfinding), explicit rules the agent must follow, phrases it should use, and things it must NOT do. Be specific to the product.`;
+
+  const extractionSchema = {
+    type: 'object',
+    properties: {
+      product: {
+        type: 'object',
+        properties: {
+          what: { type: 'string', description: 'What is the product' },
+          who: { type: 'string', description: 'Who is it for' },
+          why: { type: 'string', description: 'Why does it exist' },
+          how: { type: 'string', description: 'How does it work' }
+        },
+        required: ['what', 'who', 'why', 'how'],
+        additionalProperties: false
+      },
+      persona: {
+        type: 'object',
+        properties: {
+          name: { type: 'string', description: 'Persona name' },
+          demographics: { type: 'string', description: 'Age, role, context' },
+          goals: { type: 'array', items: { type: 'string' }, description: 'Primary goals' },
+          painPoints: { type: 'array', items: { type: 'string' }, description: 'Key pain points' },
+          motivations: { type: 'array', items: { type: 'string' }, description: 'What drives them' },
+          technicalLevel: { type: 'string', description: 'beginner, intermediate, or advanced' }
+        },
+        required: ['name', 'demographics', 'goals', 'painPoints', 'motivations', 'technicalLevel'],
+        additionalProperties: false
+      },
+      agent: {
+        type: 'object',
+        properties: {
+          purpose: { type: 'string', description: "Agent's primary purpose" },
+          personality: { type: 'string', description: 'Personality traits' },
+          capabilities: { type: 'array', items: { type: 'string' }, description: 'What it can do' },
+          tools: { type: 'array', items: { type: 'string' }, description: 'Tools it has access to' },
+          tone: { type: 'string', description: 'Communication tone' },
+          constraints: { type: 'array', items: { type: 'string' }, description: 'Limitations or boundaries' }
+        },
+        required: ['purpose', 'personality', 'capabilities', 'tools', 'tone', 'constraints'],
+        additionalProperties: false
+      },
+      keyGuidelines: {
+        type: 'array',
+        items: { type: 'string' },
+        description: '5-10 concrete rules, domain terms, or behaviors from the documents'
+      },
+      suggestedControls: {
+        type: 'object',
+        properties: {
+          tone: { type: 'string', description: 'professional|friendly|casual|formal|empathetic|authoritative' },
+          formality: { type: 'number', description: '0-100' },
+          verbosity: { type: 'number', description: '0-100' },
+          empathy: { type: 'number', description: '0-100' },
+          proactivity: { type: 'number', description: '0-100' },
+          creativity: { type: 'number', description: '0-100' },
+          technicalDepth: { type: 'number', description: '0-100' }
+        },
+        required: ['tone', 'formality', 'verbosity', 'empathy', 'proactivity', 'creativity', 'technicalDepth'],
+        additionalProperties: false
+      }
+    },
+    required: ['product', 'persona', 'agent', 'keyGuidelines', 'suggestedControls'],
+    additionalProperties: false
+  };
+
+  const requestBody = {
+    anthropic_version: 'bedrock-2023-05-31',
+    max_tokens: 4000,
+    temperature: 0.2,
+    system: systemPrompt,
+    messages: [{ role: 'user', content: userMessage }],
+    output_config: {
+      format: {
+        type: 'json_schema',
+        schema: extractionSchema
+      }
+    }
+  };
+
+  const tryStructuredOutput = async () => {
     const command = new InvokeModelCommand({
       modelId: process.env.BEDROCK_MODEL_ID || 'us.anthropic.claude-sonnet-4-20250514-v1:0',
       contentType: 'application/json',
       accept: 'application/json',
-      body: JSON.stringify({
-        anthropic_version: 'bedrock-2023-05-31',
-        max_tokens: 4000,
-        system: systemPrompt,
-        messages: [{ role: 'user', content: userMessage }]
-      })
+      body: JSON.stringify(requestBody)
     });
+    return callBedrockWithRetry(client, command);
+  };
 
-    const response = await callBedrockWithRetry(client, command);
+  const tryLegacyOutput = async () => {
+    const legacyBody = { ...requestBody };
+    delete legacyBody.output_config;
+    const command = new InvokeModelCommand({
+      modelId: process.env.BEDROCK_MODEL_ID || 'us.anthropic.claude-sonnet-4-20250514-v1:0',
+      contentType: 'application/json',
+      accept: 'application/json',
+      body: JSON.stringify(legacyBody)
+    });
+    return callBedrockWithRetry(client, command);
+  };
+
+  try {
+    console.log('Calling Bedrock to process documents (structured output)...');
+    let response;
+    try {
+      response = await tryStructuredOutput();
+    } catch (structErr) {
+      const isStructError = structErr.$metadata?.httpStatusCode === 400 ||
+        structErr.statusCode === 400 ||
+        structErr.name === 'ValidationException' ||
+        (structErr.message && (structErr.message.includes('output_config') || structErr.message.includes('format')));
+      if (isStructError) {
+        console.log('Structured output not supported, falling back to legacy...');
+        response = await tryLegacyOutput();
+      } else {
+        throw structErr;
+      }
+    }
     const responseBody = JSON.parse(new TextDecoder().decode(response.body));
     console.log('Bedrock response received');
     
     const textContent = responseBody.content[0].text;
     console.log('Extracted text length:', textContent.length);
-    console.log('First 500 chars:', textContent.substring(0, 500));
     
-    // Try to parse JSON, handle if it's wrapped in markdown code blocks or has preamble
     let extractedData;
     try {
       extractedData = JSON.parse(textContent);
     } catch (parseError) {
-      console.log('Direct JSON parse failed, trying alternatives...');
-      
-      // Try to extract JSON from markdown code blocks
       const jsonMatch = textContent.match(/```json\n([\s\S]*?)\n```/) || textContent.match(/```\n([\s\S]*?)\n```/);
       if (jsonMatch) {
-        console.log('Found JSON in code block');
         extractedData = JSON.parse(jsonMatch[1]);
       } else {
-        // Try to find JSON object in the text (starts with { and ends with })
         const jsonStart = textContent.indexOf('{');
         const jsonEnd = textContent.lastIndexOf('}');
-        if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
-          const jsonStr = textContent.substring(jsonStart, jsonEnd + 1);
-          console.log('Extracted JSON string length:', jsonStr.length);
-          console.log('JSON string:', jsonStr.substring(0, 200));
-          extractedData = JSON.parse(jsonStr);
+        if (jsonStart !== -1 && jsonEnd !== -1) {
+          extractedData = JSON.parse(textContent.substring(jsonStart, jsonEnd + 1));
         } else {
-          throw new Error('Could not find valid JSON in response');
+          throw new Error('Could not parse extraction response');
         }
       }
+    }
+    
+    if (!extractedData.keyGuidelines || !Array.isArray(extractedData.keyGuidelines)) {
+      extractedData.keyGuidelines = [];
     }
     
     console.log('Successfully parsed document data');

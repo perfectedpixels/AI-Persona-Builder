@@ -51,33 +51,59 @@ const AgentBehaviorMaker = () => {
       await new Promise(resolve => setTimeout(resolve, 500));
       
       setProcessingStatus({ currentStep: 'extracting', message: 'Extracting key information...' });
-      
-      // Process documents and generate scenarios
-      const response = await fetchWithTimeout(`${API_URL}/api/abm/process-documents`, {
+
+      // Step 1: Extract (single Bedrock call, ~15-25s) — under 29s API Gateway limit
+      const extractRes = await fetchWithTimeout(`${API_URL}/api/abm/process-documents`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(docs)
       });
-      
-      // Read the body once, then branch on status
-      const data = await response.json();
-      
-      if (!response.ok) {
-        throw new Error(data.error || 'Failed to process documents');
+      let extractData;
+      try {
+        const text = await extractRes.text();
+        extractData = text ? JSON.parse(text) : {};
+      } catch (parseErr) {
+        throw new Error(
+          extractRes.status === 502 || extractRes.status === 504
+            ? 'Extraction timed out. Try shorter documents or request API Gateway timeout increase in Service Quotas.'
+            : `Invalid response from server (${extractRes.status})`
+        );
       }
-      
-      setProcessingStatus({ currentStep: 'analyzing', message: 'Analyzing product and persona...' });
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
+      if (!extractRes.ok) {
+        throw new Error(extractData.error || 'Failed to extract from documents');
+      }
+
+      const processedDocs = extractData.processedData;
+      setProcessedData(processedDocs);
       setProcessingStatus({ currentStep: 'generating', message: 'Generating scenarios...' });
-      
+
+      // Step 2: Generate scenarios (single Bedrock call, ~10-20s) — under 29s limit
+      const scenariosRes = await fetchWithTimeout(`${API_URL}/api/abm/generate-scenarios`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ processedData: processedDocs })
+      });
+      let scenariosData;
+      try {
+        const text = await scenariosRes.text();
+        scenariosData = text ? JSON.parse(text) : {};
+      } catch (parseErr) {
+        throw new Error(
+          scenariosRes.status === 502 || scenariosRes.status === 504
+            ? 'Scenario generation timed out. Try again.'
+            : `Invalid response from server (${scenariosRes.status})`
+        );
+      }
+      if (!scenariosRes.ok) {
+        throw new Error(scenariosData.error || 'Failed to generate scenarios');
+      }
+
       setProcessingStatus({ currentStep: 'complete', message: 'All done!' });
-      setScenarios(data.scenarios);
-      setProcessedData(data.processedData); // Store the extracted reasoning
+      setScenarios(scenariosData.scenarios || []);
       
       // Apply AI-suggested control defaults based on document analysis
-      if (data.suggestedControls) {
-        const sc = data.suggestedControls;
+      if (extractData.suggestedControls) {
+        const sc = extractData.suggestedControls;
         setAgentControls(prev => ({
           tone: sc.tone || prev.tone,
           formality: typeof sc.formality === 'number' ? sc.formality : prev.formality,
@@ -101,9 +127,14 @@ const AgentBehaviorMaker = () => {
       setTimeout(() => setProcessingStatus(null), 2000);
     } catch (error) {
       console.error('Error processing documents:', error);
-      const message = error.name === 'AbortError' 
-        ? 'Request timed out. The AI service took too long. Please try again.'
-        : error.message;
+      let message = error.message;
+      if (error.name === 'AbortError') {
+        message = 'Request timed out. Try shorter documents or request API Gateway timeout increase in AWS Service Quotas.';
+      } else if (message === 'Load failed' || (error.message || '').includes('Load failed')) {
+        message = 'Network request failed. Often caused by API Gateway 29s timeout—request quota increase in Service Quotas (API Gateway → Maximum integration timeout), or try shorter documents.';
+      } else if (!message) {
+        message = 'An unexpected error occurred. Please try again.';
+      }
       setProcessingStatus({ 
         currentStep: 'error', 
         error: message,
@@ -142,7 +173,7 @@ const AgentBehaviorMaker = () => {
     }
   };
 
-  const handleScenarioSelect = async (scenarioId) => {
+  const handleScenarioSelect = async (scenario) => {
     if (isProcessing) return;
     setIsProcessing(true);
     setIsConversationLoading(true);
@@ -152,7 +183,7 @@ const AgentBehaviorMaker = () => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          scenarioId,
+          scenario,
           processedData,
           agentControls
         })

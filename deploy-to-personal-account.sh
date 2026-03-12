@@ -1,11 +1,25 @@
 #!/bin/bash
 # Deploy Conversation Maker to personal AWS account (582234715800)
 # Based on AWS_MIGRATION.md runbook
+#
+# Usage:
+#   AWS_PROFILE=personal ./deploy-to-personal-account.sh
+#   # or: export AWS_PROFILE=personal && ./deploy-to-personal-account.sh
+#
+# After deploy, set Vercel env var: VITE_API_URL = <API URL from output>
 
 set -e
 
+# Prevent AWS CLI from using a pager (which blocks the script)
+export AWS_PAGER=""
+
 echo "🚀 Deploying Conversation Maker to personal AWS account..."
 echo ""
+
+# Use personal profile if set (avoids wrong-account errors)
+if [ -n "$AWS_PROFILE" ]; then
+  echo "Using AWS profile: $AWS_PROFILE"
+fi
 
 # Configuration
 REGION="us-east-1"
@@ -20,14 +34,17 @@ MODEL_ID="us.anthropic.claude-sonnet-4-20250514-v1:0"
 echo "🔍 Verifying AWS identity..."
 CURRENT_ACCOUNT=$(aws sts get-caller-identity --query Account --output text 2>&1)
 if [ "$CURRENT_ACCOUNT" != "$ACCOUNT_ID" ]; then
-  echo "❌ Wrong AWS account! Expected $ACCOUNT_ID, got $CURRENT_ACCOUNT"
+  echo "❌ Wrong AWS account! Expected $ACCOUNT_ID (personal), got $CURRENT_ACCOUNT"
   echo ""
-  echo "Configure credentials for your personal account first:"
-  echo "  export AWS_ACCESS_KEY_ID=AKIAYPD7EW2MCA4YC35R"
-  echo "  export AWS_SECRET_ACCESS_KEY=<your-secret-key>"
-  echo "  export AWS_DEFAULT_REGION=us-east-1"
+  echo "Switch to your personal account:"
+  echo "  export AWS_PROFILE=personal"
+  echo "  ./deploy-to-personal-account.sh"
   echo ""
-  echo "Or use: aws configure --profile personal"
+  echo "Or configure the personal profile:"
+  echo "  aws configure --profile personal"
+  echo "  (use Access Key + Secret for account $ACCOUNT_ID)"
+  echo ""
+  echo "Then run: AWS_PROFILE=personal ./deploy-to-personal-account.sh"
   exit 1
 fi
 echo "✅ Confirmed account: $ACCOUNT_ID"
@@ -49,7 +66,7 @@ echo ""
 echo "📋 Step 2: Creating IAM role..."
 ROLE_ARN="arn:aws:iam::${ACCOUNT_ID}:role/${ROLE_NAME}"
 
-if aws iam get-role --role-name $ROLE_NAME 2>/dev/null; then
+if aws iam get-role --role-name $ROLE_NAME > /dev/null 2>&1; then
   echo "✅ IAM role already exists: $ROLE_NAME"
 else
   echo "  Creating IAM role: $ROLE_NAME"
@@ -126,7 +143,7 @@ else
   exit 1
 fi
 
-if aws lambda get-function --function-name $FUNCTION_NAME --region $REGION 2>/dev/null; then
+if aws lambda get-function --function-name $FUNCTION_NAME --region $REGION > /dev/null 2>&1; then
   echo "  Updating existing Lambda function..."
   aws lambda update-function-code \
     --function-name $FUNCTION_NAME \
@@ -139,6 +156,7 @@ if aws lambda get-function --function-name $FUNCTION_NAME --region $REGION 2>/de
 
   aws lambda update-function-configuration \
     --function-name $FUNCTION_NAME \
+    --timeout 90 \
     --environment "Variables={
       NODE_ENV=production,
       ELEVENLABS_API_KEY=${ELEVENLABS_KEY},
@@ -154,7 +172,7 @@ else
     --role "$ROLE_ARN" \
     --handler lambda.handler \
     --zip-file fileb://conversation-maker-lambda.zip \
-    --timeout 60 \
+    --timeout 90 \
     --memory-size 512 \
     --environment "Variables={
       NODE_ENV=production,
@@ -183,7 +201,36 @@ EXISTING_API=$(aws apigateway get-rest-apis \
 if [ ! -z "$EXISTING_API" ] && [ "$EXISTING_API" != "None" ]; then
   API_ID=$EXISTING_API
   echo "✅ API Gateway already exists: $API_ID"
-else
+fi
+
+# Set integration timeout to 90s (document processing can take 30-90s)
+# Default is 29s; without this, long requests return 504
+if [ ! -z "$API_ID" ]; then
+  echo "  Setting API Gateway integration timeout to 90s..."
+  for RESOURCE_ID in $(aws apigateway get-resources --rest-api-id $API_ID --region $REGION --query 'items[].id' --output text 2>/dev/null); do
+    aws apigateway update-integration \
+      --rest-api-id $API_ID \
+      --resource-id $RESOURCE_ID \
+      --http-method ANY \
+      --patch-operations op=replace,path=/timeoutInMillis,value=90000 \
+      --region $REGION 2>/dev/null || true
+  done
+  aws apigateway create-deployment --rest-api-id $API_ID --stage-name prod --region $REGION > /dev/null 2>&1 || true
+  echo "  (If timeout update failed, request quota increase in Service Quotas: API Gateway → Maximum integration timeout)"
+
+  # Add CORS headers to 4XX/5XX gateway responses (504 timeouts otherwise show "Origin not allowed")
+  echo "  Adding CORS headers to error responses..."
+  for RT in DEFAULT_4XX DEFAULT_5XX; do
+    aws apigateway put-gateway-response \
+      --rest-api-id $API_ID \
+      --response-type $RT \
+      --response-parameters '{"gatewayresponse.header.Access-Control-Allow-Origin":"*","gatewayresponse.header.Access-Control-Allow-Headers":"Content-Type,Authorization,Accept,Origin,X-Requested-With"}' \
+      --region $REGION 2>/dev/null || true
+  done
+  aws apigateway create-deployment --rest-api-id $API_ID --stage-name prod --region $REGION > /dev/null 2>&1 || true
+fi
+
+if [ -z "$API_ID" ]; then
   echo "  Creating REST API..."
   API_ID=$(aws apigateway create-rest-api \
     --name "$API_NAME" \
@@ -262,6 +309,24 @@ else
     --region $REGION > /dev/null
 
   echo "✅ API Gateway created: $API_ID"
+  # Set 90s timeout on new integrations
+  for RESOURCE_ID in $(aws apigateway get-resources --rest-api-id $API_ID --region $REGION --query 'items[].id' --output text 2>/dev/null); do
+    aws apigateway update-integration \
+      --rest-api-id $API_ID \
+      --resource-id $RESOURCE_ID \
+      --http-method ANY \
+      --patch-operations op=replace,path=/timeoutInMillis,value=90000 \
+      --region $REGION 2>/dev/null || true
+  done
+  # CORS on error responses (504 etc.)
+  for RT in DEFAULT_4XX DEFAULT_5XX; do
+    aws apigateway put-gateway-response \
+      --rest-api-id $API_ID \
+      --response-type $RT \
+      --response-parameters '{"gatewayresponse.header.Access-Control-Allow-Origin":"*","gatewayresponse.header.Access-Control-Allow-Headers":"Content-Type,Authorization,Accept,Origin,X-Requested-With"}' \
+      --region $REGION 2>/dev/null || true
+  done
+  aws apigateway create-deployment --rest-api-id $API_ID --stage-name prod --region $REGION > /dev/null 2>&1 || true
 fi
 
 API_URL="https://${API_ID}.execute-api.${REGION}.amazonaws.com/prod"
@@ -363,4 +428,8 @@ echo ""
 echo "Test endpoints:"
 echo "  curl ${API_URL}/api/health"
 echo "  curl ${API_URL}/api/test-bedrock"
+echo ""
+echo "To point Vercel to this personal API:"
+echo "  Vercel → Project → Settings → Environment Variables"
+echo "  Set VITE_API_URL = ${API_URL}"
 echo ""

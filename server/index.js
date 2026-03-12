@@ -6,9 +6,17 @@ const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Middleware - explicit CORS for API Gateway + cross-origin (preview, S3, localhost)
+// CORS — locked to APP_DOMAIN when set (e.g. SuperNova); otherwise allow all (Vercel, S3, etc.)
+const ALLOWED_ORIGINS = (process.env.APP_DOMAIN || '').split(',').map(s => s.trim()).filter(Boolean);
+const STRICT_CORS = ALLOWED_ORIGINS.length > 0;
+
 app.use(cors({
-  origin: '*',
+  origin: STRICT_CORS
+    ? (origin, cb) => {
+        if (!origin || ALLOWED_ORIGINS.includes(origin)) cb(null, true);
+        else cb(new Error('Not allowed by CORS'));
+      }
+    : true,  // allow all origins when APP_DOMAIN not set
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept', 'Origin', 'X-Requested-With'],
   maxAge: 86400,
@@ -17,13 +25,16 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Request timeout: 90s (Bedrock can take 60s + retry overhead)
+// Skip in Lambda — serverless-http has no real socket; Lambda timeout handles it
 app.use((req, res, next) => {
-  res.setTimeout(90000, () => {
-    console.error(`Request timeout: ${req.method} ${req.path}`);
-    if (!res.headersSent) {
-      res.status(504).json({ error: 'Request timed out. The AI service took too long to respond. Please try again.' });
-    }
-  });
+  if (!process.env.AWS_LAMBDA_FUNCTION_NAME) {
+    res.setTimeout(90000, () => {
+      console.error(`Request timeout: ${req.method} ${req.path}`);
+      if (!res.headersSent) {
+        res.status(504).json({ error: 'Request timed out. The AI service took too long to respond. Please try again.' });
+      }
+    });
+  }
   next();
 });
 
@@ -38,6 +49,11 @@ app.use('/api/conversation/generate', generateRoutes);
 app.use('/api/conversation', conversationRoutes);
 app.use('/api/voices', voicesRoutes);
 app.use('/api/abm', abmRoutes);
+
+// Favicon - avoids CSP errors when API URL is opened directly (matches /favicon.ico and /prod/favicon.ico)
+app.get(/\/favicon\.ico$/, (req, res) => {
+  res.status(204).end();
+});
 
 app.get('/api/health', (req, res) => {
   res.json({ 
@@ -89,6 +105,15 @@ app.use((err, req, res, next) => {
     ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
   });
 });
+
+// In production, serve the built React app for any non-API route
+if (process.env.NODE_ENV === 'production') {
+  const clientBuild = path.join(__dirname, '../client/build');
+  app.use(express.static(clientBuild));
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(clientBuild, 'index.html'));
+  });
+}
 
 // Start server
 app.listen(PORT, () => {
