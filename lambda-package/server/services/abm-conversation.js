@@ -42,6 +42,39 @@ function ensureKeyGuidelines(processedData) {
   return fallback.length > 0 ? fallback : guidelines.length > 0 ? guidelines : ['Stay within the product domain from the documents'];
 }
 
+function buildControlInstructions(agentControls) {
+  const c = agentControls || {};
+  const num = (v, def) => (v === undefined || v === null ? def : Math.max(0, Math.min(100, Number(v))));
+  const tone = c.tone || 'professional';
+  const formality = num(c.formality, 50);
+  const verbosity = num(c.verbosity, 50);
+  const empathy = num(c.empathy, 70);
+  const proactivity = num(c.proactivity, 50);
+  const creativity = num(c.creativity, 50);
+  const technicalDepth = num(c.technicalDepth, 50);
+
+  const formalityDesc = formality > 70 ? 'formal and polished' : formality > 40 ? 'conversational but professional' : 'casual and relaxed';
+  const verbosityDesc = verbosity > 70 ? 'thorough and detailed' : verbosity > 40 ? 'balanced' : 'concise and to the point';
+  const empathyDesc = empathy > 70 ? 'highly empathetic — acknowledge feelings before solving' : empathy > 40 ? 'warm but solution-focused' : 'direct and efficient';
+  const proactivityDesc = proactivity > 70 ? 'proactively suggest next steps and related topics' : proactivity > 40 ? 'offer suggestions when relevant' : 'respond only to what is asked';
+  const creativityDesc = creativity > 70 ? 'creative and exploratory' : creativity > 40 ? 'balanced — proven methods with occasional alternatives' : 'conservative — stick to established patterns';
+  const techDesc = technicalDepth > 70 ? 'deep technical detail with jargon for experts' : technicalDepth > 40 ? 'moderate depth — explain when needed' : 'minimal jargon — plain language only';
+
+  const rules = [
+    `Tone: ${tone}. Formality: ${formalityDesc}.`,
+    empathy > 60 ? 'Acknowledge the user\'s situation or feelings before jumping to solutions.' : 'Be direct and get to the solution quickly.',
+    proactivity > 60 ? 'After answering, suggest a logical next step or related topic.' : 'Answer only what is asked. No unsolicited additions.',
+    verbosity > 60 ? 'Provide thorough explanations with examples when helpful.' : 'Keep responses SHORT. Use bullet points over paragraphs.',
+    technicalDepth > 60 ? 'Use domain-specific terminology appropriate for the user.' : 'Avoid jargon. Explain everything in plain language.',
+    creativity > 60 ? 'Offer creative alternatives and novel approaches when appropriate.' : 'Stick to proven, conventional approaches.'
+  ];
+
+  return {
+    summary: `Tone: ${tone} | Formality: ${formalityDesc} | Verbosity: ${verbosityDesc} | Empathy: ${empathyDesc} | Proactivity: ${proactivityDesc} | Creativity: ${creativityDesc} | Technical: ${techDesc}`,
+    rules
+  };
+}
+
 async function generateConversation({ scenario, scenarioId, processedData, agentControls, userInput, existingConversation }) {
   console.log('Generating conversation with 5 AI responses...');
   
@@ -78,22 +111,22 @@ ${keyGuidelines.map((g, i) => `${i + 1}. ${g}`).join('\n')}` : '';
     ? `Title: ${scenarioObj.title || 'N/A'}\nDescription: ${scenarioObj.description || 'N/A'}\nPersonaGoal: ${scenarioObj.personaGoal || 'N/A'}\nAgentRole: ${scenarioObj.agentRole || 'N/A'}`
     : (scenarioId || 'General interaction');
 
+  const { summary, rules } = buildControlInstructions(agentControls);
+  const controlBlock = `${summary}
+
+Behavioral rules AgentLLM MUST follow:
+${rules.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
+
   const systemPrompt = `You are simulating a conversation between PersonaUser and AgentLLM.
 ${contextInfo}
 
 CRITICAL: The conversation MUST be about the product and scenario above. Do NOT use generic topics (laptop delivery, tech support, etc). Use the exact product domain from the documents.
 
-Agent Controls:
-- Tone: ${agentControls?.tone || 'professional'}
-- Formality: ${agentControls?.formality || 50}%
-- Verbosity: ${agentControls?.verbosity || 50}%
-- Empathy: ${agentControls?.empathy || 70}%
-- Proactivity: ${agentControls?.proactivity || 50}%
-- Creativity: ${agentControls?.creativity || 50}%
-- Technical Depth: ${agentControls?.technicalDepth || 50}%
+AGENT CONTROLS — These OVERRIDE any conflicting tone from the documents. Apply them strictly to every AgentLLM response:
+${controlBlock}
 
 Generate a natural conversation with 5 exchanges (PersonaUser speaks, then AgentLLM responds, repeat 5 times).
-The conversation MUST demonstrate the agent's personality and stay within the product domain.`;
+Each AgentLLM response MUST visibly demonstrate these controls (tone, formality, verbosity, empathy, proactivity, creativity, technical depth).`;
 
   const userMessage = `Generate a conversation for this scenario:
 
@@ -116,7 +149,7 @@ Return as JSON:
   ]
 }
 
-Make the conversation realistic and show the agent's personality.`;
+Make the conversation realistic. Each AgentLLM reply must match the Agent Controls exactly (e.g. if Verbosity is low, keep replies short; if Empathy is high, acknowledge feelings first).`;
 
   try {
     const command = new InvokeModelCommand({
@@ -126,6 +159,7 @@ Make the conversation realistic and show the agent's personality.`;
       body: JSON.stringify({
         anthropic_version: 'bedrock-2023-05-31',
         max_tokens: 2000,
+        temperature: 0.3,
         system: systemPrompt,
         messages: [{ role: 'user', content: userMessage }]
       })

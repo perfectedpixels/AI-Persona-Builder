@@ -32,6 +32,25 @@
   gap: 4px;
 }
 
+.dial-range-labels {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dial-range-labels .dial-slider {
+  flex: 1;
+}
+
+.dial-low, .dial-high {
+  font-size: 10px;
+  color: #888;
+  min-width: 28px;
+}
+
+.dial-low { text-align: left; }
+.dial-high { text-align: right; }
+
 .dial-label {
   display: flex;
   justify-content: space-between;

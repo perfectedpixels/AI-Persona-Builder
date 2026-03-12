@@ -1,7 +1,7 @@
 import React, { useRef, useCallback } from 'react';
 import './DialControl.css';
 
-const DialControl = ({ label, value, onChange, min = 0, max = 100 }) => {
+const DialControl = ({ label, value, onChange, min = 0, max = 100, lowLabel = 'Low', highLabel = 'High' }) => {
   const dialRef = useRef(null);
   const dragging = useRef(false);
 
@@ -133,16 +133,20 @@ const DialControl = ({ label, value, onChange, min = 0, max = 100 }) => {
         <div className="dial-slider-col">
           <label className="dial-label">
             <span>{label}</span>
-            <span className="dial-value">{value}%</span>
+            <span className="dial-value">{value}</span>
           </label>
-          <input
-            type="range"
-            className="dial-slider"
-            min={min}
-            max={max}
-            value={value}
-            onChange={handleSliderChange}
-          />
+          <div className="dial-range-labels">
+            <span className="dial-low">{lowLabel}</span>
+            <input
+              type="range"
+              className="dial-slider"
+              min={min}
+              max={max}
+              value={value}
+              onChange={handleSliderChange}
+            />
+            <span className="dial-high">{highLabel}</span>
+          </div>
         </div>
       </div>
     </div>

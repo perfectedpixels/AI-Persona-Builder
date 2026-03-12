@@ -54,31 +54,43 @@ const PhaseC = ({ controls, onChange, onExport, isProcessing, hasDocuments }) =>
             label="Formality"
             value={controls.formality}
             onChange={(v) => handleDialChange('formality', v)}
+            lowLabel="Casual"
+            highLabel="Formal"
           />
           <DialControl
             label="Verbosity"
             value={controls.verbosity}
             onChange={(v) => handleDialChange('verbosity', v)}
+            lowLabel="Brief"
+            highLabel="Detailed"
           />
           <DialControl
             label="Empathy"
             value={controls.empathy}
             onChange={(v) => handleDialChange('empathy', v)}
+            lowLabel="Direct"
+            highLabel="Warm"
           />
           <DialControl
             label="Proactivity"
             value={controls.proactivity}
             onChange={(v) => handleDialChange('proactivity', v)}
+            lowLabel="Reactive"
+            highLabel="Proactive"
           />
           <DialControl
             label="Creativity"
             value={controls.creativity}
             onChange={(v) => handleDialChange('creativity', v)}
+            lowLabel="Conventional"
+            highLabel="Creative"
           />
           <DialControl
             label="Technical"
             value={controls.technicalDepth}
             onChange={(v) => handleDialChange('technicalDepth', v)}
+            lowLabel="Plain"
+            highLabel="Technical"
           />
 
           <button
