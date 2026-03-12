@@ -135,7 +135,7 @@ Extract and return a JSON object with:
   },
   "keyGuidelines": ["Specific rule or phrase from doc 1", "Domain term or behavior from doc 2", "Do not do X"],
   "suggestedControls": {
-    "tone": "best-fit tone from: professional|friendly|casual|formal|empathetic|authoritative",
+    "tone": "best-fit tone from: professional|friendly|casual|formal|empathetic|authoritative|youthful",
     "formality": "0-100 number based on the agent framework's implied formality",
     "verbosity": "0-100 number based on how detailed the agent should be",
     "empathy": "0-100 number based on persona pain points and agent personality",
@@ -202,7 +202,7 @@ For keyGuidelines: Extract 5-10 concrete items from the documents: domain vocabu
       suggestedControls: {
         type: 'object',
         properties: {
-          tone: { type: 'string', description: 'professional|friendly|casual|formal|empathetic|authoritative' },
+          tone: { type: 'string', description: 'professional|friendly|casual|formal|empathetic|authoritative|youthful' },
           formality: { type: 'number', description: '0-100' },
           verbosity: { type: 'number', description: '0-100' },
           empathy: { type: 'number', description: '0-100' },

@@ -257,7 +257,7 @@ export function createVoice(voiceData) {
  */
 export function generateSpeakerColor() {
   const colors = [
-    '#FF8C42', // Orange
+    '#6264A7', // Teams primary
     '#4CC9F0', // Blue
     '#C77DFF', // Purple
     '#2D5016', // Green

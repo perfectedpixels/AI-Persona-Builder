@@ -51,7 +51,7 @@ function ConversationEditor() {
     // Default initial state
     const initial = createConversation();
     // Add two default speakers
-    const speaker1 = createSpeaker({ name: 'Speaker 1', color: '#FF8C42' });
+    const speaker1 = createSpeaker({ name: 'Speaker 1', color: '#6264A7' });
     const speaker2 = createSpeaker({ name: 'Speaker 2', color: '#4CC9F0' });
     return {
       ...initial,
@@ -551,7 +551,7 @@ function ConversationEditor() {
   const handleNewConversation = useCallback(() => {
     if (window.confirm('Create a new conversation? This will clear all current data.')) {
       const initial = createConversation();
-      const speaker1 = createSpeaker({ name: 'Speaker 1', color: '#FF8C42' });
+      const speaker1 = createSpeaker({ name: 'Speaker 1', color: '#6264A7' });
       const speaker2 = createSpeaker({ name: 'Speaker 2', color: '#4CC9F0' });
       
       setConversation({

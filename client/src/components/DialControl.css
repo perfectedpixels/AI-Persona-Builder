@@ -12,7 +12,8 @@
   cursor: grab;
   touch-action: none;
   flex-shrink: 0;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+  color: var(--color-primary);
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.08));
   transition: filter 0.15s;
 }
 
@@ -62,7 +63,7 @@
 
 .dial-value {
   font-size: 12px;
-  color: #FF8C42;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
@@ -81,22 +82,22 @@
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #FF8C42;
+  background: var(--color-primary);
   cursor: pointer;
   transition: all 0.15s;
   box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .dial-slider::-webkit-slider-thumb:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 0 4px rgba(255, 140, 66, 0.2);
+  transform: scale(1.1);
+  box-shadow: 0 0 0 4px rgba(98, 100, 167, 0.2);
 }
 
 .dial-slider::-moz-range-thumb {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #FF8C42;
+  background: var(--color-primary);
   cursor: pointer;
   border: none;
 }

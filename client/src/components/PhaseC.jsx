@@ -17,7 +17,8 @@ const PhaseC = ({ controls, onChange, onExport, isProcessing, hasDocuments }) =>
     { value: 'casual', label: 'Casual' },
     { value: 'formal', label: 'Formal' },
     { value: 'empathetic', label: 'Empathetic' },
-    { value: 'authoritative', label: 'Authoritative' }
+    { value: 'authoritative', label: 'Authoritative' },
+    { value: 'youthful', label: 'Youthful' }
   ];
 
   return (

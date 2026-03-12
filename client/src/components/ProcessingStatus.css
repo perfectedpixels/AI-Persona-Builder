@@ -72,7 +72,7 @@
 }
 
 .status-step.active .step-label {
-  color: #FF8C42;
+  color: var(--color-primary);
 }
 
 .status-step.complete .step-label {
@@ -92,7 +92,7 @@
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #FF8C42, #ff7a28);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-primary-hover));
   animation: progress 2s ease-in-out infinite;
 }
 

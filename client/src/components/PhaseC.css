@@ -1,8 +1,9 @@
 .phase-c {
-  background: white;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
   overflow-y: auto;
   max-height: calc(100vh - 200px);
   position: sticky;
@@ -12,18 +13,18 @@
 .phase-header {
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .phase-header h2 {
-  font-size: 24px;
-  color: #333;
+  font-size: 20px;
+  color: var(--color-foreground);
   margin-bottom: 8px;
 }
 
 .phase-header p {
   font-size: 14px;
-  color: #666;
+  color: var(--color-foreground-secondary);
 }
 
 .empty-state {
@@ -51,32 +52,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 13px;
-  color: #555;
+  font-size: 14px;
+  color: var(--color-foreground-secondary);
   margin-bottom: 6px;
   font-weight: 500;
 }
 
 .control-value {
   font-size: 12px;
-  color: #FF8C42;
+  color: var(--color-primary);
   font-weight: 600;
 }
 
 .control-select {
   width: 100%;
-  padding: 8px;
-  border: 2px solid #ddd;
-  border-radius: 6px;
-  font-size: 13px;
-  background: white;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  background: var(--color-surface);
   cursor: pointer;
   transition: border-color 0.2s;
 }
 
 .control-select:focus {
   outline: none;
-  border-color: #FF8C42;
+  border-color: var(--color-primary);
 }
 
 .export-button.compact {
@@ -84,7 +85,7 @@
   padding: 10px;
   font-size: 13px;
   font-weight: 600;
-  background: #FF8C42;
+  background: var(--color-primary);
   color: white;
   border: none;
   border-radius: 6px;
@@ -94,11 +95,10 @@
 }
 
 .export-button.compact:hover:not(:disabled) {
-  background: #ff7a28;
-  transform: translateY(-1px);
+  background: var(--color-primary-hover);
 }
 
 .export-button.compact:disabled {
-  background: #ccc;
+  background: var(--color-border);
   cursor: not-allowed;
 }

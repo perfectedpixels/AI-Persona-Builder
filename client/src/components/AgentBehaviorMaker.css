@@ -10,14 +10,14 @@
 }
 
 .abm-header h1 {
-  font-size: 32px;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 24px;
+  color: var(--color-foreground);
+  margin-bottom: 8px;
 }
 
 .abm-header p {
-  font-size: 16px;
-  color: #666;
+  font-size: 14px;
+  color: var(--color-foreground-secondary);
 }
 
 .abm-container {

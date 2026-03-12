@@ -104,7 +104,7 @@
 
 .scenario-input:focus {
   outline: none;
-  border-color: #FF8C42;
+  border-color: var(--color-primary);
 }
 
 .scenario-input:disabled {
@@ -138,13 +138,13 @@
 }
 
 .btn-option:hover:not(:disabled) {
-  border-color: #FF8C42;
+  border-color: var(--color-primary);
   background: #FFF5EF;
 }
 
 .btn-option.active {
-  border-color: #FF8C42;
-  background: #FF8C42;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
   color: white;
 }
 

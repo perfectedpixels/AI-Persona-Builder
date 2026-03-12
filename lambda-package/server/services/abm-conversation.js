@@ -60,8 +60,12 @@ function buildControlInstructions(agentControls) {
   const creativityDesc = creativity > 70 ? 'creative and exploratory' : creativity > 40 ? 'balanced — proven methods with occasional alternatives' : 'conservative — stick to established patterns';
   const techDesc = technicalDepth > 70 ? 'deep technical detail with jargon for experts' : technicalDepth > 40 ? 'moderate depth — explain when needed' : 'minimal jargon — plain language only';
 
+  const toneDesc = tone === 'youthful'
+    ? 'Sound Gen Z/Young Millennial: use casual phrasing, relatable slang (e.g. lowkey, vibe, no cap, legit, slay), short punchy sentences, and a conversational, approachable tone. Avoid corporate jargon.'
+    : `Tone: ${tone}. Formality: ${formalityDesc}.`;
+
   const rules = [
-    `Tone: ${tone}. Formality: ${formalityDesc}.`,
+    toneDesc,
     empathy > 60 ? 'Acknowledge the user\'s situation or feelings before jumping to solutions.' : 'Be direct and get to the solution quickly.',
     proactivity > 60 ? 'After answering, suggest a logical next step or related topic.' : 'Answer only what is asked. No unsolicited additions.',
     verbosity > 60 ? 'Provide thorough explanations with examples when helpful.' : 'Keep responses SHORT. Use bullet points over paragraphs.',
@@ -69,8 +73,9 @@ function buildControlInstructions(agentControls) {
     creativity > 60 ? 'Offer creative alternatives and novel approaches when appropriate.' : 'Stick to proven, conventional approaches.'
   ];
 
+  const toneSummary = tone === 'youthful' ? 'Youthful (Gen Z/Young Millennial)' : tone;
   return {
-    summary: `Tone: ${tone} | Formality: ${formalityDesc} | Verbosity: ${verbosityDesc} | Empathy: ${empathyDesc} | Proactivity: ${proactivityDesc} | Creativity: ${creativityDesc} | Technical: ${techDesc}`,
+    summary: `Tone: ${toneSummary} | Formality: ${formalityDesc} | Verbosity: ${verbosityDesc} | Empathy: ${empathyDesc} | Proactivity: ${proactivityDesc} | Creativity: ${creativityDesc} | Technical: ${techDesc}`,
     rules
   };
 }

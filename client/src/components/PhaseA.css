@@ -1,29 +1,30 @@
 .phase-a {
-  background: white;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
   overflow-y: auto;
   max-height: calc(100vh - 200px);
   position: sticky;
   top: 20px;
 }
 
-.phase-header {
+.phase-a .phase-header {
   margin-bottom: 25px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #f0f0f0;
+  border-bottom: 1px solid var(--color-border);
 }
 
-.phase-header h2 {
-  font-size: 24px;
-  color: #333;
+.phase-a .phase-header h2 {
+  font-size: 20px;
+  color: var(--color-foreground);
   margin-bottom: 8px;
 }
 
-.phase-header p {
+.phase-a .phase-header p {
   font-size: 14px;
-  color: #666;
+  color: var(--color-foreground-secondary);
 }
 
 .document-section {
@@ -38,7 +39,7 @@
 
 .document-section h3 {
   font-size: 18px;
-  color: #FF8C42;
+  color: var(--color-primary);
   margin-bottom: 8px;
 }
 
@@ -70,9 +71,9 @@
 }
 
 .type-btn.active {
-  background: #FF8C42;
+  background: var(--color-primary);
   color: white;
-  border-color: #FF8C42;
+  border-color: var(--color-primary);
 }
 
 .doc-textarea {
@@ -89,7 +90,7 @@
 
 .doc-textarea:focus {
   outline: none;
-  border-color: #FF8C42;
+  border-color: var(--color-primary);
 }
 
 .file-upload-zone {
@@ -101,7 +102,7 @@
 }
 
 .file-upload-zone:hover {
-  border-color: #FF8C42;
+  border-color: var(--color-primary);
   background: #fff8f4;
 }
 
@@ -122,7 +123,7 @@
 
 .doc-url-input:focus {
   outline: none;
-  border-color: #FF8C42;
+  border-color: var(--color-primary);
 }
 
 .submit-button {
@@ -130,7 +131,7 @@
   padding: 15px;
   font-size: 16px;
   font-weight: 600;
-  background: #FF8C42;
+  background: var(--color-primary);
   color: white;
   border: none;
   border-radius: 8px;
@@ -158,16 +159,16 @@
   padding: 10px 16px;
   font-size: 13px;
   font-weight: 600;
-  color: #FF8C42;
+  color: var(--color-primary);
   background: #fff8f4;
-  border: 2px dashed #FF8C42;
+  border: 2px dashed var(--color-primary);
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .demo-button:hover:not(:disabled) {
-  background: #FF8C42;
+  background: var(--color-primary);
   color: white;
   border-style: solid;
 }

@@ -63,7 +63,7 @@ function ConversationPanel({
       id: 'temp-' + Date.now(),
       name: `Speaker ${speakers.length + 1}`,
       context: '',
-      color: '#FF8C42',
+      color: 'var(--color-primary)',
       voiceId: availableVoices[speakers.length % availableVoices.length]?.id || null,
       defaultProsody: {
         stability: 0.75,

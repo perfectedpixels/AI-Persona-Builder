@@ -1,8 +1,9 @@
 .phase-b {
-  background: white;
-  border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -36,24 +37,23 @@
 
 .scenario-card {
   padding: 12px;
-  background: #f8f8f8;
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .scenario-card:hover {
-  background: #fff8f4;
-  border-color: #FF8C42;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background: var(--color-surface-hover);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
 }
 
 .scenario-card.selected {
-  background: #FF8C42;
-  color: white;
-  border-color: #FF8C42;
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border-color: var(--color-primary);
 }
 
 .scenario-number {
@@ -231,7 +231,7 @@
 
 .user-input-textarea:focus {
   outline: none;
-  border-color: #FF8C42;
+  border-color: var(--color-primary);
 }
 
 .input-actions {
@@ -268,7 +268,7 @@
 
 .send-btn {
   padding: 10px 30px;
-  background: #FF8C42;
+  background: var(--color-primary);
   color: white;
   border: none;
   border-radius: 6px;
@@ -343,7 +343,7 @@
   padding: 2px 10px;
   font-size: 11px;
   font-weight: 600;
-  color: #FF8C42;
+  color: var(--color-primary);
   background: #fff5ee;
   border-radius: 10px;
   animation: pulse 1.5s ease-in-out infinite;

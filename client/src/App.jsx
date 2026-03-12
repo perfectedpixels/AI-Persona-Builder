@@ -9,6 +9,9 @@ function App() {
 
   return (
     <div className="App">
+      <header className="app-header">
+        <h1 className="app-title">Try Demo – Museum Tour App</h1>
+      </header>
       <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
       
       {activeTab === 'conversation-maker' && <ConversationEditor />}

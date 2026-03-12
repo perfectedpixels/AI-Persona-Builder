@@ -103,7 +103,7 @@ const DialControl = ({ label, value, onChange, min = 0, max = 100, lowLabel = 'L
           {ticks}
           {/* Filled arc */}
           {arcPath && (
-            <path d={arcPath} fill="none" stroke="#FF8C42" strokeWidth="3" strokeLinecap="round" />
+            <path d={arcPath} fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
           )}
           {/* Pointer indicator */}
           <line
