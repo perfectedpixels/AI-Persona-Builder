@@ -140,22 +140,20 @@ router.post('/refresh-conversations', async (req, res) => {
   }
 });
 
-// Export updated agent framework
+// Export updated agent framework (returns JSON; client builds zip to avoid binary encoding issues)
 router.post('/export-framework', async (req, res) => {
   try {
     const { processedData, agentControls, conversations } = req.body;
-    
+
     console.log('Exporting updated framework...');
-    
-    const zipStream = await exportFramework({
+
+    const { personaDoc, steeringDoc } = await exportFramework({
       processedData,
       agentControls,
       conversations
     });
-    
-    res.setHeader('Content-Type', 'application/zip');
-    res.setHeader('Content-Disposition', 'attachment; filename="agent-persona-export.zip"');
-    zipStream.pipe(res);
+
+    res.json({ personaDoc, steeringDoc });
   } catch (error) {
     console.error('Error exporting framework:', error);
     res.status(500).json({ error: error.message });

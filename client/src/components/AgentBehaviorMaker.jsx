@@ -248,7 +248,7 @@ const AgentBehaviorMaker = () => {
     try {
       const response = await fetchWithTimeout(`${API_URL}/api/abm/export-framework`, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/zip' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           processedData,
           agentControls,
@@ -261,14 +261,16 @@ const AgentBehaviorMaker = () => {
         throw new Error(err.error || 'Export failed');
       }
 
-      const contentType = response.headers.get('Content-Type') || '';
-      const blob = await response.blob();
-      if (!contentType.includes('zip') && blob.size < 100) {
-        const text = await blob.text();
-        if (text.startsWith('{') || text.startsWith('<')) {
-          throw new Error('Server returned an error instead of a zip file. Check console.');
-        }
+      const { personaDoc, steeringDoc } = await response.json();
+      if (!personaDoc || !steeringDoc) {
+        throw new Error('Invalid export response');
       }
+
+      const JSZip = (await import('jszip')).default;
+      const zip = new JSZip();
+      zip.file('updated-persona.md', personaDoc);
+      zip.file('ai-persona-steering.md', steeringDoc);
+      const blob = await zip.generateAsync({ type: 'blob' });
 
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');

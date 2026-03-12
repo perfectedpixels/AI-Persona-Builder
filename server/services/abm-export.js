@@ -1,6 +1,3 @@
-const archiver = require('archiver');
-const { PassThrough } = require('stream');
-
 function buildPersonaDoc({ processedData, agentControls, conversations }) {
   const p = processedData?.persona || {};
   const a = processedData?.agent || {};
@@ -144,16 +141,7 @@ async function exportFramework({ processedData, agentControls, conversations }) 
   const personaDoc = buildPersonaDoc({ processedData, agentControls, conversations });
   const steeringDoc = buildSteeringDoc({ processedData, agentControls, conversations });
 
-  // Create a ZIP archive with both files
-  const passthrough = new PassThrough();
-  const archive = archiver('zip', { zlib: { level: 9 } });
-
-  archive.pipe(passthrough);
-  archive.append(personaDoc, { name: 'updated-persona.md' });
-  archive.append(steeringDoc, { name: 'ai-persona-steering.md' });
-  archive.finalize();
-
-  return passthrough;
+  return { personaDoc, steeringDoc };
 }
 
 module.exports = {
