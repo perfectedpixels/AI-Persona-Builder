@@ -42,6 +42,19 @@ function ensureKeyGuidelines(processedData) {
   return fallback.length > 0 ? fallback : guidelines.length > 0 ? guidelines : ['Stay within the product domain from the documents'];
 }
 
+/**
+ * Build control instructions. Each control affects ONLY its own behavior criterion.
+ * No control supersedes or duplicates another.
+ *
+ * Control → Behavior scope:
+ * - tone: Attitude/voice (professional, friendly, etc.) — NOT language register
+ * - formality: Language register (casual ↔ formal) — contractions, slang, salutations
+ * - verbosity: Response length and detail level
+ * - empathy: Whether to acknowledge feelings before solving
+ * - proactivity: Whether to suggest next steps unsolicited
+ * - creativity: Whether to offer novel/creative alternatives
+ * - technicalDepth: Jargon vs plain language
+ */
 function buildControlInstructions(agentControls) {
   const c = agentControls || {};
   const num = (v, def) => (v === undefined || v === null ? def : Math.max(0, Math.min(100, Number(v))));
@@ -53,27 +66,43 @@ function buildControlInstructions(agentControls) {
   const creativity = num(c.creativity, 50);
   const technicalDepth = num(c.technicalDepth, 50);
 
+  // Descriptions for summary only; rules below are the behavioral directives
   const formalityDesc = formality > 70 ? 'formal and polished' : formality > 40 ? 'conversational but professional' : 'casual and relaxed';
   const verbosityDesc = verbosity > 70 ? 'thorough and detailed' : verbosity > 40 ? 'balanced' : 'concise and to the point';
-  const empathyDesc = empathy > 70 ? 'highly empathetic — acknowledge feelings before solving' : empathy > 40 ? 'warm but solution-focused' : 'direct and efficient';
-  const proactivityDesc = proactivity > 70 ? 'proactively suggest next steps and related topics' : proactivity > 40 ? 'offer suggestions when relevant' : 'respond only to what is asked';
-  const creativityDesc = creativity > 70 ? 'creative and exploratory' : creativity > 40 ? 'balanced — proven methods with occasional alternatives' : 'conservative — stick to established patterns';
-  const techDesc = technicalDepth > 70 ? 'deep technical detail with jargon for experts' : technicalDepth > 40 ? 'moderate depth — explain when needed' : 'minimal jargon — plain language only';
+  const empathyDesc = empathy > 70 ? 'highly empathetic' : empathy > 40 ? 'warm but solution-focused' : 'direct and efficient';
+  const proactivityDesc = proactivity > 70 ? 'proactive' : proactivity > 40 ? 'balanced' : 'reactive';
+  const creativityDesc = creativity > 70 ? 'creative and exploratory' : creativity > 40 ? 'balanced' : 'conservative';
+  const techDesc = technicalDepth > 70 ? 'deep technical' : technicalDepth > 40 ? 'moderate depth' : 'plain language';
 
-  const toneDesc = tone === 'youthful'
-    ? 'Sound Gen Z/Young Millennial: use casual phrasing, relatable slang (e.g. lowkey, vibe, no cap, legit, slay), short punchy sentences, and a conversational, approachable tone. Avoid corporate jargon.'
-    : `Tone: ${tone}. Formality: ${formalityDesc}.`;
+  // Tone: attitude/voice only — does NOT include formality (that's a separate control)
+  const toneRule = tone === 'youthful'
+    ? 'TONE: Sound Gen Z/Young Millennial — relatable, approachable, short punchy sentences. Avoid corporate jargon.'
+    : `TONE: Use a ${tone} attitude and voice.`;
 
+  // Each control gets exactly one rule. Threshold 50: above = high behavior, below = low.
   const rules = [
-    toneDesc,
-    empathy > 60 ? 'Acknowledge the user\'s situation or feelings before jumping to solutions.' : 'Be direct and get to the solution quickly.',
-    proactivity > 60 ? 'After answering, suggest a logical next step or related topic.' : 'Answer only what is asked. No unsolicited additions.',
-    verbosity > 60 ? 'Provide thorough explanations with examples when helpful.' : 'Keep responses SHORT. Use bullet points over paragraphs.',
-    technicalDepth > 60 ? 'Use domain-specific terminology appropriate for the user.' : 'Avoid jargon. Explain everything in plain language.',
-    creativity > 60 ? 'Offer creative alternatives and novel approaches when appropriate.' : 'Stick to proven, conventional approaches.'
+    toneRule,
+    formality > 50
+      ? 'FORMALITY: Use formal language — polished phrasing, avoid contractions and slang.'
+      : 'FORMALITY: Use casual, relaxed language — contractions and conversational phrasing are fine.',
+    verbosity > 50
+      ? 'VERBOSITY: Provide thorough explanations with examples when helpful.'
+      : 'VERBOSITY: Keep responses SHORT. Use bullet points over paragraphs.',
+    empathy > 50
+      ? 'EMPATHY: Acknowledge the user\'s situation or feelings before jumping to solutions.'
+      : 'EMPATHY: Be direct and get to the solution quickly.',
+    proactivity > 50
+      ? 'PROACTIVITY: After answering, suggest a logical next step or related topic.'
+      : 'PROACTIVITY: Answer only what is asked. No unsolicited additions.',
+    creativity > 50
+      ? 'CREATIVITY: Offer creative alternatives and novel approaches when appropriate.'
+      : 'CREATIVITY: Stick to proven, conventional approaches.',
+    technicalDepth > 50
+      ? 'TECHNICAL DEPTH: Use domain-specific terminology appropriate for the user.'
+      : 'TECHNICAL DEPTH: Avoid jargon. Explain everything in plain language.'
   ];
 
-  const toneSummary = tone === 'youthful' ? 'Youthful (Gen Z/Young Millennial)' : tone;
+  const toneSummary = tone === 'youthful' ? 'Youthful (Gen Z)' : tone;
   return {
     summary: `Tone: ${toneSummary} | Formality: ${formalityDesc} | Verbosity: ${verbosityDesc} | Empathy: ${empathyDesc} | Proactivity: ${proactivityDesc} | Creativity: ${creativityDesc} | Technical: ${techDesc}`,
     rules

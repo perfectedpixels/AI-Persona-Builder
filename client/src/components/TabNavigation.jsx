@@ -10,12 +10,7 @@ const TabNavigation = ({ activeTab, onTabChange }) => {
       >
         🤖 Agent Behavior Maker
       </button>
-      <button
-        className={`tab-button ${activeTab === 'conversation-maker' ? 'active' : ''}`}
-        onClick={() => onTabChange('conversation-maker')}
-      >
-        🎭 Conversation Maker
-      </button>
+      {/* Conversation Maker tab disabled for now */}
     </div>
   );
 };

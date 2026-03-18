@@ -1,19 +1,27 @@
 .App {
+  position: relative;
   min-height: 100vh;
   background-color: var(--color-background);
 }
 
-.app-header {
-  background: var(--color-primary);
-  color: white;
-  padding: 16px 24px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+/* Mascot: bottom right, flipped horizontally, 3/4 visible */
+.App::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  right: -70px;
+  width: 280px;
+  height: 320px;
+  background-image: url('/abm-mascot.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: scaleX(-1);
+  pointer-events: none;
+  z-index: 0;
 }
 
-.app-title {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+.App > * {
+  position: relative;
+  z-index: 1;
 }
+

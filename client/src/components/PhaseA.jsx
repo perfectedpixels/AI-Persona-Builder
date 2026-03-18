@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
 import './PhaseA.css';
 import MUSEPILOT_SAMPLE from '../data/musepilot-sample';
+import PHASE_A_HELP from '../data/phase-a-help';
 
 const PhaseA = ({ onSubmit, isProcessing }) => {
+  const [showHelpModal, setShowHelpModal] = useState(false);
   const [documents, setDocuments] = useState({
     productProposal: { type: 'text', content: '', file: null, url: '' },
     userPersona: { type: 'text', content: '', file: null, url: '' },
@@ -191,7 +194,10 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
     <div className="phase-a">
       <div className="phase-header">
         <h2>Phase A: Submit Materials</h2>
-        <p>Provide the three documents that define your product and agent</p>
+        <p>
+          Provide the three documents that define your product and agent.{' '}
+          <button type="button" className="learn-more-link" onClick={() => setShowHelpModal(true)}>Learn more</button>
+        </p>
         <button
           className="demo-button"
           onClick={loadDemo}
@@ -226,6 +232,47 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
       >
         {isProcessing ? '⏳ Processing...' : '🚀 Generate Scenarios'}
       </button>
+
+      {showHelpModal && createPortal(
+        <div className="help-modal-overlay" onClick={() => setShowHelpModal(false)}>
+          <div className="help-modal" onClick={e => e.stopPropagation()}>
+            <div className="help-modal-header">
+              <h2>{PHASE_A_HELP.title}</h2>
+              <button
+                type="button"
+                className="help-modal-close"
+                onClick={() => setShowHelpModal(false)}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+            <div className="help-modal-body">
+              {PHASE_A_HELP.sections.map(section => (
+                <section key={section.id} className="help-section">
+                  <h3>{section.title}</h3>
+                  <p className="help-section-desc">{section.description}</p>
+                  {section.tips.map((tip, i) => (
+                    <div key={i} className="help-tip">
+                      <h4>{tip.heading}</h4>
+                      <p>{tip.text}</p>
+                    </div>
+                  ))}
+                </section>
+              ))}
+              <div className="help-general">
+                <h3>General tips</h3>
+                <ul>
+                  {PHASE_A_HELP.generalTips.map((tip, i) => (
+                    <li key={i}>{tip}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
     </div>
   );
 };
