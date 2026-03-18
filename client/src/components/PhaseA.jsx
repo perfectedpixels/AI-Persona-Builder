@@ -203,7 +203,7 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
           onClick={loadDemo}
           disabled={isProcessing}
         >
-          🎨 Try Demo — MusePilot
+          🎨 Try Demo — Museum Tour Guide
         </button>
       </div>
 

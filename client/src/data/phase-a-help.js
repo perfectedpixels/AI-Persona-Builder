@@ -90,7 +90,7 @@ const PHASE_A_HELP = {
     'Use .txt files or paste plain text. PDF/DOCX are not supported—paste content instead.',
     'Longer, richer documents produce better scenarios. Aim for 500–2000 words per document.',
     'Ensure the three documents are consistent—persona needs should align with product value and agent capabilities.',
-    'Click "Try Demo — MusePilot" to load a complete example you can edit or use as a template.'
+    'Click "Try Demo — Museum Tour Guide" to load a complete example you can edit or use as a template.'
   ]
 };
 
