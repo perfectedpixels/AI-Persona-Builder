@@ -1,7 +1,7 @@
 .App {
   position: relative;
   min-height: 100vh;
-  background-color: var(--color-background);
+  background-color: var(--rad-bg-page);
 }
 
 /* Mascot: bottom right, flipped horizontally, 3/4 visible */
@@ -18,10 +18,10 @@
   transform: scaleX(-1);
   pointer-events: none;
   z-index: 0;
+  opacity: 0.6;
 }
 
 .App > * {
   position: relative;
   z-index: 1;
 }
-

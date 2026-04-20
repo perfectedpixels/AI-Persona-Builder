@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
 import './PhaseA.css';
 import MUSEPILOT_SAMPLE from '../data/musepilot-sample';
 import PHASE_A_HELP from '../data/phase-a-help';
 
 const PhaseA = ({ onSubmit, isProcessing }) => {
-  const [showHelpModal, setShowHelpModal] = useState(false);
+  const [fileError, setFileError] = useState(null);
   const [documents, setDocuments] = useState({
     productProposal: { type: 'text', content: '', file: null, url: '' },
     userPersona: { type: 'text', content: '', file: null, url: '' },
@@ -13,6 +12,7 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
   });
 
   const handleInputTypeChange = (docType, inputType) => {
+    setFileError(null);
     setDocuments(prev => ({
       ...prev,
       [docType]: { ...prev[docType], type: inputType, content: '', file: null, url: '' }
@@ -56,24 +56,22 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
   };
 
   const handleSubmit = async () => {
-    // Read file contents if files were uploaded
+    setFileError(null);
     const processedDocs = {};
-    
+
     for (const [docType, doc] of Object.entries(documents)) {
       if (doc.type === 'file' && doc.file) {
-        // Reject binary formats that can't be read as plain text
         const ext = doc.file.name.split('.').pop().toLowerCase();
         if (['doc', 'docx', 'pdf'].includes(ext)) {
-          alert(`"${doc.file.name}" is a ${ext.toUpperCase()} file. Please paste the text content directly or upload a .txt file instead.`);
+          setFileError(`"${doc.file.name}" is ${ext.toUpperCase()}. Paste text or use a .txt file.`);
           return;
         }
         try {
           const text = await readFileAsText(doc.file);
-          // Strip the File object — it's not serializable and the server doesn't need it
           processedDocs[docType] = { type: doc.type, content: text, url: '' };
         } catch (error) {
           console.error(`Error reading file for ${docType}:`, error);
-          alert(`Failed to read file: ${doc.file.name}`);
+          setFileError(`Failed to read file: ${doc.file.name}`);
           return;
         }
       } else {
@@ -116,29 +114,22 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
 
     return (
       <div className="document-section">
-        <h3>{title}</h3>
-        <p className="doc-description">{description}</p>
-
-        <div className="input-type-selector">
-          <button
-            className={`type-btn ${doc.type === 'text' ? 'active' : ''}`}
-            onClick={() => handleInputTypeChange(docType, 'text')}
-          >
-            📝 Paste Text
-          </button>
-          <button
-            className={`type-btn ${doc.type === 'file' ? 'active' : ''}`}
-            onClick={() => handleInputTypeChange(docType, 'file')}
-          >
-            📄 Upload File
-          </button>
-          <button
-            className={`type-btn ${doc.type === 'url' ? 'active' : ''}`}
-            onClick={() => handleInputTypeChange(docType, 'url')}
-          >
-            🔗 Google Doc URL
-          </button>
+        <div className="document-section-head">
+          <h3>{title}</h3>
+          <label className="input-mode-label">
+            <span className="input-mode-label-text">Provide as</span>
+            <select
+              className="input-mode-select"
+              value={doc.type}
+              onChange={(e) => handleInputTypeChange(docType, e.target.value)}
+            >
+              <option value="text">Paste text</option>
+              <option value="file">Upload .txt</option>
+              <option value="url">Google Doc URL</option>
+            </select>
+          </label>
         </div>
+        <p className="doc-description">{description}</p>
 
         {doc.type !== 'none' && (
           <>
@@ -193,11 +184,35 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
   return (
     <div className="phase-a">
       <div className="phase-header">
-        <h2>Phase A: Submit Materials</h2>
+        <h2>1. Documents</h2>
         <p>
-          Provide the three documents that define your product and agent.{' '}
-          <button type="button" className="learn-more-link" onClick={() => setShowHelpModal(true)}>Learn more</button>
+          Add three inputs: product proposal, user persona, and agent framework.
         </p>
+        <details className="phase-a-help-details">
+          <summary className="phase-a-help-summary">What should I put in each field?</summary>
+          <div className="phase-a-help-body">
+            {PHASE_A_HELP.sections.map(section => (
+              <section key={section.id} className="help-section">
+                <h3>{section.title}</h3>
+                <p className="help-section-desc">{section.description}</p>
+                {section.tips.map((tip, i) => (
+                  <div key={i} className="help-tip">
+                    <h4>{tip.heading}</h4>
+                    <p>{tip.text}</p>
+                  </div>
+                ))}
+              </section>
+            ))}
+            <div className="help-general">
+              <h3>General tips</h3>
+              <ul>
+                {PHASE_A_HELP.generalTips.map((tip, i) => (
+                  <li key={i}>{tip}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </details>
         <button
           className="demo-button"
           onClick={loadDemo}
@@ -225,6 +240,13 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
         'Define your LLM agent (AgentLLM) - personality, tone, capabilities, tools'
       )}
 
+      {fileError && (
+        <div className="phase-a-inline-error" role="alert">
+          {fileError}
+          <button type="button" className="phase-a-inline-error-dismiss" onClick={() => setFileError(null)} aria-label="Dismiss">×</button>
+        </div>
+      )}
+
       <button
         className="submit-button"
         onClick={handleSubmit}
@@ -232,47 +254,6 @@ const PhaseA = ({ onSubmit, isProcessing }) => {
       >
         {isProcessing ? '⏳ Processing...' : '🚀 Generate Scenarios'}
       </button>
-
-      {showHelpModal && createPortal(
-        <div className="help-modal-overlay" onClick={() => setShowHelpModal(false)}>
-          <div className="help-modal" onClick={e => e.stopPropagation()}>
-            <div className="help-modal-header">
-              <h2>{PHASE_A_HELP.title}</h2>
-              <button
-                type="button"
-                className="help-modal-close"
-                onClick={() => setShowHelpModal(false)}
-                aria-label="Close"
-              >
-                ×
-              </button>
-            </div>
-            <div className="help-modal-body">
-              {PHASE_A_HELP.sections.map(section => (
-                <section key={section.id} className="help-section">
-                  <h3>{section.title}</h3>
-                  <p className="help-section-desc">{section.description}</p>
-                  {section.tips.map((tip, i) => (
-                    <div key={i} className="help-tip">
-                      <h4>{tip.heading}</h4>
-                      <p>{tip.text}</p>
-                    </div>
-                  ))}
-                </section>
-              ))}
-              <div className="help-general">
-                <h3>General tips</h3>
-                <ul>
-                  {PHASE_A_HELP.generalTips.map((tip, i) => (
-                    <li key={i}>{tip}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>,
-        document.body
-      )}
     </div>
   );
 };

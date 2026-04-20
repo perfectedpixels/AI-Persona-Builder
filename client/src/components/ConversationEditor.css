@@ -5,7 +5,7 @@
 }
 
 .editor-header {
-  background: var(--color-white);
+  background: var(--rad-bg-container);
   padding: var(--spacing-md) var(--spacing-lg);
   display: flex;
   justify-content: space-between;
@@ -19,14 +19,14 @@
 .header-left h1 {
   font-size: 24px;
   margin: 0;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
 }
 
 .btn-new-conversation {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
-  background: var(--color-orange-primary);
+  background: var(--rad-accent-orange);
   color: var(--color-white);
   border: none;
   border-radius: var(--radius-sm);
@@ -44,16 +44,16 @@
 }
 
 .theme-toggle {
-  background: var(--color-white);
-  border: 1px solid var(--color-light-gray);
+  background: var(--rad-bg-container);
+  border: 1px solid var(--rad-border);
   border-radius: var(--radius-lg);
   padding: 8px 16px;
   font-size: 14px;
-  color: var(--color-dark-gray);
+  color: var(--rad-text-primary);
 }
 
 .theme-toggle:hover {
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
 }
 
 .editor-layout {
@@ -108,7 +108,7 @@
 .config-panel h2 {
   font-size: 18px;
   margin-bottom: var(--spacing-md);
-  color: var(--color-black);
+  color: var(--rad-text-primary);
 }
 
 /* Responsive Design */

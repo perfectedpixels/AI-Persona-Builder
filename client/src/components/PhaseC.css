@@ -1,41 +1,47 @@
 .phase-c {
-  background: var(--color-surface);
+  background: var(--rad-bg-container);
   border-radius: var(--radius-md);
   padding: 20px;
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--rad-border);
   overflow-y: auto;
   max-height: calc(100vh - 200px);
   position: sticky;
   top: 20px;
+  animation: fadeIn 0.35s ease-out 0.2s both;
 }
 
 .phase-header {
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--rad-border);
 }
 
 .phase-header h2 {
   font-size: 20px;
-  color: var(--color-foreground);
+  color: var(--rad-text-primary);
   margin-bottom: 8px;
+  font-weight: 400;
+  font-family: 'Bookerly', 'Georgia', serif;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 
 .phase-header p {
-  font-size: 14px;
-  color: var(--color-foreground-secondary);
+  font-size: 13px;
+  color: var(--rad-text-secondary);
 }
 
 .empty-state {
   text-align: center;
   padding: 60px 20px;
-  color: #999;
+  color: var(--rad-text-tertiary);
 }
 
 .empty-icon {
   font-size: 64px;
   margin-bottom: 20px;
+  opacity: 0.6;
 }
 
 .controls-list {
@@ -52,32 +58,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  color: var(--color-foreground-secondary);
+  font-size: 13px;
+  color: var(--rad-text-secondary);
   margin-bottom: 6px;
   font-weight: 500;
 }
 
 .control-value {
   font-size: 12px;
-  color: var(--color-primary);
+  color: var(--rad-accent-orange);
   font-weight: 600;
 }
 
 .control-select {
   width: 100%;
   padding: 8px 12px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--rad-border);
   border-radius: var(--radius-sm);
   font-size: 14px;
-  background: var(--color-surface);
+  background: var(--rad-bg-input);
+  color: var(--rad-text-primary);
   cursor: pointer;
   transition: border-color 0.2s;
 }
 
 .control-select:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .export-button.compact {
@@ -85,20 +92,22 @@
   padding: 10px;
   font-size: 13px;
   font-weight: 600;
-  background: var(--color-primary);
-  color: white;
+  background: var(--rad-accent-orange);
+  color: #ffffff;
   border: none;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s;
   margin-top: 10px;
 }
 
 .export-button.compact:hover:not(:disabled) {
-  background: var(--color-primary-hover);
+  background: #d9551b;
+  box-shadow: var(--shadow-glow-orange);
 }
 
 .export-button.compact:disabled {
-  background: var(--color-border);
+  background: var(--rad-border-strong);
+  color: var(--rad-text-tertiary);
   cursor: not-allowed;
 }

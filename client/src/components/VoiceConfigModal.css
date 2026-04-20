@@ -13,7 +13,7 @@
 }
 
 .modal-content {
-  background: var(--color-white);
+  background: var(--rad-bg-container);
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   max-width: 600px;
@@ -28,13 +28,13 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-lg);
-  border-bottom: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--rad-border);
 }
 
 .modal-header h2 {
   margin: 0;
   font-size: 20px;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
 }
 
 .modal-body {
@@ -49,7 +49,7 @@
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-xl);
   padding-bottom: var(--spacing-lg);
-  border-bottom: 2px solid var(--color-light-gray);
+  border-bottom: 2px solid var(--rad-border);
 }
 
 .speaker-color-dot {
@@ -64,27 +64,27 @@
   font-size: 18px;
   font-weight: 600;
   padding: var(--spacing-sm) var(--spacing-md);
-  border: 2px solid var(--color-light-gray);
+  border: 2px solid var(--rad-border);
   border-radius: var(--radius-sm);
   transition: border-color 0.2s;
 }
 
 .speaker-name-field:focus {
   outline: none;
-  border-color: var(--color-orange-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .speaker-context-section {
   margin-bottom: var(--spacing-xl);
   padding-bottom: var(--spacing-lg);
-  border-bottom: 2px solid var(--color-light-gray);
+  border-bottom: 2px solid var(--rad-border);
 }
 
 .context-label {
   display: block;
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -93,7 +93,7 @@
   font-size: 14px;
   font-family: inherit;
   padding: var(--spacing-sm) var(--spacing-md);
-  border: 2px solid var(--color-light-gray);
+  border: 2px solid var(--rad-border);
   border-radius: var(--radius-sm);
   transition: border-color 0.2s;
   resize: vertical;
@@ -102,12 +102,12 @@
 
 .speaker-context-field:focus {
   outline: none;
-  border-color: var(--color-orange-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .context-hint {
   font-size: 12px;
-  color: var(--color-gray);
+  color: var(--rad-text-tertiary);
   margin-top: var(--spacing-xs);
   font-style: italic;
 }
@@ -117,8 +117,8 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-lg);
-  border-top: 1px solid var(--color-light-gray);
-  background: var(--color-background);
+  border-top: 1px solid var(--rad-border);
+  background: var(--rad-bg-surface);
 }
 
 .modal-footer-right {
@@ -128,8 +128,8 @@
 
 .btn-delete {
   background: transparent;
-  border: 1px solid #D32F2F;
-  color: #D32F2F;
+  border: 1px solid var(--rad-error);
+  color: var(--rad-error);
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-sm);
   font-size: 14px;
@@ -138,7 +138,7 @@
 }
 
 .btn-delete:hover {
-  background: #D32F2F;
+  background: var(--rad-error);
   color: var(--color-white);
 }
 

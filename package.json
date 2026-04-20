@@ -7,11 +7,9 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server/index.js",
     "client": "cd client && npm start",
-    "build": "cd client && npm run build && cd .. && npm run postbuild",
+    "build": "cd client && npm run build",
     "start": "node server/index.js",
     "install-all": "npm install && cd client && npm install",
-    "postbuild": "mkdir -p public && cp -r client/build/* public/ 2>/dev/null || true",
-    "eb-postinstall": "cd client && npm install && npm run build && cd .. && npm run postbuild",
     "test": "cd server && npm test && cd ../client && npm test",
     "check-secrets": "bash check-secrets.sh",
     "precommit": "npm run check-secrets"
@@ -23,7 +21,6 @@
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "fluent-ffmpeg": "^2.1.2",
-    "serverless-http": "^3.2.0",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

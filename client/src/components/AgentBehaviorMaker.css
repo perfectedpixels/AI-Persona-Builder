@@ -1,23 +1,67 @@
 .agent-behavior-maker {
-  padding: 20px;
-  max-width: 1800px;
+  padding: 24px;
+  max-width: 1430px;
   margin: 0 auto;
+  animation: fadeIn 0.4s ease-out;
 }
 
 .abm-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .abm-header h1 {
-  font-size: 24px;
-  color: var(--color-foreground);
+  font-size: 2.2em;
+  color: var(--rad-text-primary);
   margin-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  font-family: 'Ember Modern Display', system-ui, sans-serif;
 }
 
 .abm-header p {
   font-size: 14px;
-  color: var(--color-foreground-secondary);
+  color: var(--rad-text-secondary);
+}
+
+.abm-controls-refresh-chip {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 14px 0;
+  padding: 8px 14px;
+  background: var(--rad-bg-container);
+  border: 1px solid var(--rad-accent-orange);
+  border-radius: 999px;
+  box-shadow: var(--shadow-glow-orange);
+  width: fit-content;
+  max-width: 100%;
+}
+
+.abm-controls-refresh-chip .chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--rad-accent-orange);
+  flex-shrink: 0;
+}
+
+.abm-controls-refresh-chip .chip-dot--pulse {
+  animation: chip-pulse 1s ease-in-out infinite;
+}
+
+@keyframes chip-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.abm-controls-refresh-chip .chip-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rad-text-primary);
 }
 
 .abm-container {
@@ -31,6 +75,6 @@
 @media (max-width: 1400px) {
   .abm-container {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 24px;
   }
 }

@@ -10,7 +10,7 @@
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--color-medium-gray);
+  color: var(--rad-text-tertiary);
   margin-bottom: var(--spacing-sm);
 }
 
@@ -24,7 +24,7 @@
 }
 
 .conversation-name:hover {
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
 }
 
 .conversation-name-input {
@@ -57,7 +57,7 @@
 }
 
 .speaker-item:hover {
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
 }
 
 .speaker-color {
@@ -77,9 +77,9 @@
   flex: 1;
   font-weight: 500;
   padding: 4px 8px;
-  border: 1px solid var(--color-orange-primary);
+  border: 1px solid var(--rad-accent-orange);
   border-radius: var(--radius-sm);
-  background: white;
+  background: var(--rad-bg-container);
 }
 
 .add-speaker {
@@ -102,7 +102,7 @@
   flex-direction: column;
   gap: var(--spacing-md);
   padding-top: var(--spacing-md);
-  border-top: 1px solid var(--color-light-gray);
+  border-top: 1px solid var(--rad-border);
 }
 
 .btn-full {

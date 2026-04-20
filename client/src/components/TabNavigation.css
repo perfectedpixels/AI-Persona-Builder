@@ -1,8 +1,8 @@
 .tab-navigation {
   display: flex;
   gap: 0;
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
+  background: var(--rad-bg-container);
+  border-bottom: 1px solid var(--rad-border);
   padding: 0;
   margin-bottom: 0;
 }
@@ -12,21 +12,21 @@
   padding: 12px 24px;
   font-size: 14px;
   font-weight: 600;
-  background: var(--color-surface);
+  background: var(--rad-bg-container);
   border: none;
   border-bottom: 2px solid transparent;
   cursor: pointer;
   transition: all 0.2s ease;
-  color: var(--color-foreground-secondary);
+  color: var(--rad-text-secondary);
 }
 
 .tab-button:hover {
-  background: var(--color-surface-hover);
-  color: var(--color-foreground);
+  background: var(--rad-bg-hover);
+  color: var(--rad-text-primary);
 }
 
 .tab-button.active {
-  background: var(--color-surface);
-  color: var(--color-primary);
-  border-bottom-color: var(--color-primary);
+  background: var(--rad-bg-container);
+  color: var(--rad-accent-orange);
+  border-bottom-color: var(--rad-accent-orange);
 }

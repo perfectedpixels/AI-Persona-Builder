@@ -11,7 +11,7 @@
 .playback-manager h3 {
   font-size: 16px;
   margin: 0 0 var(--spacing-sm) 0;
-  color: var(--color-dark-gray);
+  color: var(--rad-text-primary);
 }
 
 /* Info Section */
@@ -19,7 +19,7 @@
   display: flex;
   gap: var(--spacing-lg);
   padding: var(--spacing-md);
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
   border-radius: var(--radius-sm);
 }
 
@@ -31,7 +31,7 @@
 
 .info-label {
   font-size: 12px;
-  color: var(--color-medium-gray);
+  color: var(--rad-text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -39,21 +39,21 @@
 .info-value {
   font-size: 24px;
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
 }
 
 /* Timeline */
 .timeline-section {
   padding: var(--spacing-md) 0;
-  border-top: 1px solid var(--color-light-gray);
-  border-bottom: 1px solid var(--color-light-gray);
+  border-top: 1px solid var(--rad-border);
+  border-bottom: 1px solid var(--rad-border);
 }
 
 .timeline {
   display: flex;
   gap: 2px;
   height: 40px;
-  background: var(--color-light-gray);
+  background: var(--rad-border);
   border-radius: var(--radius-sm);
   overflow: hidden;
 }
@@ -96,8 +96,8 @@
 
 .btn-control {
   padding: var(--spacing-md) var(--spacing-lg);
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--rad-text-primary);
+  color: var(--rad-bg-container);
   border: none;
   border-radius: var(--radius-sm);
   font-size: 16px;
@@ -112,7 +112,7 @@
 }
 
 .btn-control:hover:not(:disabled) {
-  background: var(--color-orange-primary);
+  background: var(--rad-accent-orange);
   transform: translateY(-2px);
 }
 
@@ -129,22 +129,22 @@
   gap: var(--spacing-sm);
   margin-top: var(--spacing-md);
   padding: var(--spacing-sm);
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
   border-radius: var(--radius-sm);
-  color: var(--color-dark-gray);
+  color: var(--rad-text-secondary);
   font-size: 14px;
 }
 
 /* Current Line Display */
 .current-line-display {
   padding: var(--spacing-md) 0;
-  border-top: 1px solid var(--color-light-gray);
+  border-top: 1px solid var(--rad-border);
 }
 
 .current-line {
   padding: var(--spacing-md);
-  background: var(--color-background);
-  border-left: 4px solid var(--color-orange-primary);
+  background: var(--rad-bg-surface);
+  border-left: 4px solid var(--rad-accent-orange);
   border-radius: var(--radius-sm);
 }
 
@@ -163,11 +163,11 @@
 
 .speaker-name {
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
 }
 
 .current-text {
-  color: var(--color-dark-gray);
+  color: var(--rad-text-secondary);
   line-height: 1.6;
   font-size: 16px;
 }

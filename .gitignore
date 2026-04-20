@@ -1,7 +1,5 @@
 # Dependencies
 node_modules/
-client/node_modules/
-server/node_modules/
 
 # Environment variables
 .env
@@ -38,21 +36,21 @@ coverage/
 .DS_Store
 Thumbs.db
 
-# Amplify
-amplify/
-.amplifyrc
-
-# Elastic Beanstalk
-.elasticbeanstalk/
-*.zip
-
 # Temporary files
 temp/
 tmp/
 *.tmp
+
+# Build artifacts
+*.tar.gz
+*.zip
+*.pem
 
 # Audio files (generated)
 *.mp3
 *.wav
 !client/public/*.mp3
 !client/public/*.wav
+
+# Vercel
+.vercel

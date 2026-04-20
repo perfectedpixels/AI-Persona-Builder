@@ -11,7 +11,7 @@
 .voice-configurator h3 {
   font-size: 16px;
   margin: 0 0 var(--spacing-md) 0;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -26,7 +26,7 @@
 
 .config-section {
   padding-bottom: var(--spacing-md);
-  border-bottom: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--rad-border);
 }
 
 .config-section:last-child {
@@ -36,7 +36,7 @@
 .config-label {
   display: block;
   font-weight: 600;
-  color: var(--color-dark-gray);
+  color: var(--rad-text-secondary);
   margin-bottom: var(--spacing-sm);
   font-size: 14px;
 }
@@ -50,9 +50,9 @@
 .voice-select {
   flex: 1;
   padding: var(--spacing-sm) var(--spacing-md);
-  border: 1px solid var(--color-light-gray);
+  border: 1px solid var(--rad-border);
   border-radius: var(--radius-sm);
-  background: var(--color-white);
+  background: var(--rad-bg-container);
   font-size: 14px;
   cursor: pointer;
   transition: border-color 0.2s ease;
@@ -60,7 +60,7 @@
 
 .btn-preview {
   padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--color-orange-primary);
+  background: var(--rad-accent-orange);
   color: var(--color-white);
   border: none;
   border-radius: var(--radius-sm);
@@ -88,18 +88,18 @@
 }
 
 .voice-select:hover {
-  border-color: var(--color-orange-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .voice-select:focus {
   outline: none;
-  border-color: var(--color-orange-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .loading {
   padding: var(--spacing-md);
   text-align: center;
-  color: var(--color-medium-gray);
+  color: var(--rad-text-tertiary);
   font-size: 14px;
 }
 
@@ -114,12 +114,12 @@
   align-items: center;
   margin-bottom: var(--spacing-xs);
   font-size: 14px;
-  color: var(--color-dark-gray);
+  color: var(--rad-text-secondary);
 }
 
 .slider-value {
   font-weight: 600;
-  color: var(--color-orange-primary);
+  color: var(--rad-accent-orange);
   font-family: monospace;
 }
 
@@ -127,7 +127,7 @@
   width: 100%;
   height: 6px;
   border-radius: 3px;
-  background: var(--color-light-gray);
+  background: var(--rad-border);
   outline: none;
   -webkit-appearance: none;
   appearance: none;
@@ -139,7 +139,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--color-orange-primary);
+  background: var(--rad-accent-orange);
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -153,7 +153,7 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--color-orange-primary);
+  background: var(--rad-accent-orange);
   cursor: pointer;
   border: none;
   transition: all 0.2s ease;
@@ -166,7 +166,7 @@
 
 .slider-hint {
   font-size: 12px;
-  color: var(--color-medium-gray);
+  color: var(--rad-text-tertiary);
   margin-top: var(--spacing-xs);
   font-style: italic;
 }
@@ -182,22 +182,22 @@
   gap: var(--spacing-sm);
   cursor: pointer;
   font-size: 14px;
-  color: var(--color-dark-gray);
+  color: var(--rad-text-secondary);
 }
 
 .checkbox-group input[type="checkbox"] {
   width: 18px;
   height: 18px;
   cursor: pointer;
-  accent-color: var(--color-orange-primary);
+  accent-color: var(--rad-accent-orange);
 }
 
 /* Line Override Toggle */
 .line-override-toggle {
   padding: var(--spacing-md);
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
   border-radius: var(--radius-sm);
-  border: 2px solid var(--color-orange-primary);
+  border: 2px solid var(--rad-accent-orange);
 }
 
 .line-override-toggle label {
@@ -206,29 +206,29 @@
   gap: var(--spacing-sm);
   cursor: pointer;
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
 }
 
 .line-override-toggle input[type="checkbox"] {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: var(--color-orange-primary);
+  accent-color: var(--rad-accent-orange);
 }
 
 .override-info {
   padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--color-background);
-  border-left: 3px solid var(--color-orange-primary);
+  background: var(--rad-bg-surface);
+  border-left: 3px solid var(--rad-accent-orange);
   border-radius: var(--radius-sm);
   font-size: 14px;
-  color: var(--color-dark-gray);
+  color: var(--rad-text-secondary);
 }
 
 .empty-state {
   text-align: center;
   padding: var(--spacing-xl);
-  color: var(--color-medium-gray);
+  color: var(--rad-text-tertiary);
 }
 
 .empty-state p {

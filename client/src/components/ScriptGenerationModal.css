@@ -22,9 +22,9 @@
 }
 
 .modal-content {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background: var(--rad-bg-container);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
   max-width: 600px;
   width: 90%;
   max-height: 90vh;
@@ -50,14 +50,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px;
-  border-bottom: 1px solid #E5E5E5;
+  border-bottom: 1px solid var(--rad-border);
 }
 
 .modal-header h2 {
   margin: 0;
   font-size: 24px;
   font-weight: 600;
-  color: #1A1A1A;
+  color: var(--rad-text-primary);
 }
 
 .modal-body {
@@ -72,7 +72,7 @@
   justify-content: flex-end;
   gap: 12px;
   padding: 24px;
-  border-top: 1px solid #E5E5E5;
+  border-top: 1px solid var(--rad-border);
 }
 
 .form-group {
@@ -88,14 +88,14 @@
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: 600;
-  color: #1A1A1A;
+  color: var(--rad-text-primary);
 }
 
 .scenario-input {
   width: 100%;
   padding: 12px 16px;
-  border: 1px solid #E5E5E5;
-  border-radius: 8px;
+  border: 1px solid var(--rad-border);
+  border-radius: var(--radius-sm);
   font-size: 16px;
   font-family: inherit;
   resize: vertical;
@@ -104,18 +104,18 @@
 
 .scenario-input:focus {
   outline: none;
-  border-color: var(--color-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .scenario-input:disabled {
-  background: #F8F8F8;
+  background: var(--rad-bg-surface);
   cursor: not-allowed;
 }
 
 .help-text {
   margin-top: 8px;
   font-size: 12px;
-  color: #8E8E8E;
+  color: var(--rad-text-tertiary);
 }
 
 .speaker-count-buttons,
@@ -127,24 +127,24 @@
 .btn-option {
   flex: 1;
   padding: 12px 16px;
-  border: 2px solid #E5E5E5;
-  border-radius: 8px;
-  background: white;
+  border: 2px solid var(--rad-border);
+  border-radius: var(--radius-sm);
+  background: var(--rad-bg-container);
   font-size: 16px;
   font-weight: 600;
-  color: #4A4A4A;
+  color: var(--rad-text-secondary);
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .btn-option:hover:not(:disabled) {
-  border-color: var(--color-primary);
-  background: #FFF5EF;
+  border-color: var(--rad-accent-orange);
+  background: var(--rad-bg-hover);
 }
 
 .btn-option.active {
-  border-color: var(--color-primary);
-  background: var(--color-primary);
+  border-color: var(--rad-accent-orange);
+  background: var(--rad-accent-orange);
   color: white;
 }
 

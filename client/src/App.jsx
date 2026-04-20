@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { ThemeProvider, LayoutConfigProvider } from 'rad-ui-package';
 import './App.css';
-import TabNavigation from './components/TabNavigation';
 import AgentBehaviorMaker from './components/AgentBehaviorMaker';
 
 function App() {
-  const [activeTab, setActiveTab] = useState('agent-behavior-maker');
-
   return (
-    <div className="App">
-      <TabNavigation activeTab={activeTab} onTabChange={setActiveTab} />
-      {activeTab === 'agent-behavior-maker' && <AgentBehaviorMaker />}
-    </div>
+    <ThemeProvider>
+      <LayoutConfigProvider>
+        <div className="App">
+          <AgentBehaviorMaker />
+        </div>
+      </LayoutConfigProvider>
+    </ThemeProvider>
   );
 }
 

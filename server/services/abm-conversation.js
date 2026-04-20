@@ -44,20 +44,15 @@ function ensureKeyGuidelines(processedData) {
 
 /**
  * Build control instructions. Each control affects ONLY its own behavior criterion.
- * No control supersedes or duplicates another.
+ * Uses three tiers (low/mid/high) so slider position produces visibly different output.
  *
- * Control → Behavior scope:
- * - tone: Attitude/voice (professional, friendly, etc.) — NOT language register
- * - formality: Language register (casual ↔ formal) — contractions, slang, salutations
- * - verbosity: Response length and detail level
- * - empathy: Whether to acknowledge feelings before solving
- * - proactivity: Whether to suggest next steps unsolicited
- * - creativity: Whether to offer novel/creative alternatives
- * - technicalDepth: Jargon vs plain language
+ * Tiers: low 0-33, mid 34-66, high 67-100
  */
 function buildControlInstructions(agentControls) {
   const c = agentControls || {};
   const num = (v, def) => (v === undefined || v === null ? def : Math.max(0, Math.min(100, Number(v))));
+  const tier = (v) => (v <= 33 ? 'low' : v <= 66 ? 'mid' : 'high');
+
   const tone = c.tone || 'professional';
   const formality = num(c.formality, 50);
   const verbosity = num(c.verbosity, 50);
@@ -66,46 +61,67 @@ function buildControlInstructions(agentControls) {
   const creativity = num(c.creativity, 50);
   const technicalDepth = num(c.technicalDepth, 50);
 
-  // Descriptions for summary only; rules below are the behavioral directives
-  const formalityDesc = formality > 70 ? 'formal and polished' : formality > 40 ? 'conversational but professional' : 'casual and relaxed';
-  const verbosityDesc = verbosity > 70 ? 'thorough and detailed' : verbosity > 40 ? 'balanced' : 'concise and to the point';
-  const empathyDesc = empathy > 70 ? 'highly empathetic' : empathy > 40 ? 'warm but solution-focused' : 'direct and efficient';
-  const proactivityDesc = proactivity > 70 ? 'proactive' : proactivity > 40 ? 'balanced' : 'reactive';
-  const creativityDesc = creativity > 70 ? 'creative and exploratory' : creativity > 40 ? 'balanced' : 'conservative';
-  const techDesc = technicalDepth > 70 ? 'deep technical' : technicalDepth > 40 ? 'moderate depth' : 'plain language';
+  const fTier = tier(formality);
+  const vTier = tier(verbosity);
+  const eTier = tier(empathy);
+  const pTier = tier(proactivity);
+  const crTier = tier(creativity);
+  const tTier = tier(technicalDepth);
 
-  // Tone: attitude/voice only — does NOT include formality (that's a separate control)
+  // TONE: attitude only (no formality overlap)
   const toneRule = tone === 'youthful'
-    ? 'TONE: Sound Gen Z/Young Millennial — relatable, approachable, short punchy sentences. Avoid corporate jargon.'
+    ? 'TONE: Sound Gen Z/Young Millennial — relatable, approachable, short punchy sentences.'
     : `TONE: Use a ${tone} attitude and voice.`;
 
-  // Each control gets exactly one rule. Threshold 50: above = high behavior, below = low.
-  const rules = [
-    toneRule,
-    formality > 50
-      ? 'FORMALITY: Use formal language — polished phrasing, avoid contractions and slang.'
-      : 'FORMALITY: Use casual, relaxed language — contractions and conversational phrasing are fine.',
-    verbosity > 50
-      ? 'VERBOSITY: Provide thorough explanations with examples when helpful.'
-      : 'VERBOSITY: Keep responses SHORT. Use bullet points over paragraphs.',
-    empathy > 50
-      ? 'EMPATHY: Acknowledge the user\'s situation or feelings before jumping to solutions.'
-      : 'EMPATHY: Be direct and get to the solution quickly.',
-    proactivity > 50
-      ? 'PROACTIVITY: After answering, suggest a logical next step or related topic.'
-      : 'PROACTIVITY: Answer only what is asked. No unsolicited additions.',
-    creativity > 50
-      ? 'CREATIVITY: Offer creative alternatives and novel approaches when appropriate.'
-      : 'CREATIVITY: Stick to proven, conventional approaches.',
-    technicalDepth > 50
-      ? 'TECHNICAL DEPTH: Use domain-specific terminology appropriate for the user.'
-      : 'TECHNICAL DEPTH: Avoid jargon. Explain everything in plain language.'
-  ];
+  // FORMALITY: language register only — explicit, no overlap with verbosity
+  const formalityRule = fTier === 'high'
+    ? `FORMALITY (${formality}/100): Use formal language. NO contractions (write "it is" not "it\'s", "I am" not "I\'m"). Use "certainly", "assist", "regarding". Avoid slang.`
+    : fTier === 'mid'
+      ? `FORMALITY (${formality}/100): Use professional but conversational language. Contractions OK. Balanced.`
+      : `FORMALITY (${formality}/100): Use casual, relaxed language. Contractions expected. Informal phrasing ("sure", "no problem", "got it") is fine.`;
 
-  const toneSummary = tone === 'youthful' ? 'Youthful (Gen Z)' : tone;
+  // VERBOSITY: response length only — explicit word guidance
+  const verbosityRule = vTier === 'high'
+    ? `VERBOSITY (${verbosity}/100): Each AgentLLM reply must be 60-150 words. Include multiple sentences, examples, elaboration, and context. Do NOT give brief answers.`
+    : vTier === 'mid'
+      ? `VERBOSITY (${verbosity}/100): Each AgentLLM reply should be 30-60 words. Balanced — enough detail without overwhelming.`
+      : `VERBOSITY (${verbosity}/100): Each AgentLLM reply must be 10-25 words MAX. One or two short sentences. No elaboration. Be terse.`;
+
+  // EMPATHY: emotional acknowledgment — graduated
+  const empathyRule = eTier === 'high'
+    ? `EMPATHY (${empathy}/100): Lead with empathy. Start each reply by acknowledging the user\'s feelings or situation before solving. Use phrases like "I understand", "That makes sense", "I hear you".`
+    : eTier === 'mid'
+      ? `EMPATHY (${empathy}/100): Briefly acknowledge the user\'s situation in one short phrase, then move to the solution.`
+      : `EMPATHY (${empathy}/100): Be direct. Do NOT acknowledge feelings. Jump straight to the solution. No "I understand" or emotional validation.`;
+
+  // PROACTIVITY: unsolicited suggestions
+  const proactivityRule = pTier === 'high'
+    ? `PROACTIVITY (${proactivity}/100): After every answer, add a suggested next step or related topic. Proactively offer to help with follow-up.`
+    : pTier === 'mid'
+      ? `PROACTIVITY (${proactivity}/100): Occasionally suggest a next step when it\'s clearly relevant.`
+      : `PROACTIVITY (${proactivity}/100): Answer ONLY what is asked. No suggestions. No "Would you also like..." or "You might want to...".`;
+
+  // CREATIVITY: novel vs conventional
+  const creativityRule = crTier === 'high'
+    ? `CREATIVITY (${creativity}/100): Offer creative alternatives, novel approaches, or unexpected options when appropriate.`
+    : crTier === 'mid'
+      ? `CREATIVITY (${creativity}/100): Mix proven methods with occasional alternatives.`
+      : `CREATIVITY (${creativity}/100): Stick to proven, conventional approaches only. No creative alternatives.`;
+
+  // TECHNICAL DEPTH: jargon vs plain
+  const techRule = tTier === 'high'
+    ? `TECHNICAL DEPTH (${technicalDepth}/100): Use domain-specific terminology. Assume user understands. No dumbing down.`
+    : tTier === 'mid'
+      ? `TECHNICAL DEPTH (${technicalDepth}/100): Use moderate technical depth. Explain concepts when needed.`
+      : `TECHNICAL DEPTH (${technicalDepth}/100): Use plain language only. NO jargon. Explain everything simply.`;
+
+  const rules = [toneRule, formalityRule, verbosityRule, empathyRule, proactivityRule, creativityRule, techRule];
+
+  const summary = `[${formality}] formality | [${verbosity}] verbosity | [${empathy}] empathy | [${proactivity}] proactivity | [${creativity}] creativity | [${technicalDepth}] technical`;
   return {
-    summary: `Tone: ${toneSummary} | Formality: ${formalityDesc} | Verbosity: ${verbosityDesc} | Empathy: ${empathyDesc} | Proactivity: ${proactivityDesc} | Creativity: ${creativityDesc} | Technical: ${techDesc}`,
-    rules
+    summary,
+    rules,
+    values: { formality, verbosity, empathy, proactivity, creativity, technicalDepth }
   };
 }
 
@@ -145,22 +161,27 @@ ${keyGuidelines.map((g, i) => `${i + 1}. ${g}`).join('\n')}` : '';
     ? `Title: ${scenarioObj.title || 'N/A'}\nDescription: ${scenarioObj.description || 'N/A'}\nPersonaGoal: ${scenarioObj.personaGoal || 'N/A'}\nAgentRole: ${scenarioObj.agentRole || 'N/A'}`
     : (scenarioId || 'General interaction');
 
-  const { summary, rules } = buildControlInstructions(agentControls);
-  const controlBlock = `${summary}
+  const { summary, rules, values } = buildControlInstructions(agentControls);
+  const controlBlock = `Control values: ${summary}
 
-Behavioral rules AgentLLM MUST follow:
+RULES — Apply to EVERY AgentLLM response. Each rule is independent; do not let one override another:
 ${rules.map((r, i) => `${i + 1}. ${r}`).join('\n')}`;
 
   const systemPrompt = `You are simulating a conversation between PersonaUser and AgentLLM.
 ${contextInfo}
 
-CRITICAL: The conversation MUST be about the product and scenario above. Do NOT use generic topics (laptop delivery, tech support, etc). Use the exact product domain from the documents.
+CRITICAL: The conversation MUST be about the product and scenario above. Do NOT use generic topics. Use the exact product domain from the documents.
 
-AGENT CONTROLS — These OVERRIDE any conflicting tone from the documents. Apply them strictly to every AgentLLM response:
+FORBIDDEN in PersonaUser and AgentLLM lines: Any LMS or course-UI meta text—e.g. "Click Learn", "sidebar", "build your curriculum", arrows (→) pointing to navigation, or instructions about how to use a learning platform. The dialogue is only the in-product conversation, nothing about the surrounding app or course shell.
+
+AGENT CONTROLS — These OVERRIDE the documents. Apply EVERY rule to EVERY AgentLLM response:
 ${controlBlock}
 
 Generate a natural conversation with 5 exchanges (PersonaUser speaks, then AgentLLM responds, repeat 5 times).
-Each AgentLLM response MUST visibly demonstrate these controls (tone, formality, verbosity, empathy, proactivity, creativity, technical depth).`;
+VERIFICATION: Before returning, check each AgentLLM reply:
+- Verbosity ${values.verbosity}: high=60+ words, mid=30-60, low=10-25 words
+- Formality ${values.formality}: high=no contractions, low=casual phrasing
+- Empathy ${values.empathy}: high=leads with "I understand"/validation, low=no emotional acknowledgment`;
 
   const userMessage = `Generate a conversation for this scenario:
 
@@ -183,7 +204,9 @@ Return as JSON:
   ]
 }
 
-Make the conversation realistic. Each AgentLLM reply must match the Agent Controls exactly (e.g. if Verbosity is low, keep replies short; if Empathy is high, acknowledge feelings first).`;
+CRITICAL: Each AgentLLM reply MUST follow the control rules. Verbosity ${values.verbosity} → ${values.verbosity > 66 ? 'long detailed replies (60+ words)' : values.verbosity > 33 ? 'medium (30-60 words)' : 'short replies (10-25 words max)'}. Formality ${values.formality} → ${values.formality > 66 ? 'formal, no contractions' : values.formality <= 33 ? 'casual language' : 'balanced'}. Empathy ${values.empathy} → ${values.empathy > 66 ? 'acknowledge feelings first' : values.empathy <= 33 ? 'no emotional acknowledgment, direct only' : 'brief acknowledgment'}.
+
+Do not output syllabus, curriculum-builder, or "Click Learn in the sidebar" style lines in any message.`;
 
   try {
     const command = new InvokeModelCommand({
@@ -193,7 +216,7 @@ Make the conversation realistic. Each AgentLLM reply must match the Agent Contro
       body: JSON.stringify({
         anthropic_version: 'bedrock-2023-05-31',
         max_tokens: 2000,
-        temperature: 0.3,
+        temperature: 0.2,
         system: systemPrompt,
         messages: [{ role: 'user', content: userMessage }]
       })

@@ -13,13 +13,13 @@
 .conversation-panel h3 {
   font-size: 16px;
   margin: 0 0 var(--spacing-sm) 0;
-  color: var(--color-dark-gray);
+  color: var(--rad-text-primary);
 }
 
 /* Conversation Details */
 .conversation-details {
   padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--rad-border);
 }
 
 .detail-item {
@@ -44,7 +44,7 @@
 .detail-item label {
   display: block;
   font-size: 12px;
-  color: var(--color-medium-gray);
+  color: var(--rad-text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: var(--spacing-xs);
@@ -53,7 +53,7 @@
 .conversation-name {
   font-size: 16px;
   font-weight: 600;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
   cursor: pointer;
   padding: 8px;
   border-radius: var(--radius-sm);
@@ -61,7 +61,7 @@
 }
 
 .conversation-name:hover {
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
 }
 
 .conversation-name-input {
@@ -69,14 +69,14 @@
   font-size: 16px;
   font-weight: 600;
   padding: 8px;
-  border: 1px solid var(--color-orange-primary);
+  border: 1px solid var(--rad-accent-orange);
   border-radius: var(--radius-sm);
 }
 
 .speaker-count {
   font-size: 24px;
   font-weight: 600;
-  color: var(--color-orange-primary);
+  color: var(--rad-accent-orange);
 }
 
 /* Speakers Section */
@@ -84,7 +84,7 @@
   display: flex;
   flex-direction: column;
   padding-bottom: var(--spacing-lg);
-  border-bottom: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--rad-border);
 }
 
 .speakers-list {
@@ -99,14 +99,14 @@
   align-items: center;
   gap: var(--spacing-sm);
   padding: var(--spacing-sm) var(--spacing-md);
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .speaker-item:hover {
-  background: var(--color-light-gray);
+  background: var(--rad-bg-hover);
 }
 
 .speaker-color {
@@ -119,7 +119,7 @@
 .speaker-name {
   flex: 1;
   font-weight: 500;
-  color: var(--color-black);
+  color: var(--rad-text-primary);
   cursor: text;
 }
 
@@ -127,9 +127,9 @@
   flex: 1;
   font-weight: 500;
   padding: 4px 8px;
-  border: 1px solid var(--color-orange-primary);
+  border: 1px solid var(--rad-accent-orange);
   border-radius: var(--radius-sm);
-  background: white;
+  background: var(--rad-bg-container);
   font-size: inherit;
 }
 
@@ -142,14 +142,14 @@
 .add-speaker-form input {
   width: 100%;
   padding: var(--spacing-sm) var(--spacing-md);
-  border: 1px solid var(--color-light-gray);
+  border: 1px solid var(--rad-border);
   border-radius: var(--radius-sm);
   font-size: 14px;
 }
 
 .add-speaker-form input:focus {
   outline: none;
-  border-color: var(--color-orange-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .add-speaker-actions {
@@ -182,7 +182,7 @@
 .scenario-input {
   width: 100%;
   padding: var(--spacing-sm);
-  border: 1px solid var(--color-light-gray);
+  border: 1px solid var(--rad-border);
   border-radius: var(--radius-sm);
   font-family: inherit;
   font-size: 14px;
@@ -192,11 +192,11 @@
 
 .scenario-input:focus {
   outline: none;
-  border-color: var(--color-orange-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .scenario-input:disabled {
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
   cursor: not-allowed;
 }
 
@@ -214,23 +214,23 @@
 
 .btn-option {
   padding: var(--spacing-sm);
-  background: var(--color-background);
-  border: 1px solid var(--color-light-gray);
+  background: var(--rad-bg-surface);
+  border: 1px solid var(--rad-border);
   border-radius: var(--radius-sm);
   font-size: 13px;
   cursor: pointer;
   transition: all 0.2s ease;
-  color: var(--color-dark-gray);
+  color: var(--rad-text-primary);
 }
 
 .btn-option:hover:not(:disabled) {
-  background: var(--color-light-gray);
-  border-color: var(--color-medium-gray);
+  background: var(--rad-bg-hover);
+  border-color: var(--rad-border-strong);
 }
 
 .btn-option.active {
-  background: var(--color-orange-primary);
-  border-color: var(--color-orange-primary);
+  background: var(--rad-accent-orange);
+  border-color: var(--rad-accent-orange);
   color: var(--color-white);
   font-weight: 600;
 }
@@ -245,13 +245,13 @@
   display: flex;
   align-items: center;
   padding: var(--spacing-xs);
-  background: var(--color-background);
+  background: var(--rad-bg-surface);
   border-radius: var(--radius-sm);
 }
 
 .turns-info {
   font-size: 13px;
-  color: var(--color-medium-gray);
+  color: var(--rad-text-tertiary);
   font-style: italic;
 }
 
@@ -265,7 +265,7 @@
 .custom-turns-input input {
   width: 60px;
   padding: var(--spacing-xs) var(--spacing-sm);
-  border: 1px solid var(--color-light-gray);
+  border: 1px solid var(--rad-border);
   border-radius: var(--radius-sm);
   font-size: 14px;
   text-align: center;
@@ -273,15 +273,15 @@
 
 .custom-turns-input input:focus {
   outline: none;
-  border-color: var(--color-orange-primary);
+  border-color: var(--rad-accent-orange);
 }
 
 .custom-turns-input input:disabled {
-  background: var(--color-light-gray);
+  background: var(--rad-bg-hover);
   cursor: not-allowed;
 }
 
 .turns-label {
   font-size: 13px;
-  color: var(--color-medium-gray);
+  color: var(--rad-text-tertiary);
 }

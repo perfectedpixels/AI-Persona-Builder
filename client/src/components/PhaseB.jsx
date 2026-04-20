@@ -79,7 +79,7 @@ const PhaseB = ({ scenarios = [], conversations = [], onScenarioSelect, onUserIn
   return (
     <div className="phase-b">
       <div className="phase-header">
-        <h2>Phase B: Conversation Playground</h2>
+        <h2>2. Playground</h2>
         <p>Explore scenarios and test agent interactions</p>
       </div>
 

@@ -24,7 +24,7 @@ const PhaseC = ({ controls, onChange, onExport, isProcessing, hasDocuments }) =>
   return (
     <div className="phase-c">
       <div className="phase-header">
-        <h2>Phase C: Agent Controls</h2>
+        <h2>3. Controls</h2>
         <p>Customize agent behavior</p>
       </div>
 

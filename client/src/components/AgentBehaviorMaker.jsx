@@ -40,6 +40,13 @@ const AgentBehaviorMaker = () => {
   const [processingStatus, setProcessingStatus] = useState(null);
   const [isConversationLoading, setIsConversationLoading] = useState(false);
   const controlsDebounceRef = useRef(null);
+  const agentControlsRef = useRef(agentControls);
+  agentControlsRef.current = agentControls;
+  const conversationsRef = useRef(conversations);
+  conversationsRef.current = conversations;
+  const controlsRefreshIdRef = useRef(0);
+  /** null | 'queued' (debouncing) | 'running' (API in flight) */
+  const [controlsRefreshPhase, setControlsRefreshPhase] = useState(null);
 
   const handleDocumentsSubmit = async (docs) => {
     setIsProcessing(true);
@@ -210,15 +217,23 @@ const AgentBehaviorMaker = () => {
   };
 
   const handleControlsChange = (newControls) => {
-    setAgentControls(newControls);
-    
-    // Debounce the API call so slider drags don't spam the server
+    // Merge with ref so rapid changes (before re-render) don't lose previous edits
+    const merged = { ...agentControlsRef.current, ...newControls };
+    agentControlsRef.current = merged;
+    setAgentControls(merged);
+
     if (controlsDebounceRef.current) {
       clearTimeout(controlsDebounceRef.current);
     }
-    
-    if (conversations.length > 0) {
+
+    if (conversationsRef.current.length > 0) {
+      controlsRefreshIdRef.current += 1;
+      const refreshId = controlsRefreshIdRef.current;
+      setControlsRefreshPhase('queued');
+
       controlsDebounceRef.current = setTimeout(async () => {
+        const controlsToUse = agentControlsRef.current;
+        setControlsRefreshPhase('running');
         setIsProcessing(true);
         setIsConversationLoading(true);
         try {
@@ -227,11 +242,11 @@ const AgentBehaviorMaker = () => {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               processedData,
-              agentControls: newControls,
-              existingConversations: conversations
+              agentControls: controlsToUse,
+              existingConversations: conversationsRef.current
             })
           });
-          
+
           const data = await response.json();
           setConversations(data.conversations);
         } catch (error) {
@@ -239,6 +254,11 @@ const AgentBehaviorMaker = () => {
         } finally {
           setIsProcessing(false);
           setIsConversationLoading(false);
+          if (refreshId === controlsRefreshIdRef.current) {
+            setControlsRefreshPhase(null);
+          } else {
+            setControlsRefreshPhase('queued');
+          }
         }
       }, 500);
     }
@@ -291,7 +311,23 @@ const AgentBehaviorMaker = () => {
         <p>Design and test LLM behaviors for your product</p>
       </div>
 
-      {processingStatus && <ProcessingStatus status={processingStatus} />}
+      {processingStatus && <ProcessingStatus status={processingStatus} compact />}
+
+      {controlsRefreshPhase && (
+        <div
+          className="abm-controls-refresh-chip"
+          role="status"
+          aria-live="polite"
+          aria-busy={controlsRefreshPhase === 'running'}
+        >
+          <span className={controlsRefreshPhase === 'running' ? 'chip-dot chip-dot--pulse' : 'chip-dot'} aria-hidden />
+          <span className="chip-label">
+            {controlsRefreshPhase === 'queued'
+              ? 'Controls changed — updating preview…'
+              : 'Regenerating conversation…'}
+          </span>
+        </div>
+      )}
 
       <div className="abm-container">
         <PhaseA 

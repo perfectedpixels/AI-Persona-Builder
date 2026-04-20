@@ -4,8 +4,14 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@cloudscape-design/components": "^3.0.1279",
+    "@cloudscape-design/design-tokens": "^3.0.80",
+    "@cloudscape-design/global-styles": "^1.0.57",
     "axios": "^1.6.2",
+    "framer-motion": "^12.38.0",
     "jszip": "^3.10.1",
+    "lucide-react": "^1.8.0",
+    "rad-ui-package": "file:../../../RAD-ify",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uuid": "^9.0.1"
