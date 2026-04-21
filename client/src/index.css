@@ -26,6 +26,10 @@
 /* ===== Reset ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* ===== Override RAD base styles that assume RadLayout shell ===== */
+body { overflow: auto; }
+#root { height: auto; overflow: auto; }
+
 /* ===== Root Variables ===== */
 :root {
   /* RAD Core — Dark Mode */

@@ -5,7 +5,7 @@ import AgentBehaviorMaker from './components/AgentBehaviorMaker';
 
 function App() {
   return (
-    <ThemeProvider>
+    <ThemeProvider defaultPreference="dark">
       <LayoutConfigProvider>
         <div className="App">
           <AgentBehaviorMaker />

@@ -1,0 +1,29 @@
+{
+  "name": "rad-ui-package",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./fonts.css": "./dist/fonts.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "framer-motion": "^12.0.0",
+    "lucide-react": "^1.0.0",
+    "@cloudscape-design/components": "^3.0.0",
+    "@cloudscape-design/design-tokens": "^3.0.0",
+    "@cloudscape-design/global-styles": "^1.0.0"
+  }
+}
