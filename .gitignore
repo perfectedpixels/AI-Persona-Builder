@@ -15,6 +15,9 @@ client/build/
 /public/
 dist/
 
+# Allow rad-ui-package dist to be committed
+!packages/rad-ui-package/dist/
+
 # Logs
 *.log
 npm-debug.log*

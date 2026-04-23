@@ -14,9 +14,6 @@
     "./styles.css": "./dist/styles.css",
     "./fonts.css": "./dist/fonts.css"
   },
-  "files": [
-    "dist"
-  ],
   "peerDependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
