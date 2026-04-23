@@ -1,4 +1,10 @@
 import React, { useState, useRef, useCallback } from 'react';
+import { FadeIn } from 'rad-ui-package';
+import Container from '@cloudscape-design/components/container';
+import Header from '@cloudscape-design/components/header';
+import SpaceBetween from '@cloudscape-design/components/space-between';
+import Box from '@cloudscape-design/components/box';
+import StatusIndicator from '@cloudscape-design/components/status-indicator';
 import PhaseA from './PhaseA';
 import PhaseB from './PhaseB';
 import PhaseC from './PhaseC';
@@ -305,57 +311,58 @@ const AgentBehaviorMaker = () => {
   };
 
   return (
-    <div className="agent-behavior-maker">
-      <div className="abm-header">
-        <h1>🤖 Agent Behavior Maker</h1>
-        <p>Design and test LLM behaviors for your product</p>
-      </div>
-
-      {processingStatus && <ProcessingStatus status={processingStatus} compact />}
-
-      {controlsRefreshPhase && (
-        <div
-          className="abm-controls-refresh-chip"
-          role="status"
-          aria-live="polite"
-          aria-busy={controlsRefreshPhase === 'running'}
-        >
-          <span className={controlsRefreshPhase === 'running' ? 'chip-dot chip-dot--pulse' : 'chip-dot'} aria-hidden />
-          <span className="chip-label">
-            {controlsRefreshPhase === 'queued'
-              ? 'Controls changed — updating preview…'
-              : 'Regenerating conversation…'}
-          </span>
+    <FadeIn>
+      <div className="agent-behavior-maker">
+        <div className="abm-header">
+          <h1>🤖 Agent Behavior Maker</h1>
+          <Box color="text-body-secondary" fontSize="body-m">Design and test LLM behaviors for your product</Box>
         </div>
-      )}
 
-      <div className="abm-container">
-        <PhaseA 
-          onSubmit={handleDocumentsSubmit}
-          isProcessing={isProcessing}
-        />
-        
-        <PhaseB 
-          scenarios={scenarios}
-          conversations={conversations}
-          onScenarioSelect={handleScenarioSelect}
-          onUserInterrupt={handleUserInterrupt}
-          isProcessing={isProcessing}
-          isConversationLoading={isConversationLoading}
-          documents={documents}
-          processedData={processedData}
-          isLoadingScenarios={!!processingStatus && processingStatus.currentStep !== 'error' && processingStatus.currentStep !== 'complete'}
-        />
-        
-        <PhaseC 
-          controls={agentControls}
-          onChange={handleControlsChange}
-          onExport={handleExportFramework}
-          isProcessing={isProcessing}
-          hasDocuments={!!documents.productProposal}
-        />
+        {processingStatus && <ProcessingStatus status={processingStatus} compact />}
+
+        {controlsRefreshPhase && (
+          <div
+            className="abm-controls-refresh-chip"
+            role="status"
+            aria-live="polite"
+            aria-busy={controlsRefreshPhase === 'running'}
+          >
+            <StatusIndicator type={controlsRefreshPhase === 'running' ? 'loading' : 'in-progress'}>
+              {controlsRefreshPhase === 'queued'
+                ? 'Controls changed — updating preview…'
+                : 'Regenerating conversation…'}
+            </StatusIndicator>
+          </div>
+        )}
+
+        <div className="abm-container">
+          <PhaseA 
+            onSubmit={handleDocumentsSubmit}
+            isProcessing={isProcessing}
+          />
+          
+          <PhaseB 
+            scenarios={scenarios}
+            conversations={conversations}
+            onScenarioSelect={handleScenarioSelect}
+            onUserInterrupt={handleUserInterrupt}
+            isProcessing={isProcessing}
+            isConversationLoading={isConversationLoading}
+            documents={documents}
+            processedData={processedData}
+            isLoadingScenarios={!!processingStatus && processingStatus.currentStep !== 'error' && processingStatus.currentStep !== 'complete'}
+          />
+          
+          <PhaseC 
+            controls={agentControls}
+            onChange={handleControlsChange}
+            onExport={handleExportFramework}
+            isProcessing={isProcessing}
+            hasDocuments={!!documents.productProposal}
+          />
+        </div>
       </div>
-    </div>
+    </FadeIn>
   );
 };
 

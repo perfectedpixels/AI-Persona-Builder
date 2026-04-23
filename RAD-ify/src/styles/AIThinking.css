@@ -1,0 +1,70 @@
+.ai-thinking-visualization {
+  --ai-anim-color-light: #FF6200;
+  --ai-anim-color-dark: #FF6200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ai-thinking-grid {
+  display: grid;
+}
+
+.ai-thinking-dot {
+  background-color: var(--ai-anim-color-light);
+  opacity: 0;
+  transform: scale(0);
+}
+
+[data-theme="dark"] .ai-thinking-dot {
+  background-color: var(--ai-anim-color-dark);
+}
+
+.ai-thinking-dot.ai-thinking-default {
+  animation: aiThinkingBounce var(--sweep-duration, 1.8s) ease-in-out infinite;
+}
+
+@keyframes aiThinkingBounce {
+  0%, 100% { opacity: 0; transform: scale(0) translateY(8px); }
+  25% { opacity: 0.4; transform: scale(0.8) translateY(4px); }
+  50% { opacity: 1; transform: scale(1) translateY(-8px); }
+  75% { opacity: 0.4; transform: scale(0.8) translateY(4px); }
+}
+
+.ai-thinking-dot.ai-thinking-fade {
+  animation: aiThinkingFade var(--sweep-duration, 1.4s) ease-in-out infinite;
+}
+
+@keyframes aiThinkingFade {
+  0%, 100% { opacity: 0.1; transform: scale(0.5); }
+  50% { opacity: 1; transform: scale(1); }
+}
+
+.ai-thinking-dot.ai-thinking-orbit {
+  animation: aiThinkingOrbit var(--sweep-duration, 2s) ease-in-out infinite;
+}
+
+@keyframes aiThinkingOrbit {
+  0%, 100% { opacity: 0; transform: scale(0) rotate(0deg); }
+  30% { opacity: 0.3; transform: scale(0.7) rotate(60deg); }
+  50% { opacity: 1; transform: scale(1) rotate(120deg); }
+  70% { opacity: 0.3; transform: scale(0.7) rotate(180deg); }
+}
+
+.ai-thinking-dot.ai-thinking-ripple {
+  animation: aiThinkingRipple var(--sweep-duration, 2.4s) ease-out infinite;
+}
+
+@keyframes aiThinkingRipple {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.3; transform: scale(0.4); }
+  100% { opacity: 0; transform: scale(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-thinking-dot {
+    animation: none !important;
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}

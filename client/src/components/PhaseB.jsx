@@ -1,9 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { FadeIn, StaggerChildren, AIThinking, AnimatedPresence } from 'rad-ui-package';
+import Container from '@cloudscape-design/components/container';
+import Header from '@cloudscape-design/components/header';
+import Button from '@cloudscape-design/components/button';
+import SpaceBetween from '@cloudscape-design/components/space-between';
+import Box from '@cloudscape-design/components/box';
+import Badge from '@cloudscape-design/components/badge';
+import Textarea from '@cloudscape-design/components/textarea';
+import StatusIndicator from '@cloudscape-design/components/status-indicator';
 import './PhaseB.css';
 
 const SkeletonScenarios = () => (
-  <div className="scenarios-section">
-    <h3>Suggested Scenarios</h3>
+  <SpaceBetween size="s">
+    <Box fontWeight="bold">Suggested Scenarios</Box>
     <div className="scenarios-grid">
       {[1, 2, 3, 4, 5].map(i => (
         <div key={i} className="scenario-card skeleton-card">
@@ -14,37 +23,12 @@ const SkeletonScenarios = () => (
         </div>
       ))}
     </div>
-  </div>
-);
-
-const SkeletonConversation = () => (
-  <div className="skeleton-chat">
-    <div className="skeleton-bubble agent">
-      <div className="skeleton-line wide"></div>
-      <div className="skeleton-line medium"></div>
-    </div>
-    <div className="skeleton-bubble user">
-      <div className="skeleton-line medium"></div>
-    </div>
-    <div className="skeleton-bubble agent">
-      <div className="skeleton-line wide"></div>
-      <div className="skeleton-line narrow"></div>
-    </div>
-    <div className="skeleton-bubble user">
-      <div className="skeleton-line medium"></div>
-    </div>
-    <div className="skeleton-bubble agent">
-      <div className="skeleton-line wide"></div>
-      <div className="skeleton-line medium"></div>
-      <div className="skeleton-line narrow"></div>
-    </div>
-  </div>
+  </SpaceBetween>
 );
 
 const PhaseB = ({ scenarios = [], conversations = [], onScenarioSelect, onUserInterrupt, isProcessing, isConversationLoading, documents, processedData, isLoadingScenarios }) => {
   const [selectedScenario, setSelectedScenario] = useState(null);
   const [userInput, setUserInput] = useState('');
-  const [isRecording, setIsRecording] = useState(false);
   const conversationRef = useRef(null);
 
   useEffect(() => {
@@ -66,10 +50,6 @@ const PhaseB = ({ scenarios = [], conversations = [], onScenarioSelect, onUserIn
     }
   };
 
-  const handleVoiceInput = () => {
-    setIsRecording(!isRecording);
-  };
-
   const displayConversation = conversations.length > 0
     ? conversations[conversations.length - 1]
     : null;
@@ -78,110 +58,116 @@ const PhaseB = ({ scenarios = [], conversations = [], onScenarioSelect, onUserIn
 
   return (
     <div className="phase-b">
-      <div className="phase-header">
-        <h2>2. Playground</h2>
-        <p>Explore scenarios and test agent interactions</p>
-      </div>
+      <FadeIn>
+        <Container
+          header={
+            <Header variant="h2" description="Explore scenarios and test agent interactions">
+              💬 Playground
+            </Header>
+          }
+        >
+          {!hasSubmitted && !isLoadingScenarios ? (
+            <Box textAlign="center" padding={{ vertical: 'xl' }}>
+              <SpaceBetween size="s" alignItems="center">
+                <Box fontSize="heading-xl">📋</Box>
+                <Box color="text-body-secondary">Submit your documents to generate scenarios</Box>
+              </SpaceBetween>
+            </Box>
+          ) : isLoadingScenarios && scenarios.length === 0 ? (
+            <SpaceBetween size="l">
+              <SkeletonScenarios />
+              <Box textAlign="center" padding={{ vertical: 'l' }}>
+                <AIThinking variant="fade" />
+                <Box color="text-body-secondary" margin={{ top: 's' }}>Generating scenarios...</Box>
+              </Box>
+            </SpaceBetween>
+          ) : (
+            <SpaceBetween size="l">
+              {/* Scenarios */}
+              <div>
+                <Box fontWeight="bold" margin={{ bottom: 'xs' }}>Suggested Scenarios</Box>
+                <StaggerChildren>
+                  <div className="scenarios-grid">
+                    {scenarios.map((scenario, idx) => (
+                      <div
+                        key={idx}
+                        className={`scenario-card ${selectedScenario?.id === scenario.id ? 'selected' : ''}`}
+                        onClick={() => !isProcessing && handleScenarioClick(scenario)}
+                      >
+                        <div className="scenario-number">{idx + 1}</div>
+                        <div className="scenario-title">{scenario.title}</div>
+                        <Box fontSize="body-s" color="text-body-secondary">{scenario.description}</Box>
+                      </div>
+                    ))}
+                  </div>
+                </StaggerChildren>
+              </div>
 
-      {!hasSubmitted && !isLoadingScenarios ? (
-        <div className="empty-state">
-          <div className="empty-icon">📋</div>
-          <p>Submit your documents in Phase A to generate scenarios</p>
-        </div>
-      ) : isLoadingScenarios && scenarios.length === 0 ? (
-        <>
-          <SkeletonScenarios />
-          <div className="conversation-section" ref={conversationRef}>
-            <h3>💬 Conversation</h3>
-            <div className="no-conversation">
-              <div className="empty-icon">💭</div>
-              <p>Scenarios are being generated...</p>
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div className="scenarios-section">
-            <h3>Suggested Scenarios</h3>
-            <div className="scenarios-grid">
-              {scenarios.map((scenario, idx) => (
-                <div
-                  key={idx}
-                  className={`scenario-card ${selectedScenario?.id === scenario.id ? 'selected' : ''}`}
-                  onClick={() => !isProcessing && handleScenarioClick(scenario)}
-                >
-                  <div className="scenario-number">{idx + 1}</div>
-                  <div className="scenario-title">{scenario.title}</div>
-                  <div className="scenario-description">{scenario.description}</div>
-                </div>
-              ))}
-            </div>
-          </div>
+              {/* Conversation */}
+              <div ref={conversationRef}>
+                <SpaceBetween size="xs" direction="horizontal" alignItems="center">
+                  <Box fontWeight="bold">💬 Conversation</Box>
+                  {isConversationLoading && <Badge color="blue">Generating...</Badge>}
+                </SpaceBetween>
 
-          <div className="conversation-section" ref={conversationRef}>
-            <h3>
-              💬 Conversation
-              {isConversationLoading && <span className="loading-badge">Generating...</span>}
-            </h3>
-            {isConversationLoading ? (
-              <SkeletonConversation />
-            ) : displayConversation ? (
-              <div className="imessage-chat">
-                <div className="chat-header">
-                  <div className="chat-title">{displayConversation.scenarioTitle || 'Conversation'}</div>
-                </div>
-                <div className="chat-messages">
-                  {displayConversation.messages && displayConversation.messages.map((msg, idx) => (
-                    <div
-                      key={idx}
-                      className={`chat-bubble ${msg.speaker === 'PersonaUser' ? 'user' : 'agent'}`}
-                    >
-                      <div className="bubble-content">{msg.text}</div>
-                      <div className="bubble-time">
-                        {msg.speaker === 'PersonaUser' ? 'User' : 'Agent'}
+                {isConversationLoading ? (
+                  <Box textAlign="center" padding={{ vertical: 'l' }}>
+                    <AIThinking variant="orbit" />
+                  </Box>
+                ) : displayConversation ? (
+                  <AnimatedPresence id={displayConversation.scenarioTitle || 'conv'}>
+                    <div className="imessage-chat">
+                      <div className="chat-header">
+                        <Box fontWeight="bold">{displayConversation.scenarioTitle || 'Conversation'}</Box>
+                      </div>
+                      <div className="chat-messages">
+                        {displayConversation.messages && displayConversation.messages.map((msg, idx) => (
+                          <div
+                            key={idx}
+                            className={`chat-bubble ${msg.speaker === 'PersonaUser' ? 'user' : 'agent'}`}
+                          >
+                            <div className="bubble-content">{msg.text}</div>
+                            <Box fontSize="body-s" color="text-body-secondary">
+                              {msg.speaker === 'PersonaUser' ? 'User' : 'Agent'}
+                            </Box>
+                          </div>
+                        ))}
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </AnimatedPresence>
+                ) : (
+                  <Box textAlign="center" padding={{ vertical: 'l' }} color="text-body-secondary">
+                    <Box fontSize="heading-xl">💭</Box>
+                    Select a scenario above to generate a conversation
+                  </Box>
+                )}
               </div>
-            ) : (
-              <div className="no-conversation">
-                <div className="empty-icon">💭</div>
-                <p>Select a scenario above to generate a conversation</p>
-              </div>
-            )}
-          </div>
 
-          <div className="user-input-section">
-            <h3>Add Your Scenario</h3>
-            <div className="input-container">
-              <textarea
-                className="user-input-textarea"
-                placeholder="Describe a scenario you want to see play out between PersonaUser and AgentLLM..."
-                value={userInput}
-                onChange={(e) => setUserInput(e.target.value)}
-                rows={3}
-              />
-              <div className="input-actions">
-                <button
-                  className={`voice-btn ${isRecording ? 'recording' : ''}`}
-                  onClick={handleVoiceInput}
-                  title="Voice input"
-                >
-                  {isRecording ? '⏹️ Stop' : '🎤 Voice'}
-                </button>
-                <button
-                  className="send-btn"
-                  onClick={handleUserInterrupt}
-                  disabled={!userInput.trim() || isProcessing}
-                >
-                  ➤ Send
-                </button>
+              {/* User input */}
+              <div>
+                <Box fontWeight="bold" margin={{ bottom: 'xs' }}>Add Your Scenario</Box>
+                <SpaceBetween size="s">
+                  <Textarea
+                    placeholder="Describe a scenario you want to see play out between PersonaUser and AgentLLM..."
+                    value={userInput}
+                    onChange={({ detail }) => setUserInput(detail.value)}
+                    rows={3}
+                  />
+                  <Box float="right">
+                    <Button
+                      variant="primary"
+                      onClick={handleUserInterrupt}
+                      disabled={!userInput.trim() || isProcessing}
+                    >
+                      ➤ Send
+                    </Button>
+                  </Box>
+                </SpaceBetween>
               </div>
-            </div>
-          </div>
-        </>
-      )}
+            </SpaceBetween>
+          )}
+        </Container>
+      </FadeIn>
     </div>
   );
 };

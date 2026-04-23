@@ -1,0 +1,89 @@
+.thinking-reasoning {
+  font-family: 'Bookerly', 'Georgia', serif;
+}
+
+.thinking-reasoning.thinking-centered {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.thinking-centered .pixel-dot-grid { gap: 3px; }
+.thinking-centered .pixel-dot-row { gap: 3px; }
+.thinking-centered .pixel-dot { width: 5px; height: 5px; }
+.thinking-centered .thinking-step-text { font-size: 18px; }
+
+.thinking-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.thinking-step-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pixel-dot-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5px;
+  flex-shrink: 0;
+  overflow: visible;
+  padding: 2px;
+}
+
+.pixel-dot-row {
+  display: flex;
+  gap: 1.5px;
+}
+
+.pixel-dot {
+  width: 2.5px;
+  height: 2.5px;
+  border-radius: 50%;
+  background: #FF6101;
+}
+
+.pixel-dot.variant-radial {
+  opacity: 0.15;
+  transform: scale(0.5);
+  animation: radialPulse var(--sweep-duration, 1.8s) ease-in-out infinite;
+}
+
+@keyframes radialPulse {
+  0% { opacity: 0.15; transform: scale(0.5); }
+  30% { opacity: 0.4; transform: scale(0.8); }
+  45% { opacity: 1; transform: scale(1.1); }
+  50% { opacity: 1; transform: scale(1); }
+  65% { opacity: 0.4; transform: scale(0.7); }
+  80%, 100% { opacity: 0.15; transform: scale(0.5); }
+}
+
+.thinking-step-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: #8d939a;
+  font-family: 'Bookerly', 'Georgia', serif;
+  white-space: nowrap;
+}
+
+[data-theme="dark"] .thinking-step-text {
+  color: #9aa0a6;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pixel-dot.variant-radial {
+    animation: none;
+    opacity: 0.5;
+    transform: scale(0.8);
+  }
+}

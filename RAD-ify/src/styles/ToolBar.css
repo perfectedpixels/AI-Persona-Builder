@@ -1,0 +1,196 @@
+/* ============================================================
+   RAD UI — ToolBar Styles
+   Extracted from components/ToolBar.css
+   ============================================================ */
+
+/* Toolbar wrapper - keeps both pills on one line */
+.toolbar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #FAF9F7;
+  border: 1px solid #EBE9E5;
+  border-radius: 16px;
+  padding: 12px 20px;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .toolbar {
+  background: #1B1A18;
+  border-color: #262A30;
+}
+
+/* Chat pill takes remaining space */
+.toolbar-chat {
+  flex: 1;
+}
+
+/* Actions pill stays compact */
+.toolbar-actions {
+  flex-shrink: 0;
+  gap: 5px;
+  padding: 8px 12px;
+}
+
+/* Plain input — no border, no background, no focus ring */
+.toolbar-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #191D23;
+  font-family: inherit;
+  padding: 0;
+}
+
+.toolbar-input::placeholder {
+  color: rgba(25, 29, 35, 0.45);
+}
+
+.toolbar-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+[data-theme="dark"] .toolbar-input {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .toolbar-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ⌘K shortcut badge */
+.toolbar-shortcut {
+  color: #9B9893;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  background-color: #EDEAE6;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+[data-theme="dark"] .toolbar-shortcut {
+  color: #6B7280;
+  background-color: #1B1A18;
+}
+
+/* Action icon buttons — transparent, subtle hover */
+.toolbar-action-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: background-color 0.15s ease;
+  outline: none;
+}
+
+.toolbar-action-btn:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.toolbar-action-btn:focus,
+.toolbar-action-btn:focus-visible {
+  outline: none;
+}
+
+[data-theme="dark"] .toolbar-action-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ── Fuse border animation ───────────────────────────────── */
+@property --fuse-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.toolbar-fuse {
+  position: relative;
+  border-color: transparent;
+  background-clip: padding-box;
+}
+
+.toolbar-fuse::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: conic-gradient(
+    from var(--fuse-angle),
+    #FAF9F7 0deg,
+    #FAF9F7 280deg,
+    rgba(255, 98, 0, 0.15) 310deg,
+    rgba(255, 98, 0, 0.4) 335deg,
+    #FF6200 350deg,
+    #FF8C40 355deg,
+    #FF6200 358deg,
+    #FAF9F7 360deg
+  );
+  z-index: -1;
+  animation: fuse-spin 1.8s linear infinite;
+}
+
+[data-theme="dark"] .toolbar-fuse::before {
+  background: conic-gradient(
+    from var(--fuse-angle),
+    #191D23 0deg,
+    #191D23 280deg,
+    rgba(255, 98, 0, 0.1) 310deg,
+    rgba(255, 98, 0, 0.35) 335deg,
+    #FF6200 350deg,
+    #FF8C40 355deg,
+    #FF6200 358deg,
+    #191D23 360deg
+  );
+}
+
+.toolbar-fuse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: #FAF9F7;
+  z-index: -1;
+}
+
+[data-theme="dark"] .toolbar-fuse::after {
+  background: #1B1A18;
+}
+
+@keyframes fuse-spin {
+  from { --fuse-angle: 0deg; }
+  to { --fuse-angle: 360deg; }
+}
+
+/* ── Mobile Responsive ───────────────────────────────────── */
+@media (max-width: 768px) {
+  .toolbar-wrapper {
+    gap: 8px;
+  }
+
+  .toolbar {
+    gap: 8px;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar-shortcut {
+    display: none;
+  }
+}

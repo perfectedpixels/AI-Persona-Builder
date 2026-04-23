@@ -1,0 +1,111 @@
+/* ============================================================
+   RAD UI — CSS Custom Properties & Base Styles
+   Extracted from rad-layout.css with --rad- namespace prefix
+   ============================================================ */
+
+:root {
+  /* ── Typography Base ─────────────────────────────────── */
+  font-family: 'Ember Modern Text', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 350;
+
+  color-scheme: light;
+  color: #213547;
+  background-color: #FBFAFB;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* ── Glassmorphism Configuration ─────────────────────── */
+  --rad-glass-blur: 8;
+  --rad-glass-saturate: 2.8;
+  --rad-glass-brightness: 1.25;
+  --rad-glass-contrast: 1;
+  --rad-glass-border-width: 2;
+
+  /* ── Border Colors ───────────────────────────────────── */
+  --rad-border-subtle: rgba(255, 255, 255, 0.1);
+  --rad-border-medium: rgba(255, 255, 255, 0.15);
+  --rad-border-prominent: rgba(255, 255, 255, 0.2);
+  --rad-border-focus: rgba(255, 255, 255, 0.3);
+
+  /* ── Text Colors ─────────────────────────────────────── */
+  --rad-text-primary: #232f3e;
+  --rad-text-secondary: #5f6368;
+
+  /* ── Surface Colors ──────────────────────────────────── */
+  --rad-surface-secondary: #f5f5f5;
+
+  /* ── Markdown Border Color ───────────────────────────── */
+  --rad-border-color: #e1e4e8;
+
+  /* ── Font Families ───────────────────────────────────── */
+  --rad-font-headline: 'Ember Modern Display', system-ui, -apple-system, sans-serif;
+  --rad-font-body: 'Ember Modern Text', system-ui, -apple-system, sans-serif;
+  --rad-font-ai: 'Bookerly', Georgia, 'Times New Roman', serif;
+
+  /* ── Breakpoints ─────────────────────────────────────── */
+  --rad-bp-sm: 480px;
+  --rad-bp-md: 768px;
+  --rad-bp-lg: 1024px;
+
+  /* ── Animation Timing ────────────────────────────────── */
+  --rad-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --rad-duration-fast: 0.15s;
+  --rad-duration-normal: 0.3s;
+}
+
+/* ── Dark Mode Overrides ─────────────────────────────────── */
+[data-theme="dark"] {
+  color-scheme: dark;
+  color: #e0e0e0;
+
+  /* Text Colors */
+  --rad-text-primary: #ffffff;
+  --rad-text-secondary: #9ca3af;
+
+  /* Surface Colors */
+  --rad-surface-secondary: #1B1A18;
+
+  /* Markdown Border Color */
+  --rad-border-color: #3a3f48;
+}
+
+/* ── Base Element Styles ─────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Ember Modern Display', system-ui, -apple-system, sans-serif;
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+[data-theme="dark"] h1 {
+  color: #ffffff;
+}
+
+/* ── Utility Classes ─────────────────────────────────────── */
+.veritical-divider {
+  height: 100%;
+  width: 1px;
+  background-color: #e1e4e8;
+}

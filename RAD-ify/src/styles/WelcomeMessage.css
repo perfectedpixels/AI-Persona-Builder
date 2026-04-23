@@ -1,0 +1,17 @@
+.welcome-message {
+  background: #FAF9F7;
+  border: 1px solid #EBE9E5;
+  border-radius: 16px;
+  padding: 20px 24px;
+  max-width: 380px;
+  width: max-content;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  margin-bottom: 12px;
+}
+
+[data-theme="dark"] .welcome-message {
+  background: #1B1A18;
+  border-color: #1B1A18;
+}

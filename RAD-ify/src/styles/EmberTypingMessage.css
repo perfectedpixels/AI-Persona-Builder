@@ -1,0 +1,58 @@
+.ember-typing-message p {
+  margin: 0;
+  font-family: 'Bookerly', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--rad-text-primary, #232f3e);
+}
+
+[data-theme="dark"] .ember-typing-message p {
+  color: var(--rad-text-primary, #ffffff);
+}
+
+.ember-typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: var(--rad-text-primary, #232f3e);
+  margin-left: 1px;
+  vertical-align: text-bottom;
+  animation: ember-blink 0.6s steps(2) infinite;
+}
+
+[data-theme="dark"] .ember-typing-cursor {
+  background: var(--rad-text-primary, #ffffff);
+}
+
+@keyframes ember-blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.ember-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  background: #E8600A;
+  margin-top: 2px;
+}
+
+.ember-dot-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #16A34A;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ember-typing-cursor {
+    animation: none;
+    opacity: 1;
+  }
+}

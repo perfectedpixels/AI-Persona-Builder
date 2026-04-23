@@ -1,0 +1,213 @@
+/* ============================================================
+   RAD UI — Keyframe Animations & Utility Classes
+   Extracted from animations.css
+   ============================================================ */
+
+/* ── @keyframes Definitions ──────────────────────────────── */
+
+@keyframes cardExpand {
+  from { opacity: 0.6; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes cardShrink {
+  from { opacity: 0.4; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes gridExpand {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+@keyframes gridShrink {
+  from { opacity: 0.3; transform: translateX(12px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes assessFlash {
+  0% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+@keyframes stepEnter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes staggerIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes popOut {
+  from { opacity: 1; transform: scale(1); }
+  to { opacity: 0; transform: scale(0.95); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes focusPulse {
+  0% { box-shadow: 0 0 0 0 rgba(51, 187, 239, 0.4); }
+  70% { box-shadow: 0 0 0 6px rgba(51, 187, 239, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(51, 187, 239, 0); }
+}
+
+/* Spinner rotation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ── Utility Classes ─────────────────────────────────────── */
+
+/* Step panel entrance */
+.step-animate {
+  animation: stepEnter 0.35s var(--rad-ease-default, ease);
+}
+
+/* Stagger children: each child delays slightly more */
+.stagger-children > * {
+  animation: staggerIn var(--rad-duration-normal, 0.3s) ease both;
+}
+.stagger-children > *:nth-child(1) { animation-delay: 0s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.06s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.12s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.18s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.24s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(7) { animation-delay: 0.36s; }
+.stagger-children > *:nth-child(8) { animation-delay: 0.42s; }
+.stagger-children > *:nth-child(9) { animation-delay: 0.48s; }
+.stagger-children > *:nth-child(10) { animation-delay: 0.54s; }
+
+/* Popup animation class */
+.pop-in {
+  animation: popIn 0.25s ease;
+}
+
+/* Smooth transitions for focus grid cards */
+.focus-card-wrapper {
+  transition: flex 0.4s ease, width 0.4s ease, opacity var(--rad-duration-normal, 0.3s) ease, transform var(--rad-duration-normal, 0.3s) ease;
+}
+
+.focus-card-expand {
+  animation: gridExpand 0.4s ease;
+}
+
+.focus-card-shrink {
+  animation: gridShrink 0.4s ease;
+}
+
+/* Input source card transitions */
+.source-card-wrapper {
+  transition: flex 0.4s ease, width 0.4s ease, min-width 0.4s ease, max-width 0.4s ease, opacity var(--rad-duration-normal, 0.3s) ease;
+}
+
+.source-card-expand {
+  animation: cardExpand 0.35s ease;
+}
+
+.source-card-shrink {
+  animation: cardShrink 0.35s ease;
+}
+
+/* Prioritized items get a subtle pulse on selection */
+.prioritized-pulse {
+  animation: focusPulse 0.6s ease;
+}
+
+/* ── Cloudscape Component Enhancement Transitions ────────── */
+
+/* All Cloudscape containers get subtle transitions */
+[class*="awsui_container"] {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+/* Cloudscape buttons */
+[class*="awsui_button"] {
+  transition: background-color var(--rad-duration-fast, 0.15s) ease, border-color var(--rad-duration-fast, 0.15s) ease, color var(--rad-duration-fast, 0.15s) ease, transform 0.1s ease !important;
+}
+[class*="awsui_button"]:active {
+  transform: scale(0.97);
+}
+
+/* Cloudscape segmented control */
+[class*="awsui_segment"] {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease !important;
+}
+
+/* Cloudscape modal — enhance the built-in animation */
+[class*="awsui_dialog"] {
+  animation: popIn 0.2s ease !important;
+}
+
+/* Cloudscape expandable section content */
+[class*="awsui_content-expandable"] {
+  transition: max-height var(--rad-duration-normal, 0.3s) ease, opacity 0.2s ease;
+}
+
+/* Sidebar nav items */
+.sidebar-icon-btn {
+  transition: background-color var(--rad-duration-fast, 0.15s) ease, color var(--rad-duration-fast, 0.15s) ease, opacity 0.2s ease;
+}
+
+/* Heatmap cells */
+button[style*="borderRadius: 10"] {
+  transition: border-color 0.2s ease, transform var(--rad-duration-fast, 0.15s) ease, box-shadow 0.2s ease;
+}
+button[style*="borderRadius: 10"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat bar entrance */
+.chat-bar {
+  animation: slideUp var(--rad-duration-normal, 0.3s) ease;
+}
+
+/* Settings popover */
+.settings-popover,
+[style*="position: absolute"][style*="zIndex: 200"] {
+  animation: popIn var(--rad-duration-fast, 0.15s) ease;
+}
+
+/* Badge / pill transitions */
+[class*="awsui_badge"] {
+  transition: background-color var(--rad-duration-fast, 0.15s) ease, color var(--rad-duration-fast, 0.15s) ease;
+}
+
+/* Toggle transitions */
+[class*="awsui_toggle"] {
+  transition: background-color 0.2s ease;
+}
+
+/* Smooth scroll for content area */
+.main-content {
+  scroll-behavior: smooth;
+}
+
+/* ── Reduced Motion ──────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
