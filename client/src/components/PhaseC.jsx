@@ -20,8 +20,8 @@ const PhaseC = ({ controls, onChange, onExport, isProcessing, hasDocuments }) =>
   const toneOptions = [
     { value: 'professional', label: 'Professional' },
     { value: 'friendly', label: 'Friendly' },
-    { value: 'casual', label: 'Casual' },
-    { value: 'formal', label: 'Formal' },
+    { value: 'playful', label: 'Playful' },
+    { value: 'reserved', label: 'Reserved' },
     { value: 'empathetic', label: 'Empathetic' },
     { value: 'authoritative', label: 'Authoritative' },
     { value: 'youthful', label: 'Youthful' }

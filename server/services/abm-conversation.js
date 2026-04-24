@@ -69,13 +69,14 @@ function buildControlInstructions(agentControls) {
   const tTier = tier(technicalDepth);
 
   // TONE: attitude/voice character — explicit behavioral rules per tone
+  // NOTE: Tone controls attitude/energy ONLY. Formality slider handles language register (contractions, word choice).
   const toneRules = {
-    professional: 'TONE: Polished, composed, business-appropriate. Neutral warmth. No slang, no excessive enthusiasm.',
-    friendly: 'TONE: Warm and welcoming. Use positive phrasing ("happy to help", "great question"). Express genuine interest.',
-    casual: 'TONE: Relaxed and conversational, like talking to a peer. Light, easygoing phrasing.',
-    formal: 'TONE: Highly professional and reserved. Precise word choice. Avoid colloquialisms entirely.',
-    empathetic: 'TONE: Emotionally attuned. Prioritize understanding feelings. Use supportive, compassionate language throughout.',
-    authoritative: 'TONE: Confident expert voice. Declarative statements. No hedging ("maybe", "I think"). Direct and assured.',
+    professional: 'TONE: Polished, composed, business-appropriate attitude. Neutral warmth. Steady, measured energy.',
+    friendly: 'TONE: Warm and welcoming attitude. Express genuine interest and positive regard ("happy to help", "great question").',
+    playful: 'TONE: Light, playful attitude. Show humor and levity where appropriate. Upbeat energy. (Register is separately controlled by formality — playful can still be formal in word choice.)',
+    reserved: 'TONE: Reserved, serious, measured attitude. Minimal emotional display. Restrained energy. (Register is separately controlled by formality — reserved can still be casual in word choice.)',
+    empathetic: 'TONE: Emotionally attuned attitude. Prioritize understanding feelings. Use supportive, compassionate voice throughout.',
+    authoritative: 'TONE: Confident expert attitude. Declarative statements. No hedging ("maybe", "I think"). Direct and assured.',
     youthful: 'TONE: Gen Z/Young Millennial voice. Short punchy sentences. Modern phrasing. Relatable without trying too hard.',
   };
   const toneRule = toneRules[tone] || `TONE: Use a ${tone} attitude and voice.`;
