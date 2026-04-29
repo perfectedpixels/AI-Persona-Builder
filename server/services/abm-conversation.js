@@ -237,7 +237,7 @@ Every AgentLLM reply must satisfy ALL 7 control rules from the system prompt. Do
       accept: 'application/json',
       body: JSON.stringify({
         anthropic_version: 'bedrock-2023-05-31',
-        max_tokens: 3500,
+        max_tokens: 2500,
         temperature: 0.7,
         system: systemPrompt,
         messages: [{ role: 'user', content: userMessage }]

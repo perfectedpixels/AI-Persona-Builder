@@ -1,9 +1,8 @@
 /**
- * Retry wrapper for Bedrock API calls.
- * Retries on throttling and transient errors with exponential backoff + jitter.
+ * Retry wrapper for Bedrock API calls with throttling-aware backoff.
  *
- * Throttling gets more aggressive retries since Bedrock TPM/RPM quotas
- * can recover within seconds.
+ * Tuned to stay under API Gateway's 29s integration timeout:
+ *   maxRetries=3, delays ~2s, 4s, 8s => worst case ~14s of waiting + call time.
  */
 
 function isThrottling(error) {
@@ -23,7 +22,7 @@ function isTransient(error) {
   );
 }
 
-async function callBedrockWithRetry(client, command, { maxRetries = 5, baseDelayMs = 1500 } = {}) {
+async function callBedrockWithRetry(client, command, { maxRetries = 3, baseDelayMs = 2000 } = {}) {
   let lastError;
 
   for (let attempt = 0; attempt <= maxRetries; attempt++) {
@@ -39,10 +38,9 @@ async function callBedrockWithRetry(client, command, { maxRetries = 5, baseDelay
 
       if (!isRetryable || attempt === maxRetries) {
         if (throttled) {
-          // Rewrite the error so callers/users see something actionable
           const friendly = new Error(
-            'The AI service is currently rate-limited. Please wait 30-60 seconds and try again. ' +
-            'If this keeps happening, try making fewer rapid changes to the agent controls.'
+            'The AI service is currently rate-limited. Please wait 30-60 seconds before trying again. ' +
+            'If this keeps happening, your AWS Bedrock account may need a quota increase.'
           );
           friendly.name = 'ThrottlingException';
           friendly.cause = error;
@@ -51,10 +49,8 @@ async function callBedrockWithRetry(client, command, { maxRetries = 5, baseDelay
         throw error;
       }
 
-      // Exponential backoff. Throttling gets a bigger base delay because
-      // Bedrock TPM/RPM windows are ~1 minute.
-      const base = throttled ? baseDelayMs * 2 : baseDelayMs;
-      const delay = base * Math.pow(2, attempt) + Math.random() * 1000;
+      // Exponential backoff with jitter. Kept short to stay under API Gateway 29s timeout.
+      const delay = baseDelayMs * Math.pow(2, attempt) + Math.random() * 500;
       console.warn(
         `Bedrock call ${throttled ? 'throttled' : 'failed'} (${error.name}), ` +
         `retrying in ${Math.round(delay)}ms (attempt ${attempt + 1}/${maxRetries})...`

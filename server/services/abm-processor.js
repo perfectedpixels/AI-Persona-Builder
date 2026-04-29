@@ -67,9 +67,10 @@ async function processDocuments({ productProposal, userPersona, agentFramework }
     return 'Not provided';
   };
   
-  // Cap each document to ~50k chars to avoid blowing up the Bedrock prompt
-  // (Claude's context window is large, but the prompt + response + overhead adds up)
-  const MAX_DOC_LENGTH = 50000;
+  // Cap each document to ~20k chars to keep prompt under the TPM quota.
+  // Most product proposals, personas, and agent frameworks fit in this range.
+  // Larger documents can be summarized offline before pasting.
+  const MAX_DOC_LENGTH = 20000;
   const truncate = (text) => {
     if (text.length <= MAX_DOC_LENGTH) return text;
     console.warn(`Truncating document from ${text.length} to ${MAX_DOC_LENGTH} chars`);
@@ -221,7 +222,7 @@ For keyGuidelines: Extract 5-10 concrete items from the documents: domain vocabu
 
   const requestBody = {
     anthropic_version: 'bedrock-2023-05-31',
-    max_tokens: 4000,
+    max_tokens: 2500,
     temperature: 0.2,
     system: systemPrompt,
     messages: [{ role: 'user', content: userMessage }],
@@ -306,8 +307,11 @@ For keyGuidelines: Extract 5-10 concrete items from the documents: domain vocabu
     console.error('Error processing documents:', error);
     console.error('Error details:', error.message);
     console.error('Error stack:', error.stack);
-    
-    // Return more detailed error
+
+    // Pass through friendly throttling messages; wrap others
+    if (error.name === 'ThrottlingException' || /too many requests|throttl|rate.?limit/i.test(error.message || '')) {
+      throw error;
+    }
     throw new Error(`Document processing failed: ${error.message}. Check Lambda logs for details.`);
   }
 }

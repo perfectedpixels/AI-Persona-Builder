@@ -143,6 +143,8 @@ const AgentBehaviorMaker = () => {
       let message = error.message;
       if (error.name === 'AbortError') {
         message = 'Request timed out. Try shorter documents or request API Gateway timeout increase in AWS Service Quotas.';
+      } else if (/too many requests|throttl|rate.?limit/i.test(message || '')) {
+        message = 'The AI service is rate-limited. Please wait 30-60 seconds and try again. If this persists, your AWS Bedrock account may need a quota increase (Service Quotas → Bedrock → Claude on-demand tokens/minute).';
       } else if (message === 'Load failed' || (error.message || '').includes('Load failed')) {
         message = 'Network request failed. Often caused by API Gateway 29s timeout—request quota increase in Service Quotas (API Gateway → Maximum integration timeout), or try shorter documents.';
       } else if (!message) {
