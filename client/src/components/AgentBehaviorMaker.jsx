@@ -175,11 +175,18 @@ const AgentBehaviorMaker = () => {
         })
       });
       const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data.error || `Server returned ${response.status}`);
+      }
       if (data.conversation) {
         setConversations(prev => [...prev, data.conversation].slice(-MAX_CONVERSATIONS));
       }
     } catch (error) {
       console.error('Error processing user input:', error);
+      const msg = /too many requests|throttl|rate.?limit/i.test(error.message || '')
+        ? 'The AI service is rate-limited. Wait 30-60 seconds and try again.'
+        : error.message || 'Failed to process input.';
+      setProcessingStatus({ currentStep: 'error', error: msg });
     } finally {
       setIsProcessing(false);
       setIsConversationLoading(false);
@@ -216,6 +223,10 @@ const AgentBehaviorMaker = () => {
       }
     } catch (error) {
       console.error('Error generating conversation:', error);
+      const msg = /too many requests|throttl|rate.?limit/i.test(error.message || '')
+        ? 'The AI service is rate-limited. Wait 30-60 seconds and try again.'
+        : error.message || 'Failed to generate conversation.';
+      setProcessingStatus({ currentStep: 'error', error: msg });
     } finally {
       setIsProcessing(false);
       setIsConversationLoading(false);
@@ -254,9 +265,16 @@ const AgentBehaviorMaker = () => {
           });
 
           const data = await response.json();
+          if (!response.ok) {
+            throw new Error(data.error || `Server returned ${response.status}`);
+          }
           setConversations(data.conversations);
         } catch (error) {
           console.error('Error refreshing conversations:', error);
+          const msg = /too many requests|throttl|rate.?limit/i.test(error.message || '')
+            ? 'The AI service is rate-limited. Wait 30-60 seconds and try again, or slow down control changes.'
+            : error.message || 'Failed to refresh conversation.';
+          setProcessingStatus({ currentStep: 'error', error: msg });
         } finally {
           setIsProcessing(false);
           setIsConversationLoading(false);
@@ -266,7 +284,7 @@ const AgentBehaviorMaker = () => {
             setControlsRefreshPhase('queued');
           }
         }
-      }, 500);
+      }, 1500); // debounce: wait 1.5s after last change to avoid rapid-fire API calls
     }
   };
 
